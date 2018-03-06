@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+// tag::repositories[]
+repositories {
+    mavenCentral()
+}
+// end::repositories[]
+
+// tag::jar[]
+jar {
+    baseName = 'SuanShuExtension'
+    version =  '0.1.0'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+def depJodatime = 'joda-time:joda-time:2.9.9'
+def depJUnit = 'junit:junit:4.10'
+
+dependencies {
+    compile depJodatime
+    testCompile depJodatime, depJUnit
+}
+// end::dependencies[]
