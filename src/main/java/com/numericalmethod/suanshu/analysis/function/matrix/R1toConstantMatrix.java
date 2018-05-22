@@ -32,6 +32,7 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  */
 public class R1toConstantMatrix extends R1toMatrix {
 
+    private static final long serialVersionUID = 2847626214990115071L;
     private final ImmutableMatrix A;
 
     /**

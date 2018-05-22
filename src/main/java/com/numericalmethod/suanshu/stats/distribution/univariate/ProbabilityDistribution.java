@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.distribution.univariate;
 
+import java.io.Serializable;
+
 /**
  * A univariate probability distribution completely characterizes a random variable by stipulating
  * the probability of each value of a random variable (when the variable is discrete),
@@ -33,7 +35,7 @@ package com.numericalmethod.suanshu.stats.distribution.univariate;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Probability_distribution">Wikipedia: Probability distribution</a>
  */
-public interface ProbabilityDistribution {
+public interface ProbabilityDistribution extends Serializable{
 
     /**
      * Get the mean of this distribution.

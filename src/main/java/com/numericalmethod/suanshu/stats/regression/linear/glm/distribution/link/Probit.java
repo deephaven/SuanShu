@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinear
  */
 public class Probit implements LinkFunction {
 
+    private static final long serialVersionUID = 3295159321903671428L;
     private ProbabilityDistribution normal = new NormalDistribution(0, 1);
 
     @Override

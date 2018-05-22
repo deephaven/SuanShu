@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class FtWt extends Ft {
 
+    private static final long serialVersionUID = 3573740797564494636L;
     /**
      * the current time
      */

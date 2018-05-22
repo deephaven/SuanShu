@@ -41,6 +41,7 @@ import static java.lang.Math.*;
  */
 public class KolmogorovOneSidedDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 2482476057172648287L;
     /**
      * the number of observations
      */

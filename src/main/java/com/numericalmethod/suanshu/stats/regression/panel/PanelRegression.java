@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.regression.panel;
 
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -32,7 +34,7 @@ import java.util.List;
  * @author Chung Lee
  * @see <a href="http://en.wikipedia.org/wiki/Panel_analysis">Wikipedia: Panel analysis</a>
  */
-public interface PanelRegression {
+public interface PanelRegression extends Serializable{
 
     /**
      * Solve panel regression of the following form:

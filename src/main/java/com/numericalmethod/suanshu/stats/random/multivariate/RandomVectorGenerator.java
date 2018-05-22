@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.random.multivariate;
 
+import java.io.Serializable;
+
 /**
  * A (pseudo) multivariate random number generator samples a random vector from a multivariate distribution.
  * The elements in a vector can be correlated.
@@ -34,7 +36,7 @@ package com.numericalmethod.suanshu.stats.random.multivariate;
  * <li><a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Wikipedia: Pseudorandom number generator</a>
  * </ul>
  */
-public interface RandomVectorGenerator {
+public interface RandomVectorGenerator extends Serializable{
 
     /**
      * Seed the random vector generator to produce repeatable sequences.

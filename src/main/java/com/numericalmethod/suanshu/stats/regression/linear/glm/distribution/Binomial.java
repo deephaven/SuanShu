@@ -38,6 +38,7 @@ import static java.lang.Math.*;
  */
 public class Binomial extends Family {
 
+    private static final long serialVersionUID = 1045243836644500667L;
     /**
      * the biggest integer that a binomial variable can take
      *

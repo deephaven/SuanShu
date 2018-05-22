@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Euler implements DiscretizedSDE {
 
+    private static final long serialVersionUID = -1762606679185612537L;
     /**
      * the continuous-time multivariate SDE
      */

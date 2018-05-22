@@ -31,6 +31,7 @@ package com.numericalmethod.suanshu.optimization.unconstrained.quasinewton;
  */
 @Deprecated
 public class McCormick extends Huang {//TODO
+    private static final long serialVersionUID = -8460357133437786246L;
 
     /**
      * Construct a multivariate minimizer using the McCormick method.

@@ -43,6 +43,7 @@ import static java.lang.Math.log;
  */
 public class Cheng1978 implements RandomBetaGenerator {
 
+    private static final long serialVersionUID = -5214942113991093822L;
     private double aa, bb;
     private double a, b, alpha, beta, delta, k1, k2, gamma;
     private final RandomLongGenerator uniform;

@@ -60,6 +60,7 @@ import static java.lang.Math.*;
  */
 public class KolmogorovDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -623375125561802864L;
     /**
      * the number of observations
      */
@@ -221,6 +222,8 @@ public class KolmogorovDistribution implements ProbabilityDistribution {
      */
     public static double asymptoticCDF(final double x) {
         final Summation asymptoticDist = new Summation(new Summation.Term() {
+
+            private static final long serialVersionUID = 7165938423559008428L;
 
             public double evaluate(double i) {
                 double v = (2 * i - 1) * Math.PI / x;

@@ -52,11 +52,14 @@ import java.util.Iterator;
  */
 public class DLMSeries implements com.numericalmethod.suanshu.stats.timeseries.TimeSeries<Integer, Innovation, DLMSeries.Entry> {
 
+    private static final long serialVersionUID = 6588941229279437034L;
+
     /**
      * This is the {@code TimeSeries.Entry} for a multivariate DLM time series.
      */
     public static class Entry implements com.numericalmethod.suanshu.stats.timeseries.TimeSeries.Entry<Integer, Innovation> {
 
+        private static final long serialVersionUID = 682395215011003613L;
         private final int time;
         private final Innovation value;
 

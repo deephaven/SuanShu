@@ -39,6 +39,8 @@ import static java.lang.Math.*;
  */
 public class Poisson extends Family {
 
+    private static final long serialVersionUID = -6733725629081070502L;
+
     /**
      * Construct an instance of {@code Poisson}.
      * The canonical link is {@link Log}.

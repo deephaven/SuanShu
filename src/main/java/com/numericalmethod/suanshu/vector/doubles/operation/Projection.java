@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.vector.doubles.operation;
 
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -34,8 +36,9 @@ import java.util.List;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Vector_projection">Wikipedia: Vector projection</a>
  */
-public class Projection {
+public class Projection implements Serializable{
 
+    private static final long serialVersionUID = -4540952332811306329L;
     private final Vector orthogonalVector;
     private final double[] length;
     private final Vector[] projVector;

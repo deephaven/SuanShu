@@ -22,7 +22,6 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.mathoperation;
 
-import static com.numericalmethod.suanshu.datastructure.DimensionCheck.*;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.MatrixAccess;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
@@ -32,14 +31,15 @@ import com.numericalmethod.suanshu.parallel.ParallelExecutor;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfDifferentDimension;
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfIncompatible4Multiplication;
+
 /**
  * This is a multi-threaded implementation of the matrix math operations.
  *
  * @author Ken Yiu
  */
-class ParallelMatrixMathOperation implements MatrixMathOperation {
-
-    private final ParallelExecutor parallel = new ParallelExecutor();
+public class ParallelMatrixMathOperation implements MatrixMathOperation {
 
     @Override
     public Matrix add(final MatrixAccess A1, final MatrixAccess A2) {
@@ -48,7 +48,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
         final Matrix result = new DenseMatrix(A1.nRows(), A1.nCols());
         result.set(1, 1, 0.); // trigger space allocation in this main thread
         try {
-            parallel.forLoop(1, A1.nRows() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, A1.nRows() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {
@@ -71,7 +71,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
         final Matrix result = new DenseMatrix(A1.nRows(), A1.nCols());
         result.set(1, 1, 0.); // trigger space allocation in this main thread
         try {
-            parallel.forLoop(1, A1.nRows() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, A1.nRows() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {
@@ -94,7 +94,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
         final Matrix result = new DenseMatrix(A1.nRows(), A2.nCols());
         result.set(1, 1, 0.); // trigger space allocation in this main thread
         try {
-            parallel.forLoop(1, result.nRows() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, result.nRows() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {
@@ -120,7 +120,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
 
         final DenseVector result = new DenseVector(A.nRows());
         try {
-            parallel.forLoop(1, result.size() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, result.size() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {
@@ -143,7 +143,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
         final Matrix result = new DenseMatrix(A.nRows(), A.nCols());
         result.set(1, 1, 0.); // trigger space allocation in this main thread
         try {
-            parallel.forLoop(1, A.nRows() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, A.nRows() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {
@@ -163,7 +163,7 @@ class ParallelMatrixMathOperation implements MatrixMathOperation {
         final Matrix result = new DenseMatrix(A.nCols(), A.nRows());
         result.set(1, 1, 0.); // trigger space allocation in this main thread
         try {
-            parallel.forLoop(1, A.nCols() + 1, new LoopBody() {
+            ParallelExecutor.getInstance().forLoop(1, A.nCols() + 1, new LoopBody() {
 
                 @Override
                 public void run(int i) throws Exception {

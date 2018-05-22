@@ -37,6 +37,8 @@ import static java.lang.Math.log;
  */
 public class Binomial extends com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Binomial implements QuasiFamily {
 
+    private static final long serialVersionUID = 343549885912778071L;
+
     /**
      * Construct an instance of {@code Binomial}.
      * The canonical link is {@link Logit}.

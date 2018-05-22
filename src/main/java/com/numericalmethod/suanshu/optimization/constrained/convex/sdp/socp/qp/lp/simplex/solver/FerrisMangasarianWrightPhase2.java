@@ -42,8 +42,11 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
  */
 public class FerrisMangasarianWrightPhase2 implements LPSimplexSolver<CanonicalLPProblem1> {
 
+    private static final long serialVersionUID = -6301622023942306088L;
+
     private class Solution implements LPSimplexSolution {
 
+        private static final long serialVersionUID = -7721108120951296126L;
         private SimplexTable table;
         private LPSimplexMinimizer minimizer;
         private LPUnbounded unboundedEx = null;//unbound exception

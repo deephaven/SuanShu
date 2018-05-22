@@ -50,6 +50,7 @@ import static java.lang.Math.*;
  */
 public class T extends HypothesisTest {
 
+    private static final long serialVersionUID = 3473666885758540078L;
     /**
      * degree of freedom
      */

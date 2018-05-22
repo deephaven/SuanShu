@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.descriptive;
 
+import java.io.Serializable;
+
 /**
  * A statistic (singular) is a single measure of some attribute of a sample (e.g., its arithmetic mean value).
  * It is calculated by applying a function (statistical algorithm) to a sample, i.e., a set of data.
@@ -29,7 +31,7 @@ package com.numericalmethod.suanshu.stats.descriptive;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Statistic">Wikipedia: Statistic</a>
  */
-public interface Statistic {
+public interface Statistic extends Serializable{
 
     /**
      * Recompute the statistic with more data, incrementally if possible.

@@ -36,6 +36,8 @@ public interface Realization extends com.numericalmethod.suanshu.stats.timeserie
      */
     public static class Entry extends com.numericalmethod.suanshu.stats.timeseries.univariate.TimeSeries.Entry<Double> {
 
+        private static final long serialVersionUID = -7490130354083748425L;
+
         /**
          * Construct an instance of {@code TimeSeries.Entry}.
          *

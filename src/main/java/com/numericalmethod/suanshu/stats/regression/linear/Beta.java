@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * Beta coefficients are the outcomes of fitting a linear regression model.
  * β are the coefficients of a linear model.
@@ -38,8 +40,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Ken Yiu
  */
-public abstract class Beta {
+public abstract class Beta implements Serializable{
 
+    private static final long serialVersionUID = 8810269738707741595L;
     /**
      * the coefficient estimates, β^
      */

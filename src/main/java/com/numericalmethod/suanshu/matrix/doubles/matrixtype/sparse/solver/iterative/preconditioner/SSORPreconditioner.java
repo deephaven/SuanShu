@@ -53,6 +53,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class SSORPreconditioner implements Preconditioner {
 
+    private static final long serialVersionUID = 7273554017473138402L;
     private final Matrix A;
     private final double omega;
 

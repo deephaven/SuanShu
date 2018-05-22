@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.analysis.sequence;
 import com.numericalmethod.suanshu.misc.R;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 
+import java.io.Serializable;
+
 /**
  * Summation is the operation of adding a sequence of numbers; the result is their sum or total.
  * If numbers are added sequentially from left to right, any intermediate result is a partial sum, prefix sum, or running total of the summation.
@@ -59,12 +61,14 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Summation">Wikipedia: Summation</a>
  */
-public class Summation {
+public class Summation implements Serializable{
+
+    private static final long serialVersionUID = 7599980818735063198L;
 
     /**
      * Define the terms in a summation series.
      */
-    public static interface Term {
+    public static interface Term extends Serializable{
 
         /**
          * Evaluate the term for an index.

@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.CreateMatrix;
 import com.numericalmethod.suanshu.misc.R;
 import com.numericalmethod.suanshu.number.DoubleUtils;
+
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -36,8 +38,9 @@ import java.util.TreeSet;
  *
  * @author Haksun Li
  */
-class WorkingActiveSet {
+class WorkingActiveSet implements Serializable{
 
+    private static final long serialVersionUID = 1785027950099159473L;
     /** the row indices of active constraints, Aa */
     private TreeSet<Integer> J = new TreeSet<Integer>();
     /** the active constraints */

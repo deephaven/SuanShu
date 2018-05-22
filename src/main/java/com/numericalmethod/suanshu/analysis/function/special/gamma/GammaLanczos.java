@@ -36,6 +36,7 @@ import java.math.BigDecimal;
  */
 public class GammaLanczos extends UnivariateRealFunction implements Gamma {
 
+    private static final long serialVersionUID = 9012006985583480098L;
     private final Lanczos lanczos;
 
     /**

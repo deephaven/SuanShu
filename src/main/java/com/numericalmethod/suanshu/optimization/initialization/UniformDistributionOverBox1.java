@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class UniformDistributionOverBox1 implements BuildInitials {
 
+    private static final long serialVersionUID = 5094578945569407381L;
     private final int N;
     private final UniformDistributionOverBox rng;
 

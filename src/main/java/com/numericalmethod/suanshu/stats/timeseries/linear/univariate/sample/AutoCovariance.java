@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.TimeSeri
  */
 public class AutoCovariance extends AutoCovarianceFunction {
 
+    private static final long serialVersionUID = -4826546350282366863L;
+
     public enum Type {
 
         /**

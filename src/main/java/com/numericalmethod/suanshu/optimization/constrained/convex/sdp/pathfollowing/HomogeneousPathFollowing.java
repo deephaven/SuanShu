@@ -49,11 +49,14 @@ import java.util.ArrayList;
  */
 public class HomogeneousPathFollowing implements ConstrainedMinimizer<SDPDualProblem, IterativeMinimizer<CentralPath>> {
 
+    private static final long serialVersionUID = -3612567547354714868L;
+
     /**
      * This is the solution to a Semi-Definite Programming problem using the Homogeneous Self-Dual Path-Following algorithm.
      */
     public class Solution extends PrimalDualPathFollowing.Solution {
 
+        private static final long serialVersionUID = -8909647936039729197L;
         private double kappa;
         private Vector V;
         private Matrix B;

@@ -29,12 +29,12 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  */
 public class LPUnbounded extends LPException {
 
+    private static final long serialVersionUID = -2395560403850261410L;
     /**
      * This is the pricing column that does not have an eligible row that passes the ratio test,
      * hence the problem is unbounded.
      */
     public final int s;
-    private static final long serialVersionUID = 1L;
 
     /**
      * Construct an instance of {@code LPUnbounded}.

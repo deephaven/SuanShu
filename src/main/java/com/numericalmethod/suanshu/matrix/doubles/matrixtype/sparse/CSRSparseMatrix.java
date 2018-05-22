@@ -71,6 +71,7 @@ import java.util.List;
  */
 public class CSRSparseMatrix implements SparseMatrix {
 
+    private static final long serialVersionUID = -2682025344288772113L;
     /** number of non-zeros */
     private int nnz = 0;
     private int[] row_ptr = null;

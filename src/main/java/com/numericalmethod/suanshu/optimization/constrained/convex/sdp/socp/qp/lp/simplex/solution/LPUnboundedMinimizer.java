@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class LPUnboundedMinimizer implements LPSimplexMinimizer {
 
+    private static final long serialVersionUID = 2751557660971588476L;
     protected final SimplexTable table;
     protected final int lambdaCol;
 

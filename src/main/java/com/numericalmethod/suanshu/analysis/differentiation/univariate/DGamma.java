@@ -37,6 +37,7 @@ public class DGamma extends UnivariateRealFunction {
 
     private static final Digamma digamma = new Digamma();
     private static final Gamma gamma = new GammaLanczosQuick();
+    private static final long serialVersionUID = 6884205884631569877L;
 
     @Override
     public double evaluate(double x) {

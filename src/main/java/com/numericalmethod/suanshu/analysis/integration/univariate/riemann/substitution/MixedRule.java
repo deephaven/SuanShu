@@ -40,6 +40,8 @@ import static java.lang.Math.exp;
  */
 public class MixedRule extends DoubleExponential {
 
+    private static final long serialVersionUID = -2545479446006824984L;
+
     /**
      * Construct a {@code MixedRule} substitution rule.
      *
@@ -56,6 +58,8 @@ public class MixedRule extends DoubleExponential {
     private static UnivariateRealFunction xt(final double c) {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = -509253485572479632L;
+
             @Override
             public double evaluate(double t) {
                 return exp(t - exp(-t));
@@ -66,6 +70,8 @@ public class MixedRule extends DoubleExponential {
     /** x'(t) = dx(t)/dt */
     private static UnivariateRealFunction dxdt(final double c) {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -6977972286217930658L;
 
             @Override
             public double evaluate(double t) {

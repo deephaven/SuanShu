@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde;
 
+import java.io.Serializable;
+
 /**
  * This represents a real-valued <i>F<sub>t</sub>-adapted</i> function that depends on X(t), B(t), or even on the whole past path of B(s), s ≤ t.
  *
@@ -29,7 +31,7 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde;
  *
  * @see "Fima C. Klebaner. Introduction to Stochastic Calculus with Applications. 2nd ed. Section 4.7. Imperial College Press. 2006."
  */
-public interface FtAdaptedRealFunction {
+public interface FtAdaptedRealFunction extends Serializable{
 
     /**
      * Evaluate this function, <i>f</i>, at time <i>t</i>.

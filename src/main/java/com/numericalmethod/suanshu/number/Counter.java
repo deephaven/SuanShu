@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.number;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -32,8 +33,9 @@ import java.util.Set;
  *
  * @author Haksun Li
  */
-public class Counter {
+public class Counter implements Serializable{
 
+    private static final long serialVersionUID = -5647311746296886425L;
     /** a precision parameter for rounding a double: number of decimal points to keep */
     private final int scale;
     private final Map<Double, Integer> counts = new HashMap<Double, Integer>();

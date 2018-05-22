@@ -34,6 +34,8 @@ package com.numericalmethod.suanshu.analysis.integration.univariate.riemann;
  */
 public class Midpoint extends NewtonCotes {
 
+    private static final long serialVersionUID = 6464715366980382707L;
+
     /**
      * Construct an integrator that implements the Midpoint rule.
      *

@@ -22,12 +22,14 @@
  */
 package com.numericalmethod.suanshu.stats.sampling.resampling;
 
+import java.io.Serializable;
+
 /**
  * Specify the re-sampling method.
  *
  * @author Haksun Li
  */
-public interface Resampling {
+public interface Resampling extends Serializable{
 
     /**
      * Get a resample from the original sample

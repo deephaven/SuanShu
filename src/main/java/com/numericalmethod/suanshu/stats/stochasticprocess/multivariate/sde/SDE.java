@@ -25,14 +25,17 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde;
 import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.coefficients.Diffusion;
 import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.coefficients.Drift;
 
+import java.io.Serializable;
+
 /**
  * This class represents a multi-dimensional, continuous-time, Stochastic Differential Equation (SDE) of this form:
  * <i>dX(t) = μ(t, Xt, Zt, ...) * dt + σ(t, Xt, Zt, ...) * dB(t)</i>.
  *
  * @author Haksun Li
  */
-public class SDE {
+public class SDE implements Serializable{
 
+    private static final long serialVersionUID = -142332496510159578L;
     /**
      * the drift
      *

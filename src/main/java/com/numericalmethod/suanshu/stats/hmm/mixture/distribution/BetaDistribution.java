@@ -41,6 +41,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.beta.Cheng1978;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.log;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -52,11 +54,14 @@ import java.util.Arrays;
  */
 public class BetaDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = -5324981873084547404L;
+
     /**
      * the Beta distribution parameters
      */
-    public static class Lambda {
+    public static class Lambda implements Serializable{
 
+        private static final long serialVersionUID = -7111776190469520385L;
         /** α: the shape parameter */
         public final double alpha;
         /** β: the shape parameter */
@@ -182,6 +187,8 @@ public class BetaDistribution implements HMMDistribution {
                 if (isAlphaEstimated && isBetaEstimated) {
                     BivariateRealFunction f = new BivariateRealFunction() {
 
+                        private static final long serialVersionUID = -9135753305786191883L;
+
                         @Override
                         public double evaluate(double a, double b) {
                             double gamma_ab = gamma.evaluate(a + b);
@@ -205,6 +212,8 @@ public class BetaDistribution implements HMMDistribution {
                 if (isAlphaEstimated && !isBetaEstimated) {
                     UnivariateRealFunction f = new UnivariateRealFunction() {
 
+                        private static final long serialVersionUID = 7549604323063426387L;
+
                         @Override
                         public double evaluate(double a) {
                             double gamma_ab = gamma.evaluate(a + b0_temp);
@@ -224,6 +233,8 @@ public class BetaDistribution implements HMMDistribution {
 
                 if (!isAlphaEstimated && isBetaEstimated) {
                     UnivariateRealFunction f = new UnivariateRealFunction() {
+
+                        private static final long serialVersionUID = -1487320445886552332L;
 
                         @Override
                         public double evaluate(double b) {
@@ -268,6 +279,8 @@ public class BetaDistribution implements HMMDistribution {
     private RealVectorFunction dF(final double log_x1_bar, final double log_x2_bar) {
         return new RealVectorFunction() {
 
+            private static final long serialVersionUID = -2392505363569372707L;
+
             @Override
             public Vector evaluate(Vector x) {
                 Vector dF = new DenseVector(2);
@@ -294,6 +307,8 @@ public class BetaDistribution implements HMMDistribution {
     /** the Hessian of the log-likelihood */
     private RntoMatrix d2F() {
         return new RntoMatrix() {
+
+            private static final long serialVersionUID = 1537867505311702264L;
 
             @Override
             public Matrix evaluate(Vector x) {

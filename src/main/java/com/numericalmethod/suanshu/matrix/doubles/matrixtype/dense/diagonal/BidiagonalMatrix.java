@@ -38,6 +38,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class BidiagonalMatrix extends DiagonalDataMatrix {
 
+    private static final long serialVersionUID = 5481272892281845716L;
+
     /** the types of bi-diagonal matrices available */
     public static enum BidiagonalMatrixType {
 

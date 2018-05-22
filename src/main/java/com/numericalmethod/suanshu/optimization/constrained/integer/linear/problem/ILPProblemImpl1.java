@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ILPProblemImpl1 implements ILPProblem {
 
+    private static final long serialVersionUID = 3318484166703421277L;
     private final LPProblemImpl1 lpProblem;
     private final IPProblemImpl1 ipProblem;
 

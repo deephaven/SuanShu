@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class Newton implements Uniroot {
 
+    private static final long serialVersionUID = 5224923946840298570L;
     private final double tol;
     private final int maxIterations;
 

@@ -40,6 +40,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class StandardLPProblem extends LPProblemImpl1 {
 
+    private static final long serialVersionUID = -4914694027353594614L;
+
     /**
      * Construct a linear programming problem in the standard form.
      *

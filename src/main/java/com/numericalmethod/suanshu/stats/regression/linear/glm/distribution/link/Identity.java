@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinear
  */
 public class Identity implements LinkFunction {
 
+    private static final long serialVersionUID = 8776773610475823899L;
+
     @Override
     public double inverse(double x) {
         return x;

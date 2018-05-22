@@ -47,6 +47,7 @@ public class Trigamma extends UnivariateRealFunction {
 
     private static final double SMALL_X = 1e-4;
     private static final double BIG_X = 30;
+    private static final long serialVersionUID = 7458715917976438218L;
 
     @Override
     public double evaluate(final double x) {

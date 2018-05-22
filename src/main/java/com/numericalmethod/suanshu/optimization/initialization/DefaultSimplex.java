@@ -36,6 +36,7 @@ import static java.lang.Math.abs;
  */
 public class DefaultSimplex implements BuildInitials {
 
+    private static final long serialVersionUID = -8552469112552211214L;
     private final double scale;
 
     /**

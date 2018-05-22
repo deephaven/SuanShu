@@ -32,6 +32,7 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  */
 public class ConstantSigma1 implements Diffusion {
 
+    private static final long serialVersionUID = 789838156206276803L;
     /**
      * the constant diffusion matrix
      */

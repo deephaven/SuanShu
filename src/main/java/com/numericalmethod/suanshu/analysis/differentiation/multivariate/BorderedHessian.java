@@ -49,6 +49,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class BorderedHessian extends SymmetricMatrix {
 
+    private static final long serialVersionUID = 4348967951808803677L;
+
     /**
      * Construct the bordered Hessian matrix for multivariate functions <i>f</i> and <i>g</i> at point <i>x</i>.
      * The dimension is \((n+1) \times (n+1)\),

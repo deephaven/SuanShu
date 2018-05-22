@@ -25,12 +25,14 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.integra
 import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.MultiVariateRealization;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface defines how to construct a realization for a stochastic process.
  *
  * @author Haksun Li
  */
-public interface Construction {
+public interface Construction extends Serializable{
 
     /**
      * Construct a realization of a stochastic process. The realization a time series.

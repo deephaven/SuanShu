@@ -48,6 +48,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.log;
 import static java.lang.Math.sqrt;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -66,7 +68,9 @@ import java.util.Arrays;
  * <li><a href="http://en.wikipedia.org/wiki/Factor_analysis">Wikipedia: Factor analysis</a>
  * </ul>
  */
-class FactorAnalysisMLE {
+class FactorAnalysisMLE implements Serializable{
+
+    private static final long serialVersionUID = 61636893002737263L;
 
     static enum GRADIENT {
 
@@ -140,6 +144,8 @@ class FactorAnalysisMLE {
             NelderMead.Solution soln = optim1.solve(new C2OptimProblemImpl(
                     new RealScalarFunction() {
 
+                        private static final long serialVersionUID = 8881392712582009742L;
+
                         @Override
                         public Double evaluate(Vector psi) {
                             //check bounds
@@ -182,7 +188,7 @@ class FactorAnalysisMLE {
 //        xmin = optim2.search(xmin);   
         }
 
-        if (min(xmin.toArray()) < 0.005 - Constant.EPSILON) {
+        if (min(xmin.toArray()) < 0.004999) {
             throw new RuntimeException(String.format("invalid psi: %s", xmin.toString()));
         }
 
@@ -200,6 +206,7 @@ class FactorAnalysisMLE {
      */
     private class logLikelihood implements RealScalarFunction {
 
+        private static final long serialVersionUID = 8538640575834105363L;
         private final int p = S.nRows(); //p is the original dimension, i.e. the number of variables in the original data
 
         //2nd stage in the minimization: find PSI
@@ -209,6 +216,8 @@ class FactorAnalysisMLE {
             Matrix PSI_INV_SQRT = new DiagonalMatrix(foreach(
                     psiArr,
                     new UnivariateRealFunction() {
+
+                        private static final long serialVersionUID = -8487910070591717386L;
 
                         @Override
                         public double evaluate(double psi) {
@@ -251,6 +260,7 @@ class FactorAnalysisMLE {
      */
     private class GradientFunction implements RealVectorFunction {
 
+        private static final long serialVersionUID = 5095489309682694154L;
         private final int p = S.nRows(); //p is the original dimension, i.e. the number of variables in the original data
 
         @Override

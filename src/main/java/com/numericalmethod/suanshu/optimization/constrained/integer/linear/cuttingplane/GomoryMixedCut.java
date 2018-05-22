@@ -37,11 +37,14 @@ import java.util.Arrays;
  */
 public class GomoryMixedCut extends SimplexCuttingPlane {
 
+    private static final long serialVersionUID = 4333209428339609861L;
+
     /**
      * This is Gomory's mixed cut.
      */
     public static class MyCutter implements Cutter {
 
+        private static final long serialVersionUID = 2002068332189849890L;
         private final ILPProblem problem;
         private final int[] indices;
 
@@ -110,6 +113,8 @@ public class GomoryMixedCut extends SimplexCuttingPlane {
         super(
                 new LPTwoPhaseSolver(),
                 new CutterFactory() {
+
+                    private static final long serialVersionUID = -3315120248481455425L;
 
                     @Override
                     public Cutter getCutter(final ILPProblem problem) {

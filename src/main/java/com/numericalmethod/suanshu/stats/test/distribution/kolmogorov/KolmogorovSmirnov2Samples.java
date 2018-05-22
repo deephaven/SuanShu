@@ -35,6 +35,8 @@ import static com.numericalmethod.suanshu.misc.R.*;
  */
 public class KolmogorovSmirnov2Samples extends KolmogorovSmirnov {
 
+    private static final long serialVersionUID = -1052312146733741353L;
+
     /**
      * Construct a two-sample Kolmogorov-Smirnov test.
      *

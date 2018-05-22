@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.timepoints.TimeGrid;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.brownian.RandomWalk;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integration.sde.Construction;
 
+import java.io.Serializable;
+
 /**
  * This class computes the expectation of the following class of integrals.
  *
@@ -46,8 +48,9 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
  *
  * @author Haksun Li
  */
-public class Expectation {
+public class Expectation implements Serializable{
 
+    private static final long serialVersionUID = -8743665014974315315L;
     /**
      * the integrator to compute the integral for each filtration/path
      */

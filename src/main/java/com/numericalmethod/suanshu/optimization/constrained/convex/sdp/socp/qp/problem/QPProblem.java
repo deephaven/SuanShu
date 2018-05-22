@@ -49,6 +49,7 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
  */
 public class QPProblem implements ConstrainedOptimProblem {
 
+    private static final long serialVersionUID = -8230408641181208566L;
     private final ConstrainedOptimProblemImpl1 problem;
 
     /**

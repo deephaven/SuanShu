@@ -43,6 +43,7 @@ import static java.lang.Math.*;
  */
 public class BetaDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 1458967462476012048L;
     /** α: the shape parameter */
     private final double alpha;
     /** β: the shape parameter */

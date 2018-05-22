@@ -21,14 +21,16 @@
  */
 package com.numericalmethod.suanshu.vector.doubles.operation;
 
-import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
-import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.Constant;
+import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
-import static com.numericalmethod.suanshu.number.DoubleUtils.equal;
-import java.util.List;
+import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import org.junit.Test;
+
+import java.util.List;
+
+import static com.numericalmethod.suanshu.number.DoubleUtils.equal;
 import static org.junit.Assert.*;
 
 /**
@@ -62,7 +64,7 @@ public class VectorSpaceTest {
                     -0.034199278402838214, -0.20519567041703082, -0.3761920624312232, -0.5471884544454155, -0.7181848464596079
                 })));
         assertTrue(basis.contains(new DenseVector(new double[]{
-                    -0.7738413334506781, -0.5078333750770092, -0.2418254167033382, 0.02418254167033419, 0.29019050004400515
+                    -0.773841333450678, -0.5078333750770091, -0.24182541670333815, 0.024182541670334186, 0.2901905000440051
                 })));
 
         List<Vector> complement = vs.getComplement();
@@ -103,7 +105,7 @@ public class VectorSpaceTest {
                     -0.034199278402838214, -0.20519567041703082, -0.3761920624312232, -0.5471884544454155, -0.7181848464596079
                 })));
         assertTrue(basis.contains(new DenseVector(new double[]{
-                    -0.7738413334506781, -0.5078333750770092, -0.2418254167033382, 0.02418254167033419, 0.29019050004400515
+                    -0.773841333450678, -0.5078333750770091, -0.24182541670333815, 0.024182541670334186, 0.2901905000440051
                 })));
 
         List<Vector> complement = vs.getComplement();

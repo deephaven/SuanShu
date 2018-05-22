@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.optimization;
 
 import com.numericalmethod.suanshu.optimization.problem.OptimProblem;
 
+import java.io.Serializable;
+
 /**
  * Optimization, or mathematical programming, refers to choosing the best element from some set of available alternatives.
  * In the simplest case,
@@ -39,7 +41,7 @@ import com.numericalmethod.suanshu.optimization.problem.OptimProblem;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Mathematical_programming">Wikipedia: Mathematical optimization</a>
  */
-public interface Optimizer<P, S> {
+public interface Optimizer<P, S> extends Serializable {
 
     /**
      * Solve an optimization problem, e.g., {@link OptimProblem}.

@@ -43,6 +43,7 @@ import javax.management.RuntimeErrorException;
  */
 public class LPBoundedMinimizer implements LPSimplexMinimizer {
 
+    private static final long serialVersionUID = -5775241432491888743L;
     private final Set<MyImmutableVector> minimizers = new HashSet<MyImmutableVector>();
     private final SimplexTable table;
     private final double epsilon;
@@ -52,6 +53,8 @@ public class LPBoundedMinimizer implements LPSimplexMinimizer {
      * Since we use {@link Set} to make sure uniqueness of the minimizers, we need a way to compare two vectors.
      */
     private class MyImmutableVector extends ImmutableVector {
+
+        private static final long serialVersionUID = 3170538327162437573L;
 
         MyImmutableVector(Vector vector) {
             super(vector);

@@ -40,6 +40,7 @@ import static java.lang.Math.log;
  */
 public class DBetaRegularized extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = -797416069756096821L;
     private final double p;//the shape parameter
     private final double q;//the shape parameter
     private static final LogBeta lbeta = new LogBeta();

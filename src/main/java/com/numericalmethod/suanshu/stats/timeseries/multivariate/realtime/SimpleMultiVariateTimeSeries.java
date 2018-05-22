@@ -42,6 +42,7 @@ import java.util.Iterator;
  */
 public class SimpleMultiVariateTimeSeries implements MultiVariateTimeSeries {
 
+    private static final long serialVersionUID = -5891767391172972690L;
     private final ArrayList<Vector> ts = new ArrayList<Vector>();//by rows
 
     /**

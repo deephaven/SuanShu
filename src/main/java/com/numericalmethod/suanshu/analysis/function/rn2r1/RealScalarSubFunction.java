@@ -35,6 +35,8 @@ import java.util.Map;
  */
 public class RealScalarSubFunction extends SubFunction<Double> implements RealScalarFunction {
 
+    private static final long serialVersionUID = 7486249328205295706L;
+
     /**
      * Construct a scalar sub-function.
      *

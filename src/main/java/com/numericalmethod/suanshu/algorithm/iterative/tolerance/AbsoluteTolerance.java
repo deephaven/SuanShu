@@ -35,6 +35,7 @@ public class AbsoluteTolerance implements Tolerance {
 
     /** default tolerance */
     public static final double DEFAULT_TOLERANCE = 1e-4;
+    private static final long serialVersionUID = 9175906990256580510L;
     private final double tolerance;
 
     /**

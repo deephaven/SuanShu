@@ -35,6 +35,7 @@ import static java.lang.Math.*;
  */
 public class RayleighDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 1722973316753196782L;
     /** the standard deviation */
     private final double sigma;
 

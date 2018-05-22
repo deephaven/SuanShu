@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.Lowe
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.UpperTriangularMatrix;
 import com.numericalmethod.suanshu.number.DoubleUtils;
 
+import java.io.Serializable;
+
 /**
  * Cholesky decomposition decomposes a real, symmetric (hence square), and positive definite matrix <i>A</i> into
  * <i>A = L * L<sup>t</sup></i>, where <i>L</i> is a lower triangular matrix.
@@ -39,8 +41,9 @@ import com.numericalmethod.suanshu.number.DoubleUtils;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Cholesky_decomposition">Wikipedia: Cholesky decomposition</a>
  */
-public class Cholesky {
+public class Cholesky implements Serializable{
 
+    private static final long serialVersionUID = 93030430452356157L;
     /** the resultant lower triangular matrix */
     private LowerTriangularMatrix L;
 

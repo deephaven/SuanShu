@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.test;
 import com.numericalmethod.suanshu.stats.distribution.univariate.EmpiricalDistribution;
 import com.numericalmethod.suanshu.stats.distribution.univariate.ProbabilityDistribution;
 
+import java.io.Serializable;
+
 /**
  * A statistical hypothesis test is a method of making decisions using experimental data.
  * A result is called statistically significant if it is unlikely to have occurred by chance.
@@ -46,8 +48,9 @@ import com.numericalmethod.suanshu.stats.distribution.univariate.ProbabilityDist
  * <li><a href="http://en.wikipedia.org/wiki/Alternative_hypothesis">Wikipedia: Alternative hypothesis</a>
  * </ul>
  */
-public abstract class HypothesisTest {
+public abstract class HypothesisTest implements Serializable{
 
+    private static final long serialVersionUID = 7288497006202047801L;
     /**
      * number of groups of observations
      */

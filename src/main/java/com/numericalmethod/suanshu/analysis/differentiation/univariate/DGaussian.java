@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.analysis.function.special.gaussian.Gaussian;
  */
 public class DGaussian extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 5711781848797362742L;
     private final Gaussian phi;//the Gaussian function to take the derivative of
     private static final Gaussian gaussian = new Gaussian();
 

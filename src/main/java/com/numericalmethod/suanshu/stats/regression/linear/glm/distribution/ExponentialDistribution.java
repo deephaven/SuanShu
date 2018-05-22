@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.regression.linear.glm.distribution;
 
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface represents a probability distribution from the exponential family.
  *
@@ -38,7 +40,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see "P. J. MacCullagh and J. A. Nelder, <i>Generalized Linear Models,<i> 2nd ed. Chapter 2. Eq. 2.4. pp.28"
  */
-public interface ExponentialDistribution {
+public interface ExponentialDistribution extends Serializable{
 
     /**
      * The variance function of the distribution in terms of the mean <i>μ</i>.

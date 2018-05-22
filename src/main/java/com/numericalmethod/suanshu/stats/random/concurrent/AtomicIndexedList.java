@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.stats.random.concurrent;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -36,8 +37,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Johannes Lehmann
  * @param <T> type of the list items
  */
-class AtomicIndexedList<T> {
+class AtomicIndexedList<T> implements Serializable{
 
+    private static final long serialVersionUID = -7472555093263521641L;
     private final AtomicInteger currentIndex = new AtomicInteger(0);
     private final List<T> values;
 

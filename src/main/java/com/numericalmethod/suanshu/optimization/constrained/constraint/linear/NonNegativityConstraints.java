@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
  */
 public class NonNegativityConstraints extends LowerBoundConstraints {
 
+    private static final long serialVersionUID = 1996801104477882222L;
+
     /**
      * Construct a lower bound constraints for all variables in a function.
      *

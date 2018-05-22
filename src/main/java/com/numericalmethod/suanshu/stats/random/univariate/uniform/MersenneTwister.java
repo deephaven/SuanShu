@@ -93,6 +93,7 @@ public class MersenneTwister implements RandomLongGenerator {
     private static final int UPPER_MASK = 0x80000000;
     /** least significant r bits */
     private static final int LOWER_MASK = 0x7fffffff;
+    private static final long serialVersionUID = -19968189159888170L;
     /** the array for the state vector */
     private int[] mt = new int[LENGTH];
     /** current index in mt[]; mti==LENGTH+1 means mt is not initialized */

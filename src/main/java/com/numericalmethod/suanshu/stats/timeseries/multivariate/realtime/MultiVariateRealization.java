@@ -39,6 +39,8 @@ public interface MultiVariateRealization extends com.numericalmethod.suanshu.sta
      */
     public static class Entry extends com.numericalmethod.suanshu.stats.timeseries.multivariate.MultiVariateTimeSeries.Entry<Double> {
 
+        private static final long serialVersionUID = -6944406333928024382L;
+
         /**
          * Construct an instance of {@code TimeSeries.Entry}.
          *

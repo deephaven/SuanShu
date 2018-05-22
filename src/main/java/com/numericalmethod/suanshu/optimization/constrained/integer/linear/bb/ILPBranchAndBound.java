@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.optimization.constrained.integer.linear.probl
 import com.numericalmethod.suanshu.optimization.problem.MinimizationSolution;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This is a Branch-and-Bound algorithm that solves Integer Linear Programming problems.
  *
@@ -37,10 +39,12 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ILPBranchAndBound implements IPMinimizer<ILPProblem, MinimizationSolution<Vector>> {
 
+    private static final long serialVersionUID = -8912053914072477526L;
+
     /**
      * This factory constructs a new instance of {@code ActiveList} for each Integer Linear Programming problem.
      */
-    public static interface ActiveListFactory {
+    public static interface ActiveListFactory extends Serializable{
 
         /**
          * Construct a new instance of {@code ActiveList} for an Integer Linear Programming problem.
@@ -72,6 +76,7 @@ public class ILPBranchAndBound implements IPMinimizer<ILPProblem, MinimizationSo
     public MinimizationSolution<Vector> solve(final ILPProblem problem) throws Exception {
         return new MinimizationSolution<Vector>() {
 
+            private static final long serialVersionUID = 4974632369491110624L;
             private final BranchAndBound bb;
 
             {

@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.arima.AR
  */
 public class AutoCorrelation extends AutoCorrelationFunction {
 
+    private static final long serialVersionUID = 5142524655215684155L;
     private final AutoCovariance cov;
 
     /** 

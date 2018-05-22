@@ -68,6 +68,7 @@ public class CumulativeNormalInverse extends UnivariateRealFunction {
         0.0000002888167364,
         0.0000003960315187
     };
+    private static final long serialVersionUID = 2090986869273135091L;
 
     @Override
     public double evaluate(double u) {

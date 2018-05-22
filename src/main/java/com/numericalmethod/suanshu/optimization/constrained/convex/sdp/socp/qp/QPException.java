@@ -29,7 +29,7 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp;
  */
 public class QPException extends Exception {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2555861408930937044L;
 
     /**
      * Construct an instance of {@code QPException}.

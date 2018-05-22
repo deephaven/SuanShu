@@ -55,6 +55,7 @@ import static java.lang.Math.sqrt;
  */
 public class Residuals extends com.numericalmethod.suanshu.stats.regression.linear.Residuals {
 
+    private static final long serialVersionUID = 3548902036627503181L;
     /**
      * the weighted, fitted values
      */

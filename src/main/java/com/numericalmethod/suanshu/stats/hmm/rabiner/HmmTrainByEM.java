@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class HmmTrainByEM extends HiddenMarkovModel {
 
+    private static final long serialVersionUID = -8537518198563944164L;
+
     /**
      * Construct an HMM model by training an initial model using an EM algorithm.
      *

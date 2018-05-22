@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class Erf extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = -4301869192561906961L;
     private static StandardCumulativeNormal N = new CumulativeNormalMarsaglia();
 
     @Override

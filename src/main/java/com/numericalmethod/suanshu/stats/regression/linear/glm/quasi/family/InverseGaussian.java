@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.link
  */
 public class InverseGaussian extends com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.InverseGaussian implements QuasiFamily {
 
+    private static final long serialVersionUID = 3167942146520581615L;
+
     /**
      * Create an instance of {@code InverseGaussian}.
      * The canonical link is {@link InverseSquared}.

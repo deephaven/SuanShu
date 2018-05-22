@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.stats.descriptive.moment.Variance;
  */
 public class Covariance implements Statistic {
 
+    private static final long serialVersionUID = -6084782176984650071L;
     private long N = 0;
     private Mean mean1 = new Mean();
     private Variance var1 = new Variance();

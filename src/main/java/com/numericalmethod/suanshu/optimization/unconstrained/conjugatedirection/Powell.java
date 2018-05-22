@@ -44,11 +44,14 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Powell extends SteepestDescent {
 
+    private static final long serialVersionUID = -7906700544869442866L;
+
     /**
      * an implementation of Powell's algorithm
      */
     protected class PowellImpl extends SteepestDescentImpl {
 
+        private static final long serialVersionUID = 4855943085615223937L;
         private Vector dk = null;
         private Vector[] d0;
         private final int n;
@@ -76,14 +79,14 @@ public class Powell extends SteepestDescent {
                 //generate the <i>n</i> initial linearly independent linesearch directions from the initial point
                 for (int i = 1; i <= n; ++i) {
                     d0[i] = new DenseVector(n);
-                    d0[i].set(i, xk.get(i));
+                    d0[i].set(i, 1);
                 }
             } else {
                 //replace the last direction with the last computed linesearch direction
                 for (int i = 1; i <= n - 1; ++i) {
                     d0[i] = d0[i + 1];//shift out the first direction
                 }
-                d0[n] = dk;
+                d0[n] = dk.scaled(1.0/dk.norm());
             }
 
             //in each iteration, <i>f</i> is minimized sequentially in each of the <i>n</i> directions

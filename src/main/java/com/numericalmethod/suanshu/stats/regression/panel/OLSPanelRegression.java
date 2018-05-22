@@ -38,6 +38,8 @@ import java.util.List;
  */
 public class OLSPanelRegression implements PanelRegression {
 
+    private static final long serialVersionUID = -8467693683002798937L;
+
     @Override
     public PanelRegressionResult solve(List<Vector> yt, List<Matrix> At, boolean addIntercept) {
         SuanShuUtils.assertArgument(!yt.isEmpty(), "empty vector list");

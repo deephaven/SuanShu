@@ -38,6 +38,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
  */
 public class Beta extends com.numericalmethod.suanshu.stats.regression.linear.Beta {
 
+    private static final long serialVersionUID = 505688070492242549L;
     /**
      * the z- or t-value for the regression coefficients β^
      */

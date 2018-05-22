@@ -37,6 +37,8 @@ import java.util.List;
  */
 public class Basis extends SparseVector {
 
+    private static final long serialVersionUID = 2076191747009134946L;
+
     /**
      * Construct a vector that corresponds to the <i>i</i>-th dimension in R<sup>n</sup>.
      * That is (a 1 in the <i>i</i>-th entry),

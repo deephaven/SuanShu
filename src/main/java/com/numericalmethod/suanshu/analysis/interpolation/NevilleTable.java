@@ -43,6 +43,7 @@ import java.util.Arrays;
  */
 public class NevilleTable extends UnivariateRealFunction implements OnlineInterpolator {
 
+    private static final long serialVersionUID = -4248771621666410317L;
     private double[] x;//the abscissae
     private double[][] table;//TODO: write a version that does not keep the O(n^2) table
     private double lastX;//last x evaluated

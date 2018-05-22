@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * The forward–backward algorithm is an inference algorithm for hidden Markov models
  * which computes the posterior marginals of all hidden state variables given a sequence of observations.
@@ -49,8 +51,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * @author Kevin Sun
  * @see <a href="http://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm">Wikipedia: Forward–backward algorithm</a>
  */
-public class HmmForwardBackward {
+public class HmmForwardBackward implements Serializable{
 
+    private static final long serialVersionUID = -2762033466707589863L;
     private HiddenMarkovModel model;
     /** the scaling vector for α and β, row by row for T rows */
     private Vector scales = null;

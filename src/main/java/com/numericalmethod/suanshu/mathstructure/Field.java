@@ -40,7 +40,7 @@ public interface Field<F> extends Ring<F> {
      */
     public static class InverseNonExistent extends Exception {
 
-        private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = -7477184035941912758L;
 
         /** Construct an instance of {@code InverseNonExistent} */
         public InverseNonExistent() {

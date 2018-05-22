@@ -37,6 +37,7 @@ import java.util.Arrays;
  */
 public class NonParametricBootstrap implements Resampling {
 
+    private static final long serialVersionUID = -1389039411281921152L;
     private double[] sample;// make a copy to make sure the sample never changes
     private RandomLongGenerator uniform = new UniformRng();
 

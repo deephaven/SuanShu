@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class Best1Bin extends Rand1Bin {
 
+    private static final long serialVersionUID = 2533711966179707971L;
+
     /**
      * Construct an instance of {@code Best1Bin}.
      *

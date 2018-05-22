@@ -49,6 +49,8 @@ import java.util.Arrays;
  */
 public class Quantile implements Statistic {
 
+    private static final long serialVersionUID = 2264990255487666180L;
+
     /**
      * the quantile definitions available
      *

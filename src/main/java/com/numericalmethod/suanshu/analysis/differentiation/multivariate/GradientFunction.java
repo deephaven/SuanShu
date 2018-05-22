@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class GradientFunction implements RealVectorFunction {
 
+    private static final long serialVersionUID = 8121699961760645977L;
     private final RealScalarFunction f;
 
     /**

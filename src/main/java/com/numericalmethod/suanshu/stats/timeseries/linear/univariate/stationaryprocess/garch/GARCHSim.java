@@ -53,6 +53,7 @@ import java.util.Arrays;
  */
 public class GARCHSim extends SimpleTimeSeries {
 
+    private static final long serialVersionUID = -1053973482219091878L;
     /**
      * the conditional variances
      */

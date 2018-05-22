@@ -31,14 +31,17 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solver.FerrisMangasarianWrightPhase2;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solver.LPSimplexSolver;
 
+import java.io.Serializable;
+
 /**
  * The phase 1 procedure finds a feasible table from an infeasible one by pivoting the simplex table of a related problem.
  *
  * @author Haksun Li
  * @see "Michael C. Ferris, Olvi L. Mangasarian, Stephen J. Wright, "Algorithm 3.2, Section 3.4, The Phase I Procedure," Linear Programming with MATLAB."
  */
-public class FerrisMangasarianWrightPhase1 {
+public class FerrisMangasarianWrightPhase1 implements Serializable{
 
+    private static final long serialVersionUID = 298209170382929414L;
     private SimplexTable table0;
 
     /**

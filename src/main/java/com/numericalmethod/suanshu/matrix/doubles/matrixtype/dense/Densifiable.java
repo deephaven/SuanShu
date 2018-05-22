@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense;
 
+import java.io.Serializable;
+
 /**
  * This interface specifies whether a matrix implementation can be efficiently converted to the standard dense matrix representation.
  * A particular matrix implementation may optimize the conversion by taking advantage of having access to the class' private members.
@@ -30,7 +32,7 @@ package com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense;
  * @author Haksun Li
  * @see DenseMatrix
  */
-public interface Densifiable {
+public interface Densifiable extends Serializable {
 
     /**
      * Densify a matrix, i.e., convert a matrix implementation to the standard dense matrix, {@link DenseMatrix}.

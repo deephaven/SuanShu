@@ -38,12 +38,16 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
 
+import java.io.Serializable;
+
 /**
  * This is a simplex table used to solve a linear programming problem using a simplex method.
  *
  * @author Haksun Li
  */
 public class SimplexTable extends FlexibleTable implements MinimizationSolution<ImmutableVector> {
+
+    private static final long serialVersionUID = -9217938335762779775L;
 
     //<editor-fold defaultstate="collapsed" desc="labeling of rows and columns">
     public static enum LabelType {
@@ -90,7 +94,8 @@ public class SimplexTable extends FlexibleTable implements MinimizationSolution<
         UNDEFINED
     };
 
-    public static class Label {//a read-only structure
+    public static class Label implements Serializable{//a read-only structure
+        private static final long serialVersionUID = -6078006063753834868L;
 
         /**
          * the label type

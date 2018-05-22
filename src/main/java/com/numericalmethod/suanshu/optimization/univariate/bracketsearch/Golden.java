@@ -39,10 +39,14 @@ import com.numericalmethod.suanshu.optimization.problem.C2OptimProblem;
  */
 public class Golden extends BracketSearch {
 
+    private static final long serialVersionUID = 7130409704176485098L;
+
     /**
      * This is the solution to a Golden section univariate optimization.
      */
     public class Solution extends BracketSearch.Solution {
+
+        private static final long serialVersionUID = 5528751096680223890L;
 
         private Solution(UnivariateRealFunction f) {
             super(f);

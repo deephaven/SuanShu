@@ -37,6 +37,8 @@ import static java.lang.Math.*;
  */
 public class Gaussian extends com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Gaussian implements QuasiFamily {
 
+    private static final long serialVersionUID = -4917701604122644123L;
+
     /**
      * Create an instance of {@code Gaussian}.
      * The canonical link is {@link Identity}.

@@ -33,6 +33,7 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
  */
 public class Euler implements DiscretizedSDE {
 
+    private static final long serialVersionUID = -1898303135871491254L;
     /**
      * the continuous-time univariate SDE
      */

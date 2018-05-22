@@ -62,6 +62,7 @@ import java.util.Map;
  */
 public class QPPrimalActiveSetSolver implements ConstrainedMinimizer<QPProblem, IterativeMinimizer<QPSolution>> {
 
+    private static final long serialVersionUID = -7674162856438999683L;
     private final double epsilon;
     private final int maxIterations;
 
@@ -70,6 +71,7 @@ public class QPPrimalActiveSetSolver implements ConstrainedMinimizer<QPProblem, 
      */
     public class Solution implements IterativeMinimizer<QPSolution> {
 
+        private static final long serialVersionUID = 556038460563308914L;
         private QPSolution minimizer;
         private Vector x;
         private int k = 0;
@@ -136,6 +138,8 @@ public class QPPrimalActiveSetSolver implements ConstrainedMinimizer<QPProblem, 
         public QPSolution search(final Vector initial) throws QPInfeasible {//TODO: this algorithm may fail if the initial is not strictly feasible
             return search(
                     new QPSolution() {
+
+                        private static final long serialVersionUID = 16545149667671751L;
 
                         @Override
                         public boolean isUnique() {
@@ -295,6 +299,8 @@ public class QPPrimalActiveSetSolver implements ConstrainedMinimizer<QPProblem, 
 
         private QPSolution getSolution(final Vector x) {
             return new QPSolution() {
+
+                private static final long serialVersionUID = -609860967670431847L;
 
                 @Override
                 public boolean isUnique() {

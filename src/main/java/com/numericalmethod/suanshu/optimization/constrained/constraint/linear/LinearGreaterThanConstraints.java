@@ -46,6 +46,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class LinearGreaterThanConstraints extends LinearConstraints implements GreaterThanConstraints {
 
+    private static final long serialVersionUID = 1408350997909072089L;
+
     /**
      * Construct a collection of linear greater-than or equal-to constraints.
      *

@@ -22,7 +22,6 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense;
 
-import static com.numericalmethod.suanshu.datastructure.DimensionCheck.*;
 import com.numericalmethod.suanshu.matrix.MatrixAccessException;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.mathoperation.MatrixMathOperation;
@@ -34,7 +33,11 @@ import com.numericalmethod.suanshu.parallel.MultipleExecutionException;
 import com.numericalmethod.suanshu.parallel.ParallelExecutor;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
 import java.util.Arrays;
+
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfDifferentDimension;
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfIncompatible4Multiplication;
 
 /**
  * This class implements the standard, dense, {@code double} based matrix representation.
@@ -48,14 +51,13 @@ import java.util.Arrays;
  */
 public class DenseMatrix implements Matrix, Densifiable {
 
-    private static class ParallelExecutorInstanceHolder { // thread-safe lazy initialization idiom
+    private static final long serialVersionUID = 913612418229957283L;
 
-        private static final ParallelExecutor instance = new ParallelExecutor();
-    }
 
     //<editor-fold defaultstate="collapsed" desc="customize the view/usage of the data array">
     private static class MyDenseDataImpl extends DenseData {
 
+        private static final long serialVersionUID = -3258990380240538309L;
         private final double[] data = asArray();
         private final int nCols;
 
@@ -109,13 +111,17 @@ public class DenseMatrix implements Matrix, Densifiable {
             return nCols;
         }
     }
+
     //</editor-fold>
     private MyDenseDataImpl storage;
     private final MatrixMathOperation math = new SimpleMatrixMathOperation();
-    /** for parallel algorithm execution */
+    /**
+     * for parallel algorithm execution
+     */
     private static final int LENGTH_THRESHOLD = 100 * 100;
 
     //<editor-fold defaultstate="collapsed" desc="Ctors">
+
     /**
      * Construct a 0 matrix of dimension <i>nRows * nCols</i>.
      *
@@ -403,7 +409,7 @@ public class DenseMatrix implements Matrix, Densifiable {
 //            }
 //        }
         try {
-            ParallelExecutorInstanceHolder.instance.conditionalForLoop(
+            ParallelExecutor.getInstance().conditionalForLoop(
                     thisData.length >= LENGTH_THRESHOLD,
                     0, thisData.length, nCols,
                     new LoopBody() { //loop over rows of 'this'
@@ -466,7 +472,7 @@ public class DenseMatrix implements Matrix, Densifiable {
 //        }
 
         try {
-            ParallelExecutorInstanceHolder.instance.conditionalForLoop(
+            ParallelExecutor.getInstance().conditionalForLoop(
                     thisData.length >= LENGTH_THRESHOLD,
                     0, nRows, new LoopBody() {
 
@@ -507,7 +513,7 @@ public class DenseMatrix implements Matrix, Densifiable {
 //            result.set(i / nCols + 1, sum);
 //        }
         try {
-            ParallelExecutorInstanceHolder.instance.conditionalForLoop(
+            ParallelExecutor.getInstance().conditionalForLoop(
                     resultData.length >= LENGTH_THRESHOLD,
                     0, resultData.length, 1,
                     new LoopBody() {

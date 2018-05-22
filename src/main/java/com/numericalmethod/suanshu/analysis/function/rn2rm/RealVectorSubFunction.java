@@ -35,6 +35,8 @@ import java.util.Map;
  */
 public class RealVectorSubFunction extends SubFunction<Vector> implements RealVectorFunction {
 
+    private static final long serialVersionUID = -1368736396154556477L;
+
     /**
      * Construct a vector-valued sub-function.
      *

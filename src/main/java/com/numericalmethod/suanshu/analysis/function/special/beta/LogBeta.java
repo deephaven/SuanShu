@@ -46,6 +46,7 @@ import com.numericalmethod.suanshu.analysis.function.special.gamma.LogGamma;
 public class LogBeta extends BivariateRealFunction {
 
     private final static LogGamma lgamma = new LogGamma();//(LogGamma.Method.LANCZOS, 607 / 128, 15, 30);
+    private static final long serialVersionUID = 5897335482869232860L;
 
     /**
      * Compute {@code log(B(x,y))}.

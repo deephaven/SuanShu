@@ -31,6 +31,9 @@ import com.numericalmethod.suanshu.analysis.interpolation.NevilleTable;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -48,7 +51,9 @@ import static java.lang.Math.*;
  */
 public class Ridders implements RealScalarFunction {
 
-    private static interface MyFunction {
+    private static final long serialVersionUID = 5537594420411938832L;
+
+    private static interface MyFunction extends Serializable {
 
         double evaluate(Vector x, double h);
     }
@@ -85,6 +90,7 @@ public class Ridders implements RealScalarFunction {
         this.discretization = discretization;
         this.dfh = new MyFunction() {
 
+            private static final long serialVersionUID = -4798307568219751778L;
             private final com.numericalmethod.suanshu.analysis.differentiation.univariate.FiniteDifference df =
                     new com.numericalmethod.suanshu.analysis.differentiation.univariate.FiniteDifference(f, order, Type.CENTRAL);
 
@@ -129,6 +135,7 @@ public class Ridders implements RealScalarFunction {
         this.discretization = discretization;
         this.dfh = new MyFunction() {
 
+            private static final long serialVersionUID = 611804966588381225L;
             private final com.numericalmethod.suanshu.analysis.differentiation.multivariate.FiniteDifference df =
                     new com.numericalmethod.suanshu.analysis.differentiation.multivariate.FiniteDifference(f, varidx);
 

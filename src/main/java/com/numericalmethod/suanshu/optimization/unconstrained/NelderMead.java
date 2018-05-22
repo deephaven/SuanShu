@@ -48,12 +48,14 @@ import java.util.Arrays;
  * @see <a href="http://en.wikipedia.org/wiki/Nelder-Mead_method">Wikipedia: Nelder–Mead method</a>
  */
 public class NelderMead implements MultivariateMinimizer<IterativeMinimizer<Vector>> {//TODO: convergence criterion
+    private static final long serialVersionUID = -5189921638271260561L;
 
     /**
      * This is the solution to an optimization problem by the Nelder-Mead method.
      */
     public class Solution implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = -2215100762170165718L;
         private Vector[] x;
         private double[] fx;
         private final RealScalarFunction f;//the objective function

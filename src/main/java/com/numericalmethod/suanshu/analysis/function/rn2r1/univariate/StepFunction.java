@@ -43,6 +43,7 @@ import java.util.TreeSet;
  */
 public class StepFunction extends UnivariateRealFunction implements OrderedPairs {
 
+    private static final long serialVersionUID = -3058120341184649507L;
     private final TreeSet<Pair> pairs;
 
     /**

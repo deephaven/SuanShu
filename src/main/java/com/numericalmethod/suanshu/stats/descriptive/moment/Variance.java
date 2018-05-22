@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.stats.descriptive.Statistic;
  */
 public class Variance implements Statistic {
 
+    private static final long serialVersionUID = -3922655110896062476L;
     /** indicate whether the variance calculation is unbiased or not; {@code true} if unbiased */
     private final boolean unbiased;
     private long N = 0;

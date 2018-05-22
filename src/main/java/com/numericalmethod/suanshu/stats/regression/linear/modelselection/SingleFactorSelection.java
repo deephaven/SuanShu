@@ -29,6 +29,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.stats.distribution.univariate.NormalDistribution;
 import com.numericalmethod.suanshu.stats.regression.linear.glm.GLMProblem;
 import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinearModel;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -39,14 +41,15 @@ import java.util.Arrays;
  *
  * @author Chun Yip Yau
  */
-abstract class SingleFactorSelection {//TODO: R package leaps
+abstract class SingleFactorSelection implements Serializable{
+    private static final long serialVersionUID = 3511793391752404798L;//TODO: R package leaps
 
     /**
      * We throw a <tt>ModelNotFound</tt> exception when we fail to construct a getModel to explain the data.
      */
     public static class ModelNotFound extends RuntimeException {
 
-        private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = 2241153525330369776L;
 
         /**
          * Construct a <tt>ModelNotFound</tt> exception with an error message.
@@ -61,8 +64,9 @@ abstract class SingleFactorSelection {//TODO: R package leaps
     /**
      * This is an auxiliary class to keep track of which getFactors/variables/regressors are selected in the getModel.
      */
-    class Indices {
+    static class Indices implements Serializable{
 
+        private static final long serialVersionUID = -4615613908467942617L;
         /**
          * the GLM problem to be solved
          */

@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class QuasiGlmProblem extends com.numericalmethod.suanshu.stats.regression.linear.glm.GLMProblem {
 
+    private static final long serialVersionUID = -139592044538538242L;
     /**
      * the quasi-quasiFamily distribution
      */

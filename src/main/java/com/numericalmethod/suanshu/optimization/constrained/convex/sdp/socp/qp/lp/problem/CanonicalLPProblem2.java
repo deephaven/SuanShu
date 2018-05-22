@@ -49,6 +49,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class CanonicalLPProblem2 extends LPProblemImpl1 {
 
+    private static final long serialVersionUID = 5203256239835235223L;
+
     /**
      * Construct a linear programming problem in the canonical form.
      *

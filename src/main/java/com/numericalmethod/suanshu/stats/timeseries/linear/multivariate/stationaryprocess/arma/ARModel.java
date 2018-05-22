@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class ARModel extends ARMAModel {
 
+    private static final long serialVersionUID = -955827072238951528L;
+
     /**
      * Construct a VAR model.
      *

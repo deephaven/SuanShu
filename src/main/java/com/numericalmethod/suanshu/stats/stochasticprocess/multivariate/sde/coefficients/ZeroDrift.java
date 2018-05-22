@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ZeroDrift implements Drift {
 
+    private static final long serialVersionUID = 6279864464293699750L;
+
     public Vector evaluate(Ft ft) {
         int n = ft.dim();
         return new DenseVector(n, 0);

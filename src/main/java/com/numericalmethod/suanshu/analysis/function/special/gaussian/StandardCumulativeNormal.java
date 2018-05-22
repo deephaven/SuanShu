@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.function.special.gaussian;
 
+import java.io.Serializable;
+
 /**
  * The cumulative Normal distribution function describes the probability of a Normal random variable falling in the interval \((-\infty, x]\).
  * It is defined as:
@@ -36,7 +38,7 @@ package com.numericalmethod.suanshu.analysis.function.special.gaussian;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Cumulative_normal#Cumulative_distribution_function">Wikipedia: Cumulative distribution function</a>
  */
-public interface StandardCumulativeNormal {
+public interface StandardCumulativeNormal extends Serializable {
 
     /**
      * Evaluate \(F(x;\,\mu,\sigma^2)\).

@@ -37,6 +37,8 @@ import static java.lang.Math.*;
  */
 public class InverseGaussian extends Family {
 
+    private static final long serialVersionUID = 6243289038729757348L;
+
     /**
      * Construct an instance of {@code InverseGaussian}.
      * The canonical link is {@link InverseSquared}.

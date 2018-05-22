@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.Ft;
  */
 public class Brownian implements DiscretizedSDE {
 
+    private static final long serialVersionUID = 3104819644178958145L;
     /**
      * μ, the drift
      */

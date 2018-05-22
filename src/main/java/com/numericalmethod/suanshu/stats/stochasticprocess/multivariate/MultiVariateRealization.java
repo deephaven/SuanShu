@@ -25,6 +25,9 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate;
 import com.numericalmethod.suanshu.stats.random.univariate.normal.StandardNormalRng;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -51,8 +54,9 @@ public interface MultiVariateRealization extends com.numericalmethod.suanshu.sta
      * A realization is therefore only created on demand.
      * For example, we create a realization when an <tt>Iterator</tt> is constructed.
      */
-    public abstract class Iterator implements java.util.Iterator<MultiVariateRealization.Entry> {
+    public static abstract class Iterator implements java.util.Iterator<MultiVariateRealization.Entry>, Serializable {
 
+        private static final long serialVersionUID = -6955475891642410695L;
         private int index = 0;// count from 1
         /**
          * the dimension of the Brownian motion

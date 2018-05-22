@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.regression.linear;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The residual of a sample is the difference between the sample and the estimated function (fitted) value.
  * 
@@ -32,8 +34,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see <a href="http://en.wikipedia.org/wiki/Errors_and_residuals_in_statistics">Wikipedia: Errors and residuals in statistics</a>
  */
-public abstract class Residuals {
+public abstract class Residuals implements Serializable{
 
+    private static final long serialVersionUID = -7635580752345564235L;
     /**
      * the linear regression problem to be solved
      */

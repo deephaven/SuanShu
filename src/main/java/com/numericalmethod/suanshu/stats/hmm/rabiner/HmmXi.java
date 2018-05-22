@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.hmm.rabiner;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 
+import java.io.Serializable;
+
 /**
  * <i>ξ</i> is the probability of the system being in state <i>s<sub>i</sub><i> at time <i>t</i> and state <i>s<sub>j</sub><i> at time <i>t+1</i>,
  * given the model and observation sequence.
@@ -34,8 +36,9 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  *
  * @author Kevin Sun
  */
-public class HmmXi {
+public class HmmXi implements Serializable{
 
+    private static final long serialVersionUID = 882179517824475466L;
     private final HiddenMarkovModel model;
 
     /**

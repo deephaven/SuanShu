@@ -49,6 +49,7 @@ public class Polynomial extends UnivariateRealFunction implements Ring<Polynomia
     public static final Polynomial ZERO = new Polynomial(0);
     /** a polynomial representing <i>1</i> */
     public static final Polynomial ONE = new Polynomial(1);
+    private static final long serialVersionUID = 3705849655448395408L;
     private int degree;
     private final double coefficients[];
 

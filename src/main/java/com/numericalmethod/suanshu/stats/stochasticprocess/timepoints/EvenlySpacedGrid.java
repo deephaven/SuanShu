@@ -31,6 +31,7 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  */
 public class EvenlySpacedGrid implements TimeGrid {
 
+    private static final long serialVersionUID = -852662758806920625L;
     /**
      * the number of time points
      */

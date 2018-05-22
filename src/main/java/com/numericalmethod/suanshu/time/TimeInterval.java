@@ -34,6 +34,8 @@ import org.joda.time.DateTime;
  */
 public class TimeInterval extends Interval<DateTime> {
 
+    private static final long serialVersionUID = -4882274424371987577L;
+
     /**
      * Construct a time interval from two time points.
      *

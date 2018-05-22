@@ -23,6 +23,7 @@
 package com.numericalmethod.suanshu.parallel;
 
 import com.numericalmethod.suanshu.parallel.SynchronizedIterator.Element;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +33,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * This class provides a framework for executing an algorithm in parallel. A
  * thread pool is created when executing a list of tasks.
- *
+ * <p>
  * <p>
  * Caution: Avoid using another executor within parallelized calls, this would
  * create numerous threads, leading to much memory consumption and huge overhead
@@ -49,16 +50,23 @@ public class ParallelExecutor {
     private final AtomicLong threadCount = new AtomicLong(0);
     private final long executorId = executorCount.incrementAndGet();
     private final String namePrefix = String.format("parallel-executor-%d-thread-", executorId);
+    private static ParallelExecutor parallelExecutor = new ParallelExecutor(Runtime.getRuntime().availableProcessors());
+
+
+    public static synchronized ParallelExecutor getInstance() {
+        return parallelExecutor;
+    }
 
     /**
-     * Creates an instance using default concurrency number, which is the
-     * number of available processors returned by
-     * <pre><code>
-     * Runtime.getRuntime().availableProcessors()
-     * </code></pre>
+     * Sets the concurrency level for the ParallelExecutor.
+     *
+     * @param concurrency concurrency level to set.  -1 indicates that there should be one thread per processor.
      */
-    public ParallelExecutor() {
-        this(Runtime.getRuntime().availableProcessors());
+    public static synchronized void setConcurrencyLevel(final int concurrency) {
+        final int realConcurrency = concurrency <= 0 ? Runtime.getRuntime().availableProcessors() : concurrency;
+        if (realConcurrency != parallelExecutor.concurrency) {
+            parallelExecutor = new ParallelExecutor(realConcurrency);
+        }
     }
 
     /**
@@ -66,7 +74,7 @@ public class ParallelExecutor {
      *
      * @param concurrency the maximum number of threads can be used when executing a list of tasks
      */
-    public ParallelExecutor(int concurrency) {
+    private ParallelExecutor(int concurrency) {
         this.concurrency = concurrency;
         this.executor = new ThreadPoolExecutor(
                 concurrency,
@@ -97,6 +105,15 @@ public class ParallelExecutor {
          * Ref.: see javadoc for ThreadPoolExecutor
          */
         this.executor.allowCoreThreadTimeOut(true);
+    }
+
+    /**
+     * Gets the number of concurrent threads.
+     *
+     * @return number of concurrent threads.
+     */
+    public int getConcurrency() {
+        return concurrency;
     }
 
     /**
@@ -317,7 +334,7 @@ public class ParallelExecutor {
 
                         @Override
                         public Void call() throws Exception {
-                            for (Element<T> element; (element = iterator.next()).exists();) {
+                            for (Element<T> element; (element = iterator.next()).exists(); ) {
                                 body.run(element.get());
                             }
                             return null;

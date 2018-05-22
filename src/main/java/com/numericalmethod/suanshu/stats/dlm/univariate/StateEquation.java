@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
 import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
 
+import java.io.Serializable;
+
 /**
  * This is the state equation in a controlled dynamic linear model.
  * <blockquote><i>
@@ -34,8 +36,9 @@ import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
  *
  * @author Haksun Li
  */
-public class StateEquation {
+public class StateEquation implements Serializable{
 
+    private static final long serialVersionUID = 4190769357826213482L;
     /**
      * For a time-invariant DLM (or time-invariant controlled DLM),
      * this represents a constant coefficient of x_{t_1} in the state equation.
@@ -102,6 +105,8 @@ public class StateEquation {
                 G,
                 new UnivariateRealFunction() {
 
+                    private static final long serialVersionUID = -8230567944146972376L;
+
                     @Override
                     public double evaluate(double x) {
                         return 0;
@@ -122,6 +127,8 @@ public class StateEquation {
         this(
                 new UnivariateRealFunction() {
 
+                    private static final long serialVersionUID = 412417948360640241L;
+
                     @Override
                     public double evaluate(double x) {
                         return G;
@@ -129,12 +136,16 @@ public class StateEquation {
                 },
                 new UnivariateRealFunction() {
 
+                    private static final long serialVersionUID = -5740735187573191544L;
+
                     @Override
                     public double evaluate(double x) {
                         return H;
                     }
                 },
                 new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = 3123723265422884576L;
 
                     @Override
                     public double evaluate(double x) {

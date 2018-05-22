@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
  */
 public class ConcurrentCachedRNG implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = -3979467102789638226L;
     private final ConcurrentCachedGenerator<Double> concurrentGenerator;
     private final RandomNumberGenerator rng;
 
@@ -50,6 +51,8 @@ public class ConcurrentCachedRNG implements RandomNumberGenerator {
         this.rng = rng;
         this.concurrentGenerator = new ConcurrentCachedGenerator<Double>(
                 new Generator<Double>() {
+
+                    private static final long serialVersionUID = 7041045242156843299L;
 
                     @Override
                     public Double next() {

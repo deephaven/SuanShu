@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
  */
 public class ConcurrentCachedRLG implements RandomLongGenerator {
 
+    private static final long serialVersionUID = -7368135259389219205L;
     private final ConcurrentCachedGenerator<Long> concurrentGenerator;
     private final RandomNumberGenerator rlg;
 
@@ -51,6 +52,8 @@ public class ConcurrentCachedRLG implements RandomLongGenerator {
         this.rlg = rlg;
         this.concurrentGenerator = new ConcurrentCachedGenerator<Long>(
                 new Generator<Long>() {
+
+                    private static final long serialVersionUID = 7441103942273749729L;
 
                     @Override
                     public Long next() {

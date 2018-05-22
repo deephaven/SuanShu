@@ -47,7 +47,11 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class FletcherReeves extends ConjugateGradient {
 
+    private static final long serialVersionUID = -3984815673850221905L;
+
     private class FletcherReevesImpl extends HestenesStiefel {
+
+        private static final long serialVersionUID = 4658143369299607259L;
 
         protected FletcherReevesImpl(C2OptimProblem problem) throws Exception {
             super(problem);

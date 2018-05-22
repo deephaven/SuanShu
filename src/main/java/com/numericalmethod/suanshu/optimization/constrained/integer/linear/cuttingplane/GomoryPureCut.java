@@ -38,11 +38,14 @@ import com.numericalmethod.suanshu.optimization.constrained.integer.linear.probl
  */
 public class GomoryPureCut extends SimplexCuttingPlane {
 
+    private static final long serialVersionUID = -7936504570810950019L;
+
     /**
      * This is Gomory's pure cut.
      */
     public static class MyCutter implements Cutter {
 
+        private static final long serialVersionUID = 6196351264551436545L;
         private final PureILPProblem problem;
 
         /**
@@ -96,6 +99,8 @@ public class GomoryPureCut extends SimplexCuttingPlane {
         super(
                 new LPTwoPhaseSolver(),
                 new CutterFactory() {
+
+                    private static final long serialVersionUID = 5645433853011649694L;
 
                     @Override
                     public Cutter getCutter(final ILPProblem problem) {

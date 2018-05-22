@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Courant extends MultiplierPenalty {
 
+    private static final long serialVersionUID = -4692743746934806398L;
+
     /**
      * Construct a Courant penalty function from a collection of equality constraints.
      *

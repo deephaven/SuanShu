@@ -28,6 +28,5 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  * @author Haksun Li
  */
 public class LPNoConstraint extends LPRuntimeException {
-
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -5677217804614871995L;
 }

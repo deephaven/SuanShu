@@ -67,6 +67,7 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
     private static final Polynomial p4 = new Polynomial(new double[]{1981235233 / 6666395904000d, -449882243 / 982102968000d, -269383 / 4232632320d, 319 / 183708d});
     //a rough approximation from eq. 10.42; might not even give +ve lambda for some eta
     private static final Polynomial pLambda = new Polynomial(new double[]{1 / 4320d, -1 / 270d, 1 / 36d, 1 / 3d, 1, 1});
+    private static final long serialVersionUID = -2882839868104497488L;
 
     /**
      * Evaluate <i>x = P<sup>-1</sup>(s,u)</i>.
@@ -97,6 +98,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
             //<i>u</i> is the root for <i>f</i>
             UnivariateRealFunction f = new UnivariateRealFunction() {
 
+                private static final long serialVersionUID = 6450301962741154111L;
+
                 @Override
                 public double evaluate(double x) {
                     return pgamma.evaluate(s, x) - u;
@@ -105,6 +108,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
 
             //df = dP/dx = (x<sup>s-1</sup> * e<sup>-x</sup>) / Γ(s)
             UnivariateRealFunction df = new UnivariateRealFunction() {
+
+                private static final long serialVersionUID = 8990417695641835712L;
 
                 @Override
                 public double evaluate(double x) {
@@ -121,6 +126,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
              * = x<sup>s-2</sup> * e<sup>-x</sup> * (-x + s - 1) / Γ(s)
              */
             UnivariateRealFunction d2f = new UnivariateRealFunction() {
+
+                private static final long serialVersionUID = 1541623596542849660L;
 
                 @Override
                 public double evaluate(double x) {
@@ -170,6 +177,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
             lambda = halley.solve(
                     new UnivariateRealFunction() {
 
+                        private static final long serialVersionUID = -305735758684045172L;
+
                         @Override
                         public double evaluate(double x) {
                             double f = x - 1 - log(x) - half_nu_sq;//solve for f(λ) = λ - 1 - log(λ) - 0.5(ηη) = 0
@@ -178,6 +187,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
                     },
                     new UnivariateRealFunction() {
 
+                        private static final long serialVersionUID = -6504283628153860495L;
+
                         @Override
                         public double evaluate(double x) {
                             double f = 1d - 1d / x;//f'(λ) = 1 - 1/λ
@@ -185,6 +196,8 @@ public class GammaRegularizedPInverse extends BivariateRealFunction {
                         }
                     },
                     new UnivariateRealFunction() {
+
+                        private static final long serialVersionUID = 880626343859242006L;
 
                         @Override
                         public double evaluate(double x) {

@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.matrix.doubles.MatrixTable;
  */
 public class JordanExchange extends FlexibleTable {
 
+    private static final long serialVersionUID = 2616007556364907168L;
+
     /**
      * Construct a new table by exchanging the r-th row with the s-th column in <i>A</i> using Jordan Exchange.
      *

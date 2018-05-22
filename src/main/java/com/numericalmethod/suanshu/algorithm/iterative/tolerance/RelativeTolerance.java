@@ -36,6 +36,7 @@ public class RelativeTolerance implements Tolerance {
 
     /** default tolerance */
     public static final double DEFAULT_TOLERANCE = 1e-4;
+    private static final long serialVersionUID = 3600039117677638174L;
     private final double base;
     private final double tolerance;
 

@@ -38,7 +38,11 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.*;
  */
 public class Backward extends SingleFactorSelection {
 
+    private static final long serialVersionUID = -6224972247944295109L;
+
     private class Indices extends SingleFactorSelection.Indices {
+
+        private static final long serialVersionUID = -3499029440213966012L;
 
         private Indices(GLMProblem problem) {
             super(problem);

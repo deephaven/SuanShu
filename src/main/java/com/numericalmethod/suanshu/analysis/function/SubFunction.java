@@ -40,6 +40,7 @@ import java.util.Map.Entry;
  */
 public abstract class SubFunction<R> implements Function<Vector, R> {
 
+    private static final long serialVersionUID = -8678654851150737855L;
     /** the original, unrestricted function */
     protected final Function<Vector, R> f;
     /** the restrictions or fixed values */

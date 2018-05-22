@@ -41,6 +41,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Gradient extends DenseVector {
 
+    private static final long serialVersionUID = 4072894331816678376L;
+
     /**
      * Construct the gradient vector for a multivariate function <i>f</i> at point <i>x</i>.
      *

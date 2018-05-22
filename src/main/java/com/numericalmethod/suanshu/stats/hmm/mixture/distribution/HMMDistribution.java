@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.stats.distribution.univariate.ProbabilityDist
 import com.numericalmethod.suanshu.stats.hmm.mixture.HmmBaumWelch;
 import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator;
 
+import java.io.Serializable;
+
 /**
  * This is the conditional distribution of the observations in each state
  * (possibly differently parameterized) of a mixture hidden Markov model.
@@ -34,7 +36,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
  *
  * @author Haksun Li
  */
-public interface HMMDistribution {
+public interface HMMDistribution extends Serializable{
 
     /**
      * Get the parameters, for each state, of the distribution.

@@ -28,6 +28,8 @@ import com.numericalmethod.suanshu.matrix.doubles.factorization.qr.HouseholderRe
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -50,14 +52,14 @@ import java.util.*;
  * <i>x</i> is a particular solution.
  *
  * @author Haksun Li
- * @see
- * <ul>
+ * @see <ul>
  * <li><a href="http://en.wikipedia.org/wiki/Kernel_(matrix)#Nonhomogeneous_equations">Wikipedia: Kernel (matrix)</a>
  * <li><a href="http://en.wikipedia.org/wiki/Rank-nullity_theorem">Wikipedia: Rank–nullity theorem</a>
  * </ul>
  */
-public class Kernel {
+public class Kernel implements Serializable {
 
+    private static final long serialVersionUID = -8216841706505742345L;
     private Matrix U;
     private Matrix T;
     private Map<Integer, Vector> basis;//the basis for A's kernel
@@ -93,7 +95,7 @@ public class Kernel {
      * @param A       a matrix
      * @param method  the kernel computation method
      * @param epsilon a precision parameter: when a number |x| ≤ ε, it is considered 0;
-     * the ε is used to determine the numerical rank of the linear space
+     *                the ε is used to determine the numerical rank of the linear space
      */
     public Kernel(Matrix A, Method method, double epsilon) {
         SuanShuUtils.assertArgument(A.nCols() >= A.nRows(), "cannot compute for an over-determined system");

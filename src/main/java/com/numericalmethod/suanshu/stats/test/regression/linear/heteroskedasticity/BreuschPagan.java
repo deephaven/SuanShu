@@ -52,6 +52,7 @@ import static java.lang.Math.pow;
  */
 public class BreuschPagan extends Heteroskedasticity {
 
+    private static final long serialVersionUID = -4873544630683073764L;
     private final boolean studentized;
 
     /**

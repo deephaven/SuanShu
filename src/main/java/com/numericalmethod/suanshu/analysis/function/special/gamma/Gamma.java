@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.function.special.gamma;
 
+import java.io.Serializable;
+
 /**
  * The Gamma function is an extension of the factorial function to real and complex numbers, with its argument shifted down by 1.
  * For real numbers, it is defined as:
@@ -38,7 +40,7 @@ package com.numericalmethod.suanshu.analysis.function.special.gamma;
  * <li><a href="http://en.wikipedia.org/wiki/Spouge%27s_approximation">Wikipedia: Spouge's approximation</a>
  * </ul>
  */
-public interface Gamma {
+public interface Gamma extends Serializable{
 
     /**
      * Evaluate \(\Gamma(z) = \int_0^\infty e^{-t} t^{z-1} dt\).

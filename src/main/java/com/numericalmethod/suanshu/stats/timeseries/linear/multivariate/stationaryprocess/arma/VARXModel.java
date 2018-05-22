@@ -56,6 +56,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class VARXModel extends ARMAXModel {
 
+    private static final long serialVersionUID = -6234614515935280811L;
+
     /**
      * Construct a VARX model.
      *

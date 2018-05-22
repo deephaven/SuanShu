@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class BinomialRng implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = -6517017119083935064L;
     /** the number of trials, a natural number */
     private final int n;
     /** the success probability in each trial, [0, 1] */

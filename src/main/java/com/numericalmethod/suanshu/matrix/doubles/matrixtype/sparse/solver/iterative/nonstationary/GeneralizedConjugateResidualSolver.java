@@ -49,6 +49,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class GeneralizedConjugateResidualSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = -1214846907449845466L;
     private final int m0;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration0;
@@ -80,6 +81,8 @@ public class GeneralizedConjugateResidualSolver implements IterativeLinearSystem
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = 8701082357741286787L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -107,6 +110,7 @@ public class GeneralizedConjugateResidualSolver implements IterativeLinearSystem
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = 2405119395196560496L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final int maxIteration = (m0 >= problem.A().nCols())

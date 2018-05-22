@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.random.univariate;
 
+import java.io.Serializable;
+
 /**
  * A (pseudo) random number generator is an algorithm designed to generate a sequence of numbers that lack any pattern.
  * However, it is very important to know that the sequence is not random at all and
@@ -43,7 +45,7 @@ package com.numericalmethod.suanshu.stats.random.univariate;
  * <li><a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Wikipedia: Pseudorandom number generator</a>
  * </ul>
  */
-public interface RandomNumberGenerator {
+public interface RandomNumberGenerator extends Serializable{
 
     /**
      * Seed the random number generator to produce repeatable sequences.

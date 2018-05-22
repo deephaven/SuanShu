@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import static java.lang.Math.*;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -47,10 +49,12 @@ import java.util.ArrayList;
  */
 public class SimpleGridMinimizer implements Minimizer<OptimProblem, IterativeMinimizer<Vector>> {
 
+    private static final long serialVersionUID = 1566165167306838383L;
+
     /**
      * This factory constructs a new {@code SimpleCellFactory} for each minimization problem.
      */
-    public static interface NewCellFactoryCtor {
+    public static interface NewCellFactoryCtor extends Serializable{
 
         /**
          * Construct a new instance of {@code SimpleCellFactory} for a minimization problem.
@@ -65,6 +69,7 @@ public class SimpleGridMinimizer implements Minimizer<OptimProblem, IterativeMin
      */
     protected class Solution extends GeneticAlgorithm implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = 2491362060259471584L;
         protected Vector[] initials;
         protected int iteration = 0;
         protected int nNoChanges = 0;
@@ -241,6 +246,8 @@ public class SimpleGridMinimizer implements Minimizer<OptimProblem, IterativeMin
     public SimpleGridMinimizer(boolean parallel, double epsilon, int maxIterations) {
         this(
                 new NewCellFactoryCtor() {
+
+                    private static final long serialVersionUID = 6331248950820300456L;
 
                     @Override
                     public SimpleCellFactory newCellFactory() {

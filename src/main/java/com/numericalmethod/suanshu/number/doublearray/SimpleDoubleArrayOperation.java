@@ -29,6 +29,8 @@ package com.numericalmethod.suanshu.number.doublearray;
  */
 public class SimpleDoubleArrayOperation implements DoubleArrayOperation {
 
+    private static final long serialVersionUID = 7779083761487983868L;
+
     @Override
     public double[] add(double[] arr1, double[] arr2) {
         double[] result = new double[arr1.length];

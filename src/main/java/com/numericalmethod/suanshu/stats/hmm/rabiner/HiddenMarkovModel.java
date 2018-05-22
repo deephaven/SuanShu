@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class HiddenMarkovModel extends com.numericalmethod.suanshu.stats.hmm.HiddenMarkovModel {
 
+    private static final long serialVersionUID = -4368572607327115500L;
     /** the conditional probabilities of the observation symbols */
     private final ImmutableMatrix B;
 
@@ -68,6 +69,7 @@ public class HiddenMarkovModel extends com.numericalmethod.suanshu.stats.hmm.Hid
             final int j = i;
             rng[i] = new RandomNumberGenerator() {
 
+                private static final long serialVersionUID = -4803555096387913507L;
                 private final MultinomialRvg rvg = new MultinomialRvg(1, B.getRow(j + 1).toArray());
 
                 @Override

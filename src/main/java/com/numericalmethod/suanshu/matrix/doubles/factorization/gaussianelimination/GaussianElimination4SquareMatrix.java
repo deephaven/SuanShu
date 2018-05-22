@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class GaussianElimination4SquareMatrix implements LUDecomposition {
 
+    private static final long serialVersionUID = 3810482088189779549L;
     private final GaussianElimination instance;
 
     /**

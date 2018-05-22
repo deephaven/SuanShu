@@ -39,6 +39,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class SVEC extends DenseVector {
 
+    private static final long serialVersionUID = -4457723928419783862L;
+
     /**
      * Construct the SVEC of a matrix.
      *

@@ -22,13 +22,15 @@
  */
 package com.numericalmethod.suanshu.optimization.problem;
 
+import java.io.Serializable;
+
 /**
  * This is the solution to a minimization problem, {@link OptimProblem}.
  *
  * @param <T> the minimizer type
  * @author Haksun Li
  */
-public interface MinimizationSolution<T> {
+public interface MinimizationSolution<T> extends Serializable{
 
     /**
      * Get the (approximate) minimum found.

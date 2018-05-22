@@ -22,12 +22,14 @@
  */
 package com.numericalmethod.suanshu.stats.stochasticprocess.timepoints;
 
+import java.io.Serializable;
+
 /**
  * This interface represents the discrete time points in [t<sub>1</sub>, t<sub>n</sub> = T] for a stochastic process.
  *
  * @author Haksun Li
  */
-public interface TimeGrid {
+public interface TimeGrid extends Serializable{
 
     /**
      * the number of time points

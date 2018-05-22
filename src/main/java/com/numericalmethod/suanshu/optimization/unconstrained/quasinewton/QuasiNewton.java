@@ -47,12 +47,15 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public abstract class QuasiNewton extends SteepestDescent {
 
+    private static final long serialVersionUID = 8032865898149683518L;
+
     /**
      * This is an implementation of the Quasi-Newton algorithm.
      * A sub-class supplies the Hessian updating rule.
      */
     protected abstract class QuasiNewtonImpl extends SteepestDescentImpl {
 
+        private static final long serialVersionUID = 712735453685268644L;
         /**
          * This is the approximate inverse of the Hessian matrix.
          * An implementation of {@link #updateSk(com.numericalmethod.suanshu.vector.doubles.Vector)}

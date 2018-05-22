@@ -65,6 +65,7 @@ public class ConjugateGradientSquaredSolver implements IterativeLinearSystemSolv
      * The algorithm recomputes the residual as <i>b - Ax<sub>i</sub></i> once per this number of iterations
      */
     public static final int DEFAULT_RESIDUAL_REFRESH_RATE = 50;
+    private static final long serialVersionUID = 1933405844034022121L;
     private final int residualRefreshRate;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration0;
@@ -95,6 +96,8 @@ public class ConjugateGradientSquaredSolver implements IterativeLinearSystemSolv
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = -8636016217880457467L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -111,6 +114,7 @@ public class ConjugateGradientSquaredSolver implements IterativeLinearSystemSolv
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = 4959841223112595563L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final int maxIteration = Math.min(maxIteration0, A.nCols()); // guaranteed to converge in n iterations

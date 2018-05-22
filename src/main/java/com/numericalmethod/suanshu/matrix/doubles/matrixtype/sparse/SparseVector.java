@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.number.Real;
 import com.numericalmethod.suanshu.vector.doubles.IsVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -44,11 +46,14 @@ public class SparseVector implements
         SparseStructure,
         Iterable<SparseVector.Entry> {
 
+    private static final long serialVersionUID = 6809252703013113169L;
+
     /**
      * This is an entry in a {@link SparseVector}.
      */
-    public static class Entry {
+    public static class Entry implements Serializable{
 
+        private static final long serialVersionUID = 2004363734915002219L;
         private int index;
         private double value;
 

@@ -34,6 +34,7 @@ package com.numericalmethod.suanshu.algorithm.iterative.monitor;
  */
 public class CountMonitor<S> implements IterationMonitor<S> {
 
+    private static final long serialVersionUID = 8073432073024032830L;
     private int count = 0;
 
     @Override

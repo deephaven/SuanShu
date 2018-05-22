@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.matrix.doubles.operation.CreateMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.MatrixUtils;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -56,7 +58,8 @@ import java.util.List;
  * <li><a href="http://en.wikipedia.org/wiki/Orthogonal_complement">Wikipedia: Orthogonal complement</a>
  * </ul>
  */
-public class VectorSpace {//TODO: extend this so that nRows < nCols
+public class VectorSpace implements Serializable{//TODO: extend this so that nRows < nCols
+    private static final long serialVersionUID = 3992718134827930831L;
 
     private List<Vector> basis = new ArrayList<Vector>();
     private List<Vector> complement = new ArrayList<Vector>();

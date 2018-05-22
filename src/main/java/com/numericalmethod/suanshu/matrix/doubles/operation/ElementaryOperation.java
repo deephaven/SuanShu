@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ElementaryOperation implements MatrixTable {
 
+    private static final long serialVersionUID = 2103159961089352619L;
     /** the resultant transformation */
     private DenseMatrix T;
 

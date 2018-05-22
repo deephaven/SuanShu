@@ -36,6 +36,7 @@ import static java.lang.Math.log;
  */
 public class ExponentialDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -1420172101850802503L;
     /** the rate parameter */
     private final double lambda;
 

@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.BivariateRealFunction
  */
 public class GammaRegularizedP extends BivariateRealFunction {
 
+    private static final long serialVersionUID = -1950456250919065314L;
     private final GammaRegularizedQ qgamma = new GammaRegularizedQ();
 
     /**

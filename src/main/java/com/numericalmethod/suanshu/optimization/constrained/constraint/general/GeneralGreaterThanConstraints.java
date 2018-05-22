@@ -35,6 +35,8 @@ import java.util.Collection;
  */
 public class GeneralGreaterThanConstraints extends GeneralConstraints implements GreaterThanConstraints {
 
+    private static final long serialVersionUID = 3255795455524338469L;
+
     /**
      * Construct an instance of greater-than-or-equal-to inequality constraints from a collection of real-valued functions.
      *
@@ -61,6 +63,8 @@ public class GeneralGreaterThanConstraints extends GeneralConstraints implements
         for (RealScalarFunction g : greaterThan) {
             final RealScalarFunction f = g;// make the complier happy
             RealScalarFunction nf = new RealScalarFunction() {
+
+                private static final long serialVersionUID = 4165650059399816964L;
 
                 @Override
                 public Double evaluate(Vector x) {

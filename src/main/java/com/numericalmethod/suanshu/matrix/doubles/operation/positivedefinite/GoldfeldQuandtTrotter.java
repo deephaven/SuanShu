@@ -39,6 +39,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  */
 public class GoldfeldQuandtTrotter extends DenseMatrix {
 
+    private static final long serialVersionUID = 1132887323480537272L;
+
     /**
      * Construct a symmetric, positive definite matrix using the Goldfeld-Quandt-Trotter algorithm.
      *

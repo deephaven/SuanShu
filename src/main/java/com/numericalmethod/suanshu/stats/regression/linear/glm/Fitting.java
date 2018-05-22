@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.regression.linear.glm;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface represents a fitting method for estimating <i>β</i> in a Generalized Linear Model (GLM).
  *
@@ -41,7 +43,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * <li> {@link IWLS}
  * </ul>
  */
-public interface Fitting {
+public interface Fitting extends Serializable{
 
     /**
      * Fit a Generalized Linear Model.

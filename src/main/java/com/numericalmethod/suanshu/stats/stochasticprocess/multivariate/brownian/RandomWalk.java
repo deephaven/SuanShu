@@ -46,6 +46,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class RandomWalk extends Brownian implements Construction {
 
+    private static final long serialVersionUID = 1439653316301482959L;
     //composition/layering; we implment this <tt>RandomWalk</tt> using the generic Random Walk construction
     com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.integration.sde.RandomWalk rw;
 

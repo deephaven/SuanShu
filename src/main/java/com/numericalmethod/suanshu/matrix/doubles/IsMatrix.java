@@ -248,6 +248,8 @@ public class IsMatrix {
 
         Hessenberg hss = new Hessenberg(new Hessenberg.DeflationCriterion() {
 
+            private static final long serialVersionUID = 3014637686616842525L;
+
             @Override
             public boolean isNegligible(Matrix H, int row, int col, double epsilon) {
                 return equal(0, H.get(row, col), epsilon);

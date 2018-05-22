@@ -36,6 +36,8 @@ import static java.lang.Math.max;
  */
 public class Fletcher extends MultiplierPenalty {
 
+    private static final long serialVersionUID = -6991820353086520717L;
+
     /**
      * Construct a Fletcher penalty function from a collection of inequality constraints.
      *

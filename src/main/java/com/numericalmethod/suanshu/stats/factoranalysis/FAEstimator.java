@@ -46,6 +46,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class FAEstimator extends HypothesisTest {
 
+    private static final long serialVersionUID = -3997321623934269806L;
     private final int nObs;
     private final ImmutableVector psi;
     private final ImmutableMatrix loadings;

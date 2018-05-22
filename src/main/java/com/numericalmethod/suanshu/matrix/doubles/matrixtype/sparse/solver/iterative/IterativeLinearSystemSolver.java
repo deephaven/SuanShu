@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.itera
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.iterative.stationary.SymmetricSuccessiveOverrelaxationSolver;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * An iterative method for solving an N-by-N (or non-square) linear system
  * <i>Ax = b</i> involves a sequence of matrix-vector multiplications.
@@ -108,7 +110,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Ken Yiu
  */
-public interface IterativeLinearSystemSolver {
+public interface IterativeLinearSystemSolver extends Serializable{
 
     /**
      * This is the solution to a system of linear equations using an iterative

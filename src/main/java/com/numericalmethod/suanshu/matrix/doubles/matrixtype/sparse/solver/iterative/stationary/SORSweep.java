@@ -28,6 +28,8 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This is a building block for
  * {@linkplain SuccessiveOverrelaxationSolver SOR} and
@@ -38,8 +40,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  *
  * @author Ken Yiu
  */
-public class SORSweep {
+public class SORSweep implements Serializable{
 
+    private static final long serialVersionUID = -4891128599681235748L;
     private final Matrix A;
     private final Vector b;
     private final int n;

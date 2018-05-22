@@ -47,6 +47,7 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
  */
 public class PCAbySVD extends PCAImpl {
 
+    private static final long serialVersionUID = -8694485625699091044L;
     private final boolean centered;
     private final boolean scaled;
     private final ImmutableVector mean;//make sure this does change anywhere in and out of this class

@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.linear.Lehmer
  */
 public class UniformRng implements RandomLongGenerator {
 
+    private static final long serialVersionUID = -7404850036415487977L;
+
     /**
      * the pseudo uniform random number generators available
      */

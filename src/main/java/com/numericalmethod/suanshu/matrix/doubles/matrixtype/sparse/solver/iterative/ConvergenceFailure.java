@@ -31,7 +31,7 @@ package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.iter
  */
 public class ConvergenceFailure extends Exception {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 985341312995623567L;
 
     /**
      * the reasons for the convergence failure

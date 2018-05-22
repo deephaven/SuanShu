@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  */
 public class CovarianceMatrix extends DenseMatrix {
 
+    private static final long serialVersionUID = -8535256668202167465L;
+
     /**
      * Construct the covariance matrix of a matrix.
      *

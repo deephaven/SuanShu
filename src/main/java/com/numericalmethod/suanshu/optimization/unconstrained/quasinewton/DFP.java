@@ -38,6 +38,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  */
 public class DFP extends Huang {
 
+    private static final long serialVersionUID = -6781876890656657410L;
+
     /**
      * S<sub>k+1</sub> = S<sub>k</sub> + δδ' / γ'δ - Sγγ'S' / γ'Sγ
      *

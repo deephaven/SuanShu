@@ -35,6 +35,7 @@ import static java.lang.Math.exp;
  */
 public class Knuth1969 implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = -1781460427788259261L;
     private final RandomLongGenerator uniform;
 //    private final double lambda;
     private final double L;

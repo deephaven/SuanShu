@@ -41,6 +41,8 @@ import com.numericalmethod.suanshu.optimization.problem.IterativeMinimizer;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -55,6 +57,7 @@ import java.util.List;
  */
 public class SQPActiveSetSolverForOnlyEqualityConstraint1 implements ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>> {
 
+    private static final long serialVersionUID = 2641222160237930L;
     private final VariationFactory variant;
     private final double epsilon;
     private final int maxIterations;
@@ -62,7 +65,7 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint1 implements Constrained
     /**
      * This factory constructs a new instance of {@code SQPASEVariation} for each SQP problem.
      */
-    public static interface VariationFactory {
+    public static interface VariationFactory extends Serializable{
 
         /**
          * Construct a new instance of {@code SQPASEVariation} for an SQP problem.
@@ -79,6 +82,7 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint1 implements Constrained
      */
     private class Solution implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = -2188933869686070359L;
         private Vector x0;//the best minimizer found so far
         private Vector v0;//the Lagrange multipliers (lambda)
         private Matrix A0;//the Jacobian
@@ -202,6 +206,8 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint1 implements Constrained
     public SQPActiveSetSolverForOnlyEqualityConstraint1(double epsilon, int maxIterations) {
         this(
                 new VariationFactory() {
+
+                    private static final long serialVersionUID = 700733555192404269L;
 
                     @Override
                     public SQPASEVariation newVariation(RealScalarFunction f, EqualityConstraints equal) {

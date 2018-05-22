@@ -28,6 +28,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
 import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -39,11 +41,14 @@ import java.util.Arrays;
  */
 public class NormalDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = -1529040668026790908L;
+
     /**
      * the Normal distribution parameters
      */
-    public static class Lambda {
+    public static class Lambda implements Serializable{
 
+        private static final long serialVersionUID = 3637177532528212669L;
         /** the mean */
         public final double mu;
         /** the standard deviation */

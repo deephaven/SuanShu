@@ -43,6 +43,7 @@ public interface MultiVariateTimeSeries<T extends Comparable, E extends MultiVar
      */
     public static class Entry<T> implements com.numericalmethod.suanshu.stats.timeseries.TimeSeries.Entry<T, Vector> {
 
+        private static final long serialVersionUID = -3831767378869133840L;
         private final T time;
         private final ImmutableVector value;
 

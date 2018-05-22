@@ -39,6 +39,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.*;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -60,6 +62,7 @@ import java.util.Arrays;
  */
 public class ConditionalSumOfSquares implements ARMAFitting {
 
+    private static final long serialVersionUID = 1451002615110501510L;
     /**
      * the estimated mean of the model
      */
@@ -82,8 +85,9 @@ public class ConditionalSumOfSquares implements ARMAFitting {
      * Brockwell and Davis fits a zero-mean ARMA model.
      * θ0 = 1 is not included
      */
-    private static class Estimators {
+    private static class Estimators implements Serializable{
 
+        private static final long serialVersionUID = -8493386332967095932L;
         final double[] phi;
         final double[] theta;
         final double var;
@@ -187,6 +191,8 @@ public class ConditionalSumOfSquares implements ARMAFitting {
                 final UnivariateRealFunction dgdk = dlogg(k);
 
                 UnivariateRealFunction integrand = new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = -3178973518389519990L;
 
                     @Override
                     public double evaluate(double x) {
@@ -298,6 +304,8 @@ public class ConditionalSumOfSquares implements ARMAFitting {
 
         RealScalarFunction f = new RealScalarFunction() {
 
+            private static final long serialVersionUID = 3935416677359125797L;
+
             @Override
             public Double evaluate(Vector params) {
                 Estimators estimators = new Estimators(params.toArray(), p, q);
@@ -374,6 +382,8 @@ public class ConditionalSumOfSquares implements ARMAFitting {
         final double[] coeff = j <= estimators.p() ? this.estimators.phi : this.estimators.theta;
 
         UnivariateRealFunction result = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -4214482602411883542L;
 
             @Override
             public double evaluate(double x) {//x = lambda

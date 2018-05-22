@@ -23,6 +23,9 @@
 package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
 
 import com.numericalmethod.suanshu.DeepCopyable;
+
+import java.io.Serializable;
+
 import static java.lang.Math.sqrt;
 
 /**
@@ -40,8 +43,9 @@ import static java.lang.Math.sqrt;
  *
  * @see "Fima C. Klebaner. Introduction to Stochastic Calculus with Applications. 2nd ed. pp.23. Imperial College Press. 2006."
  */
-public class Ft implements DeepCopyable {
+public class Ft implements DeepCopyable, Serializable {
 
+    private static final long serialVersionUID = 7212313653979135150L;
     /**
      * the time differential
      */

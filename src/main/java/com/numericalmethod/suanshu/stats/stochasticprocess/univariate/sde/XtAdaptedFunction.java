@@ -31,6 +31,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
  */
 public abstract class XtAdaptedFunction implements FtAdaptedFunction {
 
+    private static final long serialVersionUID = 2791702267170773842L;
+
     /**
      * Evaluate this function, <i>f</i>, based on only the current value of the stochastic process.
      * 

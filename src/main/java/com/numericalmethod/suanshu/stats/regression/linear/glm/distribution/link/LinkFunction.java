@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.lin
 
 import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinearModel;
 
+import java.io.Serializable;
+
 /**
  * This interface represents a link function <i>g(x)</i> in the Generalized Linear Model (GLM).
  *
@@ -34,7 +36,7 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinear
  *
  * @see GeneralizedLinearModel
  */
-public interface LinkFunction {
+public interface LinkFunction extends Serializable{
 
     /**
      * Inverse of the link function, i.e., <code>g<sup>-1</sup>(x)</code>.

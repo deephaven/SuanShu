@@ -22,13 +22,15 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse;
 
+import java.io.Serializable;
+
 /**
  * This interface defines common operations on sparse structures such as sparse
  * vector or sparse matrix.
  *
  * @author Ken Yiu
  */
-public interface SparseStructure {
+public interface SparseStructure extends Serializable {
 
     /**
      * Get the number of non-zero entries in the structure.

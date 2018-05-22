@@ -22,12 +22,14 @@
  */
 package com.numericalmethod.suanshu.algorithm.bb;
 
+import java.io.Serializable;
+
 /**
  * This interface defines the node popping strategy used in a branch-and-bound algorithm, e.g., depth-first-search, best-first-search.
  *
  * @author Haksun Li
  */
-public interface ActiveList {
+public interface ActiveList extends Serializable {
 
     /**
      * Returns {@code true} if this collection contains no elements.

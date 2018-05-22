@@ -35,6 +35,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  */
 public abstract class AutoCorrelationFunction extends BivariateRealFunction {
 
+    private static final long serialVersionUID = 3830028627151264673L;
+
     /**
      * Get the auto-correlation for xi and xj.
      *

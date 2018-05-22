@@ -37,6 +37,7 @@ import java.util.Arrays;
  */
 public class PoissonDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = 1574719330688925945L;
     private final Double[] rates;
 
     /**

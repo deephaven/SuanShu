@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integration.sde.Construction;
 import com.numericalmethod.suanshu.stats.test.timeseries.adf.AugmentedDickeyFuller.TrendType;
 
+import java.io.Serializable;
+
 /**
  * This class computes the asymptotic distribution of the augmented Dickey-Fuller (ADF) test statistics.
  *
@@ -59,7 +61,9 @@ import com.numericalmethod.suanshu.stats.test.timeseries.adf.AugmentedDickeyFull
  */
 public class ADFAsymptoticDistribution extends EmpiricalDistribution {
 
-    static interface TestStat {
+    private static final long serialVersionUID = 3055696918467310920L;
+
+    static interface TestStat extends Serializable{
 
         double fromFiltration(Filtration FT);
     }

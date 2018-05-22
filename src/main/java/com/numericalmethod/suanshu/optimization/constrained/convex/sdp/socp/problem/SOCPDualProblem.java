@@ -48,9 +48,12 @@ import java.util.ArrayList;
  */
 public class SOCPDualProblem implements ConstrainedOptimProblem {
 
+    private static final long serialVersionUID = 501154578690185178L;
+
     //<editor-fold defaultstate="collapsed" desc="EqualityConstraints">
     public static class EqualityConstraints implements com.numericalmethod.suanshu.optimization.constrained.constraint.EqualityConstraints {
 
+        private static final long serialVersionUID = -8110862027398243300L;
         private final ImmutableVector b;
         private final ImmutableMatrix[] A;
         private final ImmutableVector[] c;
@@ -88,6 +91,8 @@ public class SOCPDualProblem implements ConstrainedOptimProblem {
                 final int i = j;
                 h.add(
                         new RealScalarFunction() {
+
+                            private static final long serialVersionUID = -2847384122483082116L;
 
                             @Override
                             public Double evaluate(Vector x) {
@@ -166,6 +171,8 @@ public class SOCPDualProblem implements ConstrainedOptimProblem {
     public SOCPDualProblem(final Vector b, final Matrix[] A, final Vector[] c) {
         this.problem = new ConstrainedOptimProblemImpl1(
                 new RealScalarFunction() {
+
+                    private static final long serialVersionUID = 7468205307655021327L;
 
                     @Override
                     public Double evaluate(Vector x) {

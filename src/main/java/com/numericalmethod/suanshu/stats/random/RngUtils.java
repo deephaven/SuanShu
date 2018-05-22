@@ -56,6 +56,8 @@ public class RngUtils {
     public static RandomNumberGenerator synchronizedRNG(final RandomNumberGenerator rng) {
         return new RandomNumberGenerator() {
 
+            private static final long serialVersionUID = 2799407235186700451L;
+
             @Override
             public synchronized void seed(long... seeds) {
                 rng.seed(seeds);
@@ -77,6 +79,8 @@ public class RngUtils {
      */
     public static RandomLongGenerator synchronizedRLG(final RandomLongGenerator rng) {
         return new RandomLongGenerator() {
+
+            private static final long serialVersionUID = 3674760670828610391L;
 
             @Override
             public synchronized void seed(long... seeds) {
@@ -104,6 +108,8 @@ public class RngUtils {
      */
     public static RandomVectorGenerator synchronizedRVG(final RandomVectorGenerator rng) {
         return new RandomVectorGenerator() {
+
+            private static final long serialVersionUID = -4520674810186003345L;
 
             @Override
             public synchronized void seed(long... seeds) {

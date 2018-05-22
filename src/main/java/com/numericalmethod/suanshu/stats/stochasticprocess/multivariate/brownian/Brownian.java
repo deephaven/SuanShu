@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Brownian implements DiscretizedSDE {
 
+    private static final long serialVersionUID = -2983619699044191342L;
     /**
      * the dimension of this Brownian motion
      */

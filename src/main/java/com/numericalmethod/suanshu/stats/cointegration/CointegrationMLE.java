@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * Two or more time series are cointegrated if they each share a common type of stochastic drift,
  * that is, to a limited degree they share a certain type of behavior in terms of their long-term fluctuations,
@@ -61,8 +63,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * <li><a href="http://en.wikipedia.org/wiki/Johansen_test">Wikipedia: Johansen test</a>
  * </ul>
  */
-public class CointegrationMLE {
+public class CointegrationMLE implements Serializable{
 
+    private static final long serialVersionUID = -9112358116595198267L;
     /** This is the loading matrix (read by columns). Speed of adjustment. */
     private final ImmutableMatrix alpha;
     /** These (columns) are the cointegration relations. */

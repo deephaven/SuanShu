@@ -24,13 +24,15 @@ package com.numericalmethod.suanshu.analysis.interpolation;
 
 import com.numericalmethod.suanshu.analysis.function.tuple.OrderedPairs;
 
+import java.io.Serializable;
+
 /**
  * An online interpolator allows dynamically adding more points for interpolation.
  * Note: the function is no longer immutable.
  *
  * @author Haksun Li
  */
-public interface OnlineInterpolator {
+public interface OnlineInterpolator extends Serializable {
 
     /**
      * Add more points for interpolation.

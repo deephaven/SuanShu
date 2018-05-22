@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This is the problem of solving a system of linear equations.
  * <blockquote><i>
@@ -41,8 +43,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Haksun Li
  */
-public class LSProblem {
+public class LSProblem implements Serializable{
 
+    private static final long serialVersionUID = 6764163247980656743L;
     private final ImmutableMatrix A;
     private final ImmutableVector b;
     /* optional */

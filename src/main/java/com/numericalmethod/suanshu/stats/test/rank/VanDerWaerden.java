@@ -21,6 +21,7 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.concat;
 public class VanDerWaerden extends HypothesisTest {
 
     private final static ProbabilityDistribution normal = new NormalDistribution(0, 1);
+    private static final long serialVersionUID = 3919037966159603309L;
 
     @Override
     public String getNullHypothesis() {

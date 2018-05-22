@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Beta extends com.numericalmethod.suanshu.stats.regression.linear.ols.Beta {
 
+    private static final long serialVersionUID = 5581614766157518492L;
     /**
      * the z-value for the regression coefficients β^
      */

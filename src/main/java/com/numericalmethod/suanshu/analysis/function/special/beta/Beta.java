@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.BivariateRealFunction
  */
 public class Beta extends BivariateRealFunction {
 
+    private static final long serialVersionUID = 5434818344077338810L;
     private LogBeta lbeta = new LogBeta();
 
     /**

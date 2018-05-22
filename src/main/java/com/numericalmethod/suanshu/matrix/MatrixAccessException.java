@@ -30,7 +30,7 @@ package com.numericalmethod.suanshu.matrix;
  */
 public class MatrixAccessException extends RuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -2611333536524922216L;
 
     /**
      * Construct an instance of {@code MatrixAccessException}.

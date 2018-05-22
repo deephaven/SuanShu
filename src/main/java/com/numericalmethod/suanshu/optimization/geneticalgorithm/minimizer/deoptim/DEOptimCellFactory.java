@@ -43,6 +43,7 @@ import java.util.List;
  */
 public abstract class DEOptimCellFactory extends SimpleCellFactory {
 
+    private static final long serialVersionUID = 4683432185740876507L;
     /**
      * the crossover probability
      */
@@ -137,6 +138,8 @@ public abstract class DEOptimCellFactory extends SimpleCellFactory {
      * The specific Differential Evolution rules are implemented by these two genetic operations.
      */
     public abstract class DeOptimCell extends SimpleCell {
+
+        private static final long serialVersionUID = -2619376165334109851L;
 
         protected DeOptimCell(RealScalarFunction f, Vector x) {
             super(f, x);

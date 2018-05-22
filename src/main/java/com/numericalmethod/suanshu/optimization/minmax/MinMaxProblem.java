@@ -2,6 +2,8 @@ package com.numericalmethod.suanshu.optimization.minmax;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 import com.numericalmethod.suanshu.analysis.function.rn2rm.RealVectorFunction;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ import java.util.List;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Minimax">Wikipedia: Minimax</a>
  */
-public interface MinMaxProblem<T> {
+public interface MinMaxProblem<T> extends Serializable{
 
     /**
      * <i>e(x, ω)</i> is the error function, or the minmax objective, for a given <i>ω</i>.

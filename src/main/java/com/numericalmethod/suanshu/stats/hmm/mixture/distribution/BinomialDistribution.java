@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.stats.distribution.univariate.ProbabilityDistribution;
 import com.numericalmethod.suanshu.stats.random.univariate.BinomialRng;
 import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -37,11 +39,14 @@ import java.util.Arrays;
  */
 public class BinomialDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = 618964002358353951L;
+
     /**
      * the Binomial distribution parameters
      */
-    public static class Lambda {
+    public static class Lambda implements Serializable{
 
+        private static final long serialVersionUID = 6039030562122187097L;
         /** the size */
         public final int size;
         /** the success probability in each trial */

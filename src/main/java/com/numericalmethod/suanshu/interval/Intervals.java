@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.interval;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +35,9 @@ import java.util.List;
  * @param <T> a class that implements {@link Comparable}
  * @author Haksun Li
  */
-public class Intervals<T extends Comparable<? super T>> {
+public class Intervals<T extends Comparable<? super T>> implements Serializable {
 
+    private static final long serialVersionUID = 2628799374326611334L;
     private List<Interval<T>> intervals = new ArrayList<Interval<T>>();//disjoint intervals
 
     /**

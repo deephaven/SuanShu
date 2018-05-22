@@ -34,6 +34,8 @@ import static java.lang.Math.*;
  */
 public class Gamma extends com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Gamma implements QuasiFamily {
 
+    private static final long serialVersionUID = -1315160155301098308L;
+
     /**
      * Create an instance of {@code Gamma}.
      * The canonical link is {@link Inverse}.

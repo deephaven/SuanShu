@@ -51,6 +51,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class InnovationAlgorithm extends InnovationAlgorithmImpl {
 
+    private static final long serialVersionUID = 7596568733389896202L;
+
     /**
      * Construct an instance of <tt>InnovationAlgorithm</tt> for a multivariate time series with known auto-covariance structure.
      * 

@@ -22,13 +22,15 @@
  */
 package com.numericalmethod.suanshu.number.doublearray;
 
+import java.io.Serializable;
+
 /**
  * It is possible to provide different implementations for different platforms, hardware, etc.
  * For example, there are single vs. multiple threads, single vs. multiple cores, single vs. multiple machines, GPU or not, etc.
  *
  * @author Ken
  */
-public interface DoubleArrayOperation {
+public interface DoubleArrayOperation extends Serializable{
 
     /**
      * Add two {@code double} arrays.

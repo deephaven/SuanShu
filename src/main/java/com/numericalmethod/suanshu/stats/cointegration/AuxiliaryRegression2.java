@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.stats.timeseries.multivariate.realtime.Simple
  */
 class AuxiliaryRegression2 extends AuxiliaryRegression {
 
+    private static final long serialVersionUID = -2987550989911735312L;
+
     /**
      * Perform the OLS regression
      * <blockquote><i>

@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.optimization.constrained.integer.IPProblem;
 import com.numericalmethod.suanshu.optimization.geneticalgorithm.minimizer.deoptim.DEOptimCellFactory;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -36,11 +38,12 @@ import java.util.Set;
  * @author Haksun Li
  */
 public class IntegralConstrainedCellFactory extends ConstrainedCellFactory {//TODO: make consistent with IPProblem
+    private static final long serialVersionUID = 5705996675541494853L;
 
     /**
      * The integral constraints are defined by implementing this {@code interface}.
      */
-    public interface IntegerConstraint {
+    public interface IntegerConstraint extends Serializable{
 
         public Vector round(Vector x);
     }
@@ -49,6 +52,8 @@ public class IntegralConstrainedCellFactory extends ConstrainedCellFactory {//TO
      * This integral constraint makes all variables in the objective function integral variables.
      */
     public static class AllIntegers implements IntegerConstraint {
+
+        private static final long serialVersionUID = -7291759257631869274L;
 
         @Override
         public Vector round(Vector x) {
@@ -66,6 +71,7 @@ public class IntegralConstrainedCellFactory extends ConstrainedCellFactory {//TO
      */
     public static class SomeIntegers implements IntegerConstraint {
 
+        private static final long serialVersionUID = 890081680747492279L;
         private final Set<Integer> indices = new HashSet< Integer>();//the integral indices
 
         /**

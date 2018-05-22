@@ -29,7 +29,7 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  */
 public class LPException extends Exception {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -1550172622145308250L;
 
     /**
      * Construct an instance of {@code LPException}.

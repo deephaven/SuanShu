@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.stationa
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -54,8 +56,9 @@ import java.util.Arrays;
  *
  * @author Kevin Sun
  */
-public class ARIMAXModel {
+public class ARIMAXModel implements Serializable{
 
+    private static final long serialVersionUID = -7458973361732190139L;
     /**
      * the intercept (constant) vector
      */

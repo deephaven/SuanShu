@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.descriptive.Statistic;
  */
 public class Max implements Statistic {
 
+    private static final long serialVersionUID = -509687682477188005L;
     private long N = 0;
     private double max = Double.NEGATIVE_INFINITY;
 

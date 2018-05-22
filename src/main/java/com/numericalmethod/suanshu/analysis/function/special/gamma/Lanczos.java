@@ -4,25 +4,28 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.matrix.generic.matrixtype.RealMatrix;
 import com.numericalmethod.suanshu.number.Real;
-import static com.numericalmethod.suanshu.number.big.BigDecimalUtils.*;
-import static com.numericalmethod.suanshu.number.big.BigIntegerUtils.combination;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+
+import static com.numericalmethod.suanshu.number.big.BigDecimalUtils.*;
+import static com.numericalmethod.suanshu.number.big.BigIntegerUtils.combination;
 
 /**
  * The Lanczos approximation is a method for computing the Gamma function numerically, published by Cornelius Lanczos in 1964.
  * This implementation is based on the notes of Paul Godfrey and the discussion of Viktor T. Toth.
  *
  * @author Haksun Li
- * @see
- * <ul>
+ * @see <ul>
  * <li><a href="http://en.wikipedia.org/wiki/Lanczos_approximation">Wikipedia: Lanczos approximation</a>
  * <li><a href="http://my.fit.edu/~gabdo/gamma.txt">A note on the computation of the convergent Lanczos complex Gamma approximation.</a>
  * <li><a href="http://www.rskey.org/lanczos.htm">The Lanczos Approximation</a>
  * </ul>
  */
-public class Lanczos {
+public class Lanczos implements Serializable {
 
+    private static final long serialVersionUID = 449917078948627261L;
     final int scale;
     final double g;
     final int n;

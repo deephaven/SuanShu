@@ -30,6 +30,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.ols.OLSRegression;
 import com.numericalmethod.suanshu.stats.timeseries.multivariate.realtime.MultiVariateTimeSeries;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -37,10 +39,13 @@ import java.util.Arrays;
  *
  * @author Kevin Sun
  */
-public class VARFitting {
+public class VARFitting implements Serializable{
 
-    private static class Estimators {
+    private static final long serialVersionUID = -7898464153740367018L;
 
+    private static class Estimators implements Serializable{
+
+        private static final long serialVersionUID = -4278059700605053162L;
         /**
          * the estimated intercept (constant) vector
          */

@@ -38,6 +38,8 @@ import static java.lang.Math.exp;
  */
 public class DErf extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 8839412393243870050L;
+
     @Override
     public double evaluate(double x) {
         return 2d / ROOT_PI * exp(-x * x);

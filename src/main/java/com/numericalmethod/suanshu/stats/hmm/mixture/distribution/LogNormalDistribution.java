@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.stats.distribution.univariate.ProbabilityDist
 import com.numericalmethod.suanshu.stats.random.univariate.LogNormalRng;
 import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator;
 import static java.lang.Math.*;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -40,11 +42,14 @@ import java.util.Arrays;
  */
 public class LogNormalDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = 3073977038628368634L;
+
     /**
      * the Log-Normal distribution parameters
      */
-    public static class Lambda {
+    public static class Lambda implements Serializable{
 
+        private static final long serialVersionUID = 2999406505936650029L;
         /** the log-mean μ ∈ R */
         public final double logMu;
         /** the log-standard deviation; shape */
@@ -125,6 +130,8 @@ public class LogNormalDistribution implements HMMDistribution {
         final int m = u.nCols();
 
         final double[] logx = DoubleUtils.foreach(observations, new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 5054531889707478902L;
 
             @Override
             public double evaluate(double x) {

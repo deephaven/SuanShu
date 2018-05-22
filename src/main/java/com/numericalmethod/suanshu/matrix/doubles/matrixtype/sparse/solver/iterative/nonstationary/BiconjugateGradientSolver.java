@@ -59,6 +59,7 @@ public class BiconjugateGradientSolver implements IterativeLinearSystemSolver {
      * per this number of iterations
      */
     public static final int DEFAULT_RESIDUAL_REFRESH_RATE = 50;
+    private static final long serialVersionUID = 6441798393682907316L;
     private final int residualRefreshRate;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration;
@@ -89,6 +90,8 @@ public class BiconjugateGradientSolver implements IterativeLinearSystemSolver {
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = -1063699562498476858L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -105,6 +108,7 @@ public class BiconjugateGradientSolver implements IterativeLinearSystemSolver {
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = -7088588003279032652L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final Matrix At = A.t();

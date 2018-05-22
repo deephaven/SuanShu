@@ -35,11 +35,14 @@ import com.numericalmethod.suanshu.optimization.problem.C2OptimProblem;
  */
 public class Fibonacci extends BracketSearch {
 
+    private static final long serialVersionUID = -6311433203216932710L;
+
     /**
      * This is the solution to a Fibonacci's univariate optimization.
      */
     public class Solution extends BracketSearch.Solution {
 
+        private static final long serialVersionUID = -6495833675143198756L;
         private double[] fibonacci;
         private double Ik;
         private double xlLast, xuLast;

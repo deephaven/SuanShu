@@ -30,6 +30,8 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.isZero;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.operation.Basis;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,8 +66,9 @@ import java.util.List;
  * <li><a href="http://en.wikipedia.org/wiki/Householder_operator">Wikipedia: Householder operator</a>
  * </ul>
  */
-public class Householder {
+public class Householder implements Serializable{
 
+    private static final long serialVersionUID = 7079550327381935348L;
     /** the vector that defines the Householder matrix */
     private final Vector v4H;
 
@@ -240,8 +243,9 @@ public class Householder {
      * <li>λ, the norm of <i>v</i> with the sign chosen to be the opposite of the first coordinate of <i>v</i>
      * </ol>
      */
-    public static class Context {
+    public static class Context implements Serializable{
 
+        private static final long serialVersionUID = -675449652653218389L;
         /**
          * the defining vector which is perpendicular to the Householder hyperplane
          */

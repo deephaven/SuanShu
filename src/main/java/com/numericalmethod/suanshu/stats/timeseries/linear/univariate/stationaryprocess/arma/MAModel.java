@@ -31,6 +31,8 @@ package com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationar
  */
 public class MAModel extends ARMAModel {
 
+    private static final long serialVersionUID = -5430545214277419630L;
+
     /**
      * Construct a univariate MA model.
      *

@@ -32,6 +32,8 @@ package com.numericalmethod.suanshu.optimization.unconstrained.quasinewton;
  */
 public class RankOne extends Huang {
 
+    private static final long serialVersionUID = -8358520927040751787L;
+
     /**
      * Construct a multivariate minimizer using the Rank One method.
      *

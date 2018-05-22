@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
  */
 public class SmallestSubscriptRule extends NaiveRule {
 
+    private static final long serialVersionUID = 4391663355398942831L;
+
     /**
      * {@inheritDoc}
      * The pivot column is the smallest non-basic variable index, <i>s</i>, such that

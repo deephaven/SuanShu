@@ -34,6 +34,8 @@ import org.joda.time.DateTime;
  */
 public class TimeIntervals extends Intervals<DateTime> {
 
+    private static final long serialVersionUID = 2576617083213317796L;
+
     /**
      * Construct an empty collection of time interval.
      */

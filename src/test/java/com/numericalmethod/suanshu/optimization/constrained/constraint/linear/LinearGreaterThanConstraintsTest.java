@@ -30,7 +30,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
@@ -48,7 +50,7 @@ public class LinearGreaterThanConstraintsTest {
                     {0, 0, 1, 1},
                     {0, 0, -1, -2}
                 });
-        Vector b = new DenseVector(new double[]{0, 0, -2, 2, 3, -6});
+        Vector b = new DenseVector(0, 0, -2, 2, 3, -6);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);
 
         Vector x = instance.getFeasibleInitialPoint();
@@ -66,7 +68,7 @@ public class LinearGreaterThanConstraintsTest {
                     {0, 1, 0},
                     {0, 0, 1}
                 });
-        Vector b = new DenseVector(new double[]{0, 0, 0});
+        Vector b = new DenseVector(0, 0, 0);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);// x >= 0
 
         Matrix Aeq = new DenseMatrix(new double[][]{{1, 1, 1}});
@@ -91,7 +93,7 @@ public class LinearGreaterThanConstraintsTest {
                     {1, 0},
                     {0, 1}
                 });
-        Vector b = new DenseVector(new double[]{-2, -6, -2, 0, 0});
+        Vector b = new DenseVector(-2, -6, -2, 0, 0);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);
 
         Vector x = instance.getFeasibleInitialPoint();
@@ -110,11 +112,11 @@ public class LinearGreaterThanConstraintsTest {
                     {0, 1},
                     {0, -1}
                 });
-        Vector b = new DenseVector(new double[]{-0.8, -3.2, -2., 0});
+        Vector b = new DenseVector(-0.8, -3.2, -2., 0);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);
 
         Matrix Aeq = new DenseMatrix(new double[][]{{3.6, 8.}});
-        Vector beq = new DenseVector(-10.24);
+        Vector beq = new DenseVector(-10.25);
         LinearEqualityConstraints equal = new LinearEqualityConstraints(// x1 + x2 = -10.24
                 Aeq, beq);
 
@@ -134,7 +136,7 @@ public class LinearGreaterThanConstraintsTest {
                     {0, 1},
                     {0, -1}
                 });
-        Vector b = new DenseVector(new double[]{-4, 0, -2, 0});
+        Vector b = new DenseVector(-4, 0, -2, 0);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);
 
         Matrix Aeq = new DenseMatrix(new double[][]{{10, 8}});
@@ -156,7 +158,7 @@ public class LinearGreaterThanConstraintsTest {
                     {-1., -2., 0., 0.},
                     {0., 0., 1., 2.}
                 });
-        Vector b = new DenseVector(new double[]{0.3, 0.03});
+        Vector b = new DenseVector(0.3, 0.03);
         LinearGreaterThanConstraints instance = new LinearGreaterThanConstraints(A, b);
 
         Vector x = instance.getFeasibleInitialPoint();

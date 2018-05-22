@@ -29,11 +29,12 @@ import com.numericalmethod.suanshu.optimization.constrained.integer.linear.probl
 import com.numericalmethod.suanshu.optimization.problem.MinimizationSolution;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author Haksun Li
  */
 public class GomoryPureCutTest {
@@ -44,16 +45,16 @@ public class GomoryPureCutTest {
     @Test
     public void test_0020() throws LPInfeasible, Exception {
         PureILPProblem problem = new PureILPProblem(
-                new DenseVector(new double[]{-1, -1}), null,
+                new DenseVector(new double[]{-1.1, -1}), null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {7, 1},
-                    {-1, 1}
+                        {7, 1},
+                        {-1, 1}
                 }), new DenseVector(new double[]{15, 1})),
                 null, null, 1e-8);
 
         GomoryPureCut instance = new GomoryPureCut();
         MinimizationSolution<Vector> soln = instance.solve(problem);
-        assertEquals(-3, soln.minimum(), 0);
+        assertEquals(-3.2, soln.minimum(), 1e-8);
         assertArrayEquals(new double[]{2, 1}, soln.minimizer().toArray(), 0);
     }
 
@@ -66,9 +67,9 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{-4, 1}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {7, -2},
-                    {0, 1},
-                    {2, -2}
+                        {7, -2},
+                        {0, 1},
+                        {2, -2}
                 }), new DenseVector(new double[]{14, 3, 3})),
                 null, null, 1e-8);
 
@@ -87,9 +88,9 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{-5, 2}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {-1, 2},
-                    {3, 2},
-                    {-1, -3}
+                        {-1, 2},
+                        {3, 2},
+                        {-1, -3}
                 }), new DenseVector(new double[]{5, 19, -9})),
                 null, null, 1e-8);
 
@@ -108,10 +109,10 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{2, 15, 18}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {-1, 2, -6},
-                    {0, 1, 2},
-                    {2, 0, 10},
-                    {-1, 1, 0}
+                        {-1, 2, -6},
+                        {0, 1, 2},
+                        {2, 0, 10},
+                        {-1, 1, 0}
                 }), new DenseVector(new double[]{-10, 6, 19, -2})),
                 null, null, 1e-8);
 
@@ -130,8 +131,8 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{-7, -9}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {-1, 3},
-                    {7, 1}
+                        {-1, 3},
+                        {7, 1}
                 }), new DenseVector(new double[]{6, 35})),
                 null, null, 1e-8);
 
@@ -150,8 +151,8 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{-3, -4}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {3, -1},
-                    {3, 11}
+                        {3, -1},
+                        {3, 11}
                 }), new DenseVector(new double[]{12, 66})),
                 null, null, 1e-8);
 
@@ -170,8 +171,8 @@ public class GomoryPureCutTest {
                 new DenseVector(new double[]{-1, -27}),
                 null,
                 new LinearLessThanConstraints(new DenseMatrix(new double[][]{
-                    {-1, 1},
-                    {24, 4}
+                        {-1, 1},
+                        {24, 4}
                 }), new DenseVector(new double[]{1, 25})),
                 null, null, 1e-8);
 

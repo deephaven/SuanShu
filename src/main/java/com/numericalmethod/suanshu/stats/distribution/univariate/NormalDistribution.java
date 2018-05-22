@@ -48,6 +48,7 @@ import static java.lang.Math.log;
  */
 public class NormalDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -3392807789161467264L;
     /** the mean */
     private final double mu;
     /** the standard deviation */

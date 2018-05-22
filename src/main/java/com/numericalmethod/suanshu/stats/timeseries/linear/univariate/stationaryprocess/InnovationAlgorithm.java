@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.SimpleTi
 import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.TimeSeries;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The innovation algorithm is an efficient way of
  * obtaining a one step least square linear predictor for a linear time series {X<sub>t</sub>} with known auto-covariance.
@@ -44,8 +46,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see "P. J. Brockwell and R. A. Davis, "Proposition. 5.2.2. Chapter 5. Multivariate Time Series," in <i>Time Series: Theory and Methods</i>, Springer, 2006."
  */
-public class InnovationAlgorithm {
+public class InnovationAlgorithm implements Serializable{
 
+    private static final long serialVersionUID = -3912221918516123461L;
     private com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.stationaryprocess.InnovationAlgorithm impl;
 
     /**
@@ -57,6 +60,8 @@ public class InnovationAlgorithm {
     public InnovationAlgorithm(TimeSeries Xt, final AutoCovarianceFunction K) {
         com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.AutoCovarianceFunction multiK =
                 new com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.AutoCovarianceFunction() {
+
+                    private static final long serialVersionUID = 6812244310505673602L;
 
                     @Override
                     public Matrix evaluate(double x1, double x2) {

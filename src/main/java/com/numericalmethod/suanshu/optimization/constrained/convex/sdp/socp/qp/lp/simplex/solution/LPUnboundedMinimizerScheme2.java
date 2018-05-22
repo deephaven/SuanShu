@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class LPUnboundedMinimizerScheme2 extends LPUnboundedMinimizer {
 
+    private static final long serialVersionUID = -1861063995773638930L;
+
     /**
      * Construct the solution for an unbounded linear programming problem as a result of applying scheme 2.
      *

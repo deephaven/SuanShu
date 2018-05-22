@@ -36,6 +36,7 @@ import org.joda.time.DateTime;
  */
 public class DateTimeGenericTimeSeries<V> implements TimeSeries<DateTime, V, DateTimeGenericTimeSeries.Entry<V>> {
 
+    private static final long serialVersionUID = -6081999886305073148L;
     private final Map<DateTime, V> map = new TreeMap<DateTime, V>();
 
     /**
@@ -60,6 +61,7 @@ public class DateTimeGenericTimeSeries<V> implements TimeSeries<DateTime, V, Dat
      */
     public static class Entry<V> implements TimeSeries.Entry<DateTime, V> {
 
+        private static final long serialVersionUID = 3339116838975469286L;
         private final DateTime time;
         private final V value;
 

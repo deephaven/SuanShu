@@ -28,6 +28,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This is the multivariate controlled DLM (controlled Dynamic Linear Model) specification.
  * A controlled DLM, for <i>(t &ge; 1)</i>, is described by two equations: the observation and state equations.
@@ -60,8 +62,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * <li><a href="http://en.wikipedia.org/wiki/Kalman_filter#Underlying_dynamic_system_model">Wikipedia: Kalman filter - Underlying dynamic system model</a>
  * </ul>
  */
-public class DLM {
+public class DLM implements Serializable{
 
+    private static final long serialVersionUID = 4553228831234791824L;
     /**
      * the dimension of observation <i>y<sub>t</sub></i>
      */

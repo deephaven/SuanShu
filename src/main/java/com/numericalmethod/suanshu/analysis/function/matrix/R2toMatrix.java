@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public abstract class R2toMatrix implements RntoMatrix {
 
+    private static final long serialVersionUID = 4846486998952124801L;
+
     @Override
     public int dimensionOfDomain() {
         return 2;

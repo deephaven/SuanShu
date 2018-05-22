@@ -47,6 +47,7 @@ import java.util.Iterator;
  */
 public class GenericTimeTimeSeries<T extends Comparable<? super T>> implements MultiVariateTimeSeries<T, MultiVariateTimeSeries.Entry<T>> {
 
+    private static final long serialVersionUID = 3801439196723563663L;
     private final ArrayList<MultiVariateTimeSeries.Entry<T>> ts = new ArrayList<MultiVariateTimeSeries.Entry<T>>();
 
     /**

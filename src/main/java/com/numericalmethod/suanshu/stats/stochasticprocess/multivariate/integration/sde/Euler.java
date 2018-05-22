@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.timepoints.UnitGrid;
  */
 public class Euler extends RandomWalk {
 
+    private static final long serialVersionUID = -8718692647304194068L;
+
     /**
      * Simulate an SDE using the Euler scheme at time points specified.
      *

@@ -71,6 +71,7 @@ public class Digamma extends UnivariateRealFunction {
         482414483548501.7
     };
     private static final double BIG_X = 10;
+    private static final long serialVersionUID = -6895024485624152442L;
 
     @Override
     public double evaluate(final double x) {
@@ -92,6 +93,8 @@ public class Digamma extends UnivariateRealFunction {
             int n = (int) Math.ceil(BIG_X - x);
             phi = evaluate(x + n);
             phi -= new Summation(new Summation.Term() {
+
+                private static final long serialVersionUID = 6201159670207168976L;
 
                 @Override
                 public double evaluate(double k) {

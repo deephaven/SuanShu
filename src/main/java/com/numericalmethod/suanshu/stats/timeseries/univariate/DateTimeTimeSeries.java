@@ -33,6 +33,8 @@ import org.joda.time.DateTime;
  */
 public class DateTimeTimeSeries extends GenericTimeTimeSeries<DateTime> {
 
+    private static final long serialVersionUID = -6605486037227602006L;
+
     /**
      * Construct a time series from {@code DateTime} and {@code double}.
      *

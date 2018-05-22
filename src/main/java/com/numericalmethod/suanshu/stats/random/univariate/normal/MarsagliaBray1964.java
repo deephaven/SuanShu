@@ -41,6 +41,7 @@ import static java.lang.Math.sqrt;
  */
 public class MarsagliaBray1964 implements RandomStandardNormalNumberGenerator {
 
+    private static final long serialVersionUID = -306625462486699065L;
     private double z1 = Double.NaN;
     private double z2 = Double.NaN;//save the second random number
     private boolean next;//is the next sample available

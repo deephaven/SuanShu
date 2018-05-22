@@ -22,8 +22,9 @@
  */
 package com.numericalmethod.suanshu.analysis.function.special.gamma;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -57,7 +58,7 @@ public class GammaLanczosQuickTest {
         assertEquals(-4.834146544295878, gamma.evaluate(-0.75), 1e-14);
         assertEquals(-20.49482664342684, gamma.evaluate(-0.95), 1e-13);
         assertEquals(-1000.424196681276, gamma.evaluate(-0.999), 1e-10);
-        assertEquals(2.363271801207355, gamma.evaluate(-1.5), 1e-15);
+        assertEquals(2.363271801207355, gamma.evaluate(-1.5), 1e-14);
         assertEquals(0.00980745551895347, gamma.evaluate(-5.75), 1e-16);
         assertEquals(4.27175573144018e-13, gamma.evaluate(-15.75), 1e-26);
         assertEquals(3.944317997381716e-107, gamma.evaluate(-73.75), 1e-119);

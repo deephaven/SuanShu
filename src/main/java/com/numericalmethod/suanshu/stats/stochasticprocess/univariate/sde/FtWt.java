@@ -32,6 +32,7 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
  */
 public class FtWt extends Ft {
 
+    private static final long serialVersionUID = -8465603230657193577L;
     /**
      * the current time
      */

@@ -42,8 +42,11 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
  */
 public class LPTwoPhaseSolver implements LPSimplexSolver<LPProblem> {
 
+    private static final long serialVersionUID = -1161435694099760439L;
+
     private class Solution implements LPSimplexSolution {
 
+        private static final long serialVersionUID = 8460547342000345906L;
         private SimplexTable table;
         private final LPSimplexMinimizer minimizer;
 

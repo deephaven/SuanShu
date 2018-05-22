@@ -39,6 +39,7 @@ public interface TimeSeries<T extends Comparable, E extends TimeSeries.Entry<T>>
      */
     public static class Entry<T> implements com.numericalmethod.suanshu.stats.timeseries.TimeSeries.Entry<T, Double> {
 
+        private static final long serialVersionUID = 3089252584751722769L;
         private final T time;
         private final double value;
 

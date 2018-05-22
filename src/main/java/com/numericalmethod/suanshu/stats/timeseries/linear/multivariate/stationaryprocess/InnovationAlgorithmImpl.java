@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This class implements the part of the innovation algorithm that computes the prediction coefficients, V and Θ.
  * Subclasses implement the actual prediction algorithms for {@code XtHat}.
@@ -43,8 +45,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * <li>"P. J. Brockwell and R. A. Davis, "Proposition. 11.4.2. Chapter 11.4 Best Linear Predictors of Second Order Random Vectors," in <i>Time Series: Theory and Methods</i>, Springer, 2006."
  * </ul>
  */
-public abstract class InnovationAlgorithmImpl {
+public abstract class InnovationAlgorithmImpl implements Serializable{
 
+    private static final long serialVersionUID = -4915227115370114056L;
     /**
      * the coefficients of the linear predictor at each time point
      *

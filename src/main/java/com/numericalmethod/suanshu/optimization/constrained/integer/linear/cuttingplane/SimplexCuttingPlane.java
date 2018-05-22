@@ -27,11 +27,12 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solution.LPSimplexMinimizer;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solution.LPSimplexSolution;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solver.LPSimplexSolver;
-import com.numericalmethod.suanshu.optimization.constrained.integer.linear.cuttingplane.SimplexCuttingPlane.CutterFactory.Cutter;
 import com.numericalmethod.suanshu.optimization.constrained.integer.linear.problem.ILPProblem;
 import com.numericalmethod.suanshu.optimization.problem.MinimizationSolution;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 
 /**
  * The use of cutting planes to solve Mixed Integer Linear Programming (MILP) problems was introduced by Ralph E Gomory.
@@ -55,16 +56,18 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class SimplexCuttingPlane implements ConstrainedMinimizer<ILPProblem, MinimizationSolution<Vector>> {
 
+    private static final long serialVersionUID = -2294909652710804840L;
+
     /**
      * This factory constructs a new {@code Cutter} for each MILP problem.
      */
-    public static interface CutterFactory {
+    public static interface CutterFactory extends Serializable{
 
         /**
          * A {@code Cutter} defines how to cut a simplex table, i.e., how to relax a linear program so that
          * the current non-integer solution is no longer feasible to the relaxation.
          */
-        public static interface Cutter {
+        public static interface Cutter extends Serializable{
 
             /**
              * Cut a simplex table.
@@ -87,6 +90,7 @@ public class SimplexCuttingPlane implements ConstrainedMinimizer<ILPProblem, Min
 
     private class Solution implements MinimizationSolution<Vector> {
 
+        private static final long serialVersionUID = -3467824886415788260L;
         private LPSimplexMinimizer minimizer = null;
 
         private Solution(ILPProblem problem) throws Exception {

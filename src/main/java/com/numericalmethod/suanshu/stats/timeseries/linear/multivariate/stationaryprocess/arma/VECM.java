@@ -29,6 +29,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -68,8 +70,9 @@ import java.util.Arrays;
  * <li> A. Banerjee et al., "Cointegration, Error Correction, and the Econometric Analysis of Non-Stationary Data," Oxford, Oxford University Press, 1993.
  * </ul>
  */
-public class VECM {
+public class VECM implements Serializable{
 
+    private static final long serialVersionUID = 8133907425917884603L;
     /**
      * the intercept (constant) vector
      */

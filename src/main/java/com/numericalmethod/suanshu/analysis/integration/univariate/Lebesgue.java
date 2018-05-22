@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.analysis.integration.univariate;
 
 import com.numericalmethod.suanshu.analysis.function.FunctionOps;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -35,11 +37,15 @@ import java.util.Arrays;
  *
  * @author Haksun Li
  */
-public class Lebesgue {
-
-    /** the function values */
+public class Lebesgue implements Serializable {
+    private static final long serialVersionUID = -5454833910954278361L;
+    /**
+     * the function values
+     */
     private double[] fx = new double[]{0};
-    /** the measure values */
+    /**
+     * the measure values
+     */
     private double[] du = new double[]{0};//a set of measure 0
 
     /**

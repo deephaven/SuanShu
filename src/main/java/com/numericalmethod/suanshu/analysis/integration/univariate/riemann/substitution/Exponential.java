@@ -38,6 +38,7 @@ import static java.lang.Math.log;
  */
 public class Exponential implements SubstitutionRule {
 
+    private static final long serialVersionUID = -8040604855599353318L;
     private final double a;//the lower limit
 
     /**
@@ -53,6 +54,8 @@ public class Exponential implements SubstitutionRule {
     public UnivariateRealFunction x() {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 3853313958571998831L;
+
             @Override
             public double evaluate(double t) {
                 return -log(t);
@@ -63,6 +66,8 @@ public class Exponential implements SubstitutionRule {
     @Override
     public UnivariateRealFunction dx() {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 6504019824490589498L;
 
             @Override
             public double evaluate(double t) {

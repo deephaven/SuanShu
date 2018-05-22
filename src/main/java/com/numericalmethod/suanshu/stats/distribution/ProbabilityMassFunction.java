@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.distribution;
 
+import java.io.Serializable;
+
 /**
  * A probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value.
  * Suppose that <i>X: S → R</i> is a discrete random variable defined on a sample space <i>S</i>.
@@ -34,7 +36,7 @@ package com.numericalmethod.suanshu.stats.distribution;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Probability_mass_function">Wikipedia: Probability mass function</a>
  */
-public interface ProbabilityMassFunction<X> {
+public interface ProbabilityMassFunction<X> extends Serializable{
 
     /**
      * Compute the probability mass for a discrete realization <i>x</i>.

@@ -37,6 +37,8 @@ import java.util.Arrays;
  */
 public class KolmogorovSmirnov1Sample extends KolmogorovSmirnov {
 
+    private static final long serialVersionUID = 765760697235042413L;
+
     /**
      * Construct an one-sample KolmogorovDistribution-Smirnov test.
      *

@@ -44,6 +44,7 @@ import java.util.ArrayList;
  */
 public abstract class LinearConstraints implements Constraints {
 
+    private static final long serialVersionUID = 8515436557291853122L;
     private final ImmutableMatrix A;
     private final ImmutableVector b;
 
@@ -65,6 +66,8 @@ public abstract class LinearConstraints implements Constraints {
         for (int i = 1; i <= A.nRows(); ++i) {
             final int j = i;//make the complier happy
             RealScalarFunction g = new RealScalarFunction() {
+
+                private static final long serialVersionUID = 2856855429545035180L;
 
                 @Override
                 public Double evaluate(Vector x) {

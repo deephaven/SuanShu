@@ -22,13 +22,15 @@
  */
 package com.numericalmethod.suanshu.datastructure;
 
+import java.io.Serializable;
+
 /**
  * A table is a means of arranging data in rows and columns.
  *
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Table_(information)">Wikipedia: Table (information)</a>
  */
-public interface Table {
+public interface Table extends Serializable{
 
     /**
      * Get the number of rows.

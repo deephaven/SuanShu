@@ -67,6 +67,7 @@ import java.util.Arrays;
  */
 public class GeneralizedMinimalResidualSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = -7429729479363535896L;
     /** restart parameter of GMRES */
     private final int m0;
     private final PreconditionerFactory leftPreconditionerFactory;
@@ -105,6 +106,8 @@ public class GeneralizedMinimalResidualSolver implements IterativeLinearSystemSo
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = 5218175332558708440L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -132,6 +135,7 @@ public class GeneralizedMinimalResidualSolver implements IterativeLinearSystemSo
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = -6466119534345339221L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final int maxIteration = (m0 >= problem.A().nCols())

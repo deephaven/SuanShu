@@ -39,6 +39,7 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.Ft;
  */
 public class RandomWalk implements Construction {
 
+    private static final long serialVersionUID = 848039733898541580L;
     /**
      * the SDE specification, in discretized form
      */
@@ -54,6 +55,7 @@ public class RandomWalk implements Construction {
 
     public class Realization implements com.numericalmethod.suanshu.stats.stochasticprocess.univariate.Realization {
 
+        private static final long serialVersionUID = -904782969537837677L;
         /**
          * the ID of this particular realization
          */
@@ -75,6 +77,7 @@ public class RandomWalk implements Construction {
         public Iterator iterator() {
             return new Realization.Iterator(size(), id) {
 
+                private static final long serialVersionUID = -3302188552323001183L;
                 private double t0 = 0, t1;
                 private double xt = x0;// initialize the starting value
                 private Ft ft = sde.getNewFt();

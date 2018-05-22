@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.linearsystem.LinearSystemSolver;
 import com.numericalmethod.suanshu.number.NumberUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +38,9 @@ import java.util.List;
  *
  * @author Haksun Li
  */
-public class EigenProperty {
+public class EigenProperty implements Serializable{
 
+    private static final long serialVersionUID = 8744357437662501436L;
     /** the eigenvalue, real or complex */
     private final Number eigenvalue;
     /** algebraic multiplicity of an eigenvalue is defined as the multiplicity of the

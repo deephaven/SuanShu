@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.number.doublearray;
 
+import java.io.Serializable;
+
 /**
  * It is desirable to have multiple implementations and switch between them for, e.g., performance reason.
  *
@@ -29,10 +31,12 @@ package com.numericalmethod.suanshu.number.doublearray;
  */
 public class CompositeDoubleArrayOperation implements DoubleArrayOperation {
 
+    private static final long serialVersionUID = -6584938473769642460L;
+
     /**
      * Specify which implementation to use.
      */
-    public interface ImplementationChooser {
+    public interface ImplementationChooser extends Serializable{
 
         /**
          * Get an implementation based on the inputs.
@@ -68,6 +72,8 @@ public class CompositeDoubleArrayOperation implements DoubleArrayOperation {
             final DoubleArrayOperation impl2) {
         this(
                 new ImplementationChooser() {
+
+                    private static final long serialVersionUID = 5499271700097530199L;
 
                     @Override
                     public DoubleArrayOperation getOperation(double[] arr1, double[] arr2) {

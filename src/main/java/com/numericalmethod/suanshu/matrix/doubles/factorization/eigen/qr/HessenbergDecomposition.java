@@ -30,6 +30,9 @@ import com.numericalmethod.suanshu.matrix.doubles.operation.Householder.Context;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.concat;
 import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.subVector;
 
@@ -73,8 +76,9 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  *
  * @author Haksun Li
  */
-public class HessenbergDecomposition {
+public class HessenbergDecomposition implements Serializable{
 
+    private static final long serialVersionUID = -1077186363386352578L;
     private Matrix H;
     private volatile Matrix Q = null;//TODO: is this sufficient to prevent race condition?
     private Householder[] Hs;

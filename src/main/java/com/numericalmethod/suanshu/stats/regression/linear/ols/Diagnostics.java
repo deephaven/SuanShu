@@ -25,6 +25,9 @@ package com.numericalmethod.suanshu.stats.regression.linear.ols;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -48,8 +51,9 @@ import static java.lang.Math.*;
  * <li><a href="http://en.wikipedia.org/wiki/DFFITS">Wikipedia: DFFITS</a>
  * </ul>
  */
-public class Diagnostics {
+public class Diagnostics implements Serializable{
 
+    private static final long serialVersionUID = 3834978411301056355L;
     /**
      * DFFITS, Welsch and Kuh Measure
      *

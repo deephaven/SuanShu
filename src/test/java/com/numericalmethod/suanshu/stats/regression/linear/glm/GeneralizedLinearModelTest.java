@@ -22,17 +22,15 @@
  */
 package com.numericalmethod.suanshu.stats.regression.linear.glm;
 
-import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
-import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Gamma;
-import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Poisson;
-import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Binomial;
-import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Gaussian;
-import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.InverseGaussian;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
+import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
+import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.*;
 import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.link.Sqrt;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -290,7 +288,7 @@ public class GeneralizedLinearModelTest {
                 instance.beta.stderr.toArray(), 1e-6);
         assertArrayEquals(new double[]{1.489023, -0.821261, 2.022359},
                 instance.beta.z.toArray(), 1e-6);
-        assertEquals(2.004895830058038, instance.residuals.deviance, 1e-15);
+        assertEquals(2.004895830058038, instance.residuals.deviance, 1e-14);
         assertEquals(1.0, instance.residuals.overdispersion, 1e-15);
         assertEquals(23.8245863701111, instance.AIC, 1e-15);
     }

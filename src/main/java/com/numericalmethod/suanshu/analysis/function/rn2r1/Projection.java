@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Projection implements RealScalarFunction {
 
+    private static final long serialVersionUID = -6421378845664657285L;
     /** the original \(R^n \rightarrow R^m\) function */
     private final RealVectorFunction f;
     /** the dimension/coordinate to take from the output of <i>f</i>; counts from 1 */

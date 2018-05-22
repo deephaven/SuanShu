@@ -56,6 +56,7 @@ public class GammaRegularizedQ extends BivariateRealFunction {//TODO: extend to 
 
     private static final LogGamma lgamma = new LogGamma();
     private static final double epsilon = EPSILON;
+    private static final long serialVersionUID = 3986047279028091896L;
 
     /**
      * Evaluate <i>Q(s,x)</i>.
@@ -99,6 +100,7 @@ public class GammaRegularizedQ extends BivariateRealFunction {//TODO: extend to 
     private double evaluateBySeries(final double s, final double x) {
         Summation series = new Summation(new Summation.Term() {
 
+            private static final long serialVersionUID = 1433961945063369748L;
             double term;
 
             @Override
@@ -128,6 +130,8 @@ public class GammaRegularizedQ extends BivariateRealFunction {//TODO: extend to 
      */
     private double evaluateByCF(final double s, final double x) {
         ContinuedFraction cf = new ContinuedFraction(new ContinuedFraction.Partials() {
+
+            private static final long serialVersionUID = 7561886167253141777L;
 
             @Override
             public double A(int n, double u) {

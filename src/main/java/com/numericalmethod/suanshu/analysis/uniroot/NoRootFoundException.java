@@ -31,9 +31,9 @@ package com.numericalmethod.suanshu.analysis.uniroot;
  */
 public class NoRootFoundException extends Exception {
 
+    private static final long serialVersionUID = 8238004085481543660L;
     private final double x;
     private final double fx;
-    private static final long serialVersionUID = 1L;
 
     /**
      * Construct a {@code NoRootFoundException}.

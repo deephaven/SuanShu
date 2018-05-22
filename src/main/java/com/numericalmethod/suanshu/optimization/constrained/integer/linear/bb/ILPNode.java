@@ -48,6 +48,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ILPNode implements BBNode {
 
+    private static final long serialVersionUID = -382727116757917334L;
     private final int id;//the unique identifier of the node
     private final ILPProblem problem;
     private final LPBoundedMinimizer minimizer;//the minimizer to use to solve the ILP problem in this node

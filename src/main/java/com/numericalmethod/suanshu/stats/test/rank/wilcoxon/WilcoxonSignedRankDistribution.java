@@ -42,6 +42,7 @@ import static java.lang.Math.*;
  */
 public class WilcoxonSignedRankDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 5820441938948318262L;
     /**
      * number of observations in group 2
      */

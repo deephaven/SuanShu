@@ -48,6 +48,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
  */
 public class LPProblemImpl1 implements LPProblem {
 
+    private static final long serialVersionUID = 7127929062778352099L;
     private final ConstrainedOptimProblemImpl1 problem;
     private final ImmutableVector c;//the objective function
     private final BoxConstraints bounds;//used only to determine 'free' variables
@@ -100,6 +101,8 @@ public class LPProblemImpl1 implements LPProblem {
 
         ConstrainedOptimProblemImpl1 problem = new ConstrainedOptimProblemImpl1(
                 new RealScalarFunction() {
+
+                    private static final long serialVersionUID = -5918587487926425455L;
 
                     @Override
                     public Double evaluate(Vector x) {

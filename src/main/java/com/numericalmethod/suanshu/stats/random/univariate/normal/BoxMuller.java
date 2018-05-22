@@ -41,6 +41,7 @@ import static java.lang.Math.*;
  */
 public class BoxMuller implements RandomStandardNormalNumberGenerator {
 
+    private static final long serialVersionUID = 3770187814736071713L;
     private double z1 = Double.NaN;
     private double z2 = Double.NaN;//save the second random number
     private boolean next;//is the next sample available

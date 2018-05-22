@@ -7,6 +7,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ZERO extends PenaltyFunction {
 
+    private static final long serialVersionUID = -179091707864219366L;
     private int dimension;
 
     /**

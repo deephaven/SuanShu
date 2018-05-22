@@ -38,6 +38,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomLongGenerator;
  */
 public class SHR3 implements RandomLongGenerator {
 
+    private static final long serialVersionUID = -2136503199461130995L;
     private int jsr = (int) (8682522807148012L + System.nanoTime());//seed
     private SHR0 shr0 = new SHR0();
 

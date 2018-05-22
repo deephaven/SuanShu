@@ -33,6 +33,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This class represents a linear regression or a linear model (LM) problem.
  *
@@ -45,8 +47,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see <a href="http://en.wikipedia.org/wiki/Linear_regression">Wikipedia: Linear regression</a>
  */
-public class LMProblem {
+public class LMProblem implements Serializable{
 
+    private static final long serialVersionUID = 8830949651380537172L;
     /**
      * the response vector; the regressands; the dependent variables
      *

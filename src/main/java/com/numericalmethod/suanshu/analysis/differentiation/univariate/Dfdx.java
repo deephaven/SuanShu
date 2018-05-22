@@ -50,6 +50,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Dfdx extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = -6366318361216636186L;
+
     /** the methods available to compute the numerical derivative */
     public static enum Method {
 
@@ -99,6 +101,7 @@ public class Dfdx extends UnivariateRealFunction {
             switch (method) {
                 case RIDDERS:
                     dfdx = new UnivariateRealFunction() {//essentially cast a RealScalarFunction to a UnivariateRealFunction
+                        private static final long serialVersionUID = -3935228429153751962L;
 
                         private final RealScalarFunction df = new Ridders(f, 1);
 

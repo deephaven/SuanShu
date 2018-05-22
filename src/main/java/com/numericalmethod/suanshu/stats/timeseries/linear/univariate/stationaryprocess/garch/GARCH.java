@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.log;
 import static java.lang.Math.max;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -51,7 +53,8 @@ import java.util.Arrays;
  *
  * @see "Bollerslev, Tim. <i>Generalized autoregressive conditional heteroskedasticity,</i> Journal of Econometrics, Issue 3, Vol. 31. 1986."
  */
-public class GARCH {//TODO: need to use a constrained version of the BFGS algorithm
+public class GARCH implements Serializable{//TODO: need to use a constrained version of the BFGS algorithm
+    private static final long serialVersionUID = -8887750734479164588L;
 
     /**
      * the gradient information used to guild the optimization search
@@ -93,7 +96,8 @@ public class GARCH {//TODO: need to use a constrained version of the BFGS algori
         var = new Variance(e_t).value();
         final double[] e_t2 = foreach(
                 e_t,
-                new UnivariateRealFunction() {//e_t2 = e_t^2
+                new UnivariateRealFunction() {
+                    private static final long serialVersionUID = -1892570109810562550L;//e_t2 = e_t^2
 
                     @Override
                     public double evaluate(double x) {
@@ -101,7 +105,8 @@ public class GARCH {//TODO: need to use a constrained version of the BFGS algori
                     }
                 });
 
-        RealScalarFunction mL = new RealScalarFunction() {//minimize the negative of the log-likelihood
+        RealScalarFunction mL = new RealScalarFunction() {
+            private static final long serialVersionUID = -7097729235144122919L;//minimize the negative of the log-likelihood
 
             final RealScalarFunction L = logLikelihood(e_t2, p, q);
 
@@ -191,6 +196,7 @@ public class GARCH {//TODO: need to use a constrained version of the BFGS algori
     private RealScalarFunction logLikelihood(final double[] e_t2, final int p, final int q) {
         return new RealScalarFunction() {
 
+            private static final long serialVersionUID = 8684196007834818509L;
             final int maxPQ = max(p, q);
 
             @Override
@@ -253,6 +259,7 @@ public class GARCH {//TODO: need to use a constrained version of the BFGS algori
     private RealVectorFunction dLogLikelihood(final double[] e_t2, final int p, final int q) {
         return new RealVectorFunction() {
 
+            private static final long serialVersionUID = 590848398021228635L;
             final int maxPQ = max(p, q);
 
             @Override

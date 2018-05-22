@@ -24,6 +24,9 @@ package com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.station
 
 import com.numericalmethod.suanshu.matrix.doubles.ImmutableMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -33,12 +36,13 @@ import static java.lang.Math.*;
  *
  * @see "P. J. Brockwell and R. A. Davis, "Eq. 11.3.13., Theorem 13.3.2., Chapter 11.3 Multivariate ARMA Processes," in <i>Time Series: Theory and Methods</i>, Springer, 2006."
  */
-public class Invertibility {//TODO: test cases
+public class Invertibility implements Serializable{//TODO: test cases
 
     /**
      * the default number of lags
      */
     public static final int DEFAULT_NLAGS = 15;
+    private static final long serialVersionUID = 8074177501326494805L;
     /**
      * the coefficients of the linear representation of the time series
      */

@@ -61,6 +61,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Doolittle implements LUDecomposition {
 
+    private static final long serialVersionUID = -6847772597326046849L;
     private LowerTriangularMatrix L;
     private UpperTriangularMatrix U;
     private PermutationMatrix P;

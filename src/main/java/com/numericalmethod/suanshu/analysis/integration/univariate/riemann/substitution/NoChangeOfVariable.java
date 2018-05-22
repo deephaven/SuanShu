@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class NoChangeOfVariable implements SubstitutionRule {
 
+    private static final long serialVersionUID = 760738865066672873L;
     private final double a;//the lower limit
     private final double b;//the upper limit
 
@@ -53,6 +54,8 @@ public class NoChangeOfVariable implements SubstitutionRule {
     public UnivariateRealFunction x() {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 5256854589598345475L;
+
             @Override
             public double evaluate(double t) {
                 return t;
@@ -63,6 +66,8 @@ public class NoChangeOfVariable implements SubstitutionRule {
     @Override
     public UnivariateRealFunction dx() {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -4996063589657652108L;
 
             @Override
             public double evaluate(double t) {

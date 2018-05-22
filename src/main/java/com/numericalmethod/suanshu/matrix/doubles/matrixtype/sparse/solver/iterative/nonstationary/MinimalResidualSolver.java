@@ -55,6 +55,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class MinimalResidualSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = -1588842416262042715L;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration0;
     private final Tolerance tolerance;
@@ -82,6 +83,8 @@ public class MinimalResidualSolver implements IterativeLinearSystemSolver {
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = 4815141042485545365L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -98,6 +101,7 @@ public class MinimalResidualSolver implements IterativeLinearSystemSolver {
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = 1878783107542741583L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final int maxIteration = Math.min(maxIteration0, A.nCols()); // guaranteed to converge in n iterations

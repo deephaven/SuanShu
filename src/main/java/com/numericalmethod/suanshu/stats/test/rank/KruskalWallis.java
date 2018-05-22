@@ -31,6 +31,8 @@ import java.util.Set;
  */
 public class KruskalWallis extends HypothesisTest {
 
+    private static final long serialVersionUID = -5414734114083537114L;
+
     @Override
     public String getNullHypothesis() {
         return "all population medians are equal";

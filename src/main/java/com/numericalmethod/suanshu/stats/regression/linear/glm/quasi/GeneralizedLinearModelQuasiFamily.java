@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.IWLS;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * GLM for the quasi-families.
  *
@@ -47,8 +49,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see "P. J. MacCullagh and J. A. Nelder, "An algorithm for fitting generalized linear models," in <i>Generalized Linear Models</i>, 2nd ed. Chapter 9."
  */
-public class GeneralizedLinearModelQuasiFamily {
+public class GeneralizedLinearModelQuasiFamily implements Serializable{
 
+    private static final long serialVersionUID = -5583735073283537892L;
     /**
      * the quasi- generalized linear regression problem to be solved
      */

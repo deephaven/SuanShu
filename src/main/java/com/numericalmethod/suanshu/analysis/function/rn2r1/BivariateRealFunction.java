@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public abstract class BivariateRealFunction implements RealScalarFunction {
 
+    private static final long serialVersionUID = -7183195242329278730L;
+
     @Override
     public int dimensionOfDomain() {
         return 2;

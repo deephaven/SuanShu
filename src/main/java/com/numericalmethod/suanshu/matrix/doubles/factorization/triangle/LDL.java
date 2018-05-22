@@ -27,6 +27,9 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.diagonal.DiagonalMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.LowerTriangularMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.UpperTriangularMatrix;
+
+import java.io.Serializable;
+
 import static com.numericalmethod.suanshu.number.DoubleUtils.isZero;
 
 /**
@@ -42,8 +45,9 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.isZero;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/LDL_decomposition#Avoiding_taking_square_roots">Wikipedia: Avoiding taking square roots</a>
  */
-public class LDL {
+public class LDL implements Serializable{
 
+    private static final long serialVersionUID = -8685213779283326983L;
     private LowerTriangularMatrix L;
     private DiagonalMatrix D;
     private final int dim;

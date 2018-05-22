@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.FtAd
  */
 public abstract class Sigma implements Diffusion {
 
+    private static final long serialVersionUID = -5206186355561460562L;
+
     public Matrix evaluate(Ft ft) {
         int n = ft.dim();
         int d = ft.nB();

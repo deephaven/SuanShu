@@ -22,15 +22,17 @@
  */
 package com.numericalmethod.suanshu.optimization.unconstrained.steepestdescent;
 
-import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 import com.numericalmethod.suanshu.analysis.function.rn2rm.RealVectorFunction;
 import com.numericalmethod.suanshu.optimization.problem.C2OptimProblemImpl;
 import com.numericalmethod.suanshu.optimization.problem.IterativeMinimizer;
+import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static java.lang.Math.*;
+
+import static java.lang.Math.abs;
+import static java.lang.Math.pow;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -197,7 +199,7 @@ public class FirstOrderTest {
 
         ans = new DenseVector(new double[]{0.04813224188615, 0.01694710245881, 0.00169595248698, 0.02406511597832});//from matlab
 
-        assertEquals(0.0, xmin.minus(ans).norm(), 1e-13);//unlike test 0010, no problem of handling f
+        assertEquals(0.0, xmin.minus(ans).norm(), 1e-12);//unlike test 0010, no problem of handling f
         fxmin = f.evaluate(xmin);
 //        System.out.println(fxmin);
         assertEquals(0.0, abs(fans - fxmin), 1e-7);

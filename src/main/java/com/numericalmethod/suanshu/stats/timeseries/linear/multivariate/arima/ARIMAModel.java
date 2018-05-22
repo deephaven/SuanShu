@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class ARIMAModel extends ARIMAXModel {
 
+    private static final long serialVersionUID = -6715624151705071994L;
+
     /**
      * Construct a multivariate ARIMA model.
      *

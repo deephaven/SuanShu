@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class MultinomialRvg implements RandomVectorGenerator {
 
+    private static final long serialVersionUID = -5624979666582545581L;
     private final int size;
     private final double[] cumprob;
     private final RandomLongGenerator rng;

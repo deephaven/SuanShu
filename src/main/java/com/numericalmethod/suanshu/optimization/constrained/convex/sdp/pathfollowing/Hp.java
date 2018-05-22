@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.matrix.doubles.ImmutableMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.Inverse;
 
+import java.io.Serializable;
+
 /**
  * This is the symmetrization operator as defined in eq. 6 in the reference.
  * \[
@@ -36,8 +38,9 @@ import com.numericalmethod.suanshu.matrix.doubles.operation.Inverse;
  * @author Haksun Li
  * @see "K. C. Toh, M. J. Todd, R. H. Tütüncü, "SDPT3 -- a MATLAB software package for semidefinite programming, version 2.1," OPTIMIZATION METHODS AND SOFTWARE. 1999."
  */
-public class Hp {
+public class Hp implements Serializable {
 
+    private static final long serialVersionUID = -6174963085759009156L;
     private final ImmutableMatrix P;
     private final ImmutableMatrix Pinv;
     private final boolean isIdentity;

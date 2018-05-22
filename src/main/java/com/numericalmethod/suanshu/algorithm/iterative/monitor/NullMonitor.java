@@ -29,6 +29,8 @@ package com.numericalmethod.suanshu.algorithm.iterative.monitor;
  */
 public class NullMonitor<S> implements IterationMonitor<S> {
 
+    private static final long serialVersionUID = 6596287393974676696L;
+
     @Override
     public void addIterate(S s) {
         // do nothing

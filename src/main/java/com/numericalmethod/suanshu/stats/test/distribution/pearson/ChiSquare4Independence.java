@@ -40,6 +40,8 @@ import static com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath.sum
  */
 public class ChiSquare4Independence extends HypothesisTest {
 
+    private static final long serialVersionUID = -392052029128468474L;
+
     /**
      * the distribution used for the test
      */

@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.optimization.constrained.constraint;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -31,7 +33,7 @@ import java.util.List;
  *
  * @author Haksun Li
  */
-public interface Constraints {
+public interface Constraints extends Serializable{
 
     /**
      * Get the list of constraint functions.

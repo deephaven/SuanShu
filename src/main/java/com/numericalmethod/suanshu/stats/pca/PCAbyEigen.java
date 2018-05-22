@@ -65,6 +65,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class PCAbyEigen extends PCAImpl {
 
+    private static final long serialVersionUID = -8353964949960328298L;
     private final boolean correlation;
     private final ImmutableMatrix V;//make sure this does change anywhere in and out of this class
 

@@ -48,6 +48,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ARMAXModel extends ARIMAXModel {
 
+    private static final long serialVersionUID = -532980099743368399L;
+
     /**
      * Construct a multivariate ARMAX (ARMA model with eXogenous inputs) model.
      *

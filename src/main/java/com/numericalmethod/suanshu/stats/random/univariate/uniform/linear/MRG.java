@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class MRG implements LinearCongruentialGenerator {
 
+    private static final long serialVersionUID = -5245281730171141839L;
     private Lehmer[] rng;
     private boolean[] sign;
     private long[] x = null;//past values of the rngs

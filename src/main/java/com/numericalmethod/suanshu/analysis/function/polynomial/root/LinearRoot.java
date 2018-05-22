@@ -40,6 +40,8 @@ import java.util.List;
  */
 public class LinearRoot implements PolyRootSolver {
 
+    private static final long serialVersionUID = -944456281009027523L;
+
     /**
      * Solve <i>ax + b = 0</i>.
      *

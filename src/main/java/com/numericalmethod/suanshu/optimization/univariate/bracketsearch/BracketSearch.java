@@ -46,8 +46,11 @@ import static java.lang.Math.sqrt;
  */
 public abstract class BracketSearch implements UnivariateMinimizer {
 
+    private static final long serialVersionUID = -7136472024407042694L;
+
     protected abstract class Solution implements UnivariateMinimizer.Solution {
 
+        private static final long serialVersionUID = -8723782785355959024L;
         protected UnivariateRealFunction f;
 
         protected Solution(UnivariateRealFunction f) {

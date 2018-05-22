@@ -35,6 +35,7 @@ import java.util.Iterator;
  */
 public class OneDimensionTimeSeries<T extends Comparable> implements TimeSeries<T, TimeSeries.Entry<T>> {
 
+    private static final long serialVersionUID = 7217928865048371425L;
     private final MultiVariateTimeSeries<T, ? extends MultiVariateTimeSeries.Entry<T>> mts;
     private final int dim;
 

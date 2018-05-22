@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class IdentityPreconditioner implements Preconditioner {
 
+    private static final long serialVersionUID = 1281553017666452147L;
+
     /**
      * Return the input vector <i>x</i>.
      *

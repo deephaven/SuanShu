@@ -59,6 +59,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class VECMLongrun extends VECM {
 
+    private static final long serialVersionUID = 5310087929686299585L;
+
     /**
      * Construct a long-run VECM(p) model.
      *

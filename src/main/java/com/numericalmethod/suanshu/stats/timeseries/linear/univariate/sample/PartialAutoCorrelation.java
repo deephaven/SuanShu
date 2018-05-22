@@ -35,6 +35,7 @@ import java.util.ArrayList;
  */
 public class PartialAutoCorrelation extends AutoCorrelationFunction {
 
+    private static final long serialVersionUID = 5166356756995783631L;
     private final AutoCorrelation acf;
     private ArrayList<ArrayList<Double>> phi = new ArrayList<ArrayList<Double>>();
 

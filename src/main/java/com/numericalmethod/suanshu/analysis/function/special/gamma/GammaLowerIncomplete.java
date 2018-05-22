@@ -42,6 +42,7 @@ public class GammaLowerIncomplete extends BivariateRealFunction {
 
     private static final GammaRegularizedP pgamma = new GammaRegularizedP();
     private static final Gamma gamma = new GammaLanczosQuick();
+    private static final long serialVersionUID = 8751729405577661969L;
 
     /**
      * Evaluate \(\gamma(s,x)\).

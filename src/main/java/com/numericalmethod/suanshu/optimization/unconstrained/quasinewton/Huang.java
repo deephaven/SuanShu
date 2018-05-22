@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Huang extends QuasiNewton {
 
+    private static final long serialVersionUID = -7320627114790305479L;
     private final double theta;//θ, a Huang family parameterization
     private final double phi;//φ, a Huang family parameterization
     private final double psi;//ψ, a Huang family parameterization
@@ -46,6 +47,8 @@ public class Huang extends QuasiNewton {
      * an implementation of Huang's formula.
      */
     protected class HuangImpl extends QuasiNewtonImpl {
+
+        private static final long serialVersionUID = 3365549720210730713L;
 
         public HuangImpl(C2OptimProblem problem) throws Exception {
             super(problem);

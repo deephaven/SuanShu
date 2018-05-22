@@ -18,6 +18,7 @@ import java.util.Arrays;
  */
 public class SiegelTukey extends HypothesisTest {
 
+    private static final long serialVersionUID = -4644855364299986902L;
     /**
      * left, one-sided p-value
      */

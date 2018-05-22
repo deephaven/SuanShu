@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
  */
 public class SubMatrixRef implements Matrix {
 
+    private static final long serialVersionUID = 2473765611495881496L;
     /** the matrix to be referenced */
     private final Matrix ref;
     /** the starting row, counting from 1 */

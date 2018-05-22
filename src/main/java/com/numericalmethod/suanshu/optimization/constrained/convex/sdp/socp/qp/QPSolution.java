@@ -24,12 +24,14 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp;
 
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 
+import java.io.Serializable;
+
 /**
  * This is a solution to a quadratic programming problem.
  *
  * @author Haksun Li
  */
-public interface QPSolution {
+public interface QPSolution extends Serializable {
 
     /**
      * Return {@code true} if the quadratic programming problem has only one solution.

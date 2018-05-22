@@ -44,10 +44,14 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class SQPActiveSetSolverForOnlyInequalityConstraint extends SQPActiveSetSolver {
 
+    private static final long serialVersionUID = -8421092924797629477L;
+
     /**
      * This is the solution to a general minimization problem with only inequality constraints using the SQP Active Set algorithm.
      */
     public class Solution extends SQPActiveSetSolver.Solution {
+
+        private static final long serialVersionUID = -1619108174523524351L;
 
         private Solution(RealScalarFunction f, EqualityConstraints equal, GreaterThanConstraints greater) {
             super(f, equal, greater);

@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
  */
 public abstract class PenaltyFunction implements RealScalarFunction {
 
+    private static final long serialVersionUID = -3181581881056842113L;
+
     @Override
     public int dimensionOfRange() {
         return 1;

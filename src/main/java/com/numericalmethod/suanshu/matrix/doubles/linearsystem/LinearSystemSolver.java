@@ -31,6 +31,8 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -86,13 +88,15 @@ import java.util.List;
  * Homogeneous systems</a>
  * </ul>
  */
-public class LinearSystemSolver {
+public class LinearSystemSolver implements Serializable{
+
+    private static final long serialVersionUID = 6074098164968836577L;
 
     /** This is the runtime exception thrown when it fails to solve a system of linear
      * equations. */
     public static class NoSolution extends RuntimeException {
 
-        private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = -7440607730465062854L;
 
         /** Construct an {@code LinearSystemSolver.NoSolution} exception.
          *
@@ -106,7 +110,7 @@ public class LinearSystemSolver {
     /**
      * This is the solution to a linear system of equations.
      */
-    public static interface Solution {
+    public static interface Solution extends Serializable{
 
         /**
          * Get a particular solution for the linear system.
@@ -148,6 +152,7 @@ public class LinearSystemSolver {
     public Solution solve(final Matrix A0) {
         return new Solution() {
 
+            private static final long serialVersionUID = -5356689892689631862L;
             Matrix A = A0;
             SVD svd = null;//reducing the linearly dependent rows
 

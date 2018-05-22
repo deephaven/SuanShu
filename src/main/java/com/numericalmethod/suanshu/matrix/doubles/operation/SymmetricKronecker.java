@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class SymmetricKronecker extends DenseMatrix {
 
+    private static final long serialVersionUID = 5024537793027965311L;
+
     /**
      * Compute the symmetric Kronecker product of two matrices.
      *

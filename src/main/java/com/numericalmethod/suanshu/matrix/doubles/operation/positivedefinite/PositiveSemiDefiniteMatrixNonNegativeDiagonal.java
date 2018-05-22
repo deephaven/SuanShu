@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  */
 public class PositiveSemiDefiniteMatrixNonNegativeDiagonal extends PositiveDefiniteMatrixByPositiveDiagonal {
 
+    private static final long serialVersionUID = -1560105745102323833L;
+
     /**
      * Construct a positive semi-definite matrix
      * by forcing the negative diagonal entries in the eigen decomposition to 0.

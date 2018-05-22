@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.TimeSeri
  */
 public class AutoCorrelation extends AutoCorrelationFunction {
 
+    private static final long serialVersionUID = 6262244200920751569L;
     private final AutoCovariance acvf;
     private final double acvf0;
 

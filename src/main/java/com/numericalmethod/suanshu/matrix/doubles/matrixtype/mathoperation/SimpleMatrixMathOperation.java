@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This is a generic, single-threaded implementation of matrix math operations.
  * It assumes no knowledge of how a matrix is implemented.
@@ -37,7 +39,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  *
  * @author Haksun Li
  */
-public class SimpleMatrixMathOperation implements MatrixMathOperation {
+public class SimpleMatrixMathOperation implements MatrixMathOperation, Serializable {
+
+    private static final long serialVersionUID = 1558780245378647423L;
 
     @Override
     public Matrix add(MatrixAccess A1, MatrixAccess A2) {//this function is optimized for space complexity

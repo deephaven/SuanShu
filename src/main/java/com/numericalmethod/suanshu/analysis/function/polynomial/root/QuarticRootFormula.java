@@ -39,6 +39,7 @@ public class QuarticRootFormula implements QuarticSolver {
 
     private static final double CUBIC_ROOT_2 = Math.cbrt(2.);
     private static final double ONE_THIRD = 1. / 3.;
+    private static final long serialVersionUID = 7816618622890277804L;
 
     @Override
     public List<Number> solve(double a, double b, double c, double d, double e) {

@@ -45,6 +45,7 @@ import com.numericalmethod.suanshu.stats.descriptive.Statistic;
  */
 public class Kurtosis implements Statistic {
 
+    private static final long serialVersionUID = 4964464856258557194L;
     private Moments moment = new Moments(4);
 
     /**

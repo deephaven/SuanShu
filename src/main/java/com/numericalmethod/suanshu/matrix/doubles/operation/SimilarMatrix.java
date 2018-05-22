@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  */
 public class SimilarMatrix extends DenseMatrix {
 
+    private static final long serialVersionUID = 8621980676455081209L;
+
     /**
      * Construct the similar matrix <i>B = P<sup>-1</sup>AP</i>.
      *

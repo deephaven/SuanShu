@@ -36,6 +36,7 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  * @author Haksun Li
  */
 public abstract class AutoCovarianceFunction extends R2toMatrix {//TODO: make this R1toMatrix?
+    private static final long serialVersionUID = -4651544334727366357L;
 
     /**
      * Get the auto-covariance matrix for Xi and Xj.

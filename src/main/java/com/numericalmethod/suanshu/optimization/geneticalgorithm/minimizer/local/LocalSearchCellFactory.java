@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.optimization.problem.OptimProblem;
 import com.numericalmethod.suanshu.stats.random.univariate.RandomLongGenerator;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * A {@code LocalSearchCellFactory} produces {@code LocalSearchCellFactory.LocalSearchCell}s.
  * A {@code LocalSearchCellFactory.LocalSearchCell} is a chromosome for a real valued function (an optimization problem) and a candidate solution.
@@ -42,12 +44,14 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class LocalSearchCellFactory<P extends OptimProblem, T extends Minimizer<OptimProblem, IterativeMinimizer<Vector>>> extends SimpleCellFactory {
 
+    private static final long serialVersionUID = 3197056836688101070L;
+
     /**
      * This factory constructs a new {@code Minimizer} for each mutation operation.
      *
      * @param <U> the minimizer type for local search
      */
-    public static interface MinimizerFactory<U extends Minimizer<OptimProblem, IterativeMinimizer<Vector>>> {
+    public static interface MinimizerFactory<U extends Minimizer<OptimProblem, IterativeMinimizer<Vector>>> extends Serializable{
 
         /**
          * Construct a new instance of {@code Minimizer} for a mutation operation.
@@ -83,6 +87,8 @@ public class LocalSearchCellFactory<P extends OptimProblem, T extends Minimizer<
      * </ul>
      */
     public class LocalSearchCell extends SimpleCellFactory.SimpleCell {
+
+        private static final long serialVersionUID = -1140724019607114863L;
 
         protected LocalSearchCell(RealScalarFunction f, Vector x) {
             super(f, x);

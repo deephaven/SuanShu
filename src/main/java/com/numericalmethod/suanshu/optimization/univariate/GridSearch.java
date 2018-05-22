@@ -41,11 +41,14 @@ import static java.lang.Math.sqrt;
  */
 public class GridSearch implements UnivariateMinimizer {
 
+    private static final long serialVersionUID = 2705918133986321098L;
+
     /**
      * This is the solution to the {@code GridSearch}.
      */
     public class Solution implements UnivariateMinimizer.Solution {
 
+        private static final long serialVersionUID = -2927590383035768025L;
         private final UnivariateRealFunction f;
         private double fmin;//the best minimum found so far
         private double xmin;//the best {@code xmin} found so far
@@ -72,7 +75,7 @@ public class GridSearch implements UnivariateMinimizer {
             final double[] fx = new double[x.length];
 
             try {// try multi-thread
-                new ParallelExecutor().forLoop(
+                ParallelExecutor.getInstance().forLoop(
                         0,
                         x.length,
                         new LoopBody() {

@@ -32,6 +32,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
  */
 public class NormalRng implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = 8315236151126753331L;
     private final double mean;//the mean
     private final double sigma;//the standard deviation
     private final RandomStandardNormalNumberGenerator rnorm;

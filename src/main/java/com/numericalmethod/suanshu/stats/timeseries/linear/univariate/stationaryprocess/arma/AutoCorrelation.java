@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.univariate.arima.ARIM
  */
 public class AutoCorrelation extends AutoCorrelationFunction {
 
+    private static final long serialVersionUID = 4897568293022034371L;
     private com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.stationaryprocess.arma.AutoCorrelation ACF;
 
     /** 

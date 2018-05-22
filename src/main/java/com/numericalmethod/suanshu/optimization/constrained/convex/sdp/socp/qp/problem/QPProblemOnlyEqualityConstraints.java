@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.optimization.constrained.constraint.linear.Li
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * A quadratic programming problem with only equality constraints can be converted into
  * a equivalent quadratic programming problem without constraints, hence a mere quadratic function.
@@ -45,12 +47,14 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class QPProblemOnlyEqualityConstraints extends QuadraticFunction {
 
+    private static final long serialVersionUID = -3146178375804915270L;
     private final LinearEqualityConstraints equal;
     private final ImmutableMatrix Aplus;
     private final ImmutableMatrix Vr;
 
-    private static class ModifiedQPProblem {
+    private static class ModifiedQPProblem implements Serializable{
 
+        private static final long serialVersionUID = -3658278852913714924L;
         private final QuadraticFunction f;
         private final Matrix Aplus;
         private final Matrix Vr;

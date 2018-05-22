@@ -45,6 +45,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class InverseTransformSampling implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = 415385428929131832L;
     /** the distribution to sample random numbers from */
     private final ProbabilityDistribution distribution;
     /** a uniform random number generator */

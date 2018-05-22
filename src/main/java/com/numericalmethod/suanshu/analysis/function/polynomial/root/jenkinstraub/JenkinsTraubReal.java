@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.analysis.function.polynomial.Polynomial;
 import com.numericalmethod.suanshu.analysis.function.polynomial.ScaledPolynomial;
 import com.numericalmethod.suanshu.analysis.function.polynomial.root.LinearRoot;
 import com.numericalmethod.suanshu.analysis.function.polynomial.root.QuadraticRoot;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,16 +35,16 @@ import java.util.List;
  * The Jenkins-Traub algorithm is a fast globally convergent iterative method for solving for polynomial roots.
  *
  * @author Ken Yiu
- * @see
- * <ul>
+ * @see <ul>
  * <li>Jenkins, M. A. and Traub, J. F. (1970), A Three-Stage Algorithm for Real Polynomials Using QuadraticRoot Iteration, SIAM J. Numer. Anal., 7(4), 545-566.
  * <li>Jenkins, M. A. (1975), Algorithm 493: Zeros of a Real Polynomial, ACM TOMS, 1, 178-189.
  * <li><a href="http://en.wikipedia.org/wiki/Jenkins-Traub_Algorithm_for_Polynomial_Zeros">Wikipedia: Jenkins-Traub algorithm</a>
  * </ul>
  */
 // TODO: configurable program constants, e.g., no. of steps in each stage
-public class JenkinsTraubReal {
+public class JenkinsTraubReal implements Serializable {
 
+    private static final long serialVersionUID = -2342483775253164731L;
     private final LinearRoot linear = new LinearRoot();//the built-in linear equation solver
     private final QuadraticRoot quadratic = new QuadraticRoot();//the built-in quadratic equation solver
 

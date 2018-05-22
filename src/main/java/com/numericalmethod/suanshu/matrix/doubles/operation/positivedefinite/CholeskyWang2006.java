@@ -38,6 +38,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.Lowe
  */
 public class CholeskyWang2006 extends LowerTriangularMatrix {
 
+    private static final long serialVersionUID = -3448293292969524680L;
+
     /**
      * Construct the Cholesky decomposition of a matrix.
      *

@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public abstract class FiltrationFunction extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 2519199671992350442L;
+
     /**
      * Compute the value at the t-th time point, f(T[t]).
      * 

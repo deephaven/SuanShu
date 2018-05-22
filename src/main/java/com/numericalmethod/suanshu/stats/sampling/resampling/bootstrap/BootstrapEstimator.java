@@ -31,13 +31,16 @@ import com.numericalmethod.suanshu.stats.descriptive.moment.Mean;
 import com.numericalmethod.suanshu.stats.descriptive.moment.Variance;
 import com.numericalmethod.suanshu.stats.sampling.resampling.Resampling;
 
+import java.io.Serializable;
+
 /**
  * This class estimates the statistic for a sample using a bootstrap method.
  *
  * @author Haksun Li
  */
-public class BootstrapEstimator {
+public class BootstrapEstimator implements Serializable {
 
+    private static final long serialVersionUID = 1036807822402450319L;
     private final Resampling bootstrap;
     private final StatisticFactory factory;
     private final int B;
@@ -100,8 +103,8 @@ public class BootstrapEstimator {
 
     private void sim() throws MultipleExecutionException {
         final Object lock = new Object();
-        new ParallelExecutor().conditionalForLoop(isParallel, 0, B,
-                                                  new LoopBody() {
+        ParallelExecutor.getInstance().conditionalForLoop(isParallel, 0, B,
+                new LoopBody() {
 
             public void run(int i) throws Exception {
                 double[] resample;

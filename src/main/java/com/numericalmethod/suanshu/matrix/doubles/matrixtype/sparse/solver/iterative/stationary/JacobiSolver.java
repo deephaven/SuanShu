@@ -49,6 +49,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class JacobiSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = -8682115070663017343L;
     private final int maxIteration;
     private final Tolerance tolerance;
 
@@ -74,6 +75,7 @@ public class JacobiSolver implements IterativeLinearSystemSolver {
 
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = -5103018805595570387L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             final int n = problem.size();

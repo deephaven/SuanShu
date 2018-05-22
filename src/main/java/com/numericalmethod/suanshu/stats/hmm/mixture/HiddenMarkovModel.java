@@ -38,6 +38,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class HiddenMarkovModel extends com.numericalmethod.suanshu.stats.hmm.HiddenMarkovModel {
 
+    private static final long serialVersionUID = -352029381014823042L;
     private final HMMDistribution dist;
 
     /**

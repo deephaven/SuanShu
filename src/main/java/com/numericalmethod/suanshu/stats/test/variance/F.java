@@ -41,6 +41,7 @@ import static java.lang.Math.*;
  */
 public class F extends HypothesisTest {
 
+    private static final long serialVersionUID = -7360773701296106272L;
     /**
      * the degree of freedoms
      */

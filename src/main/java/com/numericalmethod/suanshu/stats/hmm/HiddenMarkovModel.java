@@ -43,6 +43,7 @@ import java.util.Arrays;
  */
 public class HiddenMarkovModel extends SimpleMC {
 
+    private static final long serialVersionUID = 415361657504406539L;
     /** the conditional observation distributions (random number generators) */
     private final RandomNumberGenerator[] B;
 

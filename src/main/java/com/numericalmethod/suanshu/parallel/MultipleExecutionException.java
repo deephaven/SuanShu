@@ -35,7 +35,7 @@ import java.util.concurrent.ExecutionException;
  */
 public class MultipleExecutionException extends Exception {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -2322008058281010999L;
     private final List<?> results;
     private final List<ExecutionException> exceptions;
 

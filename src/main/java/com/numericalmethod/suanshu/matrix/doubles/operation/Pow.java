@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class Pow extends DenseMatrix {
 
+    private static final long serialVersionUID = -499380591504631156L;
     private final double base;
     private final int scale;
     private final ImmutableMatrix B;

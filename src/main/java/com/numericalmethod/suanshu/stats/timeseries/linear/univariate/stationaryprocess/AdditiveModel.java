@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.SimpleTi
  */
 public class AdditiveModel extends SimpleTimeSeries {
 
+    private static final long serialVersionUID = -4930965872699423949L;
+
     /**
      * Construct a univariate time series by adding up the components.
      * 

@@ -40,6 +40,7 @@ import static java.lang.Math.*;
  */
 public class WeibullDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 1256647054924394814L;
     /** the scale parameter */
     private final double lambda;
     /** the shape parameter */
@@ -134,6 +135,8 @@ public class WeibullDistribution implements ProbabilityDistribution {
 
         final double t = x;
         Summation series = new Summation(new Summation.Term() {
+
+            private static final long serialVersionUID = 2887573209842730556L;
 
             @Override
             public double evaluate(double n) {

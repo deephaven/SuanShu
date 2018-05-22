@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.regression.linear.ols;
 
+import java.io.Serializable;
+
 import static java.lang.Math.log;
 
 /**
@@ -51,8 +53,9 @@ import static java.lang.Math.log;
  * <li><a href="http://en.wikipedia.org/wiki/Bayesian_information_criterion">Wikipedia: Bayesian information criterion</a>
  * </ul>
  */
-public class InformationCriteria {
+public class InformationCriteria implements Serializable{
 
+    private static final long serialVersionUID = 5009458656015462636L;
     /**
      * Akaike information criterion
      *

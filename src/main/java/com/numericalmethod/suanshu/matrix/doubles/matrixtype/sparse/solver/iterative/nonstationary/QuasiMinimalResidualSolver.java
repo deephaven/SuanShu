@@ -61,6 +61,7 @@ public class QuasiMinimalResidualSolver implements IterativeLinearSystemSolver {
      * The algorithm recomputes the residual as <i>b - Ax<sub>i</sub></i> once per this number of iterations
      */
     public static final int DEFAULT_RESIDUAL_REFRESH_RATE = 50;
+    private static final long serialVersionUID = 8221591375750753692L;
     private final int residualRefreshRate;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final PreconditionerFactory rightPreconditionerFactory;
@@ -96,12 +97,16 @@ public class QuasiMinimalResidualSolver implements IterativeLinearSystemSolver {
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = -6786965405682506264L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
                     }
                 },
                 new PreconditionerFactory() {
+
+                    private static final long serialVersionUID = -8352163668328697792L;
 
                     @Override
                     public Preconditioner newInstance(Matrix A) {
@@ -129,6 +134,7 @@ public class QuasiMinimalResidualSolver implements IterativeLinearSystemSolver {
      */
     private class Solution1 implements IterativeLinearSystemSolver.Solution {
 
+        private static final long serialVersionUID = 6218824437356533585L;
         private final IterationMonitor<Vector> monitor;
         private final Matrix A;
         private final Matrix Ah; // TODO: should be A^H (conjugate transpose)
@@ -275,6 +281,7 @@ public class QuasiMinimalResidualSolver implements IterativeLinearSystemSolver {
      */
     private class Solution2 implements IterativeLinearSystemSolver.Solution {
 
+        private static final long serialVersionUID = -4196434875204399250L;
         private final IterationMonitor<Vector> monitor;
         private final Matrix A;
         private final Matrix At;

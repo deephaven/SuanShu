@@ -41,6 +41,7 @@ import static java.lang.Math.*;
 //TODO: the convergence criterion costs a double in the number of function evaluations, c.f., chapter 4.5.4 in NR
 public class DoubleExponential implements SubstitutionRule {
 
+    private static final long serialVersionUID = 7481610398311945578L;
     private final UnivariateRealFunction x;//x(t)
     private final UnivariateRealFunction dx;//x'(t) = dx(t)/dt
     private final UnivariateRealFunction f;//the original integrand
@@ -151,6 +152,8 @@ public class DoubleExponential implements SubstitutionRule {
     private static UnivariateRealFunction xt(final double a, final double b, final double c) {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = -115595604820983282L;
+
             @Override
             public double evaluate(double t) {
                 return 0.5 * (b + a) + 0.5 * (b - a) * tanh(c * sinh(t));
@@ -161,6 +164,8 @@ public class DoubleExponential implements SubstitutionRule {
     /** x'(t) = dx(t)/dt */
     private static UnivariateRealFunction dxdt(final double a, final double b, final double c) {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -523919290161291919L;
 
             @Override
             public double evaluate(double t) {

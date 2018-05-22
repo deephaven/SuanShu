@@ -22,12 +22,14 @@
  */
 package com.numericalmethod.suanshu.stats.descriptive;
 
+import java.io.Serializable;
+
 /**
  * A factory to construct a new {@link Statistic}.
  *
  * @author Haksun Li
  */
-public interface StatisticFactory {
+public interface StatisticFactory extends Serializable{
 
     /**
      * Get a {@link Statistic}.

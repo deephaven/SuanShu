@@ -27,14 +27,17 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * A central path is a solution to both the primal and dual problems of a semi-definite programming problem.
  *
  * @author Haksun Li
  * @see "Andreas Antoniou, Wu-Sheng Lu, "Algorithm 14.3.3, Central Path," Practical Optimization: Algorithms and Engineering Applications."
  */
-public class CentralPath {
+public class CentralPath implements Serializable{
 
+    private static final long serialVersionUID = 9205112008363271866L;
     /**
      * This is the minimizer for the primal problem.
      */

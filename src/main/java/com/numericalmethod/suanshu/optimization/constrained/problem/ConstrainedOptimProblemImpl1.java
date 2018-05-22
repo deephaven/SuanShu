@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.optimization.problem.C2OptimProblemImpl;
  */
 public class ConstrainedOptimProblemImpl1 implements ConstrainedOptimProblem {
 
+    private static final long serialVersionUID = -3496445255975620682L;
     private final C2OptimProblemImpl problem;
     /** the equality constraints */
     private final EqualityConstraints equal;

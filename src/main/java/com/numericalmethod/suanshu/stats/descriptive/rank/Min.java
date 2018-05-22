@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.descriptive.Statistic;
  */
 public class Min implements Statistic {
 
+    private static final long serialVersionUID = 3022052545219102805L;
     private long N = 0;
     private double min = Double.POSITIVE_INFINITY;
 

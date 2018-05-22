@@ -34,6 +34,8 @@ import java.util.Collection;
  */
 public class GeneralEqualityConstraints extends GeneralConstraints implements EqualityConstraints {
 
+    private static final long serialVersionUID = 5615644957087753904L;
+
     /**
      * Construct an instance of equality constraints from a collection of real-valued functions.
      *

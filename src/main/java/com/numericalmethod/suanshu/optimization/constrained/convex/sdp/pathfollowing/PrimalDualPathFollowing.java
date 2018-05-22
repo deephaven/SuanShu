@@ -52,11 +52,14 @@ import java.util.ArrayList;
  */
 public class PrimalDualPathFollowing implements ConstrainedMinimizer<SDPDualProblem, IterativeMinimizer<CentralPath>> {
 
+    private static final long serialVersionUID = 3700943134396116628L;
+
     /**
      * This is the solution to a Semi-Definite Programming problem using the Primal-Dual Path-Following algorithm.
      */
     public class Solution implements IterativeMinimizer<CentralPath> {
 
+        private static final long serialVersionUID = -8494703608562455186L;
         protected CentralPath path;
         protected double sigma;
         protected double gamma;

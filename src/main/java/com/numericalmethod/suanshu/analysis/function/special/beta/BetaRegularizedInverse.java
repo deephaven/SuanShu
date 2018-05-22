@@ -50,6 +50,7 @@ import static java.lang.Math.*;
  */
 public class BetaRegularizedInverse extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 3383096327744603521L;
     private final double p;//the shape parameter
     private final double q;//the shape parameter
     private final LogBeta logBeta = new LogBeta();
@@ -92,6 +93,8 @@ public class BetaRegularizedInverse extends UnivariateRealFunction {
         // Starting with an initial guess, solve <i>x</i> where \(I_{(p,q)}(x) = u\).
         UnivariateRealFunction f = new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 4421833556656092326L;
+
             @Override
             public double evaluate(double x) {
                 BetaRegularized Ix = new BetaRegularized(p, q);
@@ -101,6 +104,8 @@ public class BetaRegularizedInverse extends UnivariateRealFunction {
 
         UnivariateRealFunction df = new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 6251982074487323817L;
+
             @Override
             public double evaluate(double x) {
                 double y = (p - 1) * log(x) + (q - 1) * log(1 - x) - logBeta.evaluate(p, q);
@@ -109,6 +114,8 @@ public class BetaRegularizedInverse extends UnivariateRealFunction {
         };
 
         UnivariateRealFunction d2f = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 3762267392577241000L;
 
             @Override
             public double evaluate(double x) {

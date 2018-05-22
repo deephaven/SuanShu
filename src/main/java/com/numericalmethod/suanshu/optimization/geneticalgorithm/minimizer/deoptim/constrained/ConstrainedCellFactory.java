@@ -35,6 +35,7 @@ import java.util.List;
  */
 public abstract class ConstrainedCellFactory extends DEOptimCellFactory {
 
+    private static final long serialVersionUID = 5868455949418161289L;
     /**
      * a factory that defines the unconstrained Differential Evolution operators
      */
@@ -72,6 +73,7 @@ public abstract class ConstrainedCellFactory extends DEOptimCellFactory {
      */
     public class ConstrainedCell extends DeOptimCell {
 
+        private static final long serialVersionUID = -1064786007612026952L;
         private final SimpleCell cell;
 
         protected ConstrainedCell(RealScalarFunction f, Vector x) {

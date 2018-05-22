@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.stats.dlm.univariate;
 
 import com.numericalmethod.suanshu.misc.R;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -34,8 +36,9 @@ import java.util.Arrays;
  *
  * @author Haksun Li
  */
-public class LinearKalmanFilter {
+public class LinearKalmanFilter implements Serializable{
 
+    private static final long serialVersionUID = 3533204469611902654L;
     /** the DLM model */
     private final DLM model;
     /**

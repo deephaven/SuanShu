@@ -10,7 +10,7 @@ package com.numericalmethod.suanshu.matrix;
  */
 public class MatrixMismatchException extends RuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -6313113136403187170L;
 
     /**
      * Construct an instance of {@code MatrixMismatchException}.

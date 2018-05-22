@@ -46,6 +46,7 @@ import static java.lang.Math.log;
  */
 public class BetaRegularized extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 4816136862680556369L;
     private final double p;//the shape parameter
     private final double q;//the shape parameter
     private final ContinuedFraction cf;
@@ -61,6 +62,8 @@ public class BetaRegularized extends UnivariateRealFunction {
         this.p = p;
         this.q = q;
         cf = new ContinuedFraction(new ContinuedFraction.Partials() {
+
+            private static final long serialVersionUID = 6533535428218455448L;
 
             @Override
             public double A(int n, double x) {

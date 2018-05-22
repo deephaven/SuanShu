@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.analysis.function.polynomial.root;
 
 import com.numericalmethod.suanshu.analysis.function.polynomial.Polynomial;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -31,7 +33,7 @@ import java.util.List;
  *
  * @author Haksun Li
  */
-public interface PolyRootSolver {
+public interface PolyRootSolver extends Serializable{
 
     public List<? extends Number> solve(Polynomial polynomial);
 }

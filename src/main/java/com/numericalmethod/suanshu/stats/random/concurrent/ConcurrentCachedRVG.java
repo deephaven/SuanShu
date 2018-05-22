@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.stats.random.multivariate.RandomVectorGenerat
  */
 public class ConcurrentCachedRVG implements RandomVectorGenerator {
 
+    private static final long serialVersionUID = -2640752468220134111L;
     private final ConcurrentCachedGenerator<double[]> concurrentGenerator;
     private final RandomVectorGenerator rvg;
 
@@ -50,6 +51,8 @@ public class ConcurrentCachedRVG implements RandomVectorGenerator {
         this.rvg = rvg;
         this.concurrentGenerator = new ConcurrentCachedGenerator<double[]>(
                 new Generator<double[]>() {
+
+                    private static final long serialVersionUID = -8312931635484104817L;
 
                     @Override
                     public double[] next() {

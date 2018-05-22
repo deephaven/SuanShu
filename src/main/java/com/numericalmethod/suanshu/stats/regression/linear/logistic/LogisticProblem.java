@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.number.DoubleUtils;
  * @author Haksun Li
  */
 public class LogisticProblem extends com.numericalmethod.suanshu.stats.regression.linear.LMProblem {//TODO: extend it to multiple discrete values (Or, use GLM)?
+    private static final long serialVersionUID = 3242128168576872359L;
 
     public LogisticProblem(com.numericalmethod.suanshu.stats.regression.linear.LMProblem problem) {
         super(problem);

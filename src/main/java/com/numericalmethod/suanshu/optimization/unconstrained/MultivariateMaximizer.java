@@ -42,6 +42,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class MultivariateMaximizer implements Optimizer<C2OptimProblem, MultivariateMaximizer.Solution> {
 
+    private static final long serialVersionUID = 5963257636782227713L;
+
     public static interface Solution extends IterativeMethod<Vector> {
 
         /**
@@ -87,7 +89,8 @@ public class MultivariateMaximizer implements Optimizer<C2OptimProblem, Multivar
     @Override
     public MultivariateMaximizer.Solution solve(final C2OptimProblem problem) throws Exception {
         final IterativeMinimizer<Vector> soln0 = minimizer.solve(new C2OptimProblemImpl(
-                new RealScalarFunction() {//negative f
+                new RealScalarFunction() {
+                    private static final long serialVersionUID = -7378626380976666265L;//negative f
 
                     @Override
                     public Double evaluate(Vector x) {
@@ -104,7 +107,8 @@ public class MultivariateMaximizer implements Optimizer<C2OptimProblem, Multivar
                         return problem.f().dimensionOfRange();
                     }
                 },
-                new RealVectorFunction() {//negative g
+                new RealVectorFunction() {
+                    private static final long serialVersionUID = -8068299215391373444L;//negative g
 
                     @Override
                     public Vector evaluate(Vector x) {
@@ -121,7 +125,8 @@ public class MultivariateMaximizer implements Optimizer<C2OptimProblem, Multivar
                         return problem.g().dimensionOfRange();
                     }
                 },
-                new RntoMatrix() {//negative H
+                new RntoMatrix() {
+                    private static final long serialVersionUID = -7703309677464701269L;//negative H
 
                     @Override
                     public Matrix evaluate(Vector x) {
@@ -140,6 +145,8 @@ public class MultivariateMaximizer implements Optimizer<C2OptimProblem, Multivar
                 }));
 
         MultivariateMaximizer.Solution soln1 = new MultivariateMaximizer.Solution() {
+
+            private static final long serialVersionUID = -8231994577321748797L;
 
             @Override
             public double maximum() {

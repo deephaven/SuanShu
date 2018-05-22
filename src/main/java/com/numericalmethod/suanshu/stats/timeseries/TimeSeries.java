@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.timeseries;
 
+import java.io.Serializable;
+
 /**
  * A time series is a serially indexed collection of items.
  * Time series data have a natural temporal ordering.
@@ -40,7 +42,7 @@ package com.numericalmethod.suanshu.stats.timeseries;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Time_series">Wikipedia: Time series</a>
  */
-public interface TimeSeries<T extends Comparable, V, E extends TimeSeries.Entry<T, V>> extends Iterable<E> {//TOOD: make T a comparable object?
+public interface TimeSeries<T extends Comparable, V, E extends TimeSeries.Entry<T, V>> extends Iterable<E>,Serializable {//TOOD: make T a comparable object?
 
     /**
      * A time series is composed of a sequence of {@code Entry}s.
@@ -50,7 +52,7 @@ public interface TimeSeries<T extends Comparable, V, E extends TimeSeries.Entry<
      * @param <T> the time type
      * @param <V> the value type
      */
-    public static interface Entry<T, V> {
+    public static interface Entry<T, V> extends Serializable{
 
         /**
          * Get the timestamp.

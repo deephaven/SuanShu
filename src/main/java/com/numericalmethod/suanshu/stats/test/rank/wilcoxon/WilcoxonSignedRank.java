@@ -50,6 +50,7 @@ import static java.lang.Math.*;
  * </ul>
  */
 public class WilcoxonSignedRank extends HypothesisTest {//TODO: exact distribution, 1 sided, handle ties
+    private static final long serialVersionUID = 5355151867756332375L;
 
     /**
      * left, one-sided p-value

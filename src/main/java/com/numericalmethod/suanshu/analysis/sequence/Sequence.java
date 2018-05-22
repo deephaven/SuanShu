@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.sequence;
 
+import java.io.Serializable;
+
 /**
  * A sequence is an ordered list of (real) numbers.
  * Although some sequences, e.g., Fibonacci, have infinitely many elements,
@@ -30,7 +32,7 @@ package com.numericalmethod.suanshu.analysis.sequence;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Sequence">Wikipedia: Sequence</a>
  */
-public interface Sequence {
+public interface Sequence extends Serializable {
 
     /**
      * Get the number of <em>computed</em> terms in the sequence.

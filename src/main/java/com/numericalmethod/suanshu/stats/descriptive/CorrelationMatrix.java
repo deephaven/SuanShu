@@ -39,6 +39,8 @@ import static java.lang.Math.sqrt;
  */
 public class CorrelationMatrix extends DenseMatrix {
 
+    private static final long serialVersionUID = 5440136498491043893L;
+
     /**
      * Construct a correlation matrix from a covariance matrix.
      *

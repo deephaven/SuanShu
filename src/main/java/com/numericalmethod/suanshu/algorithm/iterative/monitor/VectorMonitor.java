@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class VectorMonitor extends IteratesMonitor<Vector> {
 
+    private static final long serialVersionUID = 9126894751545738440L;
+
     @Override
     public void addIterate(Vector x) {
         super.addIterate(new ImmutableVector(x));

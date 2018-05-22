@@ -69,7 +69,8 @@ import com.numericalmethod.suanshu.stats.test.HypothesisTest;
  * empirical cdf for each different x and their differences at these
  * observations and calculate the statistic in the usual way.
  */
-public class KolmogorovSmirnov extends HypothesisTest {//TODO: confidence interval
+public class KolmogorovSmirnov extends HypothesisTest {
+    private static final long serialVersionUID = 1500763160862356081L;//TODO: confidence interval
 
     /**
      * the types of Kolmogorov-Smirnov tests available

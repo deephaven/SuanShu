@@ -39,6 +39,7 @@ import java.util.ArrayList;
  */
 public class FlexibleTable implements MatrixTable {
 
+    private static final long serialVersionUID = -1755228569700754524L;
     private int count = 0;
     private ArrayList<Object> rowLabels = new ArrayList<Object>();
     private ArrayList<Object> colLabels;

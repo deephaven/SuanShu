@@ -48,6 +48,7 @@ import java.util.*;
  */
 public class DOKSparseMatrix implements SparseMatrix {
 
+    private static final long serialVersionUID = -7930412186492754879L;
     private HashMap<Coordinates, Double> dictionary;
     private final int nRows;
     private final int nCols;

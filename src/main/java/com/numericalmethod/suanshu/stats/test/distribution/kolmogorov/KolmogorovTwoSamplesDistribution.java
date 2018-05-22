@@ -50,6 +50,8 @@ import java.util.Arrays;
  */
 public class KolmogorovTwoSamplesDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 1292800936927956061L;
+
     /**
      * the types of KolmogorovDistribution two-sample test available
      */

@@ -41,6 +41,8 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  */
 public class Glejser extends Heteroskedasticity {
 
+    private static final long serialVersionUID = 3449101822484722956L;
+
     /**
      * Perform the Glejser test to test for heteroskedasticity in a linear regression model.
      *
@@ -56,6 +58,8 @@ public class Glejser extends Heteroskedasticity {
 //        final double sigma2 = RSS / n;//variance of disturbances
 
         Vector y = foreach(err, new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 8325492593536777421L;
 
             @Override
             public double evaluate(double x) {

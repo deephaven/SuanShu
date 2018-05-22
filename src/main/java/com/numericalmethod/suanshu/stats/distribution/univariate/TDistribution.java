@@ -54,6 +54,7 @@ import static java.lang.Math.*;
  */
 public class TDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -8526777321641400611L;
     /** the degree of freedom */
     private final double v;
     private final BetaRegularized Ix;

@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * Inverse iteration is an iterative eigenvalue algorithm.
  * It finds an approximate eigenvector when an approximation to an eigenvalue is already known.
@@ -44,12 +46,14 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * <li>COMPUTING AN EIGENVECTOR WITH INVERSE ITERATION, ILSE C. F. IPSEN.
  * </ul>
  */
-public class InverseIteration {
+public class InverseIteration implements Serializable{
+
+    private static final long serialVersionUID = -7798338334998507352L;
 
     /**
      * This interface defines the convergence criterion.
      */
-    public static interface StoppingCriterion {
+    public static interface StoppingCriterion extends Serializable{
 
         /**
          * Check whether we stop with the current eigenvector.
@@ -90,6 +94,7 @@ public class InverseIteration {
                 A,
                 lambda,
                 new StoppingCriterion() {//as suggested in "G. H. Golub, C. F. van Loan, "eq. 7.6.2," Matrix Computations, 3rd edition."
+                    private static final long serialVersionUID = 5706409794967544660L;
 
                     private final Matrix A1 = A.minus(A.ONE().scaled(lambda));//(A - λI)
                     private final double u = Constant.unitRoundOff();

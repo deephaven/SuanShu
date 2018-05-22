@@ -57,6 +57,7 @@ import static java.lang.Math.pow;
  */
 @Deprecated
 public class ADFAsymptoticDistribution1 extends EmpiricalDistribution {//TODO: 1 out the 3 possible forms only?
+    private static final long serialVersionUID = 581505519477236441L;
 
     /**
      * the number of grid point in interval [0, 1]
@@ -123,6 +124,8 @@ public class ADFAsymptoticDistribution1 extends EmpiricalDistribution {//TODO: 1
         SDE sde = new SDE(
                 new Drift() {
 
+                    private static final long serialVersionUID = 6596405864786945086L;
+
                     public Vector evaluate(Ft ft) {
                         FtWt ftwt = (FtWt) ft;
 
@@ -143,7 +146,8 @@ public class ADFAsymptoticDistribution1 extends EmpiricalDistribution {//TODO: 1
                     {0},
                     {0}
                 })),
-                1) {//1 driving Brownian motion
+                1) {
+            private static final long serialVersionUID = 127962861724622454L;//1 driving Brownian motion
 
             @Override
             public Ft getFt() {

@@ -25,6 +25,9 @@ package com.numericalmethod.suanshu.stats.regression.linear.logistic;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -37,7 +40,9 @@ import static java.lang.Math.*;
  *
  * @see "P. J. MacCullagh and J. A. Nelder, "Eq. 4.13, Likelihood functions for binary data," in <i>Generalized Linear Models</i>, 2nd ed. pp. 115."
  */
-class LogLikelihood {
+class LogLikelihood implements Serializable{
+
+    private static final long serialVersionUID = 5199836179820530470L;
 
     /**
      * Construct the log-likelihood function for a logistic regression problem.
@@ -47,6 +52,8 @@ class LogLikelihood {
      */
     RealScalarFunction function(final LogisticProblem problem) {
         return new RealScalarFunction() {
+
+            private static final long serialVersionUID = -5159200459719312504L;
 
             @Override
             public Double evaluate(Vector b) {

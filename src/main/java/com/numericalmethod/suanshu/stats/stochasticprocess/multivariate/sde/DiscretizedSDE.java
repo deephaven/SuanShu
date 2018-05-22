@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde;
 
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface represents the discretized version of a multivariate SDE.
  *
@@ -32,7 +34,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Haksun Li
  */
-public interface DiscretizedSDE {
+public interface DiscretizedSDE extends Serializable {
 
     /**
      * Get the number of independent driving Brownian motions.

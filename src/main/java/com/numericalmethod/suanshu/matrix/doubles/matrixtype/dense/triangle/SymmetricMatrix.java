@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class SymmetricMatrix implements Matrix, Densifiable {
 
+    private static final long serialVersionUID = -8785613448975237188L;
     private final int dim;
     /** storage */
     private LowerTriangularMatrix L;//TODO: made final

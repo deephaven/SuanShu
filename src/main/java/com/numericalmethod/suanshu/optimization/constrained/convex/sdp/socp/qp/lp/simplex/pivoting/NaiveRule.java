@@ -39,6 +39,8 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
  */
 public class NaiveRule implements SimplexPivoting {
 
+    private static final long serialVersionUID = 2447106917078495251L;
+
     /**
      * {@inheritDoc}
      * We choose the column with most negative reduced cost (last entry in the column).

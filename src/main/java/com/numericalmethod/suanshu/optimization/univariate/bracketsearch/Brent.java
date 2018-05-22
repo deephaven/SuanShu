@@ -36,11 +36,14 @@ import static java.lang.Math.abs;
  */
 public class Brent extends BracketSearch {
 
+    private static final long serialVersionUID = -8064832965139716126L;
+
     /**
      * This is the solution to a Brent's univariate optimization.
      */
     public class Solution extends BracketSearch.Solution {
 
+        private static final long serialVersionUID = -5363474813715515660L;
         /**
          * the abscissae for the 2nd least value
          */

@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.analysis.uniroot;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.UnivariateRealFunction;
 
+import java.io.Serializable;
+
 /**
  * A root-finding algorithm is a numerical algorithm for finding a value <i>x</i> such that <i>f(x) = 0</i>, for a given function <i>f</i>.
  * Such an <i>x</i> is called a root of the function <i>f</i>.
@@ -31,7 +33,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Root_finding"> Wikipedia: Root-finding algorithm</a>
  */
-public interface Uniroot {
+public interface Uniroot extends Serializable {
 
     /**
      * Search for a root, <i>x</i>, in the interval <i>[lower, upper]</i> such that <i>f(x) = 0</i>.
@@ -40,8 +42,8 @@ public interface Uniroot {
      * @param lower the lower bound of the bracketing interval
      * @param upper the upper bound of the bracketing interval
      * @param guess an initial guess of the root within <i>[lower, upper]</i>.
-     * Note that {@code guess} is a {@code double[]}.
-     * This signature allows multiple initial guesses for certain types of uniroot algorithms, e.g., Brent's algorithm.
+     *              Note that {@code guess} is a {@code double[]}.
+     *              This signature allows multiple initial guesses for certain types of uniroot algorithms, e.g., Brent's algorithm.
      * @return an approximate root
      * @throws NoRootFoundException when the search fails to find a root
      */

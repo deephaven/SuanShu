@@ -31,6 +31,8 @@ package com.numericalmethod.suanshu.analysis.integration.univariate.riemann;
  */
 public class Trapezoidal extends NewtonCotes {
 
+    private static final long serialVersionUID = -8696749324149820791L;
+
     /**
      * Construct an integrator that implements the Trapezoidal rule.
      *

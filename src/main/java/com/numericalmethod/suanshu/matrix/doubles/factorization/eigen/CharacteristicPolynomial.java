@@ -54,6 +54,7 @@ import java.util.List;
  */
 public class CharacteristicPolynomial implements Spectrum {
 
+    private static final long serialVersionUID = 7914663322801591718L;
     final private Matrix A;
     final private Polynomial polynomial;
 

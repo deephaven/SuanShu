@@ -34,6 +34,7 @@ import static java.lang.Math.*;
  */
 public class LogNormalDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -8247861273715585127L;
     /** the log-mean μ ∈ R */
     private final double logMu;
     /** the log-standard deviation; shape */

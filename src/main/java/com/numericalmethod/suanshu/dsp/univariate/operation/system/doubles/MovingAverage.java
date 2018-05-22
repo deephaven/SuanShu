@@ -40,6 +40,8 @@ import java.util.Arrays;
  */
 public class MovingAverage implements Filter {
 
+    private static final long serialVersionUID = -3117753900715895615L;
+
     /**
      * the types of moving average filtering available
      */

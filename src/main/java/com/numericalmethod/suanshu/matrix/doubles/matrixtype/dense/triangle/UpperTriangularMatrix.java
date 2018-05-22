@@ -22,8 +22,6 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle;
 
-import static com.numericalmethod.suanshu.datastructure.DimensionCheck.isSquare;
-import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfDifferentDimension;
 import com.numericalmethod.suanshu.matrix.MatrixAccessException;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
@@ -35,6 +33,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import java.util.Arrays;
 
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.isSquare;
+import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfDifferentDimension;
+
 /**
  * An upper triangular matrix has 0 entries where row index > column index.
  * An upper triangular matrix is always square.
@@ -44,9 +45,12 @@ import java.util.Arrays;
 //This implementation saves about half of the storage cost (except for the diagonal) when compared to the {@link DenseMatrix} implementation.
 public class UpperTriangularMatrix implements Matrix, Densifiable {
 
+    private static final long serialVersionUID = -2465365233026036670L;
+
     //<editor-fold defaultstate="collapsed" desc="customize the view/usage of the data array">
     private static class MyDenseDataImpl extends TriangularData {
 
+        private static final long serialVersionUID = 5179096002756068819L;
         private final double[] data = asArray();
 
         private MyDenseDataImpl(int dim) {

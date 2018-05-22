@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.matrix.doubles.operation;
 import static com.numericalmethod.suanshu.datastructure.DimensionCheck.throwIfDifferentDimension;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 
+import java.io.Serializable;
+
 /**
  * The Frobenius inner product is the component-wise inner product of two matrices as though they are vectors.
  * In other words, it is the sum of the entries of the Hadamard product, that is,
@@ -35,8 +37,9 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Matrix_multiplication#Frobenius_inner_product">Wikipedia: Frobenius inner product</a>
  */
-public class InnerProduct {
+public class InnerProduct implements Serializable{
 
+    private static final long serialVersionUID = -6917233747435310731L;
     private final double value;
 
     /**

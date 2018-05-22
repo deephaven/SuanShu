@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class MatrixStorageImpl implements Table, MatrixAccess {
 
+    private static final long serialVersionUID = -4410193370186382376L;
     private final MatrixAccess storage;//TODO: make final?
     private final int nRows;
     private final int nCols;

@@ -85,6 +85,7 @@ public class ConjugateGradientNormalErrorSolver implements IterativeLinearSystem
      * The algorithm recomputes the residual as <i>b - Ax<sub>i</sub></i> once per this number of iterations
      */
     public static final int DEFAULT_RESIDUAL_REFRESH_RATE = 50;
+    private static final long serialVersionUID = -4214968533839102785L;
     private final int residualRefreshRate;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration0;
@@ -115,6 +116,8 @@ public class ConjugateGradientNormalErrorSolver implements IterativeLinearSystem
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = -2683286990785366155L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -131,6 +134,7 @@ public class ConjugateGradientNormalErrorSolver implements IterativeLinearSystem
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = 6356464364052554118L;
             private final Matrix A = problem.A();
             private final Matrix At = A.t();
             private final Vector b = problem.b();

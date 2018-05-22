@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.optimization.constrained.constraint.linear.No
  */
 public class NonNegativityConstraintOptimProblem implements ConstrainedOptimProblem {
 
+    private static final long serialVersionUID = 2690477515758703444L;
     private final ConstrainedOptimProblemImpl1 problem;
 
     /**

@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.function.polynomial;
 
+import java.io.Serializable;
+
 /**
  * Divide a polynomial <i>P(x)</i> by a quadratic monomial <i>(x<sup>2</sup> + ux + v)</i>
  * to give the quotient <i>Q(x)</i> and the remainder <i>(b * (x + u) + a)</i>.
@@ -32,8 +34,9 @@ package com.numericalmethod.suanshu.analysis.function.polynomial;
  *
  * @author Ken Yiu
  */
-public class QuadraticSyntheticDivision {
+public class QuadraticSyntheticDivision implements Serializable{
 
+    private static final long serialVersionUID = -7031310796572317396L;
     private Polynomial quotient = null;
     private double a;
     private double b;

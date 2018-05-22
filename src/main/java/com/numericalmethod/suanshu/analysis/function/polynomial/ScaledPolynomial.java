@@ -35,6 +35,7 @@ import static java.lang.Math.*;
 public class ScaledPolynomial extends Polynomial {
 
     private static final double LO = Double.MIN_VALUE / Constant.MACH_EPS;
+    private static final long serialVersionUID = -2335984641022711952L;
 
     /**
      * Construct a scaled polynomial.

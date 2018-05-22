@@ -22,13 +22,15 @@
  */
 package com.numericalmethod.suanshu.analysis.function.tuple;
 
+import java.io.Serializable;
+
 /**
  * Cartesian products and binary relations (and hence the ubiquitous functions) are defined in terms of ordered pairs.
  *
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Ordered_pairs">Wikipedia: Ordered pair</a>
  */
-public interface OrderedPairs {
+public interface OrderedPairs extends Serializable{
 
     /**
      * Get the abscissae.

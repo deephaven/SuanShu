@@ -55,6 +55,8 @@ import static java.lang.Math.*;
  */
 public class AugmentedDickeyFuller extends HypothesisTest {
 
+    private static final long serialVersionUID = 6899022594656492452L;
+
     /**
      * the three versions of augmented Dickey-Fuller (ADF) test
      */
@@ -80,6 +82,7 @@ public class AugmentedDickeyFuller extends HypothesisTest {
 
         ADFDistribution getDistributionInstance(int sampleSize) {
             return new ADFDistribution(support.getData(sampleSize), QuantileType.INVERSE_OF_EMPIRICAL_CDF) {
+                private static final long serialVersionUID = 5229982122103245399L;
             };
         }
 

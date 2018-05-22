@@ -37,6 +37,7 @@ import java.util.Arrays;
  */
 public class LinearInterpolator extends UnivariateRealFunction implements OnlineInterpolator {
 
+    private static final long serialVersionUID = -1824171806302050110L;
     private double[] x;//the abscissae
     private double[] y;//the ordinates
 

@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.vector.doubles.IsVector.VectorAccessException
  */
 public class ImmutableVector implements Vector {
 
+    private static final long serialVersionUID = -8189227899525387804L;
     private final Vector v;
 
     /**

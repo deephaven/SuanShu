@@ -50,6 +50,7 @@ import static java.lang.Math.pow;
  */
 public class Skewness implements Statistic {
 
+    private static final long serialVersionUID = 7362829418789517972L;
     private long N = 0;
     private Moments moment = new Moments(2);
     private double m3 = 0;//the sum of cubes of differences from the mean

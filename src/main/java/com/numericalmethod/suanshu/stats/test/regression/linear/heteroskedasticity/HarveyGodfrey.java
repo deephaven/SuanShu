@@ -41,6 +41,8 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  */
 public class HarveyGodfrey extends Heteroskedasticity {
 
+    private static final long serialVersionUID = 3696618289843731562L;
+
     /**
      * Perform the Harvey-Godfrey test to test for heteroskedasticity in a linear regression model.
      *
@@ -54,6 +56,8 @@ public class HarveyGodfrey extends Heteroskedasticity {
         Vector err = residuals.residuals;
 
         Vector y = foreach(err, new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -164935695066459270L;
 
             @Override
             public double evaluate(double x) {

@@ -43,6 +43,8 @@ import static com.numericalmethod.suanshu.analysis.function.FunctionOps.dotProdu
  */
 public class ARMAXModel extends ARIMAXModel {
 
+    private static final long serialVersionUID = -6408446215186961638L;
+
     /**
      * Construct a univariate ARMAX (ARMA model with eXogenous inputs) model.
      *

@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * @see <a href="http://en.wikipedia.org/wiki/Diagonal_matrix">Wikipedia: Diagonal matrix</a>
  */
 public class DiagonalMatrix extends DiagonalDataMatrix {
+    private static final long serialVersionUID = 1107051916861092171L;
 
     //<editor-fold defaultstate="collapsed" desc="Ctors">
     /**

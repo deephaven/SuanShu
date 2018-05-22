@@ -30,6 +30,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
  */
 public class Bt extends FiltrationFunction {
 
+    private static final long serialVersionUID = 3319902208042840904L;
+
     @Override
     public double evaluate(int t) {
         double Bt = FT.B(t);

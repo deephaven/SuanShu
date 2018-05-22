@@ -34,6 +34,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class InverseTransformSamplingExpRng extends InverseTransformSampling implements RandomExpGenerator {
 
+    private static final long serialVersionUID = -7780200329794786890L;
+
     /**
      * Construct a random number generator to sample from the exponential distribution using the inverse transform sampling method.
      *

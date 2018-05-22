@@ -40,6 +40,8 @@ import static java.lang.Math.log;
  */
 public class CauchyPolynomial extends Polynomial {
 
+    private static final long serialVersionUID = -4812492469529031401L;
+
     public CauchyPolynomial(Polynomial p) {
         super(getCauchyCoefficients(p));
     }

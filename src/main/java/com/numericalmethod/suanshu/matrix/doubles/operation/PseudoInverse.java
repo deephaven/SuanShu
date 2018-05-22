@@ -55,6 +55,8 @@ import com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath;
  */
 public class PseudoInverse extends DenseMatrix {
 
+    private static final long serialVersionUID = -1061678635069958687L;
+
     /**
      * Construct the Moore–Penrose pseudo-inverse matrix of a matrix.
      *

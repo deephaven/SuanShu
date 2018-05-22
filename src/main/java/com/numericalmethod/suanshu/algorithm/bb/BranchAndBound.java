@@ -42,6 +42,7 @@ import java.util.Stack;
  */
 public class BranchAndBound implements MinimizationSolution<Vector>, IterativeMethod<BBNode> {
 
+    private static final long serialVersionUID = 8035685737957752948L;
     private ActiveList activeList;
     private BBNode incumbent;
     private double upper;
@@ -66,6 +67,7 @@ public class BranchAndBound implements MinimizationSolution<Vector>, IterativeMe
         this(
                 new ActiveList() {
 
+                    private static final long serialVersionUID = -6249077161307539299L;
                     Stack<BBNode> stack = new Stack<BBNode>();
 
                     @Override

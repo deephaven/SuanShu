@@ -52,8 +52,11 @@ import java.util.List;
  */
 public class LeastPth<T> implements MinMaxMinimizer<T> {
 
+    private static final long serialVersionUID = 1806597054062724238L;
+
     private class Solution implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = -2516158857861167029L;
         private Vector xmin;
         private double Ek = Double.MAX_VALUE;
         private int p = 2;
@@ -136,6 +139,8 @@ public class LeastPth<T> implements MinMaxMinimizer<T> {
         private RealScalarFunction psi() {
             RealScalarFunction psi_k = new RealScalarFunction() {
 
+                private static final long serialVersionUID = -2973518983285658172L;
+
                 @Override
                 public Double evaluate(Vector x) {
                     //compute e(x, ωi) and E^(x)
@@ -173,6 +178,8 @@ public class LeastPth<T> implements MinMaxMinimizer<T> {
          */
         private RealVectorFunction psiGradient() {
             RealVectorFunction g_psi_k = new RealVectorFunction() {
+
+                private static final long serialVersionUID = 4044764302663014667L;
 
                 @Override
                 public Vector evaluate(Vector x) {
@@ -220,6 +227,8 @@ public class LeastPth<T> implements MinMaxMinimizer<T> {
         /** <i>∇Ψ<sub>k</sub>(x)</i> */
         private RealVectorFunction getNumericalGradient() {
             RealVectorFunction g_psi_k = new RealVectorFunction() {
+
+                private static final long serialVersionUID = -4502243696257463229L;
 
                 @Override
                 public Vector evaluate(Vector x) {

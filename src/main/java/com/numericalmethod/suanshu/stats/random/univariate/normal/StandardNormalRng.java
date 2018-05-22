@@ -28,4 +28,5 @@ package com.numericalmethod.suanshu.stats.random.univariate.normal;
  * @author Haksun Li
  */
 public class StandardNormalRng extends Zignor2005 {
+    private static final long serialVersionUID = 9032219362199723829L;
 }

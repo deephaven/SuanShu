@@ -50,6 +50,7 @@ import java.util.List;
  */
 public class SQPASEVariation1 implements SQPASEVariation {
 
+    private static final long serialVersionUID = 4548376186849357828L;
     protected RealScalarFunction f;
     protected List<RealScalarFunction> a;
     protected int p;
@@ -151,6 +152,8 @@ public class SQPASEVariation1 implements SQPASEVariation {
     @Override
     public double alpha(final Vector x, final Vector d, final Vector v) {
         UnivariateRealFunction phi = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 5299804933907189794L;
 
             @Override
             public double evaluate(double alpha) {

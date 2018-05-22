@@ -24,13 +24,15 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
 
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.Realization;
 
+import java.io.Serializable;
+
 /**
  * This interface defines how a realization of a stochastic process is constructed.
  * <tt>Construction</tt> is essentially a random path/realization generator.
  *
  * @author Haksun Li
  */
-public interface Construction {
+public interface Construction extends Serializable{
 
     /**
      * Construct a realization of the stochastic process. The realization a time series.

@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.timepoints.UnitGrid;
  */
 public class Milstein extends RandomWalk {
 
+    private static final long serialVersionUID = -888262868541928065L;
+
     /**
      * Simulate an SDE using the Milstein scheme at time points specified.
      *

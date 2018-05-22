@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.datastructure;
 
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.number.DoubleUtils;
+
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -35,7 +37,8 @@ import java.util.*;
  *
  * @author Haksun Li
  */
-public class MathTable {//TODO: make synchronized; read/write from/to file
+public class MathTable implements Serializable{//TODO: make synchronized; read/write from/to file
+    private static final long serialVersionUID = 914723222626955883L;
 
     private final double EPSILON = 10. * com.numericalmethod.suanshu.Constant.EPSILON;
 
@@ -45,8 +48,9 @@ public class MathTable {//TODO: make synchronized; read/write from/to file
      * <p/>
      * This class is immutable.
      */
-    public class Row {
+    public class Row implements Serializable{
 
+        private static final long serialVersionUID = -3853558447288022118L;
         /** the row index */
         private final double index;
         /** the column values in the row */

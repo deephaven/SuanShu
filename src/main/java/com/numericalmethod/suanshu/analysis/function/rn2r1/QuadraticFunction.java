@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class QuadraticFunction implements RealScalarFunction {
 
+    private static final long serialVersionUID = 2183588273751802524L;
     private final ImmutableMatrix H;
     private final ImmutableVector p;
     private final double c;

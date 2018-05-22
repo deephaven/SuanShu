@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationar
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface represents a fitting method for estimating <i>φ, θ, μ and σ^2</i> in an ARMA model.
  *
@@ -35,7 +37,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @see ConditionalSumOfSquares
  */
-public interface ARMAFitting {
+public interface ARMAFitting extends Serializable{
 
     /**
      * Get the ARMA coefficients, <i>φ</i>.

@@ -40,6 +40,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 abstract class Heteroskedasticity extends HypothesisTest {
 
+    private static final long serialVersionUID = -6694908102636975903L;
+
     protected abstract OLSRegression getAuxiliaryRegression();
     protected final Residuals residuals;
     /**

@@ -42,6 +42,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 abstract class DiagonalDataMatrix implements Matrix, Densifiable {
 
+    private static final long serialVersionUID = -451998121459317091L;
     /** the storage */
     DiagonalData storage;
     private final MatrixMathOperation math = new SimpleMatrixMathOperation();
@@ -49,7 +50,7 @@ abstract class DiagonalDataMatrix implements Matrix, Densifiable {
     /**
      * Construct a matrix implemented using {@code DiagonalData}.
      *
-     * @param storage the matrix entries
+     * @param data the matrix entries
      */
     DiagonalDataMatrix(DiagonalData data) {
         this.storage = data;

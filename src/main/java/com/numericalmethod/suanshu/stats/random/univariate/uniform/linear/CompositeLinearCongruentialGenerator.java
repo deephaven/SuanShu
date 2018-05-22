@@ -35,6 +35,7 @@ import java.util.Arrays;
  */
 public class CompositeLinearCongruentialGenerator implements LinearCongruentialGenerator {
 
+    private static final long serialVersionUID = 3773399569566141270L;
     private LinearCongruentialGenerator[] rng;
     private final long m;
 

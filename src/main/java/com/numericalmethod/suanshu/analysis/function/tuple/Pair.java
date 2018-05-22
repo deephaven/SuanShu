@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.function.tuple;
 
+import java.io.Serializable;
+
 /**
  * An ordered pair (x,y) is a pair of mathematical objects.
  * In the ordered pair (x,y), the object a is called the first entry, and the object b the second entry of the pair.
@@ -32,11 +34,15 @@ package com.numericalmethod.suanshu.analysis.function.tuple;
  *
  * @author Haksun Li
  */
-public class Pair {
-
-    /** <i>x</i> */
+public class Pair implements Serializable {
+    private static final long serialVersionUID = 2758689588319769569L;
+    /**
+     * <i>x</i>
+     */
     public final double x;
-    /** <i>y</i> */
+    /**
+     * <i>y</i>
+     */
     public final double y;
 
     /**

@@ -40,6 +40,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class LinearEqualityConstraints extends LinearConstraints implements EqualityConstraints {
 
+    private static final long serialVersionUID = 8238401689803191067L;
+
     /**
      * Construct a collection of linear equality constraints.
      *

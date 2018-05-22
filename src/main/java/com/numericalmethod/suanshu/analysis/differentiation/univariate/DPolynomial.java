@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.analysis.function.polynomial.Polynomial;
  */
 public class DPolynomial extends Polynomial {
 
+    private static final long serialVersionUID = -7580999927193927667L;
+
     /**
      * Construct the derivative function of a {@link Polynomial}, which, again, is a polynomial.
      *

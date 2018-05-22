@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class GLMProblem extends com.numericalmethod.suanshu.stats.regression.linear.LMProblem {
 
+    private static final long serialVersionUID = -2413197498057435982L;
     /**
      * the exponential family distribution for the mean
      */

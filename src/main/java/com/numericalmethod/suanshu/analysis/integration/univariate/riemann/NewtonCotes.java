@@ -45,6 +45,8 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.relativeError;
  */
 public class NewtonCotes implements IterativeIntegrator {
 
+    private static final long serialVersionUID = -6012165378460983635L;
+
     /** There are two types of the Newton-Cotes method: OPEN and CLOSED. */
     public static enum Type {
 

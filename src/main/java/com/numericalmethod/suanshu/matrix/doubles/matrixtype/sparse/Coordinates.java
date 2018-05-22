@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse;
 
+import java.io.Serializable;
+
 /**
  * The location of a matrix entry is specified by a 2D coordinates <i>(i,
  * j)</i>, where <i>i</i> and <i>j</i> are the row-index and column-index of the
@@ -31,8 +33,9 @@ package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse;
  */
 //TODO: move this class to a new package ...geometry...? Maybe not because it is all integers here.
 //TODO: rename to Coordinates2D?
-public final class Coordinates {
+public final class Coordinates implements Serializable{
 
+    private static final long serialVersionUID = 9136832551492924322L;
     /** the row index */
     public final int i;
     /** the column index */

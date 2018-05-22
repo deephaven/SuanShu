@@ -38,6 +38,7 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  */
 public class JacobiPreconditioner implements Preconditioner {
 
+    private static final long serialVersionUID = 4069750180173368662L;
     private final Vector Dinv;
 
     /**
@@ -52,6 +53,8 @@ public class JacobiPreconditioner implements Preconditioner {
         Dinv = com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.foreach(
                 D,
                 new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = 4587606243610490456L;
 
                     @Override
                     public double evaluate(double x) {

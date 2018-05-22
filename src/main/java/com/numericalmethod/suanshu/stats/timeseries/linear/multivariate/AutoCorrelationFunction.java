@@ -39,6 +39,7 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  * @author Haksun Li
  */
 public abstract class AutoCorrelationFunction extends R2toMatrix {//TODO: make this R1toMatrix?
+    private static final long serialVersionUID = 8184541992175118320L;
 
     /**
      * Get the auto-correlation matrix for Xi and Xj.

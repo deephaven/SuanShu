@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.link
  */
 public abstract class Family implements ExponentialDistribution {
 
+    private static final long serialVersionUID = -7838333643075565546L;
     /**
      * the link function of this distribution
      */

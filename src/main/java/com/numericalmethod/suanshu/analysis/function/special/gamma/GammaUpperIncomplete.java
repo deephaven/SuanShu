@@ -40,6 +40,7 @@ public class GammaUpperIncomplete extends BivariateRealFunction {
 
     private static final GammaRegularizedQ qgamma = new GammaRegularizedQ();
     private static final Gamma gamma = new GammaLanczosQuick();
+    private static final long serialVersionUID = 8829997232758763926L;
 
     /**
      * Compute <i>Γ(s,x)</i>.

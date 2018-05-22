@@ -32,6 +32,7 @@ package com.numericalmethod.suanshu.stats.descriptive;
  */
 public class SynchronizedStatistic implements Statistic {
 
+    private static final long serialVersionUID = 5492763845778314051L;
     /** the {@link Statistic} to be made thread-safe */
     private final Statistic stat;
 

@@ -59,6 +59,7 @@ import static java.lang.Math.*;
  */
 public class Lilliefors extends HypothesisTest {
 
+    private static final long serialVersionUID = 2198171072408449746L;
     private final ProbabilityDistribution norm = new NormalDistribution();
     private final Polynomial p1 = new Polynomial(new double[]{81.218052, -138.55152, 80.709644, -19.828315, 2.76773});
     private final Polynomial p2 = new Polynomial(new double[]{-32.355711, 94.029866, -97.490286, 40.662806, -4.901232});

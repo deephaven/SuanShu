@@ -38,6 +38,7 @@ import java.util.Random;
  */
 public class LEcuyer implements LinearCongruentialGenerator {
 
+    private static final long serialVersionUID = 8058307393389382534L;
     private final CompositeLinearCongruentialGenerator rng;
     private final MRG mrg1, mrg2;
     private final long m;//the modulus

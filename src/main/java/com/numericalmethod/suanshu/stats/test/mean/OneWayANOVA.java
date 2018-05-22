@@ -28,6 +28,7 @@ import static java.lang.Math.*;
  * </ul>
  */
 public class OneWayANOVA extends HypothesisTest {//TODO: sum sq., meam sq.
+    private static final long serialVersionUID = 2303901262417427454L;
 
     /**
      * degree of freedoms

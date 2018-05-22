@@ -28,14 +28,17 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.exception.LPUnbounded;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.pivoting.SmallestSubscriptRule;
 
+import java.io.Serializable;
+
 /**
  * The scheme 2 procedure removes equalities and free variables.
  *
  * @author Haksun Li
  * @see "Michael C. Ferris, Olvi L. Mangasarian, Stephen J. Wright. "Section 3.6.3, Scheme II," Linear Programming with MATLAB"
  */
-public class FerrisMangasarianWrightScheme2 {
+public class FerrisMangasarianWrightScheme2 implements Serializable {
 
+    private static final long serialVersionUID = 7690808150261034385L;
     private SimplexTable table0;
     private final double epsilon;
 
@@ -64,7 +67,9 @@ public class FerrisMangasarianWrightScheme2 {
         return table2;
     }
 
-    /** Move the equalities to columns then delete. */
+    /**
+     * Move the equalities to columns then delete.
+     */
     private SimplexTable swapEqualities(SimplexTable table) throws LPInfeasible {
         for (int r = 1; r < table.nRows(); ++r) {//rows
             if (table.getRowLabel(r).type != SimplexTable.LabelType.EQUALITY) {
@@ -111,7 +116,9 @@ public class FerrisMangasarianWrightScheme2 {
         return table;
     }
 
-    /** Move the free variables to rows. */
+    /**
+     * Move the free variables to rows.
+     */
     private SimplexTable swapFrees(SimplexTable table) throws LPUnbounded {
         SmallestSubscriptRule pivoting = new SmallestSubscriptRule();
 

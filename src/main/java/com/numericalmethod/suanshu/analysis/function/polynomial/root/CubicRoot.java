@@ -43,6 +43,7 @@ import java.util.List;
 public class CubicRoot implements PolyRootSolver {
 
     private static final double ROOT_3_OVER_2 = sqrt(3) / 2;
+    private static final long serialVersionUID = 5682777148896191922L;
 
     /**
      * Solve \(ax^3 + bx^2 + cx + d = 0\).

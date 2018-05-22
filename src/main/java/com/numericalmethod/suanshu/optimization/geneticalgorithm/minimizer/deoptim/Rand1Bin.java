@@ -41,6 +41,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Rand1Bin extends DEOptimCellFactory {
 
+    private static final long serialVersionUID = 9119637516518055621L;
+
     /**
      * Construct an instance of {@code Rand1Bin}.
      *
@@ -76,6 +78,8 @@ public class Rand1Bin extends DEOptimCellFactory {
      * </ul>
      */
     public class DeRand1BinCell extends DeOptimCell {
+
+        private static final long serialVersionUID = 198786935478738496L;
 
         protected DeRand1BinCell(RealScalarFunction f, Vector x) {
             super(f, x);

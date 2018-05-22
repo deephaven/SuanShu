@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class JacobianFunction implements RntoMatrix {
 
+    private static final long serialVersionUID = -7888638855866686700L;
     private final RealVectorFunction f;//the real vector function to compute the Jacobian for
 
     /**

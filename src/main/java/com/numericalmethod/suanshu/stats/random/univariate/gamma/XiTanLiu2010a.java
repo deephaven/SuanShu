@@ -40,6 +40,7 @@ import static java.lang.Math.*;
  */
 public class XiTanLiu2010a implements RandomGammaGenerator {
 
+    private static final long serialVersionUID = 5583101276778642684L;
     private final double k;
     private final RandomLongGenerator uniform;
     private final double theta, c, B_max, B_min;

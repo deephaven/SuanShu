@@ -46,6 +46,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class SimpleMC implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = 6406149682743835428L;
     /** the initial state probabilities */
     private final ImmutableVector PI;
     /** the state transition probabilities */

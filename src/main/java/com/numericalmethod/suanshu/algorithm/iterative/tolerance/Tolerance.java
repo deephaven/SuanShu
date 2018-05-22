@@ -22,12 +22,14 @@
  */
 package com.numericalmethod.suanshu.algorithm.iterative.tolerance;
 
+import java.io.Serializable;
+
 /**
  * The tolerance criteria for an iterative algorithm to stop.
  *
  * @author Ken Yiu
  */
-public interface Tolerance {
+public interface Tolerance extends Serializable{
 
     /**
      * Checks if the updated residual satisfies the tolerance criteria.

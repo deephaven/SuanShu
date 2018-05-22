@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.ols.OLSRegression;
 import com.numericalmethod.suanshu.stats.test.timeseries.adf.AugmentedDickeyFuller.TrendType;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -58,9 +60,10 @@ import java.util.Arrays;
  * <li> A. Banerjee et al., "Cointegration, Error Correction, and the Econometric Analysis of Non-Stationary Data," Oxford, Oxford University Press, 1993, ch. 4, pp. 99-135.
  * </ul>
  */
-public class ADFFiniteSampleDistribution extends EmpiricalDistribution {//TODO: cannot seed
+public class ADFFiniteSampleDistribution extends EmpiricalDistribution {
+    private static final long serialVersionUID = 2499417130359473740L;//TODO: cannot seed
 
-    static interface TestStat {
+    static interface TestStat extends Serializable{
         
         double fromRegression(Vector y, Matrix X);
     }

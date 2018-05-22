@@ -42,6 +42,7 @@ import java.util.List;
  */
 public class UniformDistributionOverBox2 implements BuildInitials {
 
+    private static final long serialVersionUID = 9140120389198421395L;
     private final double scale;
     private final RandomLongGenerator rng;
     private final Double[][] grid;

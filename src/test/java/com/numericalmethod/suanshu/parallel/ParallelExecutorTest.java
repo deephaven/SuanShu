@@ -28,6 +28,9 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.misc.R;
 import com.numericalmethod.suanshu.stats.random.multivariate.IID;
 import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
+import org.junit.After;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,14 +38,18 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import static org.junit.Assert.*;
-import org.junit.Test;
 
 /**
- *
  * @author Ken Yiu
  */
 public class ParallelExecutorTest {
+
+    @After
+    public void tearDown() throws Exception {
+        ParallelExecutor.setConcurrencyLevel(-1);
+    }
 
     @Test
     public void test_executeAllList_0010() throws MultipleExecutionException {
@@ -70,14 +77,14 @@ public class ParallelExecutorTest {
         }
         List<Integer> expResult = Arrays.<Integer>asList(sums);
 
-        List<Integer> result = new ParallelExecutor().executeAll(tasks);
+        List<Integer> result = ParallelExecutor.getInstance().executeAll(tasks);
         assertEquals(expResult, result);
     }
 
     @Test
     public void test_executeAllVarArg_0010() throws MultipleExecutionException {
         @SuppressWarnings("unchecked")
-        List<Integer> results = new ParallelExecutor().executeAll(
+        List<Integer> results = ParallelExecutor.getInstance().executeAll(
                 new Callable<Integer>() {
 
                     @Override
@@ -100,7 +107,8 @@ public class ParallelExecutorTest {
 
     @Test(timeout = 1000)
     public void test_executeAnyVarArg_0010() throws ExecutionException {
-        ParallelExecutor parallel = new ParallelExecutor(2);
+        ParallelExecutor.setConcurrencyLevel(2);
+        ParallelExecutor parallel = ParallelExecutor.getInstance();
         @SuppressWarnings("unchecked")
         Integer result = parallel.executeAny(
                 new Callable<Integer>() {
@@ -139,7 +147,7 @@ public class ParallelExecutorTest {
     @Test
     public void test_forLoop_accessAtomicObject() throws MultipleExecutionException {
         final AtomicInteger sum = new AtomicInteger(0);
-        new ParallelExecutor().forLoop(1, 101, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(1, 101, new LoopBody() {
 
             @Override
             public void run(int i) throws Exception {
@@ -153,7 +161,7 @@ public class ParallelExecutorTest {
     @Test
     public void test_forLoop_assignArrayEntries() throws MultipleExecutionException {
         final double[] array = new double[1000];
-        new ParallelExecutor().forLoop(0, array.length, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(0, array.length, new LoopBody() {
 
             @Override
             public void run(int i) throws Exception {
@@ -170,7 +178,7 @@ public class ParallelExecutorTest {
     public void test_forLoop_nestedLoops() throws MultipleExecutionException {
         final double[][] array2d = new double[100][100];
 
-        new ParallelExecutor().forLoop(0, array2d.length, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(0, array2d.length, new LoopBody() {
 
             @Override
             public void run(final int i) throws Exception {
@@ -194,7 +202,7 @@ public class ParallelExecutorTest {
         final Matrix A1 = new DenseMatrix(iid.nextVector(), matrixSize, matrixSize);
         final Matrix A2 = new DenseMatrix(matrixSize, matrixSize);
         A2.set(1, 1, 0.); // trigger space allocation in the main thread
-        new ParallelExecutor().forLoop(1, matrixSize + 1, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(1, matrixSize + 1, new LoopBody() {
 
             @Override
             public void run(int i) throws Exception {
@@ -211,7 +219,7 @@ public class ParallelExecutorTest {
     public void test_forLoop_blockIncrement() throws MultipleExecutionException {
         final int increment = 10;
         final double[] array = new double[1000];
-        new ParallelExecutor().forLoop(0, array.length, increment, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(0, array.length, increment, new LoopBody() {
 
             @Override
             public void run(int i) throws Exception {
@@ -236,7 +244,7 @@ public class ParallelExecutorTest {
         }
 
         final AtomicInteger sum = new AtomicInteger(0);
-        new ParallelExecutor().forEach(list, new IterationBody<Integer>() {
+        ParallelExecutor.getInstance().forEach(list, new IterationBody<Integer>() {
 
             @Override
             public void run(Integer item) {
@@ -251,7 +259,7 @@ public class ParallelExecutorTest {
     public void test_forEach_0020() throws MultipleExecutionException {
         List<Integer> list = Collections.<Integer>emptyList();
         final AtomicInteger sum = new AtomicInteger(0);
-        new ParallelExecutor().forEach(list, new IterationBody<Integer>() {
+        ParallelExecutor.getInstance().forEach(list, new IterationBody<Integer>() {
 
             @Override
             public void run(Integer item) {
@@ -264,7 +272,7 @@ public class ParallelExecutorTest {
 
     @Test
     public void test_reusability_0010() throws MultipleExecutionException {
-        ParallelExecutor executor = new ParallelExecutor();
+        ParallelExecutor executor = ParallelExecutor.getInstance();
         @SuppressWarnings("unchecked")
         List<Integer> results1 = executor.executeAll(
                 new Callable<Integer>() {

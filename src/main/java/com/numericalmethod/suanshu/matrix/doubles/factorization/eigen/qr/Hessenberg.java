@@ -24,9 +24,12 @@ package com.numericalmethod.suanshu.matrix.doubles.factorization.eigen.qr;
 
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.MatrixMeasure;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
 import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
 import static com.numericalmethod.suanshu.number.DoubleUtils.equal;
-import java.util.ArrayList;
 
 /**
  * An <em>upper</em> Hessenberg matrix is a square matrix which has zero entries below the first sub-diagonal.
@@ -43,7 +46,9 @@ import java.util.ArrayList;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Hessenberg_matrix>Wikipedia: Hessenberg matrix</a>
  */
-public class Hessenberg {
+public class Hessenberg implements Serializable {
+
+    private static final long serialVersionUID = -4232999467711907695L;
 
     /**
      * Deflation of an upper Hessenberg matrix splits it into multiple smaller upper Hessenberg matrices
@@ -72,7 +77,7 @@ public class Hessenberg {
      *
      * @see "Golub and van Loan, Section 7.5.1."
      */
-    public static interface DeflationCriterion {
+    public static interface DeflationCriterion extends Serializable {
 
         /**
          * Check whether a sub-diagonal element is sufficiently small.
@@ -205,8 +210,9 @@ public class Hessenberg {
      * </ul>
      * If both \(u_l\) and \(l_r\) are all zeros, it means that <i>H</i> is a quasi-triangular matrix.
      */
-    public static class Deflation {
+    public static class Deflation implements Serializable{
 
+        private static final long serialVersionUID = -4932248742585832678L;
         /**
          * <code>H<sub>22</sub></code> an unreduced Hessenberg in Algorithm 7.5.2 has the dimension \((l_r-r_l+1) \times (l_r-u_l+1)\).
          * We try to minimize \(u_l\) (hence maximize the <i>H<sub>22</sub></i> dimension).
@@ -244,7 +250,7 @@ public class Hessenberg {
         int ul = n;
         int lr = n;
 
-        for (; ul >= 1;) {
+        for (; ul >= 1; ) {
             if (ul == 1 || deflationCriterion.isNegligible(H, ul, ul - 1, epsilon)) {//reducible; deflation point
                 if (lr != 2 &&//no need to do rounding for the leading 2x2 matrix
                         ul > 1) {//avoid invalid index
@@ -253,7 +259,7 @@ public class Hessenberg {
                 }
 
                 if (ul == lr - 1//process a 2x2 block
-                    || (ul == lr)) {//process a 1x1 block
+                        || (ul == lr)) {//process a 1x1 block
                     /*
                      * process a 2x2 block
                      *
@@ -292,6 +298,7 @@ public class Hessenberg {
      */
     public static class DefaultDeflationCriterion implements DeflationCriterion {
 
+        private static final long serialVersionUID = -2211453200022354087L;
         private double threshold = 1e-12;
 
         /**

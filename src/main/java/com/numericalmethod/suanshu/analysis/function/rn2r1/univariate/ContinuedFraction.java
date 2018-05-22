@@ -22,11 +22,13 @@
  */
 package com.numericalmethod.suanshu.analysis.function.rn2r1.univariate;
 
-import static com.numericalmethod.suanshu.Constant.EPSILON;
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import static com.numericalmethod.suanshu.Constant.EPSILON;
 import static java.math.BigDecimal.ONE;
 import static java.math.BigDecimal.ZERO;
-import java.math.BigInteger;
 
 /**
  * A continued fraction representation of a number has this form:
@@ -56,12 +58,14 @@ import java.math.BigInteger;
  */
 public class ContinuedFraction extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 2821356630495175432L;
+
     /**
      * {@link RuntimeException} thrown when the continued fraction fails to converge for a given epsilon before a certain number of iterations.
      */
     public static class MaxIterationsExceededException extends RuntimeException {
 
-        private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = 2124892646413065418L;
         private final int nIterations;
 
         /**
@@ -91,7 +95,7 @@ public class ContinuedFraction extends UnivariateRealFunction {
      * z = b_0 + \cfrac{a_1}{b_1 + \cfrac{a_2}{b_2 + \cfrac{a_3}{b_3 + \cfrac{a_4}{b_4 + \ddots\,}}}}
      * \]
      */
-    public static interface Partials {
+    public static interface Partials extends Serializable {
 
         /**
          * Compute <i>a<sub>n</sub></i>.

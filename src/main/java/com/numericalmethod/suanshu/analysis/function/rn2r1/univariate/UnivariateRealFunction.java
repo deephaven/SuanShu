@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public abstract class UnivariateRealFunction implements RealScalarFunction {
 
+    private static final long serialVersionUID = -5143120303102170687L;
+
     @Override
     public int dimensionOfDomain() {
         return 1;

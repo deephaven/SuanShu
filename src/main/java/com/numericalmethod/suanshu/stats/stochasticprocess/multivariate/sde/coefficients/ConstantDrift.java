@@ -32,6 +32,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ConstantDrift implements Drift {
 
+    private static final long serialVersionUID = -5993724336244412550L;
     /**
      * the drift
      */

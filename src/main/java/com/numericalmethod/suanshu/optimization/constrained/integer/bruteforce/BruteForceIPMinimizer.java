@@ -45,6 +45,8 @@ import com.numericalmethod.suanshu.parallel.ParallelExecutor;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,12 +63,14 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, BruteForceIPMinimizer.Solution> {
 
+    private static final long serialVersionUID = 619701244919947924L;
+
     /**
      * This factory constructs a new instance of {@code ConstrainedMinimizer} to solve a real valued minimization problem.
      *
      * @param <U> a subclass of {@code ConstrainedMinimizer}
      */
-    public static interface ConstrainedMinimizerFactory<U extends ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>>> {
+    public static interface ConstrainedMinimizerFactory<U extends ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>>> extends Serializable {
 
         /**
          * Construct a new instance of {@code ConstrainedMinimizer} to solve a real valued minimization problem.
@@ -95,6 +99,7 @@ public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, B
      */
     public class Solution implements MinimizationSolution<Vector> {
 
+        private static final long serialVersionUID = -2022056920984666230L;
         private BruteForceIPProblem problem;
         private ImmutableVector minimizer;
         private double fmin = Double.POSITIVE_INFINITY;
@@ -123,7 +128,7 @@ public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, B
 
             final ConcurrentLinkedQueue<Result> results = new ConcurrentLinkedQueue<Result>();
             try {
-                new ParallelExecutor().forEach(
+                ParallelExecutor.getInstance().forEach(
                         domains,
                         new IterationBody<List<Integer>>() {
 
@@ -144,6 +149,8 @@ public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, B
                                     EqualityConstraints equal = null;
                                     if (problem.getEqualityConstraints() != null) {
                                         equal = new EqualityConstraints() {
+
+                                            private static final long serialVersionUID = -3758587800324299167L;
 
                                             @Override
                                             public ArrayList<RealScalarFunction> getConstraints() {
@@ -177,6 +184,8 @@ public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, B
                                     LessThanConstraints less = null;
                                     if (problem.getLessThanConstraints() != null) {
                                         less = new LessThanConstraints() {
+
+                                            private static final long serialVersionUID = 6288873044511594892L;
 
                                             @Override
                                             public ArrayList<RealScalarFunction> getConstraints() {
@@ -282,6 +291,8 @@ public class BruteForceIPMinimizer implements IPMinimizer<BruteForceIPProblem, B
      */
     public BruteForceIPMinimizer(final double epsilon, final int maxIterations) {
         this(new ConstrainedMinimizerFactory<ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>>>() {
+
+            private static final long serialVersionUID = -6437727970631279850L;
 
             @Override
             public ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>> newInstance() {

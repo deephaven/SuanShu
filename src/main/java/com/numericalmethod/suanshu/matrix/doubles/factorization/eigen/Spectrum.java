@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.factorization.eigen;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -34,7 +35,7 @@ import java.util.List;
  * <li><a href="http://en.wikipedia.org/wiki/Eigenvalue,_eigenvector_and_eigenspace#Spectrum">Wikipedia: Spectrum</a>
  * </ul>
  */
-public interface Spectrum {
+public interface Spectrum extends Serializable{
 
     /**
      * Get all the eigenvalues.

@@ -41,6 +41,7 @@ import static java.lang.Math.*;
  */
 public class GammaDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -4510602878245665974L;
     /** the shape parameter */
     private final double k;
     /** the scale parameter */

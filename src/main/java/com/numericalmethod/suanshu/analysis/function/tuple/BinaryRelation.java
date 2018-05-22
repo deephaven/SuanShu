@@ -38,7 +38,7 @@ import java.util.TreeSet;
  */
 public class BinaryRelation extends TreeSet<Pair> implements OrderedPairs {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -7640074154238242744L;
 
     /**
      * Construct a binary relation from {(x,y)}.

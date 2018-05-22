@@ -62,6 +62,7 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  */
 public class HouseholderReflection implements QRDecomposition {
 
+    private static final long serialVersionUID = 2449844939820757631L;
     private UpperTriangularMatrix R;//nCols x nCols
     private Vector[] cols;
     private Householder[] Hs;

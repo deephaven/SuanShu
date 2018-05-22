@@ -44,6 +44,8 @@ import java.util.List;
  */
 public class Jacobian extends DenseMatrix {
 
+    private static final long serialVersionUID = 8696875770086729549L;
+
     /**
      * Construct the Jacobian matrix for a multivariate function <i>f</i> at point <i>x</i>.
      *
@@ -71,6 +73,8 @@ public class Jacobian extends DenseMatrix {
     public Jacobian(final RealScalarFunction[] f, Vector x) {
         this(
                 new RealVectorFunction() {
+
+                    private static final long serialVersionUID = -1681982687082754029L;
 
                     @Override
                     public Vector evaluate(Vector x) {

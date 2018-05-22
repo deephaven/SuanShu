@@ -63,6 +63,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class SuccessiveOverrelaxationSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = 7452530471417021649L;
     /** the extrapolation factor, i.e., weight for weighted averaging */
     private final double omega;
     private final int maxIteration;
@@ -99,6 +100,7 @@ public class SuccessiveOverrelaxationSolver implements IterativeLinearSystemSolv
 
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = -4200515489761735045L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final SORSweep sweep = new SORSweep(A, b, omega);

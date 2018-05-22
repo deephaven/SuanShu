@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
  */
 class F_NO_CONSTANT implements JohansenAsymptoticDistribution.F {
 
+    private static final long serialVersionUID = 5025580683426334523L;
+
     @Override
     public FiltrationFunction[] evaluate(Realization[] B) {
         final int dim = B.length;
@@ -41,6 +43,8 @@ class F_NO_CONSTANT implements JohansenAsymptoticDistribution.F {
         for (int i = 0; i < dim; ++i) {
             final Filtration B_i = new Filtration(B[i]);
             F[i] = new FiltrationFunction() {
+
+                private static final long serialVersionUID = 7744346547249241663L;
 
                 @Override
                 public double evaluate(int t) {

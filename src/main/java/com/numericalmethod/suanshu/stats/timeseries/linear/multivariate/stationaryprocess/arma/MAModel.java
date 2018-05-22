@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class MAModel extends ARMAModel {
 
+    private static final long serialVersionUID = 5883793480415057662L;
+
     /**
      * Construct a multivariate MA model.
      *

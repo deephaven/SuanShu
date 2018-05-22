@@ -39,6 +39,8 @@ import static java.lang.Math.*;
  */
 public class DoubleExponential4HalfRealLine extends DoubleExponential {
 
+    private static final long serialVersionUID = 739397503870677622L;
+
     /**
      * Construct a {@code DoubleExponential4HalfRealLine} substitution rule.
      *
@@ -55,6 +57,8 @@ public class DoubleExponential4HalfRealLine extends DoubleExponential {
     private static UnivariateRealFunction xt(final double c) {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 6940170990557924270L;
+
             @Override
             public double evaluate(double t) {
                 return exp(2 * c * sinh(t));
@@ -65,6 +69,8 @@ public class DoubleExponential4HalfRealLine extends DoubleExponential {
     /** x'(t) = dx(t)/dt */
     private static UnivariateRealFunction dxdt(final double c) {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -7828974213860527288L;
 
             @Override
             public double evaluate(double t) {

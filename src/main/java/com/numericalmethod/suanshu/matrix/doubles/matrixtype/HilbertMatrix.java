@@ -40,6 +40,8 @@ import java.math.RoundingMode;
  */
 public class HilbertMatrix extends SymmetricMatrix {
 
+    private static final long serialVersionUID = -3220602941709783460L;
+
     /**
      * Construct a Hilbert matrix.
      *

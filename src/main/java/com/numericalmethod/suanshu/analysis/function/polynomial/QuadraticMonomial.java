@@ -29,6 +29,8 @@ package com.numericalmethod.suanshu.analysis.function.polynomial;
  */
 public class QuadraticMonomial extends Polynomial {
 
+    private static final long serialVersionUID = 8710959062458865695L;
+
     /**
      * Construct a quadratic monomial.
      *

@@ -35,6 +35,7 @@ import java.util.Iterator;
  */
 public class SimpleTimeSeries implements TimeSeries {
 
+    private static final long serialVersionUID = 1405110589928642029L;
     private final ArrayList<Double> ts = new ArrayList<Double>();
 
     /**

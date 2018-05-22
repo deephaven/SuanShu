@@ -25,13 +25,15 @@ package com.numericalmethod.suanshu.optimization.constrained.general.sqp.actives
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * This interface allows customization of certain operations in the Active Set algorithm to solve a general constrained minimization problem with only equality constraints
  * using Sequential Quadratic Programming.
  *
  * @author Haksun Li
  */
-public interface SQPASEVariation {
+public interface SQPASEVariation extends Serializable{
 
     /**
      * Get the initial Hessian matrix.

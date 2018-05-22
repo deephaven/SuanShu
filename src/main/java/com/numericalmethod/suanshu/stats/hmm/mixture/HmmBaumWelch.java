@@ -27,6 +27,9 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.stats.hmm.mixture.distribution.HMMDistribution;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -49,11 +52,14 @@ import static java.lang.Math.*;
  */
 public class HmmBaumWelch extends HiddenMarkovModel {
 
+    private static final long serialVersionUID = -8782687626606568649L;
+
     /**
      * the result of the Baum-Welch algorithm
      */
-    public static class TrainedModel {
+    public static class TrainedModel implements Serializable{
 
+        private static final long serialVersionUID = -1022900030769278234L;
         /**
          * the newly trained model as a result of the Baum-Welch algorithm
          */

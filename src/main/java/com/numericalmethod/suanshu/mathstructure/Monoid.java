@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.mathstructure;
 
+import java.io.Serializable;
+
 /**
  * A monoid is a group with a binary operation (<i>×</i>), satisfying the group axioms:
  * <ol>
@@ -34,7 +36,7 @@ package com.numericalmethod.suanshu.mathstructure;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Monoid">Wikipedia: Monoid</a>
  */
-public interface Monoid<G> {
+public interface Monoid<G> extends Serializable{
 
     /**
      * <i>× : G × G → G</i>

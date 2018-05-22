@@ -45,6 +45,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.MWC8222;
  */
 public class Ziggurat2000 implements RandomStandardNormalNumberGenerator {
 
+    private static final long serialVersionUID = 4731529421032384828L;
+
     static {
         zigset();//initialization
     }

@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.mathstructure;
 
+import java.io.Serializable;
+
 /**
  * An Abelian group is a group with a binary additive operation (<i>+</i>), satisfying the group axioms:
  * <ol>
@@ -36,7 +38,7 @@ package com.numericalmethod.suanshu.mathstructure;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Abelian_group">Wikipedia: Abelian group</a>
  */
-public interface AbelianGroup<G> {
+public interface AbelianGroup<G> extends Serializable {
 
     /**
      * <i>+ : G × G → G</i>

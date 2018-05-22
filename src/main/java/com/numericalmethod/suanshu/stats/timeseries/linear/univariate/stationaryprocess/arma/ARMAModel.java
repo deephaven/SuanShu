@@ -34,6 +34,8 @@ import static com.numericalmethod.suanshu.analysis.function.FunctionOps.dotProdu
  */
 public class ARMAModel extends ARIMAModel {
 
+    private static final long serialVersionUID = -4016965286954709544L;
+
     /**
      * Construct a univariate ARMA model.
      *

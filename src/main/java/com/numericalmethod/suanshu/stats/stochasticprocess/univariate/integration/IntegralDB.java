@@ -35,6 +35,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
  */
 public class IntegralDB extends Integrator {
 
+    private static final long serialVersionUID = -7546951105521670949L;
+
     /**
      * Construct an integral for f with respect to dB.
      * 

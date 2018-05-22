@@ -30,6 +30,8 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The Gaussian elimination performs elementary row operations to reduce a matrix to the row echelon form.
  * The two elementary row operations are:
@@ -54,8 +56,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * <li><a href="http://en.wikipedia.org/wiki/Reduced_row_echelon_form#Reduced_row_echelon_form">Wikipedia: Row echelon form</a>
  * </ul>
  */
-public class GaussianElimination {
+public class GaussianElimination implements Serializable{
 
+    private static final long serialVersionUID = 6901837363847532393L;
     private ElementaryOperation T;
     private ElementaryOperation U;
     private Matrix L;

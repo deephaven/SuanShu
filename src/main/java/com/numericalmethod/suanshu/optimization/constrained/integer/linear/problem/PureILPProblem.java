@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class PureILPProblem extends ILPProblemImpl1 {
 
+    private static final long serialVersionUID = -584846766452715381L;
+
     /**
      * Construct a pure ILP problem.
      *

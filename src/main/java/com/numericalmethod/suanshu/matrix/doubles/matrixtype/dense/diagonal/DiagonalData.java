@@ -36,6 +36,8 @@ import java.util.Arrays;
  */
 class DiagonalData implements MatrixAccess, Densifiable {
 
+    private static final long serialVersionUID = 3379589226528574615L;
+
     /** the types of matrices the data represent */
     static enum Type {
 

@@ -46,6 +46,7 @@ import java.util.Arrays;
  */
 public class Moments implements Statistic {
 
+    private static final long serialVersionUID = 6346728951326593343L;
     /** the highest moment to compute */
     private final int order;
     private long N = 0;

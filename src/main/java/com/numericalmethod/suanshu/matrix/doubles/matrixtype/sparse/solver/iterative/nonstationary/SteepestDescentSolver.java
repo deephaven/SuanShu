@@ -52,6 +52,7 @@ public class SteepestDescentSolver implements IterativeLinearSystemSolver {
      * The algorithm recomputes the residual as <i>b - Ax<sub>i</sub></i> once per this number of iterations
      */
     public static final int DEFAULT_RESIDUAL_REFRESH_RATE = 50;
+    private static final long serialVersionUID = -470523542175474769L;
     private final int residualRefreshRate;
     private final PreconditionerFactory leftPreconditionerFactory;
     private final int maxIteration;
@@ -82,6 +83,8 @@ public class SteepestDescentSolver implements IterativeLinearSystemSolver {
         this(
                 new PreconditionerFactory() {
 
+                    private static final long serialVersionUID = -4778946364033411387L;
+
                     @Override
                     public Preconditioner newInstance(Matrix A) {
                         return new IdentityPreconditioner();
@@ -98,6 +101,7 @@ public class SteepestDescentSolver implements IterativeLinearSystemSolver {
     public IterativeLinearSystemSolver.Solution solve(final LSProblem problem, final IterationMonitor<Vector> monitor) throws ConvergenceFailure {
         return new IterativeLinearSystemSolver.Solution() {
 
+            private static final long serialVersionUID = 9143933510051723952L;
             private final Matrix A = problem.A();
             private final Vector b = problem.b();
             private final Preconditioner M = leftPreconditionerFactory.newInstance(A);

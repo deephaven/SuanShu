@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.dlm.univariate;
 
 import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
 
+import java.io.Serializable;
+
 /**
  * This is a simulator for a univariate controlled dynamic linear model process.
  * For <i>(t &ge; 1)</i>, a controlled DLM takes the following form:
@@ -45,8 +47,9 @@ import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
 public class DLMSim {
 
     /** a simulated innovation */
-    public static class Innovation {
+    public static class Innovation implements Serializable{
 
+        private static final long serialVersionUID = 4429217325817683828L;
         /** the simulated state */
         public final double state;
         /** the simulated observation */

@@ -38,6 +38,8 @@ import static java.lang.Math.*;
  */
 public class Log implements LinkFunction {
 
+    private static final long serialVersionUID = 8793471959644380565L;
+
     @Override
     public double inverse(double x) {
         return exp(x);

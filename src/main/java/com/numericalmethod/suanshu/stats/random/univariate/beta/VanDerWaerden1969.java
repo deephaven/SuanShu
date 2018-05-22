@@ -38,6 +38,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
 @Deprecated
 public class VanDerWaerden1969 implements RandomBetaGenerator {
 
+    private static final long serialVersionUID = -3713071085857775246L;
     private RandomGammaGenerator X, Y;
 
     /**

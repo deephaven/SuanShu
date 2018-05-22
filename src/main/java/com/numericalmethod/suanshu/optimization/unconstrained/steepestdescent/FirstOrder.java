@@ -40,6 +40,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class FirstOrder extends SteepestDescent {
 
+    private static final long serialVersionUID = 7186608939519146662L;
+
     /**
      * the methods available to do line search
      */
@@ -57,6 +59,7 @@ public class FirstOrder extends SteepestDescent {
 
     private class GradientDescent extends SteepestDescentImpl {
 
+        private static final long serialVersionUID = 9108150520460834138L;
         protected Vector gk;//save re-computation
 
         protected GradientDescent(C2OptimProblem problem) throws Exception {
@@ -77,6 +80,7 @@ public class FirstOrder extends SteepestDescent {
      */
     private class Analytic extends GradientDescent {
 
+        private static final long serialVersionUID = 600973576639272712L;
         private double ak = 1;//initial value
 
         private Analytic(C2OptimProblem problem) throws Exception {

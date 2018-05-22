@@ -42,6 +42,7 @@ import static java.lang.Math.*;
  */
 public class PoissonDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -7954644344929938020L;
     /** α: a positive real number, equal to the expected number of occurrences during the given interval */
     private final double lambda;
 
@@ -93,6 +94,8 @@ public class PoissonDistribution implements ProbabilityDistribution {
         double result = lambda * (1 - log(lambda));
 
         Summation S = new Summation(new Summation.Term() {
+
+            private static final long serialVersionUID = 1369158585112736114L;
 
             @Override
             public double evaluate(double k) {

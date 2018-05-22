@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.SimpleTi
  */
 public class MultiplicativeModel extends SimpleTimeSeries {
 
+    private static final long serialVersionUID = -5324598534409277593L;
+
     /**
      * Construct a univariate time series by multiplying the components.
      * 

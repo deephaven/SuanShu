@@ -44,6 +44,7 @@ import static java.lang.Math.*;
  */
 public class WilcoxonRankSumDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 1047214156276123055L;
     /**
      * number of observations in group 1
      */

@@ -50,6 +50,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class GivensMatrix implements Matrix {
 
+    private static final long serialVersionUID = 682800064155621760L;
     private final int dim;
     private final int i;
     private final int j;

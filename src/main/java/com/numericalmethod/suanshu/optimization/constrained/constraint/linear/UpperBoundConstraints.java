@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class UpperBoundConstraints extends LinearLessThanConstraints {
 
+    private static final long serialVersionUID = -6431082077106712213L;
+
     /**
      * Construct an upper bound constraints for all variables in a function.
      *

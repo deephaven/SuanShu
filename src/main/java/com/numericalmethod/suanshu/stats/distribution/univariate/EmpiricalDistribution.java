@@ -42,6 +42,7 @@ import java.util.Arrays;
  */
 public class EmpiricalDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -7003650944091463965L;
     /** a sorted copy of the inputs */
     private final double[] sortedData;
     private final Quantile quantile;

@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.stats.timeseries.univariate.realtime.TimeSeri
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This class decomposes a time series into the trend, seasonal and the stationary random components
  * using the Moving Average Estimation with symmetric window.
@@ -55,8 +57,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  *
  * @see "P. J. Brockwell and R. A. Davis, "p. 23. Chapter 1.4. Elimination of both Trend and Seasonality," in <i>Time Series: Theory and Methods</i>, 2nd ed. Springer, 2006."
  */
-public class MADecomposition {
+public class MADecomposition implements Serializable{
 
+    private static final long serialVersionUID = 2947695260702808954L;
     /**
      * the estimated trend of the time series
      */

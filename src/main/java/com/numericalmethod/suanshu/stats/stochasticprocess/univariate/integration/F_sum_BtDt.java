@@ -33,6 +33,7 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
  */
 public abstract class F_sum_BtDt extends FiltrationFunction {
 
+    private static final long serialVersionUID = 7280798206010629333L;
     protected double sum_BtDt = 0;//Σ(Bt)*(dt)
 
     @Override

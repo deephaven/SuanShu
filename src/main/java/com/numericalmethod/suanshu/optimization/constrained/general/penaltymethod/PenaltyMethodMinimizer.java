@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.optimization.unconstrained.NelderMead;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The penalty method is an algorithm for solving a constrained minimization problem with general constraints.
  * It replaces a constrained optimization problem by a series of unconstrained problems
@@ -56,10 +58,12 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class PenaltyMethodMinimizer implements ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>> {
 
+    private static final long serialVersionUID = -6082691366794429048L;
+
     /**
      * For each constrained optimization problem, the solver creates a new penalty function for it.
      */
-    public static interface PenaltyFunctionFactory {
+    public static interface PenaltyFunctionFactory extends Serializable{
 
         /**
          * Get an instance of the penalty function.
@@ -75,6 +79,8 @@ public class PenaltyMethodMinimizer implements ConstrainedMinimizer<ConstrainedO
      */
     public static final PenaltyFunctionFactory DEFAULT_PENALTY_FUNCTION_FACTORY =
             new PenaltyFunctionFactory() {
+
+                private static final long serialVersionUID = 7826791974976695590L;
 
                 @Override
                 public PenaltyFunction getPenaltyFunction(ConstrainedOptimProblem problem) {
@@ -133,6 +139,7 @@ public class PenaltyMethodMinimizer implements ConstrainedMinimizer<ConstrainedO
     public IterativeMinimizer<Vector> solve(final ConstrainedOptimProblem problem) throws Exception {
         return new IterativeMinimizer<Vector>() {
 
+            private static final long serialVersionUID = -7409756489589327876L;
             private final IterativeMinimizer<Vector> soln0 = minimizer.solve(new C2OptimProblemImpl(getFP()));
 
             @Override
@@ -164,6 +171,8 @@ public class PenaltyMethodMinimizer implements ConstrainedMinimizer<ConstrainedO
             private RealScalarFunction getFP() {
                 final PenaltyFunction penalty = penaltyFunctionFactory.getPenaltyFunction(problem);
                 RealScalarFunction fp = new RealScalarFunction() {
+
+                    private static final long serialVersionUID = -6275074598524486573L;
 
                     @Override
                     public Double evaluate(Vector x) {

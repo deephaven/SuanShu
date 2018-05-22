@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.optimization.problem;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 
+import java.io.Serializable;
+
 /**
  * This is an optimization problem that minimizes a real valued objective function, one or multi dimension.
  * Optimization, or mathematical programming, refers to choosing the best element from some set of available alternatives.
@@ -36,7 +38,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Mathematical_programming">Wikipedia: Optimization (mathematics)</a>
  */
-public interface OptimProblem {
+public interface OptimProblem extends Serializable {
 
     /**
      * Get the number of variables.

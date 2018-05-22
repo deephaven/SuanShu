@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.glm.GeneralizedLinear
  */
 public class Inverse implements LinkFunction {
 
+    private static final long serialVersionUID = 7380270070500452766L;
+
     @Override
     public double inverse(double x) {
         return 1 / x;

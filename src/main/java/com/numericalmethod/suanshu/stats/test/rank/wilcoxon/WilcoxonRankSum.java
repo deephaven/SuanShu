@@ -24,6 +24,7 @@ import static java.lang.Math.*;
  */
 public class WilcoxonRankSum extends HypothesisTest {
 
+    private static final long serialVersionUID = 2228668906753707675L;
     /**
      * left, one-sided p-value
      */

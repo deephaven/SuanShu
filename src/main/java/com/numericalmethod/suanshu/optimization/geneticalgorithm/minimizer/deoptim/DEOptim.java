@@ -56,6 +56,8 @@ import java.util.List;
  */
 public class DEOptim extends SimpleGridMinimizer {
 
+    private static final long serialVersionUID = -3191125659853512233L;
+
     /**
      * This factory constructs a new {@code DEOptimCellFactory} for each minimization problem.
      */
@@ -74,6 +76,8 @@ public class DEOptim extends SimpleGridMinimizer {
      * This is the solution to a minimization problem using {@code DEOptim}.
      */
     protected class Solution extends SimpleGridMinimizer.Solution {
+
+        private static final long serialVersionUID = 618244939276968608L;
 
         private Solution(RealScalarFunction f) {
             super(f);
@@ -136,6 +140,8 @@ public class DEOptim extends SimpleGridMinimizer {
     public DEOptim(final double Cr, final double F, boolean parallel, double epsilon, int maxIterations, int nStableIterations) {
         this(
                 new NewCellFactory() {
+
+                    private static final long serialVersionUID = 6351514212492464875L;
 
                     @Override
                     public DEOptimCellFactory newCellFactory() {

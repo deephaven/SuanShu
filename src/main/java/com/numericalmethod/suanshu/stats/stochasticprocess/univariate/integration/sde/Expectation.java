@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.stats.descriptive.moment.Variance;
 import com.numericalmethod.suanshu.stats.stochasticprocess.timepoints.EvenlySpacedGrid;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.Realization;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.SDE;
+
+import java.io.Serializable;
 import java.util.Iterator;
 
 /**
@@ -36,8 +38,9 @@ import java.util.Iterator;
  *
  * @author Haksun Li
  */
-public class Expectation {
+public class Expectation implements Serializable{
 
+    private static final long serialVersionUID = 9200499585920780993L;
     /**
      * the value of the integral
      */

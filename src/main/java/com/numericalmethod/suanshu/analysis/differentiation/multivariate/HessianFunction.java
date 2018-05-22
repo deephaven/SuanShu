@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class HessianFunction implements RntoMatrix {
 
+    private static final long serialVersionUID = 743189225160782730L;
     private final RealScalarFunction f;//the real scalar function to compute the Hessian for
 
     /**

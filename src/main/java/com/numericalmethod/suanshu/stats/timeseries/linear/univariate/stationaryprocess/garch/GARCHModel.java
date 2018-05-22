@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationar
 import static com.numericalmethod.suanshu.analysis.function.FunctionOps.dotProduct;
 import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import static com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath.min;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -40,8 +42,9 @@ import java.util.Arrays;
  *
  * @see <a href="http://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#GARCH">Wikipedia: GARCH</a>
  */
-public class GARCHModel {
+public class GARCHModel implements Serializable{
 
+    private static final long serialVersionUID = -4661624356205948119L;
     /**
      * the constant term
      */

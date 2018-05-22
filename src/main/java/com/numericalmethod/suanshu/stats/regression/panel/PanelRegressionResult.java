@@ -25,13 +25,16 @@ package com.numericalmethod.suanshu.stats.regression.panel;
 import com.numericalmethod.suanshu.stats.regression.linear.Beta;
 import com.numericalmethod.suanshu.stats.regression.linear.ols.Residuals;
 
+import java.io.Serializable;
+
 /**
  * Stores the result of a panel regression.
  *
  * @author Chung Lee
  */
-public class PanelRegressionResult {
+public class PanelRegressionResult implements Serializable{
 
+    private static final long serialVersionUID = -2789585372569353418L;
     private final Beta beta;
     private final Residuals residuals;
 

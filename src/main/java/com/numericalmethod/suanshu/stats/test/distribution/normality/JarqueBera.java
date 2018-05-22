@@ -47,6 +47,7 @@ import com.numericalmethod.suanshu.stats.test.HypothesisTest;
  */
 public class JarqueBera extends HypothesisTest {
 
+    private static final long serialVersionUID = -1643343630304438324L;
     public final int nSim = 50000;
 
     @Override

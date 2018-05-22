@@ -52,6 +52,7 @@ public class CumulativeNormalMarsaglia extends UnivariateRealFunction implements
         0.07106958053885211
     };
     private static final double c = Math.log(Constant.ROOT_2_PI);
+    private static final long serialVersionUID = 4449150387339004250L;
 
     @Override
     public double evaluate(double x) {

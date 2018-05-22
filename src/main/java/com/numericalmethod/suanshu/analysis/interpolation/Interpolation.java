@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.analysis.interpolation;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.UnivariateRealFunction;
 import com.numericalmethod.suanshu.analysis.function.tuple.OrderedPairs;
 
+import java.io.Serializable;
+
 /**
  * Interpolation is a method of constructing new data points within the range of a discrete set of known data points.
  * In engineering and science, one often has a number of data points, obtained by sampling or experimentation,
@@ -34,7 +36,7 @@ import com.numericalmethod.suanshu.analysis.function.tuple.OrderedPairs;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Interpolation">Wikipedia: Interpolation</a>
  */
-public interface Interpolation {
+public interface Interpolation extends Serializable{
 
     /**
      * Construct a real valued function from a discrete set of data points.

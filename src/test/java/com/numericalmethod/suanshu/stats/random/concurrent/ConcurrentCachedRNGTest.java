@@ -28,19 +28,27 @@ import com.numericalmethod.suanshu.parallel.ParallelExecutor;
 import com.numericalmethod.suanshu.stats.random.RngUtils;
 import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator;
 import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
-import static org.junit.Assert.*;
+import org.junit.After;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author Johannes Lehmann
  */
 public class ConcurrentCachedRNGTest {
 
+    @After
+    public void tearDown() throws Exception {
+        ParallelExecutor.setConcurrencyLevel(-1);
+    }
+
     @Test
     public void benchmarkAgainstSynchronized() throws MultipleExecutionException {
         int nLoops = 10;
         final int nGenPerLoop = 1000000;
-        ParallelExecutor parallelExecutor = new ParallelExecutor(nLoops); // use same number of threads to minimize the effect for recycling threads
+        ParallelExecutor.setConcurrencyLevel(nLoops);
+        ParallelExecutor parallelExecutor = ParallelExecutor.getInstance(); // use same number of threads to minimize the effect for recycling threads
 
         // Run with synchronized random generator
         long startTime = System.currentTimeMillis();

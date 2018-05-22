@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.dlm.univariate;
 
+import java.io.Serializable;
+
 /**
  * This is the multivariate controlled DLM (controlled Dynamic Linear Model) specification.
  * A controlled DLM, for <i>(t &ge; 1)</i>, is described by two equations: the observation and state equations.
@@ -54,8 +56,9 @@ package com.numericalmethod.suanshu.stats.dlm.univariate;
  * <li> G. Petris et al., "Dynamic Linear Models with R," New York, Springer, 2009, ch. 2, pp. 31-84.
  * </ul>
  */
-public class DLM {
+public class DLM implements Serializable{
 
+    private static final long serialVersionUID = 6214875719319182463L;
     /**
      * the mean of x_0
      */

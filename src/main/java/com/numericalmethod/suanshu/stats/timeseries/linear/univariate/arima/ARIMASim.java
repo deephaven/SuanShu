@@ -64,6 +64,8 @@ import java.util.Arrays;
  */
 public class ARIMASim extends SimpleTimeSeries {
 
+    private static final long serialVersionUID = -3140929344306612001L;
+
     public static double[] getWhiteNoise(int size) {//TODO: other distributions? seed?
         StandardNormalRng rnorm = new StandardNormalRng();
 

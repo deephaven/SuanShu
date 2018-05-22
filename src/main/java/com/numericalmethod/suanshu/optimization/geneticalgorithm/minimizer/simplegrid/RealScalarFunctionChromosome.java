@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public abstract class RealScalarFunctionChromosome implements Chromosome {
 
+    private static final long serialVersionUID = -784320289844499515L;
     private Double fx = null;
     private final RealScalarFunction f;
     private final ImmutableVector x;

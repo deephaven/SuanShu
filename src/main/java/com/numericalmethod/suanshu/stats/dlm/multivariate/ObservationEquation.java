@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This is the observation equation in a controlled dynamic linear model.
  * <blockquote><i>
@@ -45,8 +47,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  *
  * @author Haksun Li
  */
-public class ObservationEquation {
+public class ObservationEquation implements Serializable{
 
+    private static final long serialVersionUID = -2306654433597856064L;
     /**
      * For a time-invariant DLM (or time-invariant controlled DLM),
      * this represents a (d * p) constant coefficient matrix of x_t in the observation equation.
@@ -126,12 +129,16 @@ public class ObservationEquation {
         this(
                 new R1toMatrix() {
 
+                    private static final long serialVersionUID = -2758919671798674061L;
+
                     @Override
                     public Matrix evaluate(double t) {
                         return new DenseMatrix(new double[][]{{obs.F((int) t)}});
                     }
                 },
                 new R1toMatrix() {
+
+                    private static final long serialVersionUID = 580198781265615049L;
 
                     @Override
                     public Matrix evaluate(double t) {

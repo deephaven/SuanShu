@@ -40,6 +40,8 @@ import static java.lang.Math.sinh;
  */
 public class DoubleExponential4RealLine extends DoubleExponential {
 
+    private static final long serialVersionUID = 6191188714261933511L;
+
     /**
      * Construct a {@code DoubleExponential4RealLine} substitution rule.
      *
@@ -56,6 +58,8 @@ public class DoubleExponential4RealLine extends DoubleExponential {
     private static UnivariateRealFunction xt(final double c) {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 6668430435449035017L;
+
             @Override
             public double evaluate(double t) {
                 return sinh(c * sinh(t));
@@ -66,6 +70,8 @@ public class DoubleExponential4RealLine extends DoubleExponential {
     /** x'(t) = dx(t)/dt */
     private static UnivariateRealFunction dxdt(final double c) {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 467041179845920453L;
 
             @Override
             public double evaluate(double t) {

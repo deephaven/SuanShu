@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.optimization.geneticalgorithm;
 
+import java.io.Serializable;
+
 /**
  * A chromosome is a representation of a solution to an optimization problem.
  * A genetic algorithm creates new chromosomes from existing ones by taking parts and combine them in new ways.
@@ -30,7 +32,7 @@ package com.numericalmethod.suanshu.optimization.geneticalgorithm;
  *
  * @author Haksun Li
  */
-public interface Chromosome extends Comparable<Chromosome> {
+public interface Chromosome extends Comparable<Chromosome>, Serializable {
 
     /**
      * This is the fitness to determine how good this chromosome is.

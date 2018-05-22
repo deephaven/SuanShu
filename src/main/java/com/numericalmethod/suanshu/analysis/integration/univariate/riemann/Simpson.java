@@ -41,6 +41,7 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.relativeError;
  */
 public class Simpson implements IterativeIntegrator {
 
+    private static final long serialVersionUID = 4169986784928992231L;
     private double t0, t1;//two successive steps of the trapezoidal rule
     private final Trapezoidal trapezoidal;
     private final int maxIterations;

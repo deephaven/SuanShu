@@ -25,13 +25,16 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.int
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The vector set <i>{x, s, y}</i> is a solution to both the primal and dual SOCP problems.
  *
  * @author Haksun Li
  */
-public class PrimalDualSolution {
+public class PrimalDualSolution implements Serializable{
 
+    private static final long serialVersionUID = 6333594303102484002L;
     /**
      * This is the minimizer for the primal problem.
      */

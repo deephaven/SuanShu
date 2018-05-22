@@ -43,6 +43,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  */
 public class KroneckerProduct extends DenseMatrix {
 
+    private static final long serialVersionUID = -4582676222746506229L;
+
     /**
      * Construct the Kronecker product of two matrices.
      *

@@ -42,6 +42,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ImmutableMatrix implements Matrix {
 
+    private static final long serialVersionUID = -748276178561189993L;
     private final Matrix A;//the referenced matrix
 
     /**

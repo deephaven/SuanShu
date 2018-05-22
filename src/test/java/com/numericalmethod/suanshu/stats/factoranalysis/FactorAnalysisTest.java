@@ -22,11 +22,12 @@
  */
 package com.numericalmethod.suanshu.stats.factoranalysis;
 
-import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.matrix.doubles.AreMatrices;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
+import com.numericalmethod.suanshu.vector.doubles.Vector;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -81,7 +82,7 @@ public class FactorAnalysisTest {
                 corr,
                 1e-6));
 
-        FAEstimator estimators = instance.getEstimators(300);
+        FAEstimator estimators = instance.getEstimators(1000);
 
         Vector uniqueness = estimators.psi();
 //        System.out.println(uniqueness);
@@ -172,7 +173,7 @@ public class FactorAnalysisTest {
                 corr,
                 1e-6));
 
-        FAEstimator estimators = instance.getEstimators(300);
+        FAEstimator estimators = instance.getEstimators(1000);
 
         Vector uniqueness = estimators.psi();
 //        System.out.println(uniqueness);

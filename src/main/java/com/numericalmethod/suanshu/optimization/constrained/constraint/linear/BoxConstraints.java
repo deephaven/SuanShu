@@ -26,28 +26,32 @@ import com.numericalmethod.suanshu.interval.RealInterval;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.CreateMatrix;
 import com.numericalmethod.suanshu.number.DoubleUtils;
-import com.numericalmethod.suanshu.optimization.constrained.constraint.linear.BoxConstraints.Bound;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
  * This represents the lower and upper bounds for a variable.
- *
+ * <p>
  * <blockquote><code><pre>
  * lb ≤ x ≤ ub
  * </blockquote></code></pre>
  *
  * @author Haksun Li
  */
-public class BoxConstraints {
+public class BoxConstraints implements Serializable {
+
+    private static final long serialVersionUID = 7851438508996423551L;
 
     /**
      * a bound constraint for a variable
      */
-    public static class Bound {
+    public static class Bound implements Serializable{
 
+        private static final long serialVersionUID = -5694482497356029403L;
         /**
          * the index to the variable, counting from 1
          */
@@ -84,7 +88,7 @@ public class BoxConstraints {
 
     /**
      * Construct a set of bound constraints.
-     * 
+     *
      * @param bounds the bounds
      * @param dim the number of variables
      */
@@ -108,7 +112,7 @@ public class BoxConstraints {
 
     /**
      * Split the equality constraints and get the less-than-the-upper-bounds part.
-     * 
+     *
      * @return the upper bound constraints
      */
     public LinearLessThanConstraints getUpperBounds() {

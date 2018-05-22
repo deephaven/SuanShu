@@ -41,6 +41,7 @@ import static java.lang.Math.*;
  */
 public class ChiSquareDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 3073195398054661427L;
     /** the degree of freedom */
     private final double k;
     private static final LogGamma lgamma = new LogGamma();

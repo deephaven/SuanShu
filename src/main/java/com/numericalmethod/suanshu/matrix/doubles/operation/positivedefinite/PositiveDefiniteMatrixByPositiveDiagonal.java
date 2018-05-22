@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.diagonal.Diag
  */
 public class PositiveDefiniteMatrixByPositiveDiagonal extends DenseMatrix {
 
+    private static final long serialVersionUID = 627252300579473332L;
+
     /**
      * Construct a positive definite matrix
      * by forcing the diagonal entries in the eigen decomposition to a small non-negative number, e.g., 0.

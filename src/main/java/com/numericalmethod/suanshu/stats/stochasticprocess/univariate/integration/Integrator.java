@@ -24,12 +24,16 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
 
 import com.numericalmethod.suanshu.analysis.integration.univariate.Lebesgue;
 
+import java.io.Serializable;
+
 /**
  * The class represents an integral for a function, in the Lebesgue sense.
  *
  * @author Haksun Li
  */
-public abstract class Integrator {
+public abstract class Integrator implements Serializable{
+
+    private static final long serialVersionUID = 2152380201162423158L;
 
     /**
      * Get an array of function values.

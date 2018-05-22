@@ -42,6 +42,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.abs;
 import static java.lang.Math.log;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -53,11 +55,14 @@ import java.util.Arrays;
  */
 public class GammaDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = 1324439141411025717L;
+
     /**
      * the Gamma distribution parameters
      */
-    public static class Lambda {
+    public static class Lambda implements Serializable{
 
+        private static final long serialVersionUID = -8804842861990160674L;
         /** the shape parameter */
         public final double k;
         /** the scale parameter */
@@ -148,6 +153,8 @@ public class GammaDistribution implements HMMDistribution {
 
         final double[] logx = DoubleUtils.foreach(observations, new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 7141853596036307706L;
+
             @Override
             public double evaluate(double x) {
                 return log(x);
@@ -183,6 +190,8 @@ public class GammaDistribution implements HMMDistribution {
                 if (isShapeEstimated && isScaleEstimated) {
                     BivariateRealFunction f = new BivariateRealFunction() {
 
+                        private static final long serialVersionUID = 69745762339336167L;
+
                         @Override
                         public double evaluate(double k, double theta) {
                             double gamma_k = new GammaLanczosQuick().evaluate(k);
@@ -203,6 +212,8 @@ public class GammaDistribution implements HMMDistribution {
 
                 if (isShapeEstimated && !isScaleEstimated) {
                     UnivariateRealFunction f = new UnivariateRealFunction() {
+
+                        private static final long serialVersionUID = -3903690786574536793L;
 
                         @Override
                         public double evaluate(double k) {
@@ -260,6 +271,8 @@ public class GammaDistribution implements HMMDistribution {
     private RealVectorFunction dF(final double x_bar, final double log_x_bar) {
         return new RealVectorFunction() {
 
+            private static final long serialVersionUID = -3644330260155749200L;
+
             @Override
             public Vector evaluate(Vector x) {
                 double theta = x.get(1);
@@ -287,6 +300,8 @@ public class GammaDistribution implements HMMDistribution {
     /** the Hessian of the log-likelihood */
     private RntoMatrix d2F() {
         return new RntoMatrix() {
+
+            private static final long serialVersionUID = 8237606586205031628L;
 
             @Override
             public Matrix evaluate(Vector x) {

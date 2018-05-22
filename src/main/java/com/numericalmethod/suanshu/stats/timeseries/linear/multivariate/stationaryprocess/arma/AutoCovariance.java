@@ -50,6 +50,7 @@ import java.util.Arrays;
  */
 public class AutoCovariance extends AutoCovarianceFunction {
 
+    private static final long serialVersionUID = 6313189663083798666L;
     /**
      * the number of lags in the result
      */

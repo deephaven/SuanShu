@@ -49,6 +49,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class ConjugateGradient extends SteepestDescent {
 
+    private static final long serialVersionUID = -3163905851405456007L;
+
     /**
      * Hestenes and Stiefel proposes this way to compute the new search direction:
      * A new search direction is created by adding a vector <i>β<sub>k</sub>d<sub>k</sub></i>
@@ -57,6 +59,8 @@ public class ConjugateGradient extends SteepestDescent {
      * @see "M. R. Hestenes and E. L. Stiefel, "Methods of conjugate gradients for solving linear systems," J. Res. Natl, Bureau Standards, vol. 49, p. 409–436, 1952."
      */
     class HestenesStiefel extends SteepestDescentImpl {
+
+        private static final long serialVersionUID = 2045977123189656304L;
 
         protected HestenesStiefel(C2OptimProblem problem) throws Exception {
             super(problem);

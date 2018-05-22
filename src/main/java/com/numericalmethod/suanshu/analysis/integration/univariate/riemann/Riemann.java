@@ -38,6 +38,7 @@ import static java.lang.Math.min;
  */
 public class Riemann implements Integrator {
 
+    private static final long serialVersionUID = -2707299947457400115L;
     private final int maxIterations;//the maximum number of iterations
     private final double precision;//the convergence threshold
 

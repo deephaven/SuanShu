@@ -39,7 +39,11 @@ import static java.lang.Math.abs;
  */
 public class Forward extends SingleFactorSelection {
 
+    private static final long serialVersionUID = 7404148393354740377L;
+
     private class Indices extends SingleFactorSelection.Indices {
+
+        private static final long serialVersionUID = -9206260648926108901L;
 
         private Indices(GLMProblem problem) {
             super(problem);

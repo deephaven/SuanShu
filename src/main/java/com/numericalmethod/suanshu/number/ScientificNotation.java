@@ -42,12 +42,12 @@ import java.math.BigInteger;
  */
 public class ScientificNotation extends Number {
 
+    private static final long serialVersionUID = 1276454920065257082L;
     /** the significand or mantissa */
     private final BigDecimal significand;
     /** the exponent */
     private final int exponent;
     private final BigDecimal TEN = BigDecimal.valueOf(10);
-    private static final long serialVersionUID = 1L;
 
     /**
      * Construct the scientific notation of a number in this form: <i>x = a * 10<sup>b</sup></i>.

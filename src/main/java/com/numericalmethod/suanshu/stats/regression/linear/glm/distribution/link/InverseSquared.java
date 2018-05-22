@@ -38,6 +38,8 @@ import static java.lang.Math.*;
  */
 public class InverseSquared implements LinkFunction {
 
+    private static final long serialVersionUID = -692172755111567472L;
+
     @Override
     public double inverse(double x) {
         return 1. / sqrt(x);

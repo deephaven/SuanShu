@@ -48,6 +48,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Hessian extends SymmetricMatrix {
 
+    private static final long serialVersionUID = 4978942583241781624L;
+
     /**
      * Construct the Hessian matrix for a multivariate function <i>f</i> at point <i>x</i>.
      *

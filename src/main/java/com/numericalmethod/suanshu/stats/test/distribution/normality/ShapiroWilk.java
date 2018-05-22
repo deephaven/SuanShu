@@ -56,6 +56,7 @@ import static java.lang.Math.*;
  */
 public class ShapiroWilk extends HypothesisTest {
 
+    private static final long serialVersionUID = 5527399365625541464L;
     private final ProbabilityDistribution norm = new NormalDistribution();
     private Polynomial a_n = new Polynomial(new double[]{-2.706056, 4.434685, -2.071190, -0.147981, 0.221157, 0});
     private Polynomial a_nm1 = new Polynomial(new double[]{-3.582633, 5.682633, -1.752461, -0.293762, 0.042981, 0});

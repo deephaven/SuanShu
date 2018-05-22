@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.PermutationMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.UpperTriangularMatrix;
 
+import java.io.Serializable;
+
 /**
  * QR decomposition of a matrix decomposes an <i>m x n</i> matrix <i>A</i> so that <i>A = Q * R</i>.
  * <ul>
@@ -41,7 +43,7 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.Uppe
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/QR_decomposition">Wikipedia: QR decomposition</a>
  */
-public interface QRDecomposition {
+public interface QRDecomposition extends Serializable {
 
     /**
      * Get <i>P</i>, the pivoting matrix in the QR decomposition.

@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.misc.R;
 import com.numericalmethod.suanshu.optimization.constrained.constraint.EqualityConstraints;
 import com.numericalmethod.suanshu.optimization.constrained.constraint.LessThanConstraints;
 import com.numericalmethod.suanshu.optimization.constrained.integer.IPProblemImpl1;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -37,12 +39,15 @@ import java.util.Arrays;
  */
 public class BruteForceIPProblem extends IPProblemImpl1 {
 
+    private static final long serialVersionUID = -904212391749255017L;
+
     /**
      * This specifies the integral domain for an integral variable,
      * i.e., the integer values the variable can take.
      */
-    public static class IntegerDomain {
+    public static class IntegerDomain implements Serializable{
 
+        private static final long serialVersionUID = 4270283335365208295L;
         /**
          * the index of an integral variable
          */

@@ -22,14 +22,19 @@
  */
 package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solution;
 
-import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.exception.LPInfeasible;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
+import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.exception.LPInfeasible;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.problem.CanonicalLPProblem1;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.solver.LPCanonicalSolver;
-import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
+import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -41,21 +46,21 @@ public class BoundedLPMinimizerTest {
     /**
      * Example 3-3-3.
      * Multiple (6) solutions.
-     *
+     * <p>
      * Linear Programming with MATLAB
      * by Michael C. Ferris, Olvi L. Mangasarian, Stephen J. Wright.
      */
     @Test
     public void test_0010() throws LPInfeasible {
-        DenseVector c = new DenseVector(new double[]{-1, -1, -1});
+        DenseVector c = new DenseVector(-1, -1, -1);
 
         Matrix A = new DenseMatrix(new double[][]{
-                    {1, -1, 1},
-                    {-1, 1, 1},
-                    {1, 1, -1},
-                    {-1, -1, -1}
-                });
-        DenseVector b = new DenseVector(new double[]{-2, -3, -1, -4});
+                {1, -1, 1},
+                {-1, 1, 1},
+                {1, 1, -1},
+                {-1, -1, -1}
+        });
+        DenseVector b = new DenseVector(-2, -3, -1, -4);
 
         CanonicalLPProblem1 problem = new CanonicalLPProblem1(c, A, b);
 
@@ -63,14 +68,22 @@ public class BoundedLPMinimizerTest {
         LPBoundedMinimizer minimizer = (LPBoundedMinimizer) instance.solve(problem).minimizer();
 
         assertEquals(-4.0, minimizer.minimum(), 0);
-        assertArrayEquals(new double[]{3.5, 0, 0.5}, minimizer.minimizer().toArray(), 1e-15);
+        assertArrayEquals(new double[]{3.5, 0.5, 0}, minimizer.minimizer().toArray(), 1e-15);
 
-        ImmutableVector[] minimizers = minimizer.minimizers();
-        assertArrayEquals(new double[]{3.5, 0, 0.5}, minimizers[0].toArray(), 1e-15);
-        assertArrayEquals(new double[]{1.5, 0, 2.5}, minimizers[1].toArray(), 1e-15);
-        assertArrayEquals(new double[]{0, 1.5, 2.5}, minimizers[2].toArray(), 1e-15);
-        assertArrayEquals(new double[]{0, 3, 1}, minimizers[3].toArray(), 1e-15);
-        assertArrayEquals(new double[]{1, 3, 0}, minimizers[4].toArray(), 1e-15);
-        assertArrayEquals(new double[]{3.5, 0.5, 0}, minimizers[5].toArray(), 1e-15);
+        List<ImmutableVector> minimizers = Arrays.asList(minimizer.minimizers());
+
+        List<ImmutableVector> expected = new ArrayList<>();
+        expected.add(new ImmutableVector(new DenseVector(3.5, 0.5, 0)));
+        expected.add(new ImmutableVector(new DenseVector(1.5, 0, 2.5)));
+        expected.add(new ImmutableVector(new DenseVector(0, 1.5, 2.5)));
+        expected.add(new ImmutableVector(new DenseVector(0, 3, 1)));
+        expected.add(new ImmutableVector(new DenseVector(1, 3, 0)));
+        expected.add(new ImmutableVector(new DenseVector(3.5, 0, 0.5)));
+        int counter = 0;
+        for (final ImmutableVector vec : minimizers) {
+            assertTrue(expected.contains(vec));
+            ++counter;
+        }
+        assertEquals(6, counter);
     }
 }

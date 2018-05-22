@@ -40,6 +40,8 @@ import static java.lang.Math.*;
  */
 public class Logit implements LinkFunction {
 
+    private static final long serialVersionUID = 8195805056275867358L;
+
     /**
      * {@inheritDoc}
      *

@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.optimization.Optimizer;
 import com.numericalmethod.suanshu.optimization.problem.C2OptimProblem;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * A line search is often used in another minimization algorithm to improve the current solution in one iteration step.
  * It begins the search from the current solution along a minimization direction.
@@ -38,7 +40,7 @@ public interface LineSearch extends Optimizer<C2OptimProblem, LineSearch.Solutio
     /**
      * This is the solution to a line search minimization.
      */
-    public static interface Solution {
+    public static interface Solution extends Serializable{
 
         /**
          * Get the increment <i>α</i> so that <i>f(x + α * d)</i> is (approximately) minimized.

@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.coe
 import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.Ft;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 
+import java.io.Serializable;
+
 /**
  * This represents the diffusion term, <i>σ</i>, of an SDE. It is of this form: <i>σ(dt, Xt, Zt, ...)</i>.
  *
@@ -36,7 +38,7 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
  *
  * @see "Fima C. Klebaner. Introduction to Stochastic Calculus with Applications. 2nd ed. Section 4.7. Imperial College Press. 2006."
  */
-public interface Diffusion {
+public interface Diffusion extends Serializable{
 
     /**
      * <i>σ(dt, Xt, Zt, ...)</i>

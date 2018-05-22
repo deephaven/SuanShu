@@ -36,6 +36,8 @@ import static java.lang.Math.sqrt;
  */
 public class GammaGergoNemes extends UnivariateRealFunction implements Gamma {
 
+    private static final long serialVersionUID = 2233402377012500872L;
+
     @Override
     public double evaluate(double x) {
         if (isZero(x, 0)) {

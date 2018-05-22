@@ -45,6 +45,8 @@ import static java.lang.Math.*;
  */
 public class FiniteDifference extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 5107729310662611869L;
+
     /** the types of finite difference available */
     public static enum Type {
 

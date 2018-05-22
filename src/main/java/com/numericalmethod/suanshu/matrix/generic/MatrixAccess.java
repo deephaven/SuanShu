@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.matrix.generic;
 import com.numericalmethod.suanshu.mathstructure.Field;
 import com.numericalmethod.suanshu.matrix.MatrixAccessException;
 
+import java.io.Serializable;
+
 /**
  * This interface defines the methods for accessing entries in a matrix over a field.
  * Indices count from 1, e.g., {@code get(1,1)}.
@@ -35,11 +37,10 @@ import com.numericalmethod.suanshu.matrix.MatrixAccessException;
  * Other operations that "change" the matrix actually creates a new and independent copy.
  *
  * @param <F> the number Field
- *
  * @author Haksun Li
  * @see com.numericalmethod.suanshu.mathstructure.Field
  */
-public interface MatrixAccess<F extends Field<F>> {//TODO: extends Cloneable, java.io.Serializable {
+public interface MatrixAccess<F extends Field<F>> extends Serializable {//TODO: extends Cloneable, java.io.Serializable {
 
     /**
      * Set the matrix entry at <i>[i,j]</i> to a value.

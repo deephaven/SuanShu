@@ -24,13 +24,15 @@ package com.numericalmethod.suanshu.optimization.initialization;
 
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * Some optimization algorithms, e.g., Nelder–Mead, Differential-Evolution, require a set of initial points to work with.
  * In case there are fewer initial points supplied, we need to generate more by, e.g., guessing.
  *
  * @author Haksun Li
  */
-public interface BuildInitials {
+public interface BuildInitials extends Serializable{
 
     /**
      * Generate a set of initial points for optimization from the fewer than required points.

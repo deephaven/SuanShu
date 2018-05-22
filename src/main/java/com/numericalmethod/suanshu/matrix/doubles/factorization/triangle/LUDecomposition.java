@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.PermutationMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.LowerTriangularMatrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.UpperTriangularMatrix;
 
+import java.io.Serializable;
+
 /**
  * LU decomposition decomposes an <i>n x n</i> matrix <i>A</i> so that <i>P * A = L * U</i>.
  * <i>P</i> is an <i>n x n</i> permutation matrix.
@@ -39,7 +41,7 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.triangle.Uppe
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/LU_decomposition">Wikipedia: LU decomposition</a>
  */
-public interface LUDecomposition {
+public interface LUDecomposition extends Serializable{
 
     /**
      * Get the lower triangular matrix <i>L</i> as in the LU decomposition.

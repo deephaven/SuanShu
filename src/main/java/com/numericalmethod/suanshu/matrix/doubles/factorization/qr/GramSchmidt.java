@@ -66,7 +66,8 @@ import java.util.List;
 //TODO: column pivoting, rank, det, output the diagonal
 //
 public class GramSchmidt implements QRDecomposition {
-    
+
+    private static final long serialVersionUID = 4231549462561446102L;
     private Matrix Q;
     private UpperTriangularMatrix R;
     private PermutationMatrix P;

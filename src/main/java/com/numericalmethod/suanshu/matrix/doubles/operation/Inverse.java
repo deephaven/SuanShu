@@ -48,6 +48,7 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.equal;
  */
 public class Inverse extends DenseMatrix {
 
+    private static final long serialVersionUID = 5148490415087417899L;
     /** the dimension of the square matrix */
     private final int dim;
 

@@ -27,6 +27,9 @@ import com.numericalmethod.suanshu.stats.cointegration.JohansenAsymptoticDistrib
 import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.log;
 
 /**
@@ -38,8 +41,9 @@ import static java.lang.Math.log;
  * @author Haksun Li
  * @see JohansenAsymptoticDistribution.Test
  */
-public class JohansenTest {
+public class JohansenTest implements Serializable{
 
+    private static final long serialVersionUID = -722952681629877229L;
     private JohansenAsymptoticDistribution[] dist = null;
     private final Test test;
     private final TrendType trend;

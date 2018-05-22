@@ -25,6 +25,9 @@ package com.numericalmethod.suanshu.matrix.doubles.factorization.gaussianelimina
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.operation.ElementaryOperation;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
+
+import java.io.Serializable;
+
 import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
 
 /**
@@ -39,14 +42,14 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
  * Suppose there is a leading 1 at [i,j], {@code U.get(i, j) == 1} always returns {@code true}.
  *
  * @author Haksun Li
- * @see
- * <ul>
+ * @see <ul>
  * <li><a href="http://en.wikipedia.org/wiki/Gauss%E2%80%93Jordan_elimination">Wikipedia: Gauss–Jordan elimination</a>
  * <li><a href="http://en.wikipedia.org/wiki/Reduced_row_echelon_form#Reduced_row_echelon_form">Wikipedia: Row echelon form</a>
  * </ul>
  */
-public class GaussJordanElimination {
+public class GaussJordanElimination implements Serializable {
 
+    private static final long serialVersionUID = 4009857515238012655L;
     private ElementaryOperation T;
     private ElementaryOperation U;
     private final boolean usePivoting;//{@code true} if partial pivoting is wanted, e.g., for numerical stability
@@ -110,7 +113,7 @@ public class GaussJordanElimination {
          */
         int[] leading1s = new int[nRows + 1];//initialized to 0s
 
-        for (int i = 1, j = 1; i <= nRows && j <= nCols;) {
+        for (int i = 1, j = 1; i <= nRows && j <= nCols; ) {
             int maxRow = i;
             if (usePivoting) {
                 for (int k = i + 1; k <= nRows; ++k) {

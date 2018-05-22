@@ -46,6 +46,7 @@ import java.util.List;
  * @see "Andreas Antoniou, Wu-Sheng Lu, "Algorithm 15.4, SQP algorithm for nonlinear problems with equality and inequality constraints," Practical Optimization: Algorithms and Engineering Applications."
  */
 public class SQPASVariation1 implements SQPASVariation {//TODO: not thread safe
+    private static final long serialVersionUID = 879251903925208643L;
 
     private RealScalarFunction f;
     private List<RealScalarFunction> ae;
@@ -122,6 +123,8 @@ public class SQPASVariation1 implements SQPASVariation {//TODO: not thread safe
         final double beta = 100;
 
         UnivariateRealFunction phi = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -2589341369288285463L;
 
             @Override
             public double evaluate(double alpha) {

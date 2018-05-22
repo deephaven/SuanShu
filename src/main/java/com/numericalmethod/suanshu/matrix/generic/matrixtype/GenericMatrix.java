@@ -37,6 +37,7 @@ import java.util.Arrays;
  */
 public class GenericMatrix<F extends Field<F>> implements Matrix<GenericMatrix<F>, F> {
 
+    private static final long serialVersionUID = 5546679190106811418L;
     /** the number of rows */
     private final int nRows;
     /** the number of columns */

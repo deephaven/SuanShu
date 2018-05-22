@@ -43,6 +43,7 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.autoEpsilon;
  */
 public class MatthewsDavies extends DenseMatrix {
 
+    private static final long serialVersionUID = 5356666386748673074L;
     private final LowerTriangularMatrix L;
     private final UpperTriangularMatrix Lt;
     private final DiagonalMatrix D;

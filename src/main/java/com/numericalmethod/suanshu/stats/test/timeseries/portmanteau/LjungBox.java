@@ -44,6 +44,8 @@ package com.numericalmethod.suanshu.stats.test.timeseries.portmanteau;
  */
 public class LjungBox extends BoxPierce {
 
+    private static final long serialVersionUID = 5402855368216708305L;
+
     public LjungBox(double[] xt, int lag, int fitdf) {
         super(xt, lag, fitdf);
     }

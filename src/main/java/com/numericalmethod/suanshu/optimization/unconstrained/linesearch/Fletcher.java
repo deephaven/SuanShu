@@ -40,6 +40,7 @@ import static java.lang.Math.pow;
  */
 public class Fletcher implements LineSearch {
 
+    private static final long serialVersionUID = 8032541119151748574L;
     private final double rho;
     private final double sigma;
     private final double tau;
@@ -77,10 +78,14 @@ public class Fletcher implements LineSearch {
     public Solution solve(final C2OptimProblem problem) {
         return new Solution() {
 
+            private static final long serialVersionUID = 1188447640470844850L;
+
             @Override
             public double linesearch(final Vector x, final Vector d) {
                 //f as a function of {@code a}
                 UnivariateRealFunction fa = new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = 9054838212560781262L;
 
                     @Override
                     public double evaluate(double a) {
@@ -92,6 +97,8 @@ public class Fletcher implements LineSearch {
 
                 //f' as a function of {@code a}
                 UnivariateRealFunction dfa = new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = 1441616786234819812L;
 
                     @Override
                     public double evaluate(double a) {

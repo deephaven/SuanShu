@@ -40,6 +40,7 @@ import static java.lang.Math.*;
  */
 public class Residuals extends com.numericalmethod.suanshu.stats.regression.linear.Residuals {
 
+    private static final long serialVersionUID = 2420227126483768882L;
     /**
      * the residuals, ε
      */
@@ -110,6 +111,8 @@ public class Residuals extends com.numericalmethod.suanshu.stats.regression.line
      */
     private static Vector logistic(Vector v) {
         return com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.foreach(v, new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -5913699252040571951L;
 
             @Override
             public double evaluate(double x) {

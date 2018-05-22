@@ -47,6 +47,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class FisherExactDistribution extends EmpiricalDistribution {
 
+    private static final long serialVersionUID = -5557535255396815783L;
+
     /**
      * Construct the distribution for the Fisher's exact test.
      * 

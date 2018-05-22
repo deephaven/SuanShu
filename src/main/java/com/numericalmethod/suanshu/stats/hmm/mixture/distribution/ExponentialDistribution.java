@@ -37,6 +37,7 @@ import java.util.Arrays;
  */
 public class ExponentialDistribution implements HMMDistribution {
 
+    private static final long serialVersionUID = 189384260194202941L;
     private final Double[] rates;
 
     /**
@@ -61,6 +62,7 @@ public class ExponentialDistribution implements HMMDistribution {
             final double rate = rates[i];
             rng[i] = new RandomNumberGenerator() {
 
+                private static final long serialVersionUID = -6513274072599671969L;
                 Ziggurat2000Exp rng = new Ziggurat2000Exp();
 
                 @Override

@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class Beta extends com.numericalmethod.suanshu.stats.regression.linear.glm.Beta {
 
+    private static final long serialVersionUID = -4938570590634353096L;
+
     /**
      * Construct an instance of <tt>Beta</tt>.
      *

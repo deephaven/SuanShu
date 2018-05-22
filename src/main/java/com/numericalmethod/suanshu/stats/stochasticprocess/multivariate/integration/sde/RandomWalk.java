@@ -42,6 +42,7 @@ import static com.numericalmethod.suanshu.matrix.doubles.operation.CreateMatrix.
  */
 public class RandomWalk implements Construction {
 
+    private static final long serialVersionUID = -4843164261441512469L;
     /**
      * the SDE specification, in discretized form
      */
@@ -60,6 +61,7 @@ public class RandomWalk implements Construction {
      */
     public class MultiVariateRealization implements com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.MultiVariateRealization {
 
+        private static final long serialVersionUID = -6234304032032811964L;
         /**
          * the ID of this particular realization
          */
@@ -85,6 +87,7 @@ public class RandomWalk implements Construction {
         public Iterator iterator() {
             return new MultiVariateRealization.Iterator(sde.nB(), size(), id) {
 
+                private static final long serialVersionUID = -221431110028364292L;
                 private double t0 = 0, t1;
                 private Vector xt = x0;// initialize the starting value
                 private Ft ft = sde.getNewFt();

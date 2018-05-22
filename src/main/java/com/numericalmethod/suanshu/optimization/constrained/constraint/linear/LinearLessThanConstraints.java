@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class LinearLessThanConstraints extends LinearConstraints implements LessThanConstraints {
 
+    private static final long serialVersionUID = 2092149437068061625L;
+
     /**
      * Construct a collection of linear less-than or equal-to constraints.
      *

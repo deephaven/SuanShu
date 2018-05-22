@@ -49,6 +49,7 @@ import java.util.List;
  */
 public class LILSparseMatrix implements SparseMatrix {
 
+    private static final long serialVersionUID = -8254606762066179935L;
     private final SparseVector[] rows;
     private final int nRows;
     private final int nCols;

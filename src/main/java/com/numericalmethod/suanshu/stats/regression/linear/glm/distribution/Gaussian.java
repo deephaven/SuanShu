@@ -37,6 +37,8 @@ import static java.lang.Math.*;
  */
 public class Gaussian extends Family {
 
+    private static final long serialVersionUID = -2834048277518541565L;
+
     /**
      * Construct an instance of {@code Gaussian}.
      * The canonical link is {@link Identity}.

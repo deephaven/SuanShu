@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class InvertingVariable implements SubstitutionRule {
 
+    private static final long serialVersionUID = 3438047538851880795L;
     private final double a;//the lower limit
     private final double b;//the upper limit
 
@@ -59,6 +60,8 @@ public class InvertingVariable implements SubstitutionRule {
     public UnivariateRealFunction x() {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 4278548703249348493L;
+
             @Override
             public double evaluate(double t) {
                 return 1 / t;
@@ -69,6 +72,8 @@ public class InvertingVariable implements SubstitutionRule {
     @Override
     public UnivariateRealFunction dx() {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -1946321205718343409L;
 
             @Override
             public double evaluate(double t) {

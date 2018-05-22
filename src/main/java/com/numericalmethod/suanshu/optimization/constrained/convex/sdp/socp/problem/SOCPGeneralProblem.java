@@ -55,6 +55,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
  */
 public class SOCPGeneralProblem extends SOCPDualProblem {
 
+    private static final long serialVersionUID = -3780274855432102059L;
+
     /**
      * Construct a general Second Order Conic Programming problem.
      * Minimize

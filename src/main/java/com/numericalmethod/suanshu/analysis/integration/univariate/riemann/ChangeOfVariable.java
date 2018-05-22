@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.analysis.integration.univariate.riemann.subst
  */
 public class ChangeOfVariable implements Integrator {
 
+    private static final long serialVersionUID = -1733752276039024374L;
     private final Integrator integrator;
     private final SubstitutionRule change;
 
@@ -78,6 +79,8 @@ public class ChangeOfVariable implements Integrator {
      */
     public UnivariateRealFunction fdx(final UnivariateRealFunction f) {
         UnivariateRealFunction g = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 7172809181377171762L;
 
             @Override
             public double evaluate(double t) {

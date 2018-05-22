@@ -23,9 +23,12 @@
 package com.numericalmethod.suanshu.vector.doubles.dense;
 
 import com.numericalmethod.suanshu.number.Real;
-import static com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath.*;
 import com.numericalmethod.suanshu.vector.doubles.IsVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
+
+import static com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath.*;
 
 /**
  * This is a generic implementation of the math operations of {@code double} based {@link Vector}.
@@ -34,7 +37,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Ken Yiu
  */
-public class VectorMathOperation {
+public class VectorMathOperation implements Serializable {
+
+    private static final long serialVersionUID = 4886086848266357449L;
 
     public DenseVector add(Vector v1, Vector v2) {
         IsVector.throwIfNotEqualSize(v1, v2);

@@ -34,6 +34,7 @@ import java.util.Arrays;
  */
 public abstract class MultiplierPenalty extends PenaltyFunction {
 
+    private static final long serialVersionUID = -2320858766542292566L;
     /**
      * the weights for the constraints
      */

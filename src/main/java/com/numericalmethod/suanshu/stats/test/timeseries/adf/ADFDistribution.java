@@ -25,13 +25,17 @@ package com.numericalmethod.suanshu.stats.test.timeseries.adf;
 import com.numericalmethod.suanshu.stats.descriptive.rank.Quantile.QuantileType;
 import com.numericalmethod.suanshu.stats.distribution.univariate.EmpiricalDistribution;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Haksun Li
  */
 public abstract class ADFDistribution extends EmpiricalDistribution {
 
-    static interface Table {
+    private static final long serialVersionUID = 4619205543530773371L;
+
+    static interface Table extends Serializable{
 
         double[] getData(int sampleSize);
     }

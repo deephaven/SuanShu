@@ -46,6 +46,7 @@ public abstract class DenseData implements MatrixAccess, DeepCopyable {
             SIZE_THRESHOLD,
             new SimpleDoubleArrayOperation(),
             new ParallelDoubleArrayOperation());
+    private static final long serialVersionUID = -712015746192931442L;
     /** stores the values of matrix entries */
     private double[] data = null; //caller throws NullPointerException if data is not initialized
     private final DoubleArrayOperation doubleArrayOperation;

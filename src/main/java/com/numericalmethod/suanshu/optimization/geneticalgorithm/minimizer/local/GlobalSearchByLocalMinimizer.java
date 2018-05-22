@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
 public class GlobalSearchByLocalMinimizer extends SimpleGridMinimizer {
 
     private static final int defaultMaxIterations = 200;
+    private static final long serialVersionUID = 8201289353373751155L;
 
     /**
      * Construct a {@code GlobalSearchByLocalMinimizer} to solve unconstrained minimization problems.
@@ -61,6 +62,8 @@ public class GlobalSearchByLocalMinimizer extends SimpleGridMinimizer {
         super(
                 new NewCellFactoryCtor() {
 
+                    private static final long serialVersionUID = 4058365870709177843L;
+
                     @Override
                     public SimpleCellFactory newCellFactory() {
                         return new LocalSearchCellFactory(factory, uniform);
@@ -80,6 +83,8 @@ public class GlobalSearchByLocalMinimizer extends SimpleGridMinimizer {
     public GlobalSearchByLocalMinimizer(boolean parallel, RandomLongGenerator uniform, final double epsilon, int maxIterations) {
         this(
                 new LocalSearchCellFactory.MinimizerFactory() {
+
+                    private static final long serialVersionUID = -4172531594048601473L;
 
                     @Override
                     public MultivariateMinimizer newInstance() {

@@ -52,6 +52,7 @@ import java.util.List;
  */
 public class PolyRoot implements PolyRootSolver {
 
+    private static final long serialVersionUID = -207242243438899895L;
     private final LinearRoot p1 = new LinearRoot();
     private final QuadraticRoot p2 = new QuadraticRoot();
     private final CubicRoot p3 = new CubicRoot();

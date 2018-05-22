@@ -45,6 +45,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class InnovationAlgorithm extends InnovationAlgorithmImpl {
 
+    private static final long serialVersionUID = -9114358638972405210L;
+
     /**
      * Construct an instance of <tt>InnovationAlgorithm</tt> for a multivariate ARMA time series.
      * 
@@ -113,6 +115,8 @@ public class InnovationAlgorithm extends InnovationAlgorithmImpl {
      */
     private AutoCovarianceFunction getK(final AutoCovariance Gamma, final ARMAModel model) {
         AutoCovarianceFunction K = new AutoCovarianceFunction() {
+
+            private static final long serialVersionUID = -120732587087986052L;
 
             @Override
             public Matrix evaluate(double x1, double x2) {//assume x1, x2 >= 1

@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.univariate.arima.ARIM
  * @see "P. J. Brockwell and R. A. Davis, "p. 420. Eq. 11.3.15. The Covariance Matrix Function of a Causal ARMA Process. Chapter 11.3. Multivariate Time Series," in <i>Time Series: Theory and Methods</i>, Springer, 2006."
  */
 public class AutoCovariance extends AutoCovarianceFunction {//TODO: solve the 1D Yule-Walker equations directly for performance
+    private static final long serialVersionUID = -3202727352135846385L;
 
     private com.numericalmethod.suanshu.stats.timeseries.linear.multivariate.stationaryprocess.arma.AutoCovariance ACVF;
 

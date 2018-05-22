@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.timeseries.linear.univariate.arima;
 
 import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationaryprocess.arma.ARMAXModel;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -47,8 +49,9 @@ import java.util.Arrays;
  *
  * @author Kevin Sun
  */
-public class ARIMAXModel {
+public class ARIMAXModel implements Serializable{
 
+    private static final long serialVersionUID = -365343585098976595L;
     /**
      * the intercept (constant) term
      */

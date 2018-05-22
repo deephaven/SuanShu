@@ -42,6 +42,8 @@ import com.numericalmethod.suanshu.stats.descriptive.moment.Variance;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import static java.lang.Math.*;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -70,7 +72,9 @@ import java.util.Arrays;
  * <li><a href="http://en.wikipedia.org/wiki/Factor_analysis">Wikipedia: Factor analysis</a>
  * </ul>
  */
-public class FactorAnalysis {
+public class FactorAnalysis implements Serializable{
+
+    private static final long serialVersionUID = -1097096351721852404L;
 
     /**
      * These are the different ways to compute the factor analysis scores.
@@ -261,6 +265,8 @@ public class FactorAnalysis {
                 psiArr,
                 new UnivariateRealFunction() {
 
+                    private static final long serialVersionUID = 7414670400606913394L;
+
                     @Override
                     public double evaluate(double psi) {
                         return sqrt(psi);
@@ -269,7 +275,8 @@ public class FactorAnalysis {
 
         Matrix PSI_INV_SQRT = new DiagonalMatrix(foreach(
                 psiArr,
-                new UnivariateRealFunction() { //sqx_recip = 1/sqrt(x)
+                new UnivariateRealFunction() {
+                    private static final long serialVersionUID = 7389498537888369389L; //sqx_recip = 1/sqrt(x)
 
                     @Override
                     public double evaluate(double psi) {
@@ -284,7 +291,8 @@ public class FactorAnalysis {
 
         Matrix DELTA_SQRT = new DiagonalMatrix(foreach(
                 theta,
-                new UnivariateRealFunction() { //sqrt(max(x - 1, 0))
+                new UnivariateRealFunction() {
+                    private static final long serialVersionUID = 610193335679740223L; //sqrt(max(x - 1, 0))
 
                     @Override
                     public double evaluate(double theta) {

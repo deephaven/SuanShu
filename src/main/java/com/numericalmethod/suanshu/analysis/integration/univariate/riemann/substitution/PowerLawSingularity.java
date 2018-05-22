@@ -23,6 +23,9 @@
 package com.numericalmethod.suanshu.analysis.integration.univariate.riemann.substitution;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.UnivariateRealFunction;
+
+import java.io.Serializable;
+
 import static java.lang.Math.pow;
 
 /**
@@ -43,6 +46,8 @@ import static java.lang.Math.pow;
  * @author Haksun Li
  */
 public class PowerLawSingularity implements SubstitutionRule {
+
+    private static final long serialVersionUID = -6109498539782146387L;
 
     /** the type of end point divergence */
     public static enum PowerLawSingularityType {
@@ -77,6 +82,8 @@ public class PowerLawSingularity implements SubstitutionRule {
     public UnivariateRealFunction x() {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 3650445881952103147L;
+
             @Override
             public double evaluate(double t) {
                 switch (type) {
@@ -94,6 +101,8 @@ public class PowerLawSingularity implements SubstitutionRule {
     @Override
     public UnivariateRealFunction dx() {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 4195963023456229355L;
 
             @Override
             public double evaluate(double t) {

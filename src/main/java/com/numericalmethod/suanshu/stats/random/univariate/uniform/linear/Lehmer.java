@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Lehmer implements LinearCongruentialGenerator {
 
+    private static final long serialVersionUID = 6754726794556292170L;
     /** the multiplier */
     private final long a;
     /** the modulus */

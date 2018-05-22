@@ -28,6 +28,8 @@ import com.numericalmethod.suanshu.optimization.unconstrained.MultivariateMaximi
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * A logistic regression (sometimes called the logistic model or logit model)
  * is used for prediction of the probability of occurrence of an event by fitting data to a logit function logistic curve.
@@ -44,8 +46,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * <li>P. J. MacCullagh and J. A. Nelder. "Likelihood functions for binary data," in <i>Generalized Linear Models</i>, 2nd ed. pp.114. Section 4.4."
  * </ul>
  */
-public class Logistic {
+public class Logistic implements Serializable{
 
+    private static final long serialVersionUID = -4638262770862582096L;
     /**
      * the logistic regression problem to be solved
      */

@@ -32,6 +32,8 @@ import static java.lang.Math.pow;
  */
 public class Residuals extends com.numericalmethod.suanshu.stats.regression.linear.glm.Residuals {
 
+    private static final long serialVersionUID = 6001115596548483211L;
+
     /**
      * Perform the residual analysis for a quasi GLM problem.
      *

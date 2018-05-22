@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.analysis.function;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.BivariateRealFunction;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 
+import java.io.Serializable;
+
 /**
  * The mathematical concept of a function expresses the idea that one quantity (the argument of the function, also known as the input) completely determines another quantity (the value, or output).
  * The argument (domain) and value (range) may be real numbers (as in {@link RealScalarFunction}), but they can also be elements from any given sets.
@@ -34,16 +36,14 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Function_(mathematics)">Wikipedia: Function (mathematics)</a>
  */
-public interface Function<D, R> {
+public interface Function<D, R> extends Serializable {
 
     /**
      * This is the {@link RuntimeException} thrown when it fails to evaluate an expression.
      * E.g., when there are not two arguments passed in a {@link BivariateRealFunction}.
      */
     public static class EvaluationException extends RuntimeException {//TODO: make Exception (non-runtime)?
-
-        private static final long serialVersionUID = 1L;
-
+        private static final long serialVersionUID = -7460675592317861082L;
         /**
          * Constructs an {@code EvaluationException} with the specified detail message.
          *

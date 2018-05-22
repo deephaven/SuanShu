@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.number.complex.Complex;
  */
 public class ComplexMatrix implements Matrix<ComplexMatrix, Complex> {
 
+    private static final long serialVersionUID = 2592016214142885224L;
     /** the storage */
     private final GenericMatrix<Complex> A;////composition over inheritance
 

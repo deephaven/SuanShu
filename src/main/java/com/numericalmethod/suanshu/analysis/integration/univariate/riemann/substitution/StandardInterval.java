@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class StandardInterval implements SubstitutionRule {
 
+    private static final long serialVersionUID = -3444091777344749739L;
     private final double a;//the lower limit
     private final double b;//the upper limit
 
@@ -53,6 +54,8 @@ public class StandardInterval implements SubstitutionRule {
     public UnivariateRealFunction x() {
         return new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = -998611601620740027L;
+
             @Override
             public double evaluate(double t) {
                 return ((b - a) * t + (a + b)) / 2;
@@ -63,6 +66,8 @@ public class StandardInterval implements SubstitutionRule {
     @Override
     public UnivariateRealFunction dx() {
         return new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = -2951116689680798551L;
 
             @Override
             public double evaluate(double t) {

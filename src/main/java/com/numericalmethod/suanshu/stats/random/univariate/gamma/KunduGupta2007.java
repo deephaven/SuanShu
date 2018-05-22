@@ -36,6 +36,7 @@ import static java.lang.Math.*;
  */
 public class KunduGupta2007 implements RandomGammaGenerator {
 
+    private static final long serialVersionUID = -3263104897135536685L;
     private final double theta;
     private final RandomLongGenerator uniform;
     private final double k;

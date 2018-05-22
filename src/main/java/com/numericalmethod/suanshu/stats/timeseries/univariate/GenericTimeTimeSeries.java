@@ -40,6 +40,7 @@ import java.util.Iterator;
  */
 public class GenericTimeTimeSeries<T extends Comparable<? super T>> implements TimeSeries<T, TimeSeries.Entry<T>> {
 
+    private static final long serialVersionUID = -7878976525481692679L;
     private final ArrayList<TimeSeries.Entry<T>> ts = new ArrayList<TimeSeries.Entry<T>>();
 
     /**

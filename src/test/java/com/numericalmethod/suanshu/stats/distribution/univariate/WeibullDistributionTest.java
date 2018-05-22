@@ -23,7 +23,8 @@
 package com.numericalmethod.suanshu.stats.distribution.univariate;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -107,8 +108,8 @@ public class WeibullDistributionTest {
 
         assertEquals(1.772453850905515, dist.mean(), 1e-15);
         assertEquals(0.8584073464102104, dist.variance(), 1e-15);
-        assertEquals(0.6311106578189307, dist.skew(), 1e-15);
-        assertEquals(0.24508930068759494, dist.kurtosis(), 1e-15);
+        assertEquals(0.6311106578189307, dist.skew(), 1e-12);
+        assertEquals(0.24508930068759494, dist.kurtosis(), 1e-12);
         assertEquals(1.288607832450766, dist.entropy(), 1e-15);
 
         assertEquals(0, dist.cdf(0), 0);//from R

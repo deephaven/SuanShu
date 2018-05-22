@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
  */
 public class Beta extends com.numericalmethod.suanshu.stats.regression.linear.Beta {
 
+    private static final long serialVersionUID = 1308153743122307684L;
     /**
      * the z-values for the GLM coefficients β^
      */

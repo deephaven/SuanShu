@@ -27,6 +27,8 @@ import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.factorization.eigen.qr.HessenbergDecomposition;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 
+import java.io.Serializable;
+
 /**
  * A tri-diagonal matrix <i>A</i> is a matrix such that
  * it has non-zero elements only in the main diagonal, the first diagonal below, and the first diagonal above.
@@ -43,8 +45,9 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  * <li><a href="http://en.wikipedia.org/wiki/Householder_transformation#TriDiagonalization">Wikipedia: TriDiagonalization</a>
  * </ul>
  */
-public class TriDiagonalization {
+public class TriDiagonalization implements Serializable{
 
+    private static final long serialVersionUID = 1878191406474021778L;
     private final HessenbergDecomposition decomp;
 
     /**

@@ -44,6 +44,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class QR implements QRDecomposition {
 
+    private static final long serialVersionUID = -2022974385849390037L;
     QRDecomposition impl;
 
     /**

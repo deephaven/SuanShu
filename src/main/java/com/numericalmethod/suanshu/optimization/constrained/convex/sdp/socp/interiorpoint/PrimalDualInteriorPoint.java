@@ -50,11 +50,14 @@ import static java.lang.Math.*;
  */
 public class PrimalDualInteriorPoint implements ConstrainedMinimizer<SOCPDualProblem, IterativeMinimizer<PrimalDualSolution>> {
 
+    private static final long serialVersionUID = 8633964372836223656L;
+
     /**
      * This is the solution to a Dual Second Order Conic Programming problem using the Primal Dual Interior Point algorithm.
      */
     public class Solution implements IterativeMinimizer<PrimalDualSolution> {
 
+        private static final long serialVersionUID = -6549301153594108843L;
         private PrimalDualSolution soln;
         private int iter = 0; //the number of iterations
         private final SOCPDualProblem problem;

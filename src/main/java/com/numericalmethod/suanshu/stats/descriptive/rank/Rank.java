@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.descriptive.rank;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import static com.numericalmethod.suanshu.number.DoubleUtils.shellsort;
 import static java.lang.Math.abs;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -49,8 +51,10 @@ import java.util.Arrays;
  * <li>"Remark AS R7: A Remark on Algorithm AS 26: Ranking an Array of Numbers. P. R. Freeman. Journal of the Royal Statistical Society. Series C (Applied Statistics), Vol. 22, No. 1 (1973), p. 133."
  * </ul>
  */
-public class Rank {
+public class Rank implements Serializable{
 
+
+    private static final long serialVersionUID = -7699091685346361365L;
     /**
      * t = Σ(t<sub>i</sub><sup>3</sup> - t<sub>i</sub>)
      */

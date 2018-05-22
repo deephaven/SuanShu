@@ -47,9 +47,12 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public abstract class SteepestDescent implements MultivariateMinimizer<IterativeMinimizer<Vector>> {
 
+    private static final long serialVersionUID = 4238975995902187376L;
+
     /** This is an implementation of the steepest descent method. */
     protected abstract class SteepestDescentImpl implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = -3160426147971880802L;
         private Vector xmin = null;//the current minimizer
         private Vector dx = null;
         protected final C2OptimProblem problem;

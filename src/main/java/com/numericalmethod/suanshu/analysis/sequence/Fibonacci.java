@@ -36,6 +36,7 @@ import java.util.Arrays;
  * @see <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Wikipedia: Fibonacci number</a>
  */
 public class Fibonacci implements Sequence {//TOOD: implement an infinite length version of this?
+    private static final long serialVersionUID = 8498924352907631286L;
 
     private final double[] fibonacci;
 

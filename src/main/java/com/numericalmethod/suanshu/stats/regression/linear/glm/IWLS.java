@@ -29,6 +29,9 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
 import com.numericalmethod.suanshu.number.DoubleUtils;
 import com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.link.LinkFunction;
 import com.numericalmethod.suanshu.stats.regression.linear.ols.OLSRegression;
+
+import java.io.Serializable;
+
 import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.foreach;
 
 /**
@@ -48,6 +51,7 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  */
 public class IWLS implements Fitting {
 
+    private static final long serialVersionUID = 8396446353752589352L;
     /**
      * the convergence threshold
      */
@@ -92,8 +96,9 @@ public class IWLS implements Fitting {
     /**
      * the implementation of the IWLS algorithm
      */
-    private class Run {
+    private class Run implements Serializable{
 
+        private static final long serialVersionUID = 4728481822906481318L;
         //the generalized linear regression problem to be solved
         private final GLMProblem problem;
         //the link function for {@code family}
@@ -162,6 +167,8 @@ public class IWLS implements Fitting {
         private Vector mu(Vector eta) {
             return foreach(eta, new UnivariateRealFunction() {
 
+                private static final long serialVersionUID = 698335010821694691L;
+
                 @Override
                 public double evaluate(double x) {
                     return link.inverse(x);
@@ -177,6 +184,8 @@ public class IWLS implements Fitting {
          */
         private Vector dg(Vector mu) {
             return foreach(mu, new UnivariateRealFunction() {
+
+                private static final long serialVersionUID = -2115714035976969118L;
 
                 @Override
                 public double evaluate(double x) {
@@ -218,6 +227,8 @@ public class IWLS implements Fitting {
          */
         private Vector weights(Vector mu, Vector dg) {
             Vector oneOverVariance = foreach(mu, new UnivariateRealFunction() {
+
+                private static final long serialVersionUID = -521292852375546995L;
 
                 @Override
                 public double evaluate(double x) {

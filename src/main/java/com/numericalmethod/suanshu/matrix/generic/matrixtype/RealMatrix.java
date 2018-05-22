@@ -35,6 +35,7 @@ import com.numericalmethod.suanshu.number.Real;
  */
 public class RealMatrix implements Matrix<RealMatrix, Real> {
 
+    private static final long serialVersionUID = 5154913550155014618L;
     /** the storage */
     private final GenericMatrix<Real> A;//composition over inheritance
 

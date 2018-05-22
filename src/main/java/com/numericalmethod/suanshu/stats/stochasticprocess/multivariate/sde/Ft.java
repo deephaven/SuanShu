@@ -25,6 +25,9 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.DeepCopyable;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.sqrt;
 
 /**
@@ -42,8 +45,9 @@ import static java.lang.Math.sqrt;
  *
  * @see "Fima C. Klebaner. Introduction to Stochastic Calculus with Applications. 2nd ed. pp.23. Imperial College Press. 2006."
  */
-public class Ft implements DeepCopyable {
+public class Ft implements DeepCopyable, Serializable {
 
+    private static final long serialVersionUID = 951393911623434398L;
     /**
      * the time differential
      */

@@ -53,6 +53,7 @@ import java.util.Comparator;
  */
 public class GloubKahanSVD implements SVDDecomposition {
 
+    private static final long serialVersionUID = 1280864938173727391L;
     private DiagonalMatrix D;
     private Matrix Ut;
     private Matrix V;

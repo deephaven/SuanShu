@@ -37,6 +37,8 @@ import static java.lang.Math.*;
  */
 public class Poisson extends com.numericalmethod.suanshu.stats.regression.linear.glm.distribution.Poisson implements QuasiFamily {
 
+    private static final long serialVersionUID = -2420005355136021964L;
+
     /**
      * Create an instance of {@code Poisson}.
      * The canonical link is {@link Log}.

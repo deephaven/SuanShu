@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class C2OptimProblemImpl implements C2OptimProblem {
 
+    private static final long serialVersionUID = -7893914411029108510L;
     /** the objective function to be minimized */
     private final RealScalarFunction f;
     /** the gradient function */

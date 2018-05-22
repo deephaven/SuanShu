@@ -45,6 +45,7 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
  */
 public class RandomWalk extends Brownian implements Construction {
 
+    private static final long serialVersionUID = -2358169442332342097L;
     //composition/layering; we implment this <tt>RandomWalk</tt> using the generic Random Walk construction
     com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integration.sde.RandomWalk rw;
 

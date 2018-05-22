@@ -28,6 +28,5 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  * @author Haksun Li
  */
 public class LPInfeasible extends LPException {
-
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 265585041207576124L;
 }

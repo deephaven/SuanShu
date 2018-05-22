@@ -39,11 +39,14 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Zangwill extends SteepestDescent {
 
+    private static final long serialVersionUID = 8600045045739776771L;
+
     /**
      * an implementation of Zangwill's algorithm
      */
     protected class ZangwillImpl extends SteepestDescentImpl {
 
+        private static final long serialVersionUID = 2825019160079872953L;
         private Vector dk = null;
         private Vector[] d0;
         private int m = Integer.MIN_VALUE;//not used in the first iteration
@@ -81,7 +84,7 @@ public class Zangwill extends SteepestDescent {
                 double ratio = akm * deltak / lambda;
 
                 if (ratio > epsilon2) {
-                    d0[m] = dk;
+                    d0[m] = dk.scaled(1/lambda);
                     deltak = ratio;
                 }//else, do nothing, keeping the same conjugate directions
             }

@@ -41,6 +41,7 @@ public class DBeta extends BivariateRealFunction {
 
     private static final Beta beta = new Beta();
     private static final Digamma digamma = new Digamma();
+    private static final long serialVersionUID = 3021588159867420323L;
 
     /**
      * Evaluate \({\partial \over \partial x} \mathrm{B}(x, y)\).

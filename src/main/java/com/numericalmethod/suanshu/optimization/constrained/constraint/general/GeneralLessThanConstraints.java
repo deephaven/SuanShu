@@ -35,6 +35,8 @@ import java.util.Collection;
  */
 public class GeneralLessThanConstraints extends GeneralConstraints implements LessThanConstraints {
 
+    private static final long serialVersionUID = 685356021318174870L;
+
     /**
      * Construct an instance of less-than or equal-to inequality constraints from a collection of real-valued functions.
      *
@@ -61,6 +63,8 @@ public class GeneralLessThanConstraints extends GeneralConstraints implements Le
         for (RealScalarFunction l : lessThan) {
             final RealScalarFunction f = l;// make the complier happy
             RealScalarFunction nf = new RealScalarFunction() {
+
+                private static final long serialVersionUID = -7820518348128978534L;
 
                 @Override
                 public Double evaluate(Vector x) {

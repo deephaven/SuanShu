@@ -40,6 +40,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class Best2Bin extends Best1Bin {
 
+    private static final long serialVersionUID = 8824002479468567436L;
+
     /**
      * Construct an instance of {@code Best2Bin}.
      *
@@ -67,6 +69,8 @@ public class Best2Bin extends Best1Bin {
     }
 
     public class DeBest2BinCell extends DeRand1BinCell {
+
+        private static final long serialVersionUID = -6601479881882519768L;
 
         protected DeBest2BinCell(RealScalarFunction f, Vector x) {
             super(f, x);

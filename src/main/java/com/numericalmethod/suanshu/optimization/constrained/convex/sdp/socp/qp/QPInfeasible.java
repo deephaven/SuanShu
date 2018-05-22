@@ -28,6 +28,5 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp;
  * @author Haksun Li
  */
 public class QPInfeasible extends QPException {
-
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -7483009022345547964L;
 }

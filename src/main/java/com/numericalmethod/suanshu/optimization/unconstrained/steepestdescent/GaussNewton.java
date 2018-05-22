@@ -58,11 +58,14 @@ public class GaussNewton {
 
     protected static class MySteepestDescent extends SteepestDescent {
 
+        private static final long serialVersionUID = 8499249657496242207L;
+
         /**
          * an implementation of the Gauss-Newton algorithm.
          */
         protected class GaussNewtonImpl extends MySteepestDescent.SteepestDescentImpl {
 
+            private static final long serialVersionUID = 3049109705663763775L;
             private final RntoMatrix J;
 
             protected GaussNewtonImpl(C2OptimProblem problem, RntoMatrix J) throws Exception {
@@ -142,6 +145,8 @@ public class GaussNewton {
     private static RealVectorFunction g(final RealVectorFunction vf, final RntoMatrix J) {
         RealVectorFunction gf = new RealVectorFunction() {
 
+            private static final long serialVersionUID = 758925187743177725L;
+
             @Override
             public Vector evaluate(Vector x) {
                 Matrix Jxt = J.evaluate(x).t();
@@ -173,6 +178,8 @@ public class GaussNewton {
      */
     private static RealScalarFunction f2(final RealVectorFunction vf) {
         RealScalarFunction F = new RealScalarFunction() {
+
+            private static final long serialVersionUID = -5372310454722306495L;
 
             @Override
             public Double evaluate(Vector x) {

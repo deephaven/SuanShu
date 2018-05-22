@@ -25,14 +25,17 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.coefficients.Diffusion;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.coefficients.Drift;
 
+import java.io.Serializable;
+
 /**
  * This class represents a univariate, continuous-time Stochastic Differential Equation of this form:
  * <i>dX(t) = μ(t, Xt, Zt, ...) * dt + σ(t, Xt, Zt, ...) * dB(t)</i>.
  *
  * @author Haksun Li
  */
-public class SDE {
+public class SDE implements Serializable{
 
+    private static final long serialVersionUID = -2491057661896647124L;
     /**
      * the drift
      *

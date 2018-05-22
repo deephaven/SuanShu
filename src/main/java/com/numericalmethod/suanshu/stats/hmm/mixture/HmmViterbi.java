@@ -27,6 +27,9 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 import com.numericalmethod.suanshu.number.DoubleUtils;
 import com.numericalmethod.suanshu.number.doublearray.DoubleArrayMath;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
+
 import static java.lang.Math.log;
 
 /**
@@ -43,8 +46,9 @@ import static java.lang.Math.log;
  * <li><a href="http://en.wikipedia.org/wiki/Viterbi_algorithm">Wikipedia: Viterbi algorithm</a>
  * </ul>
  */
-public class HmmViterbi {
+public class HmmViterbi implements Serializable{
 
+    private static final long serialVersionUID = -3786015921154922574L;
     /** the underlying hidden Markov model */
     private final HiddenMarkovModel model;
 

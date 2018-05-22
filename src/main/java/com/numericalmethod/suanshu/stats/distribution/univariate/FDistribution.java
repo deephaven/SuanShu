@@ -39,6 +39,7 @@ import static java.lang.Math.*;
  */
 public class FDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = 6030532009352587892L;
     /** the first degree of freedom */
     private final double df1;
     /** the second degree of freedom */

@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class LU implements LUDecomposition {
 
+    private static final long serialVersionUID = 2257736407594223847L;
     private final LUDecomposition impl;
 
     /**

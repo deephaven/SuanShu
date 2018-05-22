@@ -39,6 +39,8 @@ import static java.lang.Math.*;
  */
 public class Gamma extends Family {
 
+    private static final long serialVersionUID = 2018969288839159003L;
+
     /**
      * Construct an instance of {@code Gamma}.
      * The canonical link is {@link Inverse}.

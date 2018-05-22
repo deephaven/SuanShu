@@ -47,6 +47,7 @@ import static java.lang.Math.*;
  */
 //TODO: the R function "dagoTest" in package "fBasics" does not seem to be correct; probably b/c they use the biased estimator?
 public class DAgostino extends HypothesisTest {//TODO: the formulae on Wikipedia and Wiki Doc appear to be wrong as of 4/8/2010; consult the original paper
+    private static final long serialVersionUID = 6264687716671175141L;
 
     /**
      * test statistics K<sup>2</sup>

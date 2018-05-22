@@ -35,6 +35,8 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  */
 public abstract class AutoCovarianceFunction extends BivariateRealFunction {
 
+    private static final long serialVersionUID = 3906723146487079300L;
+
     /**
      * Get the auto-covariance for xi and xj.
      *

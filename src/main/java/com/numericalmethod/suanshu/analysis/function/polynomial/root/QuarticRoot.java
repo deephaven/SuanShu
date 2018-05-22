@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.analysis.function.polynomial.root;
 
 import com.numericalmethod.suanshu.analysis.function.polynomial.Polynomial;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -34,8 +36,12 @@ import java.util.List;
  */
 public class QuarticRoot implements PolyRootSolver {
 
-    /** This defines a quartic equation solver. */
-    public static interface QuarticSolver {
+    private static final long serialVersionUID = -5176455427307712767L;
+
+    /**
+     * This defines a quartic equation solver.
+     */
+    public static interface QuarticSolver extends Serializable {
 
         /**
          * Solve \(ax^4 + bx^3 + cx^2 + dx + e = 0\).

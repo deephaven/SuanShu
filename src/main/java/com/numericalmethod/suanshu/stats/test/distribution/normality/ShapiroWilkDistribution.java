@@ -46,6 +46,7 @@ import static java.lang.Math.*;
  * </ul>
  */
 public class ShapiroWilkDistribution implements ProbabilityDistribution {//TODO: the exact case
+    private static final long serialVersionUID = 7410257737117335014L;
 
     /**
      * the number of observations

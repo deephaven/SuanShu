@@ -57,6 +57,7 @@ import java.util.List;
  */
 public class QRAlgorithm implements Spectrum {
 
+    private static final long serialVersionUID = -399954291675017683L;
     private final Matrix A;
     private final Matrix H;
     private final int dim;

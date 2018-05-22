@@ -38,6 +38,7 @@ public class MWC8222 implements RandomLongGenerator {
     private static final long MWC_A = 809430660;
     private static final int MWC_AI = 809430660;
     private static final int MWC_C = 362436;
+    private static final long serialVersionUID = -5599533419537265613L;
     private int s_uiStateMWC = MWC_R - 1;
     private int s_uiCarryMWC = MWC_C;
     private long[] s_auiStateMWC = new long[MWC_R];

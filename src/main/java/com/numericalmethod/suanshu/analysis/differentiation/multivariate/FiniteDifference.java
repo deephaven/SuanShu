@@ -49,6 +49,7 @@ import java.util.Arrays;
  */
 public class FiniteDifference implements RealScalarFunction {
 
+    private static final long serialVersionUID = -3391592849535079180L;
     private final RealScalarFunction f;
     private final int[] varidx;
 

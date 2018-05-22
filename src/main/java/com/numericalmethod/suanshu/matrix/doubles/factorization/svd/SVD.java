@@ -41,6 +41,7 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class SVD implements SVDDecomposition {
 
+    private static final long serialVersionUID = -2356114818371744085L;
     private final Matrix A;
     private final boolean fat;
     private final boolean doUV;

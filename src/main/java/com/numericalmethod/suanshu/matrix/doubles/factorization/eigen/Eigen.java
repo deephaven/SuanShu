@@ -49,6 +49,7 @@ import java.util.*;
  * @see <a href="http://en.wikipedia.org/wiki/Eigenvalue_algorithm">Wikipedia: Eigenvalue algorithm</a>
  */
 public class Eigen implements Spectrum {//TODO: refactor this lenghty code
+    private static final long serialVersionUID = -6655686858462014947L;
 
     /**
      * the methods available to compute eigenvalues and eigenvectors

@@ -25,21 +25,28 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.exception.LPUnbounded;
 import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.lp.simplex.SimplexTable;
 
+import java.io.Serializable;
+
 /**
  * A simplex pivoting finds a row and column to exchange to reduce the cost function.
  *
  * @author Haksun Li
  */
-public interface SimplexPivoting {
+public interface SimplexPivoting extends Serializable {
 
     /**
      * the pivot
      */
-    public class Pivot {//a read-only structure
+    public class Pivot implements Serializable{//a read-only structure
+        private static final long serialVersionUID = -8812041702439875436L;
 
-        /** the pivot row */
+        /**
+         * the pivot row
+         */
         public final int r;
-        /** the pivot column */
+        /**
+         * the pivot column
+         */
         public final int s;
 
         /**

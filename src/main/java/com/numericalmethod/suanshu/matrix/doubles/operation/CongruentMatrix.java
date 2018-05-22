@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  */
 public class CongruentMatrix extends DenseMatrix {
 
+    private static final long serialVersionUID = 8558276294779600860L;
+
     /**
      * Construct the congruent matrix <i>B = P'AP</i>.
      *

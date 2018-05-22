@@ -39,6 +39,7 @@ import static java.lang.Math.min;
  */
 public class Brent implements Uniroot {
 
+    private static final long serialVersionUID = -3514278697022536072L;
     private final double tol;
     private final int maxIterations;
 

@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class RayleighRng extends InverseTransformSampling {
 
+    private static final long serialVersionUID = 385409506785609120L;
+
     /**
      * Construct a random number generator to sample from the Rayleigh distribution.
      *

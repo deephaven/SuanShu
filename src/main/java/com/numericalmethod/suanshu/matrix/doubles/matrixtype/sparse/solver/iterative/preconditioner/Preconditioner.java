@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.iter
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.iterative.nonstationary.BiconjugateGradientSolver;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * Preconditioning reduces the condition number of the
  * coefficient matrix of a linear system to accelerate the convergence
@@ -33,7 +35,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * @author Ken Yiu
  * @see <a href="http://en.wikipedia.org/wiki/Preconditioner">Wikipedia: Preconditioner</a>
  */
-public interface Preconditioner {
+public interface Preconditioner extends Serializable {
 
     /**
      * Solve <i>Mv = x</i>, where <i>M</i> is the preconditioner matrix.

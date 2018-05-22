@@ -38,6 +38,8 @@ import java.util.Arrays;
  */
 public class ARIMASim extends SimpleMultiVariateTimeSeries {
 
+    private static final long serialVersionUID = -7753325469010481544L;
+
     /**
      * Simulate a multivariate ARIMA process.
      *

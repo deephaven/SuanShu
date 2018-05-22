@@ -38,6 +38,8 @@ import static java.lang.Math.*;
  */
 public class Ziggurat2000Exp implements RandomExpGenerator {
 
+    private static final long serialVersionUID = 3264819647641181983L;
+
     static {
         zigset();//initialization
     }

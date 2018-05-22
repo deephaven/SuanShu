@@ -28,14 +28,17 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomLongGenerator;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * A {@code SimpleCellFactory} produces {@code SimpleCell}s.
  * A {@code SimpleCell} is a chromosome for a real valued function (an optimization problem) and a candidate solution.
  *
  * @author Haksun Li
  */
-public class SimpleCellFactory {
+public class SimpleCellFactory implements Serializable{
 
+    private static final long serialVersionUID = 4281707850074755306L;
     /**
      * the uniform random number generator
      */
@@ -75,6 +78,8 @@ public class SimpleCellFactory {
      * </ul>
      */
     public class SimpleCell extends RealScalarFunctionChromosome {
+
+        private static final long serialVersionUID = -4320827779829586912L;
 
         protected SimpleCell(RealScalarFunction f, Vector x) {
             super(f, x);

@@ -44,6 +44,7 @@ import java.util.List;
 public class QuarticRootFerrari implements QuarticSolver {
 
     private static final double ONETHIRD = 1. / 3.;
+    private static final long serialVersionUID = -3623085133945255089L;
 
     /**
      * Solve \(ax^4 + bx^3 + cx^2 + dx + e = 0\).

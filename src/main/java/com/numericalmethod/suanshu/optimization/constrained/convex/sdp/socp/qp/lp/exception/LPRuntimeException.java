@@ -29,7 +29,7 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  */
 public class LPRuntimeException extends java.lang.RuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 4675335813659308231L;
 
     /**
      * Construct an instance of {@code LPRuntimeException}.

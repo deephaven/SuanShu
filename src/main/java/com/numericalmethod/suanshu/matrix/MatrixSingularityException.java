@@ -8,7 +8,7 @@ package com.numericalmethod.suanshu.matrix;
  */
 public class MatrixSingularityException extends RuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -3761851452175185790L;
 
     /**
      * Construct an instance of {@code MatrixSingularityException}.

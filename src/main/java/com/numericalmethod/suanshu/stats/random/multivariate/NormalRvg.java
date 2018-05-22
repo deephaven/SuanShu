@@ -56,6 +56,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class NormalRvg implements RandomVectorGenerator {
 
+    private static final long serialVersionUID = -6922538406551671519L;
     private final int size;
     private final ImmutableVector mu;
     private final ImmutableMatrix A;

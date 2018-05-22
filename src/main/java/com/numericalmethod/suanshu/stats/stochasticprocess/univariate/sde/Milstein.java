@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class Milstein implements DiscretizedSDE {
 
+    private static final long serialVersionUID = -8436869466246200037L;
     /**
      * the continuous-time SDE specification
      */
@@ -85,6 +86,8 @@ public class Milstein implements DiscretizedSDE {
     public double db(final Ft ft) {
 
         UnivariateRealFunction f = new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 8674449338144417191L;
 
             @Override
             public double evaluate(double x) {//x = Xt

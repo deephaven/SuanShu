@@ -36,7 +36,8 @@ import static com.numericalmethod.suanshu.number.DoubleUtils.relativeError;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Romberg_integration">Wikipedia: Romberg's method</a>
  */
-public class Romberg implements Integrator {//TODO: is this really the Romberg formula, or just Neville?
+public class Romberg implements Integrator {
+    private static final long serialVersionUID = -2170723818166982576L;//TODO: is this really the Romberg formula, or just Neville?
 
     /** the iterative integrator */
     private IterativeIntegrator integrator;

@@ -38,6 +38,8 @@ import static java.lang.Math.*;
  */
 public class Cloglog implements LinkFunction {
 
+    private static final long serialVersionUID = -758394627768313151L;
+
     @Override
     public double inverse(double x) {
         return 1 - exp(-exp(x));

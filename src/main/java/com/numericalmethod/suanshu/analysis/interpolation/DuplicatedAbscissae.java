@@ -29,7 +29,7 @@ package com.numericalmethod.suanshu.analysis.interpolation;
  */
 public class DuplicatedAbscissae extends RuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 3829595566910378164L;
 
     /**
      * Construct a {@code DuplicatedAbscissae} runtime exception.

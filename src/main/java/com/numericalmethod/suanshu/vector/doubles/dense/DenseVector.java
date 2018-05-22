@@ -39,7 +39,8 @@ import java.util.Arrays;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Euclidean_vector">Wikipedia: Euclidean vector</a>
  */
-public class DenseVector implements Vector {//TODO: java.io.Serializable {
+public class DenseVector implements Vector {
+    private static final long serialVersionUID = -6685243313141585818L;//TODO: java.io.Serializable {
 
     /** data storage */
     private double[] data;
@@ -261,6 +262,8 @@ public class DenseVector implements Vector {//TODO: java.io.Serializable {
     public DenseVector add(final double scalar) {
         double[] result = foreach(data, new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 142066540769351093L;
+
             @Override
             public double evaluate(double x) {
                 return x + scalar;
@@ -274,6 +277,8 @@ public class DenseVector implements Vector {//TODO: java.io.Serializable {
     public DenseVector minus(final double scalar) {
         double[] result = foreach(data, new UnivariateRealFunction() {
 
+            private static final long serialVersionUID = 7524907016856029638L;
+
             @Override
             public double evaluate(double x) {
                 return x - scalar;
@@ -286,6 +291,8 @@ public class DenseVector implements Vector {//TODO: java.io.Serializable {
     @Override
     public DenseVector pow(final double scalar) {
         double[] result = foreach(data, new UnivariateRealFunction() {
+
+            private static final long serialVersionUID = 226065311122657804L;
 
             @Override
             public double evaluate(double x) {

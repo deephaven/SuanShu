@@ -42,8 +42,8 @@ public class Real extends Number implements Field<Real>, Comparable<Real> {
     public static final Real ZERO = new Real(BigDecimal.ZERO);
     /** a number representing <i>1</i> */
     public static final Real ONE = new Real(BigDecimal.ONE);
+    private static final long serialVersionUID = -7975372464277584080L;
     private final BigDecimal value;
-    private static final long serialVersionUID = 1L;
 
     /**
      * Construct a {@code Real} from a {@code double}.

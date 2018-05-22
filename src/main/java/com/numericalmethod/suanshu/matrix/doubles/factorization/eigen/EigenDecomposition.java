@@ -28,6 +28,8 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.diagonal.Diag
 import com.numericalmethod.suanshu.matrix.doubles.operation.CreateMatrix;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +42,9 @@ import java.util.List;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Eigendecomposition_of_a_matrix">Wikipedia: Eigendecomposition of a matrix</a>
  */
-public class EigenDecomposition {
+public class EigenDecomposition implements Serializable{
 
+    private static final long serialVersionUID = 4781617646609099120L;
     private final int dim;
     private final Eigen eigen;
 

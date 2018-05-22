@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationaryprocess.arma;
 
 import static com.numericalmethod.suanshu.number.DoubleUtils.concat;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -33,12 +35,13 @@ import java.util.Arrays;
  *
  * @see "P. J. Brockwell and R. A. Davis, "Eqs. 3.3.3, 3.3.4, Theorem 3.1.1., Chapter 11.3 Multivariate ARMA Processes," in <i>Time Series: Theory and Methods</i>, Springer, 2006."
  */
-public class LinearRepresentation {
+public class LinearRepresentation implements Serializable{
 
     /**
      * the default number of lags
      */
     public static final int DEFAULT_NUMBER_OF_LAGS = 15;
+    private static final long serialVersionUID = 2589839903205752168L;
     /**
      * {ψ<sub>i</sub>}
      *

@@ -33,6 +33,7 @@ import com.numericalmethod.suanshu.misc.R;
  * @see <a href="http://en.wikipedia.org/wiki/Tridiagonal_matrix">Wikipedia: Tridiagonal matrix</a>
  */
 public class TridiagonalMatrix extends DiagonalDataMatrix {
+    private static final long serialVersionUID = -1047925018777037952L;
 
     //<editor-fold defaultstate="collapsed" desc="Ctors">
     /**

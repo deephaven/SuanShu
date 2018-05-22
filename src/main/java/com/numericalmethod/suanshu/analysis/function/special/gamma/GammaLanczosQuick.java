@@ -34,6 +34,7 @@ import static java.lang.Math.exp;
  */
 public class GammaLanczosQuick extends UnivariateRealFunction implements Gamma {
 
+    private static final long serialVersionUID = -5455697118989056356L;
     private final Lanczos lanczos;
 
     /**

@@ -36,6 +36,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class LogGamma extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 3571386316018212770L;
+
     /** the methods available to compute \(\log (\Gamma(z))\) */
     public static enum Method {
 

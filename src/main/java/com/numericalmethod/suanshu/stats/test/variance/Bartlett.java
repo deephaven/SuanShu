@@ -51,6 +51,7 @@ import static java.lang.Math.*;
  */
 public class Bartlett extends HypothesisTest {
 
+    private static final long serialVersionUID = -8020235702973189322L;
     /**
      * the degree of freedom
      */

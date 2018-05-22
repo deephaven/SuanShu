@@ -16,6 +16,7 @@ import static java.lang.Math.*;
  */
 public class BrownForsythe extends HypothesisTest {
 
+    private static final long serialVersionUID = -8697381215101593715L;
     /**
      * degree of freedoms
      */

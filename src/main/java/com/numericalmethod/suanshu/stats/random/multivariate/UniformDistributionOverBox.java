@@ -34,6 +34,7 @@ import java.util.Arrays;
  */
 public class UniformDistributionOverBox implements RandomVectorGenerator {
 
+    private static final long serialVersionUID = -7833162486944486618L;
     private final RealInterval[] bounds;
     private final RandomLongGenerator rng = new UniformRng();
 

@@ -82,6 +82,8 @@ public class QPSimpleSolver {
 
         return new QPSolution() {
 
+            private static final long serialVersionUID = -6860062594251623126L;
+
             @Override
             public boolean isUnique() {
                 return min >= epsilon;// H is positive definite
@@ -126,6 +128,8 @@ public class QPSimpleSolver {
         final Vector x = f1.getSolutionToOriginalProblem(soln1.minimizer());
 
         return new QPSolution() {
+
+            private static final long serialVersionUID = 4921740276209119223L;
 
             @Override
             public boolean isUnique() {

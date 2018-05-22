@@ -43,4 +43,5 @@ import com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.l
  * @see "Michael C. Ferris, Olvi L. Mangasarian, Stephen J. Wright, Linear Programming with MATLAB."
  */
 public class LPCanonicalSolver extends FerrisMangasarianWrightPhase2 {
+    private static final long serialVersionUID = -1829276846575633616L;
 }

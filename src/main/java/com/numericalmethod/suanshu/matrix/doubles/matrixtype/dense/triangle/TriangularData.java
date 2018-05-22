@@ -34,6 +34,7 @@ import java.util.List;
  */
 abstract class TriangularData extends DenseData {
 
+    private static final long serialVersionUID = 6496445796320758955L;
     /** the (square, triangular) matrix dimension */
     final int dim;
 

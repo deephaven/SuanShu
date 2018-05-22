@@ -22,18 +22,19 @@
  */
 package com.numericalmethod.suanshu.dsp.univariate.operation.system.doubles;
 
+import java.io.Serializable;
+
 /**
  * A filter, for signal processing, takes (real) input signal and transforms it to (real) output signal.
  * Often, a filter system performs mathematical operations on a sampled, discrete-time signal to reduce or enhance certain aspects of that signal.
  *
  * @author Haksun Li
- * @see
- * <ul>
+ * @see <ul>
  * <li><a href="http://en.wikipedia.org/wiki/Filter_design">Wikipedia: Filter design</a>
  * <li><a href="http://en.wikipedia.org/wiki/Digital_filter">Wikipedia: Digital filter</a>
  * </ul>
  */
-public interface Filter {
+public interface Filter extends Serializable {
 
     /**
      * Transforms the input signal into the output signal.

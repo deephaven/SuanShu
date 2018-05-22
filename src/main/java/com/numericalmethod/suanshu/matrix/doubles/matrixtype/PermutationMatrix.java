@@ -47,6 +47,7 @@ import java.util.Arrays;
  */
 public class PermutationMatrix implements Matrix {
 
+    private static final long serialVersionUID = -1220655810109622445L;
     /**
      * This implementation uses row view.
      * We store the column position of the 1 in each row.

@@ -46,6 +46,7 @@ import java.util.ArrayList;
  * @see "Andreas Antoniou, Wu-Sheng Lu, "Section 14.2, Primal and Dual SDP Problems," Practical Optimization: Algorithms and Engineering Applications."
  */
 public class SDPDualProblem extends ConstrainedOptimProblemImpl1 {
+    private static final long serialVersionUID = 8096561235874889370L;
     //<editor-fold defaultstate="collapsed" desc="EqualityConstraints">
 
     /**
@@ -57,6 +58,7 @@ public class SDPDualProblem extends ConstrainedOptimProblemImpl1 {
     //TODO: S being positive definite
     public static class EqualityConstraints implements com.numericalmethod.suanshu.optimization.constrained.constraint.EqualityConstraints {
 
+        private static final long serialVersionUID = 714153493998819007L;
         private final ImmutableMatrix C;
         private final ImmutableMatrix[] A;
         private final int p;
@@ -85,6 +87,8 @@ public class SDPDualProblem extends ConstrainedOptimProblemImpl1 {
             ArrayList<RealScalarFunction> h = new ArrayList<RealScalarFunction>();
             h.add(
                     new RealScalarFunction() {
+
+                        private static final long serialVersionUID = 5856693166532061393L;
 
                         @Override
                         public Double evaluate(Vector x) {//eq.14.4b
@@ -144,6 +148,8 @@ public class SDPDualProblem extends ConstrainedOptimProblemImpl1 {
     public SDPDualProblem(final Vector b, final SymmetricMatrix C, final SymmetricMatrix[] A) {
         super(
                 new RealScalarFunction() {
+
+                    private static final long serialVersionUID = -3355203607187542174L;
 
                     @Override
                     public Double evaluate(Vector x) {

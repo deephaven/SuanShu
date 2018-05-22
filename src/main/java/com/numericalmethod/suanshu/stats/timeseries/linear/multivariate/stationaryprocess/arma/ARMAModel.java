@@ -38,6 +38,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class ARMAModel extends ARIMAModel {
 
+    private static final long serialVersionUID = -5411516352357379254L;
+
     /**
      * Construct a multivariate ARMA model.
      *

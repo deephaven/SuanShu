@@ -35,6 +35,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
  */
 public class IntegralDt extends Integrator {
 
+    private static final long serialVersionUID = 4012435228714852198L;
+
     /**
      * Construct an integral for f with respect to dt.
      *

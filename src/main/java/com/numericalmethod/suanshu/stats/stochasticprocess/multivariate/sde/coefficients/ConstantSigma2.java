@@ -36,6 +36,7 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.multivariate.sde.FtAd
 @Deprecated
 public class ConstantSigma2 extends Sigma {
 
+    private static final long serialVersionUID = 8146197181580020750L;
     /**
      * the constant diffusion matrix
      */
@@ -53,6 +54,8 @@ public class ConstantSigma2 extends Sigma {
     @Override
     public FtAdaptedRealFunction sigma_i_j(final int i, final int j) {
         return new FtAdaptedRealFunction() {
+
+            private static final long serialVersionUID = -6524060648008345931L;
 
             public double evaluate(Ft ft) {
                 return sigma.get(i, j);

@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
@@ -31,7 +32,9 @@ import java.util.Comparator;
  *
  * @author Ken Yiu
  */
-public final class SparseEntry {
+public final class SparseEntry implements Serializable{
+
+    private static final long serialVersionUID = -288278388701027822L;
 
     /**
      * This {@code Comparator} sorts the matrix coordinates first from top to

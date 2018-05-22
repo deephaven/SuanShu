@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.univariate.stationary
  */
 public class ARIMAModel extends ARIMAXModel {
 
+    private static final long serialVersionUID = -3109891295267308560L;
+
     /**
      * Construct a univariate ARIMA model.
      *

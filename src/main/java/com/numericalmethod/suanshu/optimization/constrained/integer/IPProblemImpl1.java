@@ -38,6 +38,7 @@ import java.util.Arrays;
  */
 public class IPProblemImpl1 implements IPProblem {
 
+    private static final long serialVersionUID = 7626097091758616783L;
     private final ConstrainedOptimProblemImpl1 problem;
     private final int[] integers;
     private final double epsilon;

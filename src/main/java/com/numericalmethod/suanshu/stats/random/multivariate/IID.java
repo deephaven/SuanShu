@@ -31,6 +31,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomNumberGenerator
  */
 public class IID implements RandomVectorGenerator {
 
+    private static final long serialVersionUID = -7092954650019808429L;
     private final RandomNumberGenerator rng;
     private final int length;
 

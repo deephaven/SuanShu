@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.analysis.function.polynomial;
 
+import java.io.Serializable;
+
 /**
  * Horner scheme is an algorithm for the efficient evaluation of polynomials in monomial form.
  * It can also be seen as a fast algorithm for dividing a polynomial by a linear polynomial with Ruffini's rule.
@@ -36,8 +38,9 @@ package com.numericalmethod.suanshu.analysis.function.polynomial;
  * @author Ken Yiu
  * @see <a href="http://en.wikipedia.org/wiki/Horner_scheme">Wikipedia: Horner scheme</a>
  */
-public class HornerScheme {
+public class HornerScheme implements Serializable{
 
+    private static final long serialVersionUID = -8822736658497543572L;
     private double remainder;
     private Polynomial quotient;
     private final Polynomial polynomial;

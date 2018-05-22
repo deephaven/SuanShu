@@ -35,6 +35,8 @@ import static java.lang.Math.abs;
  */
 public class AbsoluteError extends MultiplierPenalty {
 
+    private static final long serialVersionUID = 5534556138850918347L;
+
     /**
      * Construct an absolute error penalty function from a collection of equality constraints.
      *

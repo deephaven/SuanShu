@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.optimization.constrained.constraint.EqualityC
  */
 public class SQPActiveSetSolverForOnlyEqualityConstraint2 extends SQPActiveSetSolverForOnlyEqualityConstraint1 {
 
+    private static final long serialVersionUID = 2477021019798050577L;
+
     /**
      * Construct an SQP Active Set minimizer to solve general minimization problems with equality constraints.
      *
@@ -41,6 +43,8 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint2 extends SQPActiveSetSo
     public SQPActiveSetSolverForOnlyEqualityConstraint2(double epsilon, int maxIterations) {
         super(
                 new VariationFactory() {
+
+                    private static final long serialVersionUID = -8654891520784804414L;
 
                     @Override
                     public SQPASEVariation newVariation(RealScalarFunction f, EqualityConstraints equal) {
@@ -64,6 +68,8 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint2 extends SQPActiveSetSo
     public SQPActiveSetSolverForOnlyEqualityConstraint2(final double r, final double lower, final int discretization, double epsilon, int maxIterations) {
         super(
                 new VariationFactory() {
+
+                    private static final long serialVersionUID = 549830926739388998L;
 
                     @Override
                     public SQPASEVariation newVariation(RealScalarFunction f, EqualityConstraints equal) {

@@ -35,6 +35,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde.coeffi
  */
 public class GeometricBrownian extends SDE {
 
+    private static final long serialVersionUID = -2095819330692393691L;
+
     /**
      * Construct a Geometric Brownian motion.
      *
@@ -49,11 +51,15 @@ public class GeometricBrownian extends SDE {
         super(
                 new Drift() {
 
+                    private static final long serialVersionUID = -2138872500070303688L;
+
                     public double evaluate(Ft ft) {
                         return r * ft.Xt();
                     }
                 },
                 new Diffusion() {
+
+                    private static final long serialVersionUID = 6565143561206102633L;
 
                     public double evaluate(Ft ft) {
                         return sigma * ft.Xt();

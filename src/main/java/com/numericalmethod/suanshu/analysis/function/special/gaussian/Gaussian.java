@@ -37,6 +37,7 @@ import static java.lang.Math.exp;
  */
 public class Gaussian extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 1657950778025216168L;
     private final double a;
     private final double b;
     private final double c;

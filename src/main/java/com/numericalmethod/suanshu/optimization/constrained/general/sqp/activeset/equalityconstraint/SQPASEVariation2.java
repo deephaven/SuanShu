@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class SQPASEVariation2 extends SQPASEVariation1 {
 
+    private static final long serialVersionUID = -8834263807542924993L;
+
     /**
      * Construct a variation.
      *

@@ -38,7 +38,11 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class NewtonRaphson extends SteepestDescent {
 
+    private static final long serialVersionUID = 4711028640287876740L;
+
     protected class NewtonRaphsonImpl extends SteepestDescentImpl {
+
+        private static final long serialVersionUID = -163301620837727687L;
 
         protected NewtonRaphsonImpl(C2OptimProblem problem) throws Exception {
             super(problem);

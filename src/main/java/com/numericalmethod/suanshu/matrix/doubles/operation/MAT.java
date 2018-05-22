@@ -39,6 +39,8 @@ import static java.lang.Math.sqrt;
  */
 public class MAT extends DenseMatrix {
 
+    private static final long serialVersionUID = 4168458858372004876L;
+
     /**
      * Construct the MAT of a vector.
      *

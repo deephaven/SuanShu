@@ -33,6 +33,7 @@ import java.util.List;
  */
 public class IteratesMonitor<S> implements IterationMonitor<S> {
 
+    private static final long serialVersionUID = 9062788183639257392L;
     private final List<S> iterates;
 
     /**

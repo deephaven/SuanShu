@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
 
+import java.io.Serializable;
+
 /**
  * This interface represents the discretized version of a univariate SDE.
  *
@@ -30,7 +32,7 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.sde;
  *
  * @author Haksun Li
  */
-public interface DiscretizedSDE {
+public interface DiscretizedSDE extends Serializable{
 
     /**
      * Get an empty filtration for the process.

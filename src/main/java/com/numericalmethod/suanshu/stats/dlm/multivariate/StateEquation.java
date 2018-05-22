@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This is the state equation in a controlled dynamic linear model.
  * <blockquote><i>
@@ -45,8 +47,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  *
  * @author Haksun Li
  */
-public class StateEquation {
+public class StateEquation implements Serializable{
 
+    private static final long serialVersionUID = 1044974564383399643L;
     /**
      * For a time-invariant DLM (or time-invariant controlled DLM),
      * this represents a (p * p) constant coefficient matrix of x_{t_1} in the state equation.
@@ -154,6 +157,8 @@ public class StateEquation {
         this(
                 new R1toMatrix() {
 
+                    private static final long serialVersionUID = -5495709927616975580L;
+
                     @Override
                     public Matrix evaluate(double t) {
                         return new DenseMatrix(new double[][]{{states.G((int) t)}});
@@ -161,12 +166,16 @@ public class StateEquation {
                 },
                 new R1toMatrix() {
 
+                    private static final long serialVersionUID = 492016414962567576L;
+
                     @Override
                     public Matrix evaluate(double t) {
                         return new DenseMatrix(new double[][]{{states.H((int) t)}});
                     }
                 },
                 new R1toMatrix() {
+
+                    private static final long serialVersionUID = -4148085303364451330L;
 
                     @Override
                     public Matrix evaluate(double t) {

@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integrati
 
 import com.numericalmethod.suanshu.misc.R;
 import com.numericalmethod.suanshu.stats.timeseries.univariate.TimeSeries;
+
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Iterator;
 
@@ -33,8 +35,9 @@ import java.util.Iterator;
  *
  * @author Haksun Li
  */
-public class Filtration {
+public class Filtration implements Serializable{
 
+    private static final long serialVersionUID = 8560488108839145887L;
     /**
      * the time grid
      */

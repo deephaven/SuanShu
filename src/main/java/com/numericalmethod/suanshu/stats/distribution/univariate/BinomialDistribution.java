@@ -38,6 +38,7 @@ import java.math.BigInteger;
  */
 public class BinomialDistribution implements ProbabilityDistribution {
 
+    private static final long serialVersionUID = -5928072002952222586L;
     /** the number of trials, a natural number */
     private final int n;
     /** the success probability in each trial, [0, 1] */

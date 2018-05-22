@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.stats.regression.linear.ols.OLSRegression;
 import com.numericalmethod.suanshu.stats.timeseries.multivariate.realtime.SimpleMultiVariateTimeSeries;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -43,7 +45,9 @@ import java.util.Arrays;
  *
  * @author Kevin Sun
  */
-abstract class AuxiliaryRegression {
+abstract class AuxiliaryRegression implements Serializable{
+
+    private static final long serialVersionUID = 8479622249560742328L;
 
     abstract Matrix getRegressand();
     final SimpleMultiVariateTimeSeries ts;

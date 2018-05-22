@@ -23,6 +23,8 @@
 package com.numericalmethod.suanshu.interval;
 
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
+
+import java.io.Serializable;
 import java.util.EnumSet;
 import java.util.Set;
 
@@ -39,8 +41,9 @@ import java.util.Set;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Partially_ordered_set#Interval">Wikipedia: Interval</a>
  */
-public class Interval<T extends Comparable<? super T>> {
+public class Interval<T extends Comparable<? super T>> implements Serializable {
 
+    private static final long serialVersionUID = 125006933785803674L;
     private final T begin;//the beginning of this interval
     private final T end;//the end of this interval
 

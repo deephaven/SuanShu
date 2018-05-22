@@ -26,6 +26,8 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
 import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
 import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
 
+import java.io.Serializable;
+
 /**
  * This is the observation equation in a controlled dynamic linear model.
  * <blockquote><i>
@@ -34,8 +36,9 @@ import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
  *
  * @author Haksun Li
  */
-public class ObservationEquation {
+public class ObservationEquation implements Serializable{
 
+    private static final long serialVersionUID = -6022640975224732245L;
     /**
      * For a time-invariant DLM (or time-invariant controlled DLM),
      * this represents a constant coefficient of x_t in the observation equation.
@@ -90,12 +93,16 @@ public class ObservationEquation {
         this(
                 new UnivariateRealFunction() {
 
+                    private static final long serialVersionUID = -7277211151148875714L;
+
                     @Override
                     public double evaluate(double x) {
                         return F;
                     }
                 },
                 new UnivariateRealFunction() {
+
+                    private static final long serialVersionUID = -7621199333711638379L;
 
                     @Override
                     public double evaluate(double x) {

@@ -48,6 +48,7 @@ import com.numericalmethod.suanshu.stats.random.multivariate.IID;
  */
 public class JarqueBeraDistribution extends EmpiricalDistribution {
 
+    private static final long serialVersionUID = 3205444202614366792L;
     /**
      * the number of observations in a sample
      */

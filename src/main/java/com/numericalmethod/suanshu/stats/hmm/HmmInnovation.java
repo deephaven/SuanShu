@@ -22,13 +22,16 @@
  */
 package com.numericalmethod.suanshu.stats.hmm;
 
+import java.io.Serializable;
+
 /**
  * An HMM innovation consists of a state and an observation in the state.
  *
  * @author Haksun Li
  */
-public class HmmInnovation {
+public class HmmInnovation implements Serializable{
 
+    private static final long serialVersionUID = 896477006983186993L;
     private int state;
     private double observation;
 

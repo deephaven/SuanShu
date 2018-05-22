@@ -35,6 +35,7 @@ import java.util.Arrays;
  */
 public class SumOfPenalties extends PenaltyFunction {
 
+    private static final long serialVersionUID = 6706502763953922195L;
     /** the constituent penalty functions */
     private final PenaltyFunction[] penalties;
 

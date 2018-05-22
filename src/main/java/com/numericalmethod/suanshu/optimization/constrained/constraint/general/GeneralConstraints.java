@@ -38,6 +38,7 @@ import java.util.Collection;
  */
 public abstract class GeneralConstraints implements Constraints {
 
+    private static final long serialVersionUID = -1979456052724019278L;
     /** the constraints */
     private final ArrayList<RealScalarFunction> constraints = new ArrayList<RealScalarFunction>();
     private final int dim;

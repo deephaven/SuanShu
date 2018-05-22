@@ -37,6 +37,7 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 abstract class PCAImpl implements PCA {
 
+    private static final long serialVersionUID = 7136314075564151578L;
     /**
      * a matrix which provides the original data for the principal component analysis
      *

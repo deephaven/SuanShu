@@ -28,6 +28,5 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  * @author Haksun Li
  */
 public class LPEmptyCostVector extends LPRuntimeException {
-
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -151738965136679763L;
 }

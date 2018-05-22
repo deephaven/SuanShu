@@ -41,6 +41,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integration.IntegralDt;
 import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integration.sde.Construction;
 
+import java.io.Serializable;
+
 /**
  * Johansen provides the asymptotic distributions of the two {@linkplain Test hypothesis testings} (Eigen and Trace tests),
  * each for 5 different {@linkplain TrendType trend types}.
@@ -49,6 +51,8 @@ import com.numericalmethod.suanshu.stats.stochasticprocess.univariate.integratio
  * @see "Kevin Sun, Notes on Cointegration, February 23, 2011."
  */
 public class JohansenAsymptoticDistribution extends EmpiricalDistribution {
+
+    private static final long serialVersionUID = 6956779255692751997L;
 
     /**
      * the types of Johansen cointegration tests available
@@ -120,7 +124,7 @@ public class JohansenAsymptoticDistribution extends EmpiricalDistribution {
     /**
      * This is a filtration function.
      */
-    public static interface F {
+    public static interface F extends Serializable{
 
         /**
          * <i>F(B)</i>.
@@ -212,6 +216,8 @@ public class JohansenAsymptoticDistribution extends EmpiricalDistribution {
                 final FiltrationFunction F2 = F[j];
 
                 FiltrationFunction F1F2 = new FiltrationFunction() {
+
+                    private static final long serialVersionUID = -4062906640385396845L;
 
                     @Override
                     public void setFT(Filtration FT) {

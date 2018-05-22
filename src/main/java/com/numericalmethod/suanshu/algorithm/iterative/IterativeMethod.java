@@ -22,6 +22,8 @@
  */
 package com.numericalmethod.suanshu.algorithm.iterative;
 
+import java.io.Serializable;
+
 /**
  * An iterative method is a mathematical procedure that generates a sequence of
  * improving approximate solutions for a class of problems.
@@ -35,7 +37,7 @@ package com.numericalmethod.suanshu.algorithm.iterative;
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Iterative_method">Wikipedia: Iterative method</a>
  */
-public interface IterativeMethod<S> {
+public interface IterativeMethod<S> extends Serializable{
 
     /**
      * Supply the starting points for the search.

@@ -31,6 +31,7 @@ import static com.numericalmethod.suanshu.misc.SuanShuUtils.assertArgument;
  */
 public class UnitGrid implements TimeGrid {
 
+    private static final long serialVersionUID = -5919129414356850015L;
     /**
      * the number of time points
      */

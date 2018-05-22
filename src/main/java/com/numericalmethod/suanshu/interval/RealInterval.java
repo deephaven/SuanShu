@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.misc.SuanShuUtils;
  */
 public class RealInterval extends Interval<Double> {
 
+    private static final long serialVersionUID = -5585075682026914305L;
+
     /**
      * Construct an interval on the real line.
      *

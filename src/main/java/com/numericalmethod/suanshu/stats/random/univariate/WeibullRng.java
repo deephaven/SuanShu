@@ -32,6 +32,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
  */
 public class WeibullRng extends InverseTransformSampling {
 
+    private static final long serialVersionUID = 2307516730305870855L;
+
     /**
      * Construct a random number generator to sample from the Weibull distribution.
      *

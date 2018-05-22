@@ -49,6 +49,7 @@ import com.numericalmethod.suanshu.stats.timeseries.linear.univariate.sample.Aut
  */
 public class BoxPierce extends HypothesisTest {
 
+    private static final long serialVersionUID = -1950622702699524774L;
     private final int lag = 0;
 
     @Override

@@ -60,6 +60,8 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  */
 public class VECMTransitory extends VECM {
 
+    private static final long serialVersionUID = 3897042032717583643L;
+
     /**
      * Construct a transitory VECM(p) model.
      *

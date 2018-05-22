@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class ErfInverse extends UnivariateRealFunction {
 
+    private static final long serialVersionUID = 6179434790678555676L;
     private static CumulativeNormalInverse Ninv = new CumulativeNormalInverse();
 
     @Override

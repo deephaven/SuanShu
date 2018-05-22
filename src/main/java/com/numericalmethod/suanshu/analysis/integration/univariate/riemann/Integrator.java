@@ -24,13 +24,15 @@ package com.numericalmethod.suanshu.analysis.integration.univariate.riemann;
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.UnivariateRealFunction;
 
+import java.io.Serializable;
+
 /**
  * This defines the interface for the numerical integration of definite integrals of univariate functions.
  *
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Numerical_integration">Wikipedia: Numerical integration</a>
  */
-public interface Integrator {
+public interface Integrator extends Serializable{
 
     /**
      * Integrate function <i>f</i> from <i>a</i> to <i>b</i>,

@@ -45,6 +45,8 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class BFGS extends QuasiNewton {
 
+    private static final long serialVersionUID = -5221472154264333905L;
+
     /**
      * S<sub>k+1</sub> = S<sub>k</sub> + (1 + γ'Sγ/γ'δ)/γ'δ * δδ' -(δγ'S + Sγδ') / γ'δ, where S = H<sup>-1</sup>
      *
@@ -120,6 +122,8 @@ public class BFGS extends QuasiNewton {
      * an implementation of the BFGS algorithm
      */
     protected class BFGSImpl extends QuasiNewtonImpl {
+
+        private static final long serialVersionUID = 7147229684217463262L;
 
         public BFGSImpl(C2OptimProblem problem) throws Exception {
             super(problem);

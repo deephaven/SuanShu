@@ -40,6 +40,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  */
 public class Halley implements Uniroot {
 
+    private static final long serialVersionUID = 7358430982118678935L;
     private final double tol;
     private final int maxIterations;
 

@@ -34,6 +34,7 @@ import com.numericalmethod.suanshu.stats.random.univariate.normal.NormalRng;
  */
 public class LogNormalRng implements RandomNumberGenerator {
 
+    private static final long serialVersionUID = 7818000050701965396L;
     private final NormalRng rnorm;
 
     /**

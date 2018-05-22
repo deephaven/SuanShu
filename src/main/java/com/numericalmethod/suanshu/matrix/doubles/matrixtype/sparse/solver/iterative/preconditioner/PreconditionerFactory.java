@@ -24,12 +24,14 @@ package com.numericalmethod.suanshu.matrix.doubles.matrixtype.sparse.solver.iter
 
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 
+import java.io.Serializable;
+
 /**
  * This constructs a new instance of {@link Preconditioner} for a coefficient matrix.
  *
  * @author Haksun Li
  */
-public interface PreconditionerFactory {
+public interface PreconditionerFactory extends Serializable{
 
     /**
      * Construct a new instance of {@link Preconditioner} for a coefficient matrix.

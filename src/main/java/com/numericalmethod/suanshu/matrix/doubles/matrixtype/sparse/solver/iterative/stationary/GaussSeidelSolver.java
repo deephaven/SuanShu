@@ -43,6 +43,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 public class GaussSeidelSolver implements IterativeLinearSystemSolver {
 
+    private static final long serialVersionUID = 7278886213013721556L;
     private final SuccessiveOverrelaxationSolver sor;
 
     /**

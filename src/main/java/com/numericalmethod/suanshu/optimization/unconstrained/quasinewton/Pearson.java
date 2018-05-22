@@ -30,6 +30,8 @@ package com.numericalmethod.suanshu.optimization.unconstrained.quasinewton;
  */
 public class Pearson extends Huang {
 
+    private static final long serialVersionUID = 6683076705169818883L;
+
     /**
      * Construct a multivariate minimizer using the Pearson method.
      *

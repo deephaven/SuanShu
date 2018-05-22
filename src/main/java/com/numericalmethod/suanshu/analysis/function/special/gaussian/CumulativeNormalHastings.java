@@ -45,6 +45,7 @@ public class CumulativeNormalHastings extends UnivariateRealFunction implements 
     private static final double b5 = 1.330274429;
     private static final double p = 0.2316419;
     private static final double c = Math.log(Constant.ROOT_2_PI);
+    private static final long serialVersionUID = -6132352561754021414L;
 
     @Override
     public double evaluate(double x) {

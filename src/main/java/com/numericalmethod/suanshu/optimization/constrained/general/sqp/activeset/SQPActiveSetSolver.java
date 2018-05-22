@@ -50,6 +50,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,6 +83,7 @@ import java.util.List;
  */
 public class SQPActiveSetSolver implements ConstrainedMinimizer<ConstrainedOptimProblem, IterativeMinimizer<Vector>> {
 
+    private static final long serialVersionUID = -2695161836133646539L;
     protected final double epsilon;
     protected final int maxIterations;
     private final VariationFactory variant;
@@ -88,7 +91,7 @@ public class SQPActiveSetSolver implements ConstrainedMinimizer<ConstrainedOptim
     /**
      * This factory constructs a new instance of {@code SQPASVariation} for each SQP problem.
      */
-    public static interface VariationFactory {
+    public static interface VariationFactory extends Serializable{
 
         /**
          * Construct a new instance of {@code SQPASVariation} for an SQP problem.
@@ -106,6 +109,7 @@ public class SQPActiveSetSolver implements ConstrainedMinimizer<ConstrainedOptim
      */
     public class Solution implements IterativeMinimizer<Vector> {
 
+        private static final long serialVersionUID = 6666441302957784567L;
         private Vector x0;//the best minimizer found so far
         private Vector v0;//the Lagrange multipliers for equality constraints (lambda)
         private Vector u0;//the Lagrange multipliers for greater-than constraints (mu)
@@ -316,6 +320,8 @@ public class SQPActiveSetSolver implements ConstrainedMinimizer<ConstrainedOptim
     public SQPActiveSetSolver(double epsilon, int maxIterations) {
         this(
                 new VariationFactory() {
+
+                    private static final long serialVersionUID = 6437949567323220330L;
 
                     @Override
                     public SQPASVariation newVariation(RealScalarFunction f, EqualityConstraints equal, GreaterThanConstraints greater) {

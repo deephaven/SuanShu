@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.analysis.integration.univariate.riemann.subs
 
 import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.UnivariateRealFunction;
 
+import java.io.Serializable;
+
 /**
  * A substitution rule specifies \(x(t)\) and \(\frac{\mathrm{d} x}{\mathrm{d} t}\).
  * <p/>
@@ -40,7 +42,7 @@ import com.numericalmethod.suanshu.analysis.function.rn2r1.univariate.Univariate
  * @author Haksun Li
  * @see <a href="http://en.wikipedia.org/wiki/Substitution_rule">Wikipedia: Integration by substitution</a>
  */
-public interface SubstitutionRule {
+public interface SubstitutionRule extends Serializable{
 
     /**
      * the transformation: <i>x(t)</i>

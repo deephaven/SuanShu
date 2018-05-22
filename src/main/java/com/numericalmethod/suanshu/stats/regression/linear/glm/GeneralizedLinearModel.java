@@ -24,6 +24,8 @@ package com.numericalmethod.suanshu.stats.regression.linear.glm;
 
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * The Generalized Linear Model (GLM) is a flexible generalization of ordinary least squares regression.
  * The GLM generalizes linear regression by allowing the linear model to be related to the response variable via a link function and
@@ -52,8 +54,9 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * <li>"P. J. MacCullagh and J. A. Nelder. An algorithm for fitting generalized linear models," in <i>Generalized Linear Models</i>, 2nd ed. pp.40. Section 2.5."
  * </ul>
  */
-public class GeneralizedLinearModel {
+public class GeneralizedLinearModel implements Serializable{
 
+    private static final long serialVersionUID = 7302563584234933711L;
     /**
      * the generalized linear regression problem to be solved
      */

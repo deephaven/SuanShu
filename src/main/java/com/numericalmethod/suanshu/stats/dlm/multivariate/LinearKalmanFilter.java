@@ -31,6 +31,8 @@ import com.numericalmethod.suanshu.stats.timeseries.multivariate.realtime.Simple
 import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The Kalman filter, also known as linear quadratic estimation (LQE),
  * is an algorithm which uses a series of measurements observed over time,
@@ -40,8 +42,9 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  *
  * @author Haksun Li
  */
-public class LinearKalmanFilter {
+public class LinearKalmanFilter implements Serializable{
 
+    private static final long serialVersionUID = 3351032785411380385L;
     /** the DLM model */
     private final DLM model;
     /**

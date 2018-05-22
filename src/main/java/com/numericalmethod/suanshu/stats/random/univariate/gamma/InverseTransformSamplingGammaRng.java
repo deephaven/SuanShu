@@ -37,6 +37,8 @@ import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
 @Deprecated
 public class InverseTransformSamplingGammaRng extends InverseTransformSampling implements RandomGammaGenerator {
 
+    private static final long serialVersionUID = 2388823539890391751L;
+
     /**
      * Construct a random number generator to sample from the gamma distribution using the inverse transform sampling method.
      *

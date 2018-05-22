@@ -40,6 +40,7 @@ public class Zignor2005 implements RandomStandardNormalNumberGenerator {
     private static final double ZIGNOR_R = 3.442619855899;
     // (R * phi(R) + Pr(X>=R)) * sqrt(2\pi)
     private static final double ZIGNOR_V = 9.91256303526217e-3;
+    private static final long serialVersionUID = 3699567417334271306L;
     private RandomLongGenerator uniform = new MWC8222();
 
     /*

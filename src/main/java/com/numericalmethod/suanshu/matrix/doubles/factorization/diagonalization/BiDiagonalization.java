@@ -33,6 +33,9 @@ import com.numericalmethod.suanshu.matrix.doubles.operation.Householder.Context;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
+
+import java.io.Serializable;
+
 import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateVector.*;
 
 /**
@@ -84,8 +87,9 @@ import static com.numericalmethod.suanshu.vector.doubles.dense.operation.CreateV
  *
  * @author Haksun Li
  */
-public class BiDiagonalization {
+public class BiDiagonalization implements Serializable{
 
+    private static final long serialVersionUID = -7782647114457945409L;
     private Householder[] Us;
     private Householder[] Vs;
     private BidiagonalMatrix B;

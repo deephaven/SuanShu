@@ -22,6 +22,7 @@
  */
 package com.numericalmethod.suanshu.analysis.function.polynomial.root;
 
+import com.numericalmethod.suanshu.Constant;
 import com.numericalmethod.suanshu.analysis.function.polynomial.Polynomial;
 import com.numericalmethod.suanshu.misc.SuanShuUtils;
 import static com.numericalmethod.suanshu.number.DoubleUtils.compare;
@@ -42,6 +43,8 @@ import java.util.List;
  * @see <a href="http://en.wikipedia.org/wiki/Quadratic_equation">Wikipedia: QuadraticRoot equation</a>
  */
 public class QuadraticRoot implements PolyRootSolver {
+
+    private static final long serialVersionUID = 4386183515701071704L;
 
     /**
      * Solve \(ax^2 + bx + c = 0\).
@@ -99,7 +102,7 @@ public class QuadraticRoot implements PolyRootSolver {
          * the complex conjugate roots are
          * x1 = (- b/2 + d)/a, x2 = - b/2a - d/a
          */
-        if (compare(e, 0, 0) >= 0) {
+        if (compare(e, 0, Constant.EPSILON) >= 0) {
             // real roots
             d = -signum(b_OVER_2) * d;
             double x1 = (-b_OVER_2 + d) / a;

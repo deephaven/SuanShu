@@ -63,6 +63,7 @@ public class Complex extends Number implements Field<Complex>, NumberUtils.Compa
      * a number representing the complex Not-a-Number ({@code NaN})
      */
     public static final Complex NaN = new Complex(java.lang.Double.NaN, java.lang.Double.NaN);
+    private static final long serialVersionUID = 1778648444936674860L;
     /**
      * the real part of this complex number
      */
@@ -71,7 +72,6 @@ public class Complex extends Number implements Field<Complex>, NumberUtils.Compa
      * the imaginary part of this complex number
      */
     private final double imaginary;
-    private static final long serialVersionUID = 1L;
 
     /**
      * Construct a complex number from the real and imaginary parts.

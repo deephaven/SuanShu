@@ -52,6 +52,8 @@ import static java.lang.Math.*;
  */
 public class Levene extends HypothesisTest {
 
+    private static final long serialVersionUID = -7759286548223805644L;
+
     /**
      * the implementations available when computing the absolute deviations
      */
@@ -117,6 +119,8 @@ public class Levene extends HypothesisTest {
             final int j = i;
             z[i] = foreach(samples[i],
                     new UnivariateRealFunction() {
+
+                        private static final long serialVersionUID = 6877858415281565259L;
 
                         @Override
                         public double evaluate(double x) {

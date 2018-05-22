@@ -68,8 +68,7 @@ public class ConcurrentCachedGeneratorTest {
         // get 1 million numbers in parallel
         int nLoops = 100;
         final int nGenPerLoop = nNum / nLoops;
-        ParallelExecutor parallelExecutor = new ParallelExecutor();
-        parallelExecutor.forLoop(0, nLoops, new LoopBody() {
+        ParallelExecutor.getInstance().forLoop(0, nLoops, new LoopBody() {
 
             @Override
             public void run(int i) throws Exception {

@@ -29,7 +29,7 @@ package com.numericalmethod.suanshu.optimization.constrained.convex.sdp.socp.qp.
  */
 public class LPDimensionNotMatched extends LPRuntimeException {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -4749867331059414494L;
 
     /**
      * Construct an instance of {@code LPDimensionNotMatched}.

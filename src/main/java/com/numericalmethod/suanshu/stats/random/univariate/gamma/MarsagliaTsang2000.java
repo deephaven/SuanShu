@@ -27,6 +27,9 @@ import com.numericalmethod.suanshu.stats.random.univariate.RandomLongGenerator;
 import com.numericalmethod.suanshu.stats.random.univariate.normal.RandomStandardNormalNumberGenerator;
 import com.numericalmethod.suanshu.stats.random.univariate.normal.StandardNormalRng;
 import com.numericalmethod.suanshu.stats.random.univariate.uniform.UniformRng;
+
+import java.io.Serializable;
+
 import static java.lang.Math.*;
 
 /**
@@ -40,17 +43,19 @@ import static java.lang.Math.*;
  */
 public class MarsagliaTsang2000 implements RandomGammaGenerator {
 
+    private static final long serialVersionUID = -123794919125284167L;
     private final double theta;
     private final RandomStandardNormalNumberGenerator normal;
     private final RandomLongGenerator uniform;
     private final Generate generate;
 
-    private interface Generate {
+    private interface Generate extends Serializable{
 
         public double nextDouble();
     }
 
-    private class Kg1 implements Generate {//k >= 1
+    private class Kg1 implements Generate {
+        private static final long serialVersionUID = 4253388712620377L;//k >= 1
 
         private final double d;
         private final double c;
@@ -87,7 +92,8 @@ public class MarsagliaTsang2000 implements RandomGammaGenerator {
         }
     }
 
-    private class Kl1 implements Generate {//k < 1
+    private class Kl1 implements Generate {
+        private static final long serialVersionUID = 9134714835133058320L;//k < 1
 
         private final Kg1 kg1;
         private final double one_over_k;

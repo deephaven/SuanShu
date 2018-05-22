@@ -29,6 +29,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 
+import java.io.Serializable;
+
 /**
  * This is a simulator for a multivariate controlled dynamic linear model process.
  * For <i>(t &ge; 1)</i>, a controlled DLM takes the following form:
@@ -47,11 +49,14 @@ import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
  * @author Kevin Sun
  * @see "G. Petris et al., "Dynamic Linear Models with R," New York, Springer, 2009, ch. 2, pp. 31-84."
  */
-public class DLMSim {
+public class DLMSim implements Serializable{
+
+    private static final long serialVersionUID = 8678153709639718998L;
 
     /** a simulated innovation */
-    public static class Innovation {
+    public static class Innovation implements Serializable{
 
+        private static final long serialVersionUID = -1969792460659749614L;
         /** the simulated state */
         public final ImmutableVector state;
         /** the simulated observation */

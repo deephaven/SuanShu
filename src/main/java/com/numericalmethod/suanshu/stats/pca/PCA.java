@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.pca;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * Principal Component Analysis (PCA) is a mathematical procedure that
  * uses an orthogonal transformation to convert a set of observations of possibly correlated variables into
@@ -45,7 +47,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  * <li><a href="http://en.wikipedia.org/wiki/Principal_component_analysis">Wikipedia: Principal component analysis</a>
  * </ul>
  */
-public interface PCA {
+public interface PCA extends Serializable{
 
     /**
      * Get the number of observations in the original data; sample size.

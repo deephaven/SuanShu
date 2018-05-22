@@ -42,6 +42,7 @@ import com.numericalmethod.suanshu.stats.descriptive.Statistic;
  */
 public class Mean implements Statistic {
 
+    private static final long serialVersionUID = 170853815743939086L;
     private long N = 0;
     private double mean = 0;
 

@@ -41,6 +41,7 @@ import static java.lang.Math.sqrt;
  */
 public class Residuals extends com.numericalmethod.suanshu.stats.regression.linear.Residuals {
 
+    private static final long serialVersionUID = -5110905028706076409L;
     /**
      * overdispersion
      */

@@ -39,6 +39,7 @@ import java.util.Arrays;
  */
 public class MovingAverageByExtension implements Filter {
 
+    private static final long serialVersionUID = 8153334486438211328L;
     private final double[] filter;
 
     /**

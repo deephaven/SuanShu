@@ -25,6 +25,8 @@ package com.numericalmethod.suanshu.stats.hmm.rabiner;
 import com.numericalmethod.suanshu.matrix.doubles.Matrix;
 import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
 
+import java.io.Serializable;
+
 /**
  * <i>γ</i> is the probability of the system in state <i>s<sub>i</sub></i>,
  * given the model and observation sequence.
@@ -34,8 +36,9 @@ import com.numericalmethod.suanshu.matrix.doubles.matrixtype.dense.DenseMatrix;
  *
  * @author Kevin Sun
  */
-public class HmmGamma {
+public class HmmGamma implements Serializable{
 
+    private static final long serialVersionUID = 8970068039265368185L;
     private final HiddenMarkovModel model;
 
     /**

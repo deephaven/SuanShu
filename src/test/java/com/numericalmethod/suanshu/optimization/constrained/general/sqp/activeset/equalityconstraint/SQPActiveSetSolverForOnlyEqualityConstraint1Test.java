@@ -22,15 +22,17 @@
  */
 package com.numericalmethod.suanshu.optimization.constrained.general.sqp.activeset.equalityconstraint;
 
-import com.numericalmethod.suanshu.vector.doubles.Vector;
-import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.analysis.function.rn2r1.RealScalarFunction;
 import com.numericalmethod.suanshu.optimization.constrained.constraint.EqualityConstraints;
 import com.numericalmethod.suanshu.optimization.constrained.constraint.general.GeneralEqualityConstraints;
 import com.numericalmethod.suanshu.optimization.problem.IterativeMinimizer;
-import static java.lang.Math.*;
+import com.numericalmethod.suanshu.vector.doubles.Vector;
+import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static java.lang.Math.pow;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -149,7 +151,7 @@ public class SQPActiveSetSolverForOnlyEqualityConstraint1Test {
                     }
                 }, 1e-7, 600);
         soln = instance.solve(f, equal);
-        x = soln.search(new DenseVector(0.003, 0.015, 0.3), new DenseVector(-1., -1.));
+        x = soln.search(new DenseVector(0.03, 0.015, 0.3), new DenseVector(-1., -1.));
         fx = f.evaluate(x);
         assertEquals(-38.28479, fx, 1e-3);
         assertArrayEquals(new double[]{-1.874065, -0.465820, -1.884720}, x.toArray(), 1e-5);

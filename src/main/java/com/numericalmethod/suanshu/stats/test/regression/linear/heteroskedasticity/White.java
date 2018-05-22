@@ -51,6 +51,7 @@ import static java.lang.Math.pow;
  */
 public class White extends Heteroskedasticity {
 
+    private static final long serialVersionUID = -1511503259202607962L;
     private final int K;
     private final int nAuxiliaryFactors;
 

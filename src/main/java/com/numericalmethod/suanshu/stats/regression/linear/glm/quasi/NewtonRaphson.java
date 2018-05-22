@@ -33,6 +33,8 @@ import com.numericalmethod.suanshu.vector.doubles.ImmutableVector;
 import com.numericalmethod.suanshu.vector.doubles.dense.DenseVector;
 import com.numericalmethod.suanshu.vector.doubles.Vector;
 
+import java.io.Serializable;
+
 /**
  * The Newton-Raphson method is an iterative algorithm to estimate the β of the quasi GLM regression.
  * It is a maximum likelihood method.
@@ -48,6 +50,7 @@ import com.numericalmethod.suanshu.vector.doubles.Vector;
  */
 class NewtonRaphson implements Fitting {
 
+    private static final long serialVersionUID = 1110843967067345384L;
     /**
      * the convergence threshold
      */
@@ -123,8 +126,9 @@ class NewtonRaphson implements Fitting {
     /**
      * an implementation of the Newton-Raphson algorithm
      */
-    private class Run {
+    private class Run implements Serializable{
 
+        private static final long serialVersionUID = -7800681415578326649L;
         //the generalized linear regression problem to be solved
         private final QuasiGlmProblem problem;
         //the following are fitting results
