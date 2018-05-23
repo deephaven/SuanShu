@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 
-String globalVersion = '0.1.1'
+String globalVersion = '0.1.2'
 // tag::repositories[]
 repositories {
     mavenCentral()

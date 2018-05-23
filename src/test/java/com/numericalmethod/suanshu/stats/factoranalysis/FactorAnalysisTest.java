@@ -89,7 +89,7 @@ public class FactorAnalysisTest {
         assertArrayEquals(
                 new double[]{0.005, 0.101, 0.005, 0.224, 0.084, 0.005},
                 uniqueness.toArray(),
-                1e-3);
+                1e-3);//fails if NelderMEad optimization is used to find estimators
 
         int dof = estimators.dof();
         assertEquals(dof, 0);
@@ -180,7 +180,7 @@ public class FactorAnalysisTest {
         assertArrayEquals(
                 new double[]{0.005, 0.101, 0.005, 0.224, 0.084, 0.005},
                 uniqueness.toArray(),
-                1e-3);
+                1e-3);//fails if NelderMEad optimization is used to find estimators
 
         int dof = estimators.dof();
         assertEquals(dof, 0);
