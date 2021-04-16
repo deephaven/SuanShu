@@ -1,0 +1,42 @@
+name: Check CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  checks:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # note: this uses Zulu and not AdoptOpenJDK or other. should make sure we build and test on the same one...
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '8.0.282'
+
+      - name: Setup gradle properties
+        run: |
+          mkdir -p $HOME/.gradle
+          cp .github/env/${{ runner.os }}/gradle.properties $HOME/.gradle/gradle.properties
+
+      - name: Check
+        uses: burrunan/gradle-cache-action@v1
+        with:
+          job-id: checks
+          arguments: check
+          gradle-version: wrapper
+
+      - name: Publish Test Results
+        uses: scacap/action-surefire-report@v1
+        if: always()
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+        with:
+          check_name: check-ci test report
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          report_paths: '**/build/test-results/test/TEST-*.xml'
