@@ -1,37 +1,38 @@
-apply plugin: 'java'
-apply plugin: 'idea'
+plugins {
+    id 'java-library'
+}
 
-String globalVersion = '0.1.2'
-// tag::repositories[]
 repositories {
     mavenCentral()
 }
-// end::repositories[]
 
-// tag::jar[]
-jar {
-    baseName = 'SuanShu'
-    version =  globalVersion
-    destinationDir = file("$rootDir/build/jars")
-}
-// end::jar[]
+group = 'io.deephaven'
+version = '0.1.0'
+description = 'Extension of original open-sourced math library, SuanShu.'
 
-task sourceJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allJava
-    version =  globalVersion
-    destinationDir = file("$rootDir/build/jars")
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+    withSourcesJar()
+    withJavadocJar()
 }
 
-// tag::dependencies[]
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-def depJodatime = 'joda-time:joda-time:2.9.9'
-def depJUnit = 'junit:junit:4.10'
+javadoc {
+    // lots of javadoc problems, but need it for publishing to mavenCentral
+    source = null
+}
 
 dependencies {
-    compile depJodatime
-    testCompile depJodatime, depJUnit
+    compile 'joda-time:joda-time:2.9.9'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    testImplementation 'junit:junit:4.10'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
 }
-// end::dependencies[]
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
