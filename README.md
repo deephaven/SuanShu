@@ -4,12 +4,11 @@ This extension fixes testcases and serialized the library.
 
 ## Installation
 
-The Maven repository for this project can be found at https://mvnrepository.com/artifact/io.deephaven/SuanShu
+The latest versions can be found on [Maven](https://search.maven.org/artifact/io.deephaven/SuanShu).
 
 ### pom.xml
 
 ```
-<!-- https://mvnrepository.com/artifact/io.deephaven/SuanShu -->
 <dependency>
     <groupId>io.deephaven</groupId>
     <artifactId>SuanShu</artifactId>
@@ -20,8 +19,7 @@ The Maven repository for this project can be found at https://mvnrepository.com/
 ### Gradle
 
 ```
-// https://mvnrepository.com/artifact/io.deephaven/SuanShu
-implementation group: 'io.deephaven', name: 'SuanShu', version: '0.1.0'
+implementation 'io.deephaven:SuanShu:0.1.0'
 ```
 
 ## Usage
