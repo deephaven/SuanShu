@@ -1,6 +1,8 @@
 # SuanShu
 
-This extension fixes testcases and serialized the library.
+SuanShu is a Java math library for numerical analysis, statistics, root finding, linear algebra, optimization, curve fitting, interpolation, regression, differential equation solvers, and more.  
+
+This repository is a fork of the most recent Open Source SuanShu release (2012-06-06).  It has enhancements that include fixes to test cases, serialization, etc.  If you are interested in the commercially licensed version, see [https://nm.dev/](https://nm.dev/).
 
 ## Installation
 
