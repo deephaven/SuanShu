@@ -4,7 +4,7 @@ This extension fixes testcases and serialized the library.
 
 ## Installation
 
-The latest versions can be found on [Maven](https://search.maven.org/artifact/io.deephaven/SuanShu).
+The latest version of this package can be found on [Maven](https://search.maven.org/artifact/io.deephaven/SuanShu).
 
 ### pom.xml
 
