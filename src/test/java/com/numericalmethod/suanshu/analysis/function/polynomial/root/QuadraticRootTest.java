@@ -1,19 +1,19 @@
 /*
  * Copyright (c) Numerical Method Inc.
  * http://www.numericalmethod.com/
- * 
+ *
  * THIS SOFTWARE IS LICENSED, NOT SOLD.
- * 
+ *
  * YOU MAY USE THIS SOFTWARE ONLY AS DESCRIBED IN THE LICENSE.
  * IF YOU ARE NOT AWARE OF AND/OR DO NOT AGREE TO THE TERMS OF THE LICENSE,
  * DO NOT USE THIS SOFTWARE.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITH NO WARRANTY WHATSOEVER,
  * EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION,
  * ANY WARRANTIES OF ACCURACY, ACCESSIBILITY, COMPLETENESS,
  * FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, NON-INFRINGEMENT,
  * TITLE AND USEFULNESS.
- * 
+ *
  * IN NO EVENT AND UNDER NO LEGAL THEORY,
  * WHETHER IN ACTION, CONTRACT, NEGLIGENCE, TORT, OR OTHERWISE,
  * SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
@@ -60,6 +60,22 @@ public class QuadraticRootTest {
         Polynomial polynomial = new Polynomial(1, 0, 1); // x^2 + 1
         List<Number> roots = instance.solve(polynomial);
         assertEquals(Arrays.asList(Complex.I, Complex.I.opposite()), roots);
+    }
+
+    @Test
+    public void test_solve_zero_b_real_roots() {
+        QuadraticRoot instance = new QuadraticRoot();
+        Polynomial polynomial = new Polynomial(13, 0, -1); // 13x^2 - 1
+        List<Number> roots = instance.solve(polynomial);
+        NumberAssert.assertSameList(Arrays.asList(-1 / Math.sqrt(13), 1 / Math.sqrt(13)), roots, 0);
+    }
+
+    @Test
+    public void test_solve_positive_b() {
+        QuadraticRoot instance = new QuadraticRoot();
+        Polynomial polynomial = new Polynomial(1, 5, 6); // x^2 + 5x + 6
+        List<Number> roots = instance.solve(polynomial);
+        NumberAssert.assertSameList(Arrays.asList(-3, -2), roots, 1e-15);
     }
 
     @Test(expected = IllegalArgumentException.class)
