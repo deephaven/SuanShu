@@ -48,6 +48,14 @@ public class QuadraticRootTest {
     @Test
     public void test_solve_0020() {
         QuadraticRoot instance = new QuadraticRoot();
+        Polynomial polynomial = new Polynomial(1, 5, 6); // x^2 + 5x + 6
+        List<Number> roots = instance.solve(polynomial);
+        NumberAssert.assertSameList(Arrays.asList(-3, -2), roots, 1e-15);
+    }
+
+    @Test
+    public void test_solve_0030() {
+        QuadraticRoot instance = new QuadraticRoot();
         Polynomial polynomial = new Polynomial(2, -281.256, 9740.6784); // 2x^2 -281.256x + 9740.6784
         List<Number> roots = instance.solve(polynomial);
         double epsilon = SuanShuUtils.autoEpsilon(polynomial.getCoefficients());
@@ -55,11 +63,19 @@ public class QuadraticRootTest {
     }
 
     @Test
-    public void test_solve_0030() {
+    public void test_solve_0040() {
         QuadraticRoot instance = new QuadraticRoot();
         Polynomial polynomial = new Polynomial(1, 0, 1); // x^2 + 1
         List<Number> roots = instance.solve(polynomial);
         assertEquals(Arrays.asList(Complex.I, Complex.I.opposite()), roots);
+    }
+
+        @Test
+    public void test_solve_0050() {
+        QuadraticRoot instance = new QuadraticRoot();
+        Polynomial polynomial = new Polynomial(13, 0, -1); // 13x^2 - 1
+        List<Number> roots = instance.solve(polynomial);
+        NumberAssert.assertSameList(Arrays.asList(-1 / Math.sqrt(13), 1 / Math.sqrt(13)), roots, 0);
     }
 
     @Test(expected = IllegalArgumentException.class)

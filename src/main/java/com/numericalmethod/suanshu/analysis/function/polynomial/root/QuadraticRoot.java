@@ -68,6 +68,16 @@ public class QuadraticRoot implements PolyRootSolver {
             roots.add(new Double(0.0));
             roots.add(new Double(-b / a));
             return roots;
+        } else if(isZero(b, 0)) {
+            if(c < 0){
+                roots.add(new Double(sqrt(-c / a)));
+                roots.add(new Double(-sqrt(-c / a)));
+                return roots;
+            } else {
+                roots.add(new Complex(0, sqrt(c / a)));
+                roots.add(new Complex(0, -sqrt(c / a)));
+                return roots;
+            }
         }
 
         /*
