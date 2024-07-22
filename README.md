@@ -14,14 +14,14 @@ The latest version of this package can be found on [Maven](https://search.maven.
 <dependency>
     <groupId>io.deephaven</groupId>
     <artifactId>SuanShu</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```
-implementation 'io.deephaven:SuanShu:0.1.0'
+implementation 'io.deephaven:SuanShu:0.1.1'
 ```
 
 ## Usage
